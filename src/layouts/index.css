@@ -1,0 +1,25 @@
+:root {
+  --navy: #1E3650;
+  --teal: #25768F;
+  --marron: #640D23;
+  --vermillion: #D73C13;
+  --white: #fff;
+  --off-white: #F3E9EA; 
+  --peach: #FED8CE;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Serif", serif;
+}
+
+

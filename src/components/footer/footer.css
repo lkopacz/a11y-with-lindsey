@@ -1,0 +1,27 @@
+:root {
+  --navy: #1E3650;
+  --off-white: #F3E9EA; 
+}
+
+footer {
+  background: var(--navy);
+  margin: 0 auto;
+  padding: 15px 20%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--off-white);
+}
+
+footer a {
+  color: var(--off-white);
+}
+
+.social li {
+  display: inline-block;
+  list-style: none;
+  padding: 1rem;
+}
+
+.social a {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,10 @@
+:root {
+  --navy: #1E3650;
+  --teal: #25768F;
+}
+
+header {
+  background: var(--navy);
+  border-top: 15px solid var(--teal);
+  padding: 2rem 0 1rem;
+}
