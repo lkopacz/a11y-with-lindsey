@@ -1,10 +1,11 @@
 import React from 'react'
 
+
 const Hero = (props) => (
   <div className="hero">
     <h2>{props.header}</h2>
     <div className="hero__background-image">
-			<img src="images/computer.jpg" width="4831" height="3221" alt="" typeof="foaf:Image" />
+			<img src={props.img} width="4831" height="3221" alt="" typeof="foaf:Image" />
 		</div>
     <div className="hero__text-wrapper">
       <div className="hero__body">
