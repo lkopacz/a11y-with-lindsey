@@ -1,0 +1,23 @@
+.mailchimp-signup {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) {
+  .mailchimp-signup {
+    max-width: 767px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mailchimp-signup {
+    max-width: 1024px;
+  }
+}
+
+.mailchimp-signup__form {
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+}
