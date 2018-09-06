@@ -1,0 +1,22 @@
+.hero {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: calc((100vh - 350px)/2);
+  height: calc(100vh - 159px);
+  color: #1E3650;
+  background: rgba(254, 216, 206, 0.7);
+  text-shadow: 0.5px 0.5px grey;
+  text-align: center;
+}
+
+.hero__background-image {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+}
+
+.hero__background-image img {
+  width: 100%; 
+  height: calc(100vh - 159px);
+}

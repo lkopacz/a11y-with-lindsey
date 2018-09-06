@@ -1,0 +1,57 @@
+.quote {
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+  margin-top: -100px;
+  background: #fff;
+  margin-bottom: 50px;
+  border-left: 15px solid #D73C13;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #640D23;
+}
+
+
+@media only screen and (min-width: 767px) {
+  .quote {
+    max-width: 767px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .quote {
+    max-width: 1024px;
+  }
+}
+
+.quote > h2 {
+  letter-spacing: 4px;
+  line-height: 1;
+  font-size: 2.5rem;
+}
+
+.quote__text {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+
+.quote__text::before {
+  content: '\201C';
+  font-family: Arial;
+  vertical-align: bottom;
+  font-size: 2em;
+  line-height: 0.25;
+  padding-right: 0.5rem;
+  display: inline;
+}
+
+.quote__source-label,
+.quote__source-item {
+  display: inline-block;
+}
+
+.quote__source-label::after {
+  content: ':';
+}

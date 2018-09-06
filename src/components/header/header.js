@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <span className="visually-hidden"> {siteTitle} </span>
-          <img src={Logo} alt=""/>
+          <img src={Logo} alt="" style={{width: 200}} />
         </Link>
       </h1>
     </div>
