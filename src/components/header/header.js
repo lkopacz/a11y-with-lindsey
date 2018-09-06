@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Logo from '../../images/logo.svg'
 
 const Header = ({ siteTitle }) => (
   <header
@@ -24,7 +25,8 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          <span className="visually-hidden"> {siteTitle} </span>
+          <img src={Logo} alt=""/>
         </Link>
       </h1>
     </div>
