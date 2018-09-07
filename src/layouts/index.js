@@ -15,7 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle="a11y with Lindsey" />
+    <Header siteTitle={data.site.siteMetadata.title} />
     {children()}
     <Footer />
   </div>
