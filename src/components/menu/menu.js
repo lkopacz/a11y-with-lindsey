@@ -11,7 +11,7 @@ const Menu = () => (
         </Link>
       </li>
       <li className="menu-item">
-        <Link to="/">
+        <Link to="/blog">
           Blog
         </Link>
       </li>
