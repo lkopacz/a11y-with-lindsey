@@ -1,0 +1,19 @@
+.featured-image-block {
+  margin: 3rem 0;
+  border-top: 15px solid #25768F;
+  background: #fff;
+}
+
+.featured-image-block__wrapper {
+  display: flex;
+  padding: 3rem 2rem;
+}
+
+.featured-image-block__img {
+  margin-right: 2rem;
+}
+
+.featured-image-block__img img {
+  border-radius: 60px;
+  border: 6px solid #FED8CE;
+}
