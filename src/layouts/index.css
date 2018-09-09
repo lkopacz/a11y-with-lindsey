@@ -35,6 +35,7 @@ h6 {
 
 .main {
   margin: 0 auto;
+  min-height: 65vh;
 }
 
 @media only screen and (min-width: 767px) {
@@ -89,9 +90,7 @@ a:hover {
 }
 
 .gatsby-resp-image-wrapper {
-  float: left;
-  width: 100%;
-  padding-right: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 a {
