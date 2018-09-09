@@ -4,7 +4,7 @@ module.exports = {
     author: 'Lindsey Kopacz',
     siteUrl: '',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
