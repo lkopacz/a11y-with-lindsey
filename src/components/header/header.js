@@ -13,7 +13,7 @@ class Header extends React.Component {
     let header;
 
     if (isFront) {
-      header = <h1 style={{ margin: 0, padding: "2rem 0 1rem" }}>
+      header = <h1 style={{ margin: 0, padding: "4rem 0 2rem" }}>
         <Link
           to="/"
           style={{
@@ -27,7 +27,7 @@ class Header extends React.Component {
         </Link>
       </h1>
     } else {
-      header = <div style={{ margin: 0, padding: "2rem 0 1rem" }}>
+      header = <div style={{ margin: 0, padding: "4rem 0 2rem" }}>
         <Link
           to="/"
           style={{
