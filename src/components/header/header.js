@@ -19,6 +19,7 @@ class Header extends React.Component {
           style={{
             color: 'white',
             textDecoration: 'none',
+            borderBottom: 'none'
           }}
         >
           <span className="visually-hidden"> {this.props.siteTitle} </span>
@@ -32,6 +33,7 @@ class Header extends React.Component {
           style={{
             color: 'white',
             textDecoration: 'none',
+            borderBottom: 'none'
           }}
         >
           <span className="visually-hidden"> {this.props.siteTitle} </span>

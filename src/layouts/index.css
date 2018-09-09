@@ -12,6 +12,7 @@ body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   background: var(--off-white);
+  color: var(--navy);
 }
 
 h1,
@@ -32,3 +33,97 @@ h6 {
   overflow: hidden;
 }
 
+.main {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) {
+  .main {
+    max-width: 767px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    max-width: 1024px;
+  }
+}
+
+time {
+  position: relative;
+  display: inline-block;
+  font-family: "PT Serif", serif;
+  color: var(--vermillion);
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+time::after {
+  content: "\2014";
+  position: absolute;
+  top: 0;
+  right: -19px;
+}
+
+a {
+  padding-bottom: 2px;
+  border-bottom: 2px solid;
+  text-decoration: none;
+  color: var(--teal);
+  font-weight: bold;
+  transition: padding-bottom 0.3s ease;
+}
+
+a:hover {
+  padding-bottom: 4px;
+}
+
+.gatsby-resp-image-link { 
+  border-bottom: none;
+  padding: 0;
+}
+
+.gatsby-resp-image-link:hover {
+  padding: 0;
+}
+
+.gatsby-resp-image-wrapper {
+  float: left;
+  width: 100%;
+  padding-right: 2rem;
+}
+
+h2 a {
+  color: var(--navy);
+}
+
+p {
+  line-height: 1.5;
+}
+
+pre {
+  background: #636363;
+  color: var(--peach);
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+code {
+  font-size: 0.9325rem;
+}
+
+blockquote {
+  position: relative;
+  margin: 3rem auto;
+  border-left: 8px solid #D73C13;
+  background: #fff;
+  padding: 3rem 3rem 3rem 5rem;
+  width: 60%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #640D23;
+}
