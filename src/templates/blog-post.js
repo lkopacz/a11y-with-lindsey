@@ -16,10 +16,10 @@ class BlogPostTemplate extends React.Component {
           <nav className="breadcrumb">
             <ol>
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>{post.frontmatter.title}</li>
             </ol>

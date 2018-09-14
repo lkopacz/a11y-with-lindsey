@@ -10,7 +10,7 @@ const About = ({data}) => (
       <nav className="breadcrumb">
         <ol>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>About</li>
         </ol>
