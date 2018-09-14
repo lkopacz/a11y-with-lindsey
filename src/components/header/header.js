@@ -13,7 +13,7 @@ class Header extends React.Component {
     let header;
 
     if (isFront) {
-      header = <h1 style={{ margin: 0, padding: "4rem 0 2rem" }}>
+      header = <h1 className="logo">
         <Link
           to="/"
           style={{
@@ -23,11 +23,11 @@ class Header extends React.Component {
           }}
         >
           <span className="visually-hidden"> {this.props.siteTitle} </span>
-          <img src={Logo} alt="" style={{width: 200}} />
+          <img src={Logo} alt="" />
         </Link>
       </h1>
     } else {
-      header = <div style={{ margin: 0, padding: "4rem 0 2rem" }}>
+      header = <div className="logo">
         <Link
           to="/"
           style={{
@@ -37,7 +37,7 @@ class Header extends React.Component {
           }}
         >
           <span className="visually-hidden"> {this.props.siteTitle} </span>
-          <img src={Logo} alt="" style={{width: 200}} />
+          <img src={Logo} alt="" />
         </Link>
       </div>
     }
@@ -46,7 +46,7 @@ class Header extends React.Component {
       <header>
         <div className="header-wrapper">
           {header}
-          <Menu />
+          <Menu class="menu-main" />
         </div>
       </header>
     )

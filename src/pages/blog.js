@@ -12,24 +12,32 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <div className="main">
-        <h1>Blog</h1>
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div style={{marginTop: 24, marginBottom: 24}} key={node.fields.slug}>
-              <h2 style={{marginTop: 10, marginBottom: 10}} >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
+          <nav className="breadcrumb">
+            <ol>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>Blog</li>
+            </ol>
+          </nav>
+          <h1>Blog</h1>
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <div style={{marginTop: 24, marginBottom: 24}} key={node.fields.slug}>
+                <h2 style={{marginTop: 10, marginBottom: 10}} >
+                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h2>
+                <time>{node.frontmatter.date}</time>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <Link to={node.fields.slug}>
+                  Read more<span className="visually-hidden"> about {title}</span>
                 </Link>
-              </h2>
-              <time>{node.frontmatter.date}</time>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <Link to={node.fields.slug}>
-                Read more<span className="visually-hidden"> about {title}</span>
-              </Link>
-            </div>
-          )
-        })}
+              </div>
+            )
+          })}
         </div>
       </div>
     )

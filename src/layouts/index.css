@@ -36,6 +36,7 @@ h6 {
 .main {
   margin: 0 auto;
   min-height: 65vh;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 767px) {
@@ -125,6 +126,7 @@ blockquote {
   font-weight: 500;
   line-height: 1.6;
   color: var(--marron);
+  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, .11);
 }
 
 blockquote::before {
@@ -135,4 +137,19 @@ blockquote::before {
   left: 33px;
   font-size: 4em;
   color: var(--marron);
+}
+
+.breadcrumb ol {
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: inline;
+  list-style: none;
+  padding-right: 7px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ' \BB ';
+  padding-left: 3px;
 }

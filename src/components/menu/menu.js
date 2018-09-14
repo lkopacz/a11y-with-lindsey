@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './menu.css'
 
-const Menu = () => (
-  <nav style={{alignSelf: "flex-end"}}>
+const Menu = (props) => (
+  <nav className={props.class} style={{alignSelf: 'flex-end' }}>
     <ul className="menu">
       <li className="menu-item">
         <Link to="/about">

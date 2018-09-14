@@ -5,19 +5,32 @@
 
 footer {
   background: var(--navy);
-  margin: 0 auto;
-  padding: 15px 20%;
-  text-align: center;
+  padding: 15px 0;
+  /* text-align: center; */
   font-size: 0.75rem;
   color: var(--off-white);
+}
+
+.footer-wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-menu li {
+  list-style: none;
+  text-align: left;
 }
 
 footer a {
   color: var(--off-white);
 }
 
+.social {
+  display: flex;
+  padding: 0;
+}
+
 .social li {
-  display: inline-block;
   list-style: none;
   padding: 1rem;
 }
@@ -25,4 +38,26 @@ footer a {
 .social a {
   font-size: 1.5rem;
   border-bottom: none;
+}
+
+.credit {
+  padding-left: 1rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 767px;
+  }
+
+  .social {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-wrapper {
+    max-width: 1024px;
+  }
 }

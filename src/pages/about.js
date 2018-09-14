@@ -7,6 +7,14 @@ const About = ({data}) => (
   <div>
     <Helmet title="a11y with Lindsey - About" />
     <div className="main">
+      <nav className="breadcrumb">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>About</li>
+        </ol>
+      </nav>
       <h1>About</h1>
       <p>My passion for web accessibility started in 2016, 
         when I realized how much it combined my love of technology 
