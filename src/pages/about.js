@@ -16,9 +16,24 @@ const About = ({data}) => (
         </ol>
       </nav>
       <h1>About</h1>
-      <p>My passion for web accessibility started in 2016, 
-        when I realized how much it combined my love of technology 
-        and the web with my passion of diversity and inclusion. 
+      <p>I started learning about web accessibility started in 2016 when I got 
+        a ticket at work to do some accessibility testing. I was told to 
+        download the Wave chrome extension and make a ticket for every 
+        error or alert that we came across. Quite frankly, I was copying 
+        and pasting the errors, having no clue what any of them meant. 
+        I knew accessibility was important, but I had no idea what any 
+        of it meant.</p>
+
+      <p>It wasn't until 2016 Tech Lady Hackathon (now Tech Rebalanced) where 
+        I challenged myself to speak about accessibility publicly that I forced 
+        myself to understand why it's important. I tried to explain it to my former 
+        and current self and had many a-ha moments. I was honest in explaining 
+        those to my audience and a lot of people came to me afterwards telling 
+        me how much they connected to it.</p>
+
+      <p>I realized how much accessibility combined my love of technology 
+        and the web with my passion of diversity and inclusion. Accessibility literally 
+        helps people access the web and assures everyone can use your technology.
         I stopped thinking about it as a purely technical issue and 
         more of an empathy and inclusion issue. After that, my love and 
         desire to teach people about it and how approachable the problem can be has been my 
@@ -59,15 +74,15 @@ const About = ({data}) => (
         a developer improved tremendously.</p>
     
       <h2>About Me</h2>
-      <p>I am a self-taught web developer with 4 years of experience. I taught myself by 
-        studying for 1 hour before my day job every single day. That is the same drive I am 
-        bringing to this blog, and to my business.</p>
+      <p>I am a self-taught web developer with 4 years of <em>professional</em> experience. When 
+        I was starting out, I taught myself by studying for 1 hour before my desk job every single 
+        day. I started getting involved with the Drupal Community and that landed me my first job. 
+        That is the same drive I am bringing to this blog, and to my business.</p>
 
-      <p>Currently, I am a front-end developer who specializes in Drupal. In my free time, I also help 
-        with website development for <a href="https://www.drupalgovcon.org/">Drupal GovCon</a> and I also 
-        help lead the Front End Group for <a href="https://www.womenwhocode.com/dc">Women Who Code DC</a>. 
-        My interests vary depending on the topic, but I love fitness, learning more about JavaScript, marketing, 
-        craft beer, cooking, and my cat!</p>
+      <p>Currently, I am a front-end developer who specializes in Drupal with Acquia Professional Services. 
+        In my free time, I also help lead the Front End Group for <a href="https://www.womenwhocode.com/dc">Women Who Code DC</a>. 
+        My interests vary depending on the topic, but I love weight lifting, makeup artistry, learning more 
+        about JavaScript, marketing, craft beer, cooking, and my cat!</p>
     </div>
   </div>
 )
