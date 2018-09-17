@@ -6,8 +6,6 @@
 footer {
   background: var(--navy);
   padding: 15px 0;
-  /* text-align: center; */
-  font-size: 0.75rem;
   color: var(--off-white);
 }
 
@@ -41,7 +39,8 @@ footer a {
 }
 
 .credit {
-  padding-left: 1rem;
+  font-size: 0.75rem;
+  margin: 2.5rem 0 1rem;
 }
 
 @media only screen and (min-width: 767px) {
@@ -53,6 +52,10 @@ footer a {
 
   .social {
     justify-content: flex-end;
+  }
+
+  .credit {
+    text-align: center;
   }
 }
 

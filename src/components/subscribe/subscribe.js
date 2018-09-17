@@ -45,6 +45,11 @@ class Subscribe extends React.Component {
 							name="MERGE0" 
 							id="MERGE0" 
 							size="25" 
+							style={{
+								borderColor: '#F3E9EA', 
+								color: '#F3E9EA',
+								fontSize: '1rem'
+							}}
 							value={this.state.emailValue} 
 							onChange={this.handleEmailInput}
 						/>
@@ -56,6 +61,11 @@ class Subscribe extends React.Component {
 							name="MERGE1" 
 							id="MERGE1" 
 							size="25" 
+							style={{
+								borderColor: '#F3E9EA',
+								color: '#F3E9EA',
+								fontSize: '1rem'
+							}}
 							value={this.state.nameValue}
 							onChange={this.handleNameInput}
 						/>

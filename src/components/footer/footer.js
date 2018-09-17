@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from '../menu/menu'
+import Subscribe from '../subscribe/subscribe'
 import './footer.css'
 
 const Footer = () => (
@@ -9,12 +10,12 @@ const Footer = () => (
       <div className="footer-details">
         <ul className="social">
           <li>
-            <a href="https://www.linkedin.com/in/lindsey-kopacz-70a09033?trk=hp-identity-photo" aria-label="Lindsey's LinkedIn">
+            <a href="https://www.linkedin.com/in/lindsey-kopacz-70a09033" aria-label="Lindsey's LinkedIn">
               <i className="fab fa-linkedin-in" aria-hidden="true"></i>
             </a>
           </li>
           <li>
-            <a href="/" aria-label="Lindsey's Twitter">
+            <a href="https://twitter.com/littlekope0903" aria-label="Lindsey's Twitter">
               <i className="fab fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
@@ -24,8 +25,11 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-        <span className="credit">Logo and Color Scheme design by <a href="https://www.linkedin.com/in/raquel-breternitz/">Raquel Breternitz</a></span>
+        <Subscribe />
       </div>
+    </div>
+    <div className="credit">
+      Logo and Color Scheme design by <a href="https://www.linkedin.com/in/raquel-breternitz/">Raquel Breternitz</a>
     </div>
   </footer>
 );

@@ -1,35 +1,10 @@
-.mailchimp-signup {
-  margin: 3rem auto;
-}
-
-@media only screen and (min-width: 767px) {
-  .mailchimp-signup {
-    width: 45%;
-    max-width: 767px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .mailchimp-signup {
-    max-width: 1024px;
-  }
-}
-
-.mailchimp-signup__form {
-  margin: 0 auto;
-  width: 75%;
-  background: white;
-  padding: 2rem;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
-}
-
 .mailchimp-signup__form h2 {
   margin-top: 0;
 }
 
 .mailchimp-signup__form label {
-  display: block;
+  display: inline-block;
+  width: 6.875rem;
 }
 
 .mailchimp-signup__form label::after {
@@ -50,4 +25,4 @@
   color: #fff;
   background: #D73C13;
   font-size: 1rem;
-}
+} 

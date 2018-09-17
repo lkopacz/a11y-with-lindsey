@@ -4,7 +4,7 @@ import Hero from '../components/hero/hero'
 import Quote from '../components/quote/quote'
 import computer from '../images/computer.jpg'
 import get from 'lodash/get'
-import Subscribe from '../components/subscribe/subscribe'
+// import Subscribe from '../components/subscribe/subscribe'
 import './index.css'
 
 class IndexPage extends React.Component {
@@ -47,7 +47,6 @@ class IndexPage extends React.Component {
             })}
           </div>
         </div>
-        <Subscribe />
       </div>
     )
   }

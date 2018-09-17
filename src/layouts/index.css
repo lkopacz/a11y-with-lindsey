@@ -127,6 +127,12 @@ blockquote::before {
   color: var(--marron);
 }
 
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid;
+}
+
 .breadcrumb ol {
   padding: 0;
 }
