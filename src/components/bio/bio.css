@@ -6,12 +6,14 @@
 }
 
 .featured-image-block__wrapper {
-  display: flex;
+  position: relative;
   padding: 3rem 2rem;
 }
 
 .featured-image-block__img {
-  margin-right: 2rem;
+  position: absolute;
+  right: -56px;
+  top: -56px;
 }
 
 .featured-image-block__img img {

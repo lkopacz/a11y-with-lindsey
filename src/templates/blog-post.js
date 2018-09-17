@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import Bio from '../components/bio/bio'
+import Sidebar from '../components/sidebar/sidebar'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <div>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <div className="main">
+        <div className="wrapper with-sidebar">
           <nav className="breadcrumb">
             <ol>
               <li>
@@ -24,12 +24,16 @@ class BlogPostTemplate extends React.Component {
               <li>{post.frontmatter.title}</li>
             </ol>
           </nav>
-          <h1>{post.frontmatter.title}</h1>
-          <time>
-            {post.frontmatter.date}
-          </time>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <Bio />
+          <div className="content">
+            <main>
+            <h1>{post.frontmatter.title}</h1>
+            <time>
+              {post.frontmatter.date}
+            </time>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </main>
+            <Sidebar location="blog" />
+          </div>
         </div>
       </div>
     )

@@ -33,22 +33,10 @@ h6 {
   overflow: hidden;
 }
 
-.main {
+.wrapper {
   margin: 0 auto;
   min-height: 65vh;
   padding: 20px;
-}
-
-@media only screen and (min-width: 767px) {
-  .main {
-    max-width: 767px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main {
-    max-width: 1024px;
-  }
 }
 
 time {
@@ -152,4 +140,30 @@ blockquote::before {
 .breadcrumb li:not(:last-child)::after {
   content: ' \BB ';
   padding-left: 3px;
+}
+
+@media only screen and (min-width: 767px) {
+  .wrapper {
+    max-width: 767px;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .with-sidebar main {
+    flex-basis: 66%;
+  }
+
+  aside {
+    padding-left: 25px;
+    flex-basis: 30%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    max-width: 1024px;
+  }
 }

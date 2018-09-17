@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Sidebar from '../components/sidebar/sidebar'
 
 class BlogIndex extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
-        <div className="main">
+        <div className="wrapper with-sidebar">
           <nav className="breadcrumb">
             <ol>
               <li>
@@ -20,24 +21,29 @@ class BlogIndex extends React.Component {
               <li>Blog</li>
             </ol>
           </nav>
-          <h1>Blog</h1>
-          {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug
-            return (
-              <div style={{marginTop: 24, marginBottom: 24}} key={node.fields.slug}>
-                <h2 style={{marginTop: 10, marginBottom: 10}} >
-                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h2>
-                <time>{node.frontmatter.date}</time>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                <Link to={node.fields.slug}>
-                  Read more<span className="visually-hidden"> about {title}</span>
-                </Link>
-              </div>
-            )
-          })}
+          <div className="content">
+            <main>
+              <h1>Blog</h1>
+              {posts.map(({ node }) => {
+                const title = get(node, 'frontmatter.title') || node.fields.slug
+                return (
+                  <div style={{marginTop: 24, marginBottom: 24}} key={node.fields.slug}>
+                    <h2 style={{marginTop: 10, marginBottom: 10}} >
+                      <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                        {title}
+                      </Link>
+                    </h2>
+                    <time>{node.frontmatter.date}</time>
+                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                    <Link to={node.fields.slug}>
+                      Read more<span className="visually-hidden"> about {title}</span>
+                    </Link>
+                  </div>
+                )
+              })}
+            </main>
+            <Sidebar location="blog" />
+          </div>
         </div>
       </div>
     )
