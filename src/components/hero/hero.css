@@ -20,3 +20,19 @@
   width: 100%; 
   height: calc(100vh - 159px);
 }
+
+.hero__cta a {
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  font-weight: 500;
+  color: #fff;
+  background: #25768F;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: transform 0.3s; 
+}
+
+.hero__cta a:hover {
+  transform: scale(1.1);
+}

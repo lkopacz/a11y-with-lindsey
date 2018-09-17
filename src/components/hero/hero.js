@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import './hero.css'
 
 const Hero = (props) => (
@@ -10,6 +11,9 @@ const Hero = (props) => (
     <div className="hero__text-wrapper">
       <div className="hero__body">
         <p>Empowering and teaching developers to make their Internet, <strong>Everyone's Internet.</strong></p>
+      </div>
+      <div className="hero__cta">
+        <Link to="/about">About Me</Link>
       </div>
     </div>
   </div>
