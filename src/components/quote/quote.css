@@ -1,23 +1,21 @@
 .quote {
   margin: 0 auto;
+  padding: 0 20px;
   position: relative;
   z-index: 20;
   margin-top: -100px;
-  background: #fff;
   margin-bottom: 50px;
-  border-left: 15px solid #D73C13;
-  padding-top: 50px;
-  padding-bottom: 50px;
   box-sizing: border-box;
   text-align: center;
   color: #640D23;
-  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, .11);
+  padding: 0 20px;
 }
 
 
 @media only screen and (min-width: 767px) {
   .quote {
     max-width: 767px;
+    padding: 0;
   }
 }
 
@@ -27,7 +25,15 @@
   }
 }
 
-.quote > h2 {
+.quote__wrapper {
+  border-left: 15px solid #D73C13;
+  padding: 50px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, .11);
+}
+
+.quote__wrapper > h2 {
   letter-spacing: 4px;
   line-height: 1;
   font-size: 2.5rem;

@@ -3,8 +3,8 @@ import './quote.css'
 
 const Quote = (props) => (
   <div className="quote">
-		<h2>{props.header}</h2>
-		<div className="quote__wrapper">    
+		<div className="quote__wrapper">  
+			<h2>{props.header}</h2>  
 			<div className="quote__text">{props.text}</div>
 			<div className="quote__source-wrapper">
 				<div className="quote__source-label">Source</div>

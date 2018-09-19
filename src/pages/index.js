@@ -29,9 +29,10 @@ class IndexPage extends React.Component {
                 <div 
                   className="blog__item" 
                   style={{
-                    background: '#fff', 
-                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.11)', 
+                    margin: '1.5rem 0',
                     padding: '1.5rem',
+                    background: '#fff', 
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.11)',
                     boxSizing: 'border-box',
                   }} 
                 >
