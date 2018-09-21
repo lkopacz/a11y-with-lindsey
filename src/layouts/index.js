@@ -10,9 +10,20 @@ const Layout = ({ children, data, location }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
+      htmlAttributes={{ lang: 'en' }}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { 
+          name: 'description',
+          content: 'a11y with Lindsey, where we want to make our internet, Everyone\'s internet!' 
+        },
+        {
+          name: 'keywords',
+          content: 'sample, something'
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width'
+        }
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} location={location} />
