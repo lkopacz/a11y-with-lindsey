@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 
 const About = ({data}) => (
   <div>
-    <Helmet title="a11y with Lindsey - About" />
+    <Helmet title="About | a11y with Lindsey" />
     <div className="wrapper">
       <nav className="breadcrumb">
         <ol>

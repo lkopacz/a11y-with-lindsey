@@ -4,7 +4,6 @@ import Hero from '../components/hero/hero'
 import Quote from '../components/quote/quote'
 import computer from '../images/computer.jpg'
 import get from 'lodash/get'
-// import Subscribe from '../components/subscribe/subscribe'
 import './index.css'
 
 class IndexPage extends React.Component {
@@ -66,9 +65,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
