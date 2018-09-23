@@ -18,7 +18,7 @@ const Layout = ({ children, data, location }) => (
         },
         {
           name: 'keywords',
-          content: 'sample, something'
+          content: 'accessibility, DC, inclusion, empathy'
         },
         {
           name: 'viewport',

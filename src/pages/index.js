@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
                   <time>{node.frontmatter.date}</time>
                   <h2 className="blog__title">{node.frontmatter.title}</h2>
                   <div><p>{node.excerpt}</p></div>
-                  <Link to={node.fields.slug}>
+                  <Link to={node.frontmatter.path}>
                     Read more 
                     <span className="visually-hidden">about {node.frontmatter.title}</span>
                   </Link>
@@ -68,6 +68,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            path
           }
         }
       }

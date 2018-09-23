@@ -12,6 +12,16 @@ export default function Template({ data }) {
       <div>
         <Helmet 
           title={`${frontmatter.title} | ${siteTitle}`}
+          meta={[
+            {
+              name: "description",
+              content: excerpt
+            },
+            {
+              name: "keywords",
+              content: frontmatter.tags.join(", ")
+            }
+          ]}
         />
         <div className="wrapper with-sidebar">
           <nav className="breadcrumb">

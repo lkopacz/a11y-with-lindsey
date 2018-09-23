@@ -11,7 +11,19 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet 
+          title={siteTitle} 
+          meta={[
+            { 
+              name: 'description',
+              content: 'a11y with Lindsey blog, where you can learn tidbits of accessibility tips for developers' 
+            },
+            {
+              name: 'keywords',
+              content: 'accessibility, blogging, DC, inclusion, empathy'
+            }
+          ]}
+        />
         <div className="wrapper with-sidebar">
           <nav className="breadcrumb">
             <ol>
