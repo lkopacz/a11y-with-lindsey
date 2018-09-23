@@ -1,7 +1,7 @@
 ---
 title: Keeping the User in Mind Series - Vision (P1)
-date: "2018-06-27T00:24:06Z"
-path: "/user-mind-series-vision"
+date: "2018-06-27"
+path: "/blog/user-mind-series-vision"
 tags: ["screenreaders", "colorblind", "accessibility", "user experience"]
 published: true
 ---
