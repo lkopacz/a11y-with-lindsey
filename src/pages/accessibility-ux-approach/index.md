@@ -1,6 +1,9 @@
 ---
 title: Keeping the User in Mind Series - Vision (P1)
-date: "2018-06-27T00:24:06Z"
+date: "2018-06-27"
+path: "/blog/user-mind-series-vision"
+tags: ["screenreaders", "colorblind", "accessibility", "user experience"]
+published: true
 ---
 For me personally, the largest difficulty in learning accessibility was the long Section 508 Compliance reports I used to get when I first started learning about this stuff. It was so stuffy and jargony and quite frankly, when you receive a wall of all the errors on your site and that report is approximately 40 pages long, addressing those issues becomes quite daunting.
 

@@ -4,7 +4,6 @@ import Hero from '../components/hero/hero'
 import Quote from '../components/quote/quote'
 import computer from '../images/computer.jpg'
 import get from 'lodash/get'
-// import Subscribe from '../components/subscribe/subscribe'
 import './index.css'
 
 class IndexPage extends React.Component {
@@ -39,7 +38,7 @@ class IndexPage extends React.Component {
                   <time>{node.frontmatter.date}</time>
                   <h2 className="blog__title">{node.frontmatter.title}</h2>
                   <div><p>{node.excerpt}</p></div>
-                  <Link to={node.fields.slug}>
+                  <Link to={node.frontmatter.path}>
                     Read more 
                     <span className="visually-hidden">about {node.frontmatter.title}</span>
                   </Link>
@@ -62,16 +61,17 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { published: { eq: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM D, YYYY")
             title
+            path
           }
         }
       }

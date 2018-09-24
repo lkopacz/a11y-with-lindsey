@@ -5,7 +5,19 @@ import Link from 'gatsby-link'
 
 const About = ({data}) => (
   <div>
-    <Helmet title="a11y with Lindsey - About" />
+    <Helmet 
+      title="About | a11y with Lindsey" 
+      meta={[
+        {
+          name: "description",
+          content: "In 2017, I broke my right middle finger. It wasn't until then I realized how much we take our ability for granted. At any given time, we can become temporarily or permanently disabled."
+        },
+        {
+          name: "keywords",
+          content: "accessibility, DC, inclusion, empathy"
+        }
+      ]}  
+      />
     <div className="wrapper">
       <nav className="breadcrumb">
         <ol>

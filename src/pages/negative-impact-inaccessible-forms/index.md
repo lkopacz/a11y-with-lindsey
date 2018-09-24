@@ -1,6 +1,9 @@
 ---
 title: The negative impact of inaccessible forms. 
-date: "2018-06-23T22:59:06Z"
+date: "2018-06-23"
+path: "/blog/negative-impact-inaccessible-forms"
+tags: ["screenreaders", "forms", "accessibility"]
+published: true
 ---
 
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
