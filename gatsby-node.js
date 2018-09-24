@@ -1,5 +1,4 @@
 const path = require("path");
-const _ = require("lodash");
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
@@ -10,7 +9,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     {
       allMarkdownRemark(
         filter: { frontmatter: { published: { eq: true } } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { order: DESC, fields: [frontmatter___date] }
       ) {
         edges {
           node {
