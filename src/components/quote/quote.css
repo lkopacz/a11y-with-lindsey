@@ -57,6 +57,7 @@
 .quote__source-label,
 .quote__source-item {
   display: inline-block;
+  margin: 0 0.25rem;
 }
 
 .quote__source-label::after {

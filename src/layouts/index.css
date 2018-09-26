@@ -94,7 +94,6 @@ pre {
   background: #636363;
   color: var(--peach);
   display: block;
-  width: 50%;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -146,6 +145,18 @@ input {
 .breadcrumb li:not(:last-child)::after {
   content: ' \BB ';
   padding-left: 3px;
+}
+
+.block__header {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.block__body {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 767px) {
