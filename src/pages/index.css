@@ -3,6 +3,26 @@
   padding: 0 20px;
 }
 
+.blog__more-link {
+  text-align: center;
+}
+
+.blog__more-link a {
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  font-weight: 500;
+  color: #fff;
+  background: #D73C13;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: transform 0.3s
+}
+
+.blog__more-link a:hover {
+  transform: scale(1.1);
+}
+
 @media only screen and (min-width: 767px) {
   .blog__items {
     display: flex;

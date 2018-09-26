@@ -20,6 +20,14 @@ class IndexPage extends React.Component {
           link="https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html" 
           linkText="U.S. Census, 2010"
         />
+        <div className="block">
+          <h2 className="block__header">What is "a11y"</h2>
+          <div className="block__body">
+            <p>"a11y" stands for accessibility. It comes from the 11 letters between 
+            the first and last letter. This has become a common phrase for 
+            Web Accessibility.</p>
+          </div>
+        </div>
         <div style={{margin: '6rem 0'}}>
           <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
           <div className="blog__items">
@@ -45,6 +53,9 @@ class IndexPage extends React.Component {
                 </div>
               )
             })}
+          </div>
+          <div className="blog__more-link">
+            <Link to="/blog">See All Blog Posts</Link>
           </div>
         </div>
       </div>

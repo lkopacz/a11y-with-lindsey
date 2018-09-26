@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   box-sizing: border-box;
-  padding-top: calc((100vh - 350px)/2);
-  height: calc(100vh - 159px);
+  padding-top: 10rem;
+  height: calc(100vh - 161px);
   color: #1E3650;
   background: rgba(254, 216, 206, 0.7);
   text-shadow: 0.5px 0.5px grey;
@@ -18,7 +18,7 @@
 
 .hero__background-image img {
   width: 100%; 
-  height: calc(100vh - 159px);
+  height: calc(100vh - 161px);
 }
 
 .hero__cta a {
