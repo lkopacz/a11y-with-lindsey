@@ -16,7 +16,7 @@ const Menu = (props) => (
         </Link>
       </li>
       <li className="menu-item">
-        <Link to="/">
+        <Link to="/contact">
           Contact
         </Link>
       </li>
