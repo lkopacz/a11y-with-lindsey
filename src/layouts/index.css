@@ -103,7 +103,7 @@ code {
   font-size: 0.9325rem;
 }
 
-blockquote {
+blockquote:not(.twitter-tweet) {
   position: relative;
   margin: 3rem auto;
   border-left: 8px solid var(--vermillion);
@@ -117,7 +117,7 @@ blockquote {
   box-shadow: 1px 0.5px 0px rgba(0, 0, 0, .11);
 }
 
-blockquote::before {
+blockquote:not(.twitter-tweet)::before {
   position: absolute;
   content: '\201C';
   font-family: Arial;
@@ -125,6 +125,11 @@ blockquote::before {
   left: 33px;
   font-size: 4em;
   color: var(--marron);
+}
+
+twitterwidget {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
