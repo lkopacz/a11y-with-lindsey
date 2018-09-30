@@ -3,7 +3,7 @@
   padding: 0 20px;
   position: relative;
   z-index: 20;
-  margin-top: -100px;
+  margin-top: 30px;
   margin-bottom: 50px;
   box-sizing: border-box;
   text-align: center;
@@ -62,4 +62,10 @@
 
 .quote__source-label::after {
   content: ':';
+}
+
+@media only screen and (min-width: 767px) {
+  .quote {
+    margin-top: -100px;
+  }
 }

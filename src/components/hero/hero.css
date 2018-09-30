@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   box-sizing: border-box;
-  padding-top: 10rem;
-  height: calc(100vh - 161px);
+  padding-top: calc((100vh - 422px)/2);
+  height: calc(100vh - 152px);
   color: #1E3650;
   background: rgba(254, 216, 206, 0.7);
   text-shadow: 0.5px 0.5px grey;
@@ -18,7 +18,11 @@
 
 .hero__background-image img {
   width: 100%; 
-  height: calc(100vh - 161px);
+  height: calc(100vh - 152px);
+}
+
+.hero__body p {
+  line-height: 1.25;
 }
 
 .hero__cta a {
@@ -35,4 +39,23 @@
 
 .hero__cta a:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (min-width: 767px) {
+  .hero {
+    padding-top: calc((100vh - 419px)/2);
+    height: calc(100vh - 161px);
+  }
+
+  .hero__background-image img {
+    height: calc(100vh - 161px);
+  }
+
+  .hero__body {
+    width: 57%;
+  }
+
+  .hero__body p {
+    line-height: 1.5;
+  }
 }
