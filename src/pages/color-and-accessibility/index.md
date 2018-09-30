@@ -29,7 +29,7 @@ According to [National Institute of Health, National Eye Institute](https://nei.
 
 The above tweet makes me laugh, mostly because I am relatively young (29), with 20/20 vision and only wear glasses at the computer to reduce eye strain. I have *missed* links that were gray on gray before. 
 
-So what is the proper contrast? Proper contrast is 3:1 for large text and 4.5:1 for smaller text. When I first saw these evaluations, I thought to myself: What the heck does small or large mean, that's subjective!? Well, they do actually define it. Large text is anything larger than 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger. Anything smaller is... small text.
+So what is the proper contrast? Proper contrast is 3:1 for large text and 4.5:1 for smaller text. When I first saw these evaluations, I thought to myself: What the heck does small or large mean, that's subjective!? Well, they do actually define it. Large text is anything larger than 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger. Anything smaller is...small text.
 
 ## Tools to use 
 1. [WebAim contrast checker](https://webaim.org/resources/contrastchecker/). Let's be real, I don't know how to manually check hues and contrast on my own. That is way above my analytical and artistic skills. But in order to assess contrast, I use this contrast checker. I simply put in the hex value of the Foreground Color (text color) and Background color, and it will tell me what the contrast is. Another thing I like is if you're playing with color contrast, you can adjust it to be lighter or darker to stay within the brand while knowing for certain that your color usage is acceptable.
