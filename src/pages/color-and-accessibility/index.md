@@ -16,7 +16,6 @@ There are plenty of technical things I could talk about here, but let's talk abo
 Then came [the Jets-Bills game](https://www.cbssports.com/nfl/news/look-bills-jets-game-is-complete-torture-for-color-blind-people/), which was a nightmare for the 13 million (at time of the report) Americans who suffer from Red/Green colorblindness. 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">heres what the bills jets game looks like for red green color blind people <a href="https://t.co/TAjoQpOfCj">pic.twitter.com/TAjoQpOfCj</a></p>&mdash; kurt (@kurtwearshats) <a href="https://twitter.com/kurtwearshats/status/664992830629281792?ref_src=twsrc%5Etfw">November 13, 2015</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Ultimately, your design may look spectacular to you, but it may be painfully frustrating for your users. Particularly if you're using color to determine meaning.
 
@@ -25,7 +24,6 @@ Ultimately, your design may look spectacular to you, but it may be painfully fru
 According to [National Institute of Health, National Eye Institute](https://nei.nih.gov/health/color_blindness/facts_about), as many as 8 percent of men and 0.5 percent of women with Northern European ancestry have the common form of red-green color blindness. However, color contrast isn't important only for those that suffer from colorblindness. This can also impact people with aging and/or sleepy eyes or even people trying to read a site on a mobile device outside in the sun. 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">As my vision declines, there is not one single day that goes by that I don&#39;t curse asshole web-designers who use grey type.</p>&mdash; son of an asylum seeker, father of an immigrant (@doctorow) <a href="https://twitter.com/doctorow/status/908702406338240512?ref_src=twsrc%5Etfw">September 15, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The above tweet makes me laugh, mostly because I am relatively young (29), with 20/20 vision and only wear glasses at the computer to reduce eye strain. I have *missed* links that were gray on gray before. 
 
