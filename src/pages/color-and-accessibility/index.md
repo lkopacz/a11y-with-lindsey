@@ -1,9 +1,9 @@
 ---
 title: Design Tips - Color and Accessibility
-date: "2018-10-09"
+date: "2018-10-16"
 path: "/blog/design-tips-color-accessibility"
 tags: ["screenreaders", "colorblind", "accessibility", "user experience", "testing"]
-published: true
+published: false
 ---
 This topic has the potential to be a touchy one for marketing departments and designers. There have been plenty of approved designs I have received, just to find their new branding's color scheme is not accessible. Sometimes our clients or organizations fall in love with their new brand and design, and asking them to change on the branding or the design is actually like asking them to change the new identity they just fell in love with. The ironic part is there are usually accessibility requirements on the clients' SOW, but the designers didn't know that their colors were inaccessible. 
 
