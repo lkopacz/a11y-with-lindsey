@@ -23,6 +23,11 @@
   padding: 0.75rem;
 }
 
+.privacy-policy a {
+  text-transform: none;
+  font-size: 0.75rem;
+}
+
 @media only screen and (min-width: 767px) {
   .menu-main li {
     display: inline-block;
@@ -36,10 +41,9 @@
   .menu a:hover {
     padding: 1rem;
   }
-}
 
-/* @media only screen and (min-width: 1024px) {
-  .main-menu {
-    max-width: 1024px;
+  .privacy-policy a {
+    text-transform: none;
+    font-size: 0.75rem;
   }
-}  */
+}

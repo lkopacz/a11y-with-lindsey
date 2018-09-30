@@ -46,7 +46,7 @@ class Header extends React.Component {
       <header>
         <div className="header-wrapper">
           {header}
-          <Menu class="menu-main" />
+          <Menu class="menu-main" position="flex-end" hasPrivacyPolicy={false}/>
         </div>
       </header>
     )

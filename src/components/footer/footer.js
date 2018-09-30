@@ -6,7 +6,7 @@ import './footer.css'
 const Footer = () => (
   <footer>
     <div className="footer-wrapper">
-      <Menu class="footer-menu" />
+      <Menu class="footer-menu" position="flex-start" hasPrivacyPolicy={true}/>
       <div className="footer-details">
         <ul className="social">
           <li>
