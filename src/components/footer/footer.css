@@ -40,7 +40,7 @@ footer a {
 
 .credit {
   font-size: 0.75rem;
-  margin: 2.5rem 0 1rem;
+  margin: 2.5rem 20px 1rem;
 }
 
 @media only screen and (min-width: 767px) {

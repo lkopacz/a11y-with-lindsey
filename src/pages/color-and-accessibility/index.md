@@ -1,13 +1,13 @@
 ---
-title: Keeping the User in Mind Series - Vision (P1)
-date: "2018-06-27"
-path: "/blog/user-mind-series-vision"
+title: Design Tips - Color and Accessibility
+date: "2018-09-26"
+path: "/blog/color-accessibility-designers-supposed-nightmare"
 tags: ["screenreaders", "colorblind", "accessibility", "user experience"]
 published: false
 ---
-For me personally, the largest difficulty in learning accessibility was the long Section 508 Compliance reports I used to get when I first started learning about this stuff. It was so stuffy and jargony and quite frankly, when you receive a wall of all the errors on your site and that report is approximately 40 pages long, addressing those issues becomes quite daunting.
+This topic has the potential to be a touchy one for marketing departments and designers. There have been plenty of approved designs I have received, just to find their new branding's color scheme is not accessible. Sometimes our clients or organizations fall in love with their new brand and design, and asking them to change on the branding or the design . The ironic part is there are usually accessibility requirements on the clients' SOW, but the designers didn't know that their colors were inaccessible. 
 
-If I took away the jargon portion of these reports, then maybe I could actually tackle solving the problem. What I challenged myself to do is ask, OK what does this actually mean? When I see an error on an icon link that says "A text equivalent for every non-text element shall be provided," I tried to ask myself why that would be important to the end user. That's when I started thinking about the 4 major categories of disability.
+I worked with a designer on this site (see footer to get her info, she was fantastic to work with). In terms of developing a color palette I said 
 
 ## Visual
 

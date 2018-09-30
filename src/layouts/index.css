@@ -96,6 +96,7 @@ pre {
   display: block;
   margin: 0 auto;
   padding: 1rem;
+  overflow: auto;
 }
 
 code {

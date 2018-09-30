@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
         <div style={{margin: '6rem 0'}}>
-          <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
+          {/* <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
           <div className="blog__items">
             {posts.map(({ node }) => {
               return(
@@ -53,7 +53,7 @@ class IndexPage extends React.Component {
                 </div>
               )
             })}
-          </div>
+          </div> */}
           <div className="blog__more-link">
             <Link to="/blog">See All Blog Posts</Link>
           </div>
