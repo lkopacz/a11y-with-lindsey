@@ -1,6 +1,6 @@
 ---
 title: Writing alternative text that matters
-date: "2018-05-05"
+date: "2018-09-25"
 path: "/blog/writing-alternative-text-matters"
 tags: ["screenreaders", "images", "accessibility"]
 published: true

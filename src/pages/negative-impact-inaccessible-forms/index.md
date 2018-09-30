@@ -1,6 +1,6 @@
 ---
 title: The negative impact of inaccessible forms. 
-date: "2018-06-23"
+date: "2018-10-02"
 path: "/blog/negative-impact-inaccessible-forms"
 tags: ["screenreaders", "forms", "accessibility"]
 published: true
