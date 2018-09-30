@@ -1,5 +1,6 @@
 import React from 'react'
 import headshot from './headshot.jpg'
+import Link from 'gatsby-link'
 import './bio.css'
 
 const Bio = () => (
@@ -10,7 +11,9 @@ const Bio = () => (
       </div>
       <div className="featured-image-block__content">
         <h2 style={{margin: 0}}>About Lindsey </h2>
-        <p>Lindsey is an accessibility expert, a JavaScript lover, a Front End Developer specializing in Drupal, and passionate about inclusivity outside the web. Read more about her on the <a href="&lt;front&gt;">About Page</a></p>
+        <p>Lindsey is an accessibility expert, a JavaScript lover, a Front End Developer 
+        specializing in Drupal, and passionate about inclusivity outside the web. Read more 
+        about her on the <Link to="/about">About Page</Link></p>
       </div>
     </div>
   </div>
