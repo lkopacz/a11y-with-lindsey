@@ -8,7 +8,7 @@ published: true
 
 If I ask anyone what accessibility means to them, usually the first thing that they can identify is "Adding alt text!" All you have to do is add alt tags to your images makes your site way more accessible, right? I love the enthusiasm to reduce accessibility errors, but I am about to give you an infuriating response. **It depends**.
 
-Adding alt text may mean that you don't get pesky errors about missing alternative text on an Accessibility Scan, but it doesn't necessarily mean that your images have better meaning. Sometimes an empty alt tag is actually what you need. Are you envisioning the mind blown emoji and/or gif yet? That's how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. After this blog post, hopefully my conscience is clear! I usually ask myself the below questions in this order.
+Adding alt text may mean that you don't get pesky errors about missing alternative text on an Accessibility Scan, but it doesn't necessarily mean that your images have better meaning. Sometimes an empty alt tag is actually what you need. Are you envisioning the mind blown emoji and/or gif yet? That's how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. Hopefully, my conscience is clear after this blog post! I usually ask myself the below questions in this order.
 
 ##Is it decorative?
 
@@ -18,15 +18,15 @@ Seems simple for certain things. For example, let's say we have a "Team" page on
 
 ##What is the context of this image?
 
-Before thinking about the descriptor, sometimes we need to ask the question first: form or function? Granted, this doesn't cover all your bases, but the easiest way to think of this is "Is this a link or a button, or is this content?" In other words, does it _do something_ like go to another page or does it _describe something_ that adds context to our content. This could be "Go to About Me Page" or it could be "Gooey chocolate chip brownie hot from the oven."
+Before thinking about the descriptor, sometimes we need to ask the question first: form or function? Granted, this doesn't cover all your bases, but the easiest way to think of this is "Is this a link or a button, or is this content?" In other words, does it _do something_ like go to another page or does it _describe something_ that adds context to our content? This could be "Go to About Me Page" or it could be "Gooey chocolate chip brownie hot from the oven."
 
 ##What is your content strategy?
 
-Now let's go to another area of the site that focuses more on marketing a new cookbook. Let's say that the marketing department had spent a lot of time researching their target audience using focus groups, survey's, etc. Then they put a lot of effort into their marketing plan and decided that visuals were really important to their marketing. They partnered with a photographer and got new images of delicious recipes. Wouldn't you want the _purpose_ of those photographs to be reflected to assistive technology? We probably want to describe the recipe the same way a TV Cooking Show host might: "spicy Italian sausage and peppers with plenty of green herbs."
+Now let's go to another area of the site that focuses more on marketing a new cookbook. Let's say that the marketing department had spent a lot of time researching their target audience using focus groups, survey's, etc. Then they put a lot of effort into their marketing plan and decided that the visuals were really important to their marketing. They partnered with a photographer and got new images of delicious recipes. Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology? We probably want to describe the recipe the same way a TV Cooking Show host might: "spicy Italian sausage and peppers with plenty of green herbs."
 
->Wouldn't you want the _purpose_ of those photographs to be reflected to assistive technology?
+>Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology?
 
-![George Washington](./gw2.jpg) That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. If that team doesn't exist, at the very least we thinking about the purpose for the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
+![George Washington](./gw2.jpg) That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. If that team doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
 
 ##Don't overthink it
 
