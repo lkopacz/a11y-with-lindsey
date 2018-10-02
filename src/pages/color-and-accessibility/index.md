@@ -44,7 +44,7 @@ Of course, because my blog was going to be about accessibility, I was very adama
 
 ![Lindsey's color schemes with a variety of them as backgrounds and text colors with contrast ratio next to them](./color_schemes_example.png)
 
-Once I picked my favorite color schemes, she went above and beyond when she sent me deliverables. She gave me about 5 - 6 colors and would use a variety of them together with text and background. For each one, she would tell me what the color contrast of that combination was. It gave me a lot of confidence that all the colors I was using was at proper contrast and I was using colors appropriately. If you'd like to take a look at some of the samples that we went through,  you can [download the color schemes](./ColorSchemes.zip).
+Once I picked my favorite color schemes, she went above and beyond when she sent me deliverables. She gave me about 5 - 6 colors and would use a variety of them together with text and background. For each one, she would tell me what the color contrast of that combination was. It gave me a lot of confidence that all the colors I was using was at proper contrast and I was using colors appropriately. If you'd like to take a look at some of the samples that we went through,  you can [download the color schemes](./ColorSchemes.zip). Disclaimer: the source/inspiration photos in the color scheme PDFs were taken off Pinterest.
 
 ## How to convince a client to change their brand
 
