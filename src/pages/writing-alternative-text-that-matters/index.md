@@ -3,7 +3,7 @@ title: Writing alternative text that matters
 date: "2018-10-02"
 path: "/blog/writing-alternative-text-matters"
 tags: ["screenreaders", "images", "accessibility"]
-published: true
+published: false
 ---
 
 If I ask anyone what accessibility means to them, usually the first thing that they can identify is "Adding alt text!" All you have to do is add alt tags to your images makes your site way more accessible, right? I love the enthusiasm to reduce accessibility errors, but I am about to give you an infuriating response. **It depends**.
