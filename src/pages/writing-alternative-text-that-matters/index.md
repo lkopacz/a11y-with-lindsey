@@ -1,14 +1,18 @@
 ---
 title: Writing alternative text that matters
-date: "2018-10-02"
+date: "2018-10-09"
 path: "/blog/writing-alternative-text-matters"
 tags: ["screenreaders", "images", "accessibility"]
-published: false
+published: true
 ---
 
 If I ask anyone what accessibility means to them, usually the first thing that they can identify is "Adding alt text!" All you have to do is add alt tags to your images makes your site way more accessible, right? I love the enthusiasm to reduce accessibility errors, but I am about to give you an infuriating response. **It depends**.
 
-Adding alt text may mean that you don't get pesky errors about missing alternative text on an Accessibility Scan, but it doesn't necessarily mean that your images have better meaning. Sometimes an empty alt tag is actually what you need. Are you envisioning the mind blown emoji and/or gif yet? That's how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. Hopefully, my conscience is clear after this blog post! I usually ask myself the below questions in this order.
+Adding alt text may mean that you don't get pesky errors about missing alternative text on an Accessibility Scan, but it doesn't necessarily mean that your images have better meaning. Sometimes an empty alt tag is actually what you need. Are you envisioning the mind blown emoji and/or gif yet? 
+
+![Gif of Chris Pratt doing a gesture about mind blowing](https://media.giphy.com/media/l0NhZ0aUSE8fXag12/giphy.gif)
+
+That's how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. Hopefully, my conscience is clear after this blog post! I usually ask myself the below questions in this order.
 
 ##Is it decorative?
 
