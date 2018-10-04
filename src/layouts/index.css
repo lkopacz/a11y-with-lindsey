@@ -49,13 +49,6 @@ time {
   font-weight: bold;
 }
 
-time::after {
-  content: "\2014";
-  position: absolute;
-  top: 0;
-  right: -19px;
-}
-
 a {
   padding-bottom: 2px;
   border-bottom: 2px solid;

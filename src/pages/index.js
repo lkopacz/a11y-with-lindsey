@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
         <Hero header="My Mission" img={computer} />
         <Quote 
           header="Did you know?" 
-          text="Nearly 1 in 5 People Have a Disability in the U.S." 
+          text="Nearly 1 in 5 People in the U.S. Have a Disability." 
           link="https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html" 
           linkText="U.S. Census, 2010"
         />
