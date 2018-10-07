@@ -33,7 +33,46 @@ From an empathetic standpoint, when you put non-empty alternative text on a deco
 
 ##What is the context of this image?
 
-Before thinking about the descriptor, sometimes we need to ask the question first: form or function? Granted, this doesn't cover all your bases, but the easiest way to think of this is "Is this a link or a button, or is this content?" In other words, does it _do something_ like go to another page or does it _describe something_ that adds context to our content? This could be "Go to About Me Page" or it could be "Gooey chocolate chip brownie hot from the oven."
+Before thinking about the descriptor, sometimes we need to ask the question first: form or function? Sometimes the easiest way to think of this is “Is this a link or a button, or is this content?” Granted, this doesn’t cover all your bases, but asking yourself whether it _does something_ like go to another page or _describes something_ that adds context to our content is usually a good first start.
+
+### Images that do things
+
+First, let's cover an example that **does something**. Let's take the following code here. It's a Facebook icon that directs to the organization's Facebook page. Currently, it does not have any alt text.
+```
+<a href="https://www.facebook.com/DrupalGovCon">
+  <img src="facebook.svg">
+</a>
+```
+
+Sometimes it's tempting to add alt text here that would describe the image. Like this:
+```
+<a href="https://www.facebook.com/DrupalGovCon">
+  <img src="facebook.svg" alt="facebook icon">
+</a>
+```
+
+The problem with this is that describing it doesn't really help add context to what this image does. Someone using a screen reader may be able to take a logical guess about where the link is going based on all the other context of the entire site. However, I don't want my users to guess, I want them to know! If one clicks on this image, it will go to the DrupalGovCon Facebook page. Let's make it super clear to the end user, regardless of visual ability where this link is going:
+
+```
+<a href="https://www.facebook.com/DrupalGovCon">
+  <img src="facebook.svg" alt="Go to the DrupalGovCon Facebook Page">
+</a>
+```
+
+### Images that Describe Things
+
+Now let's go over an example that **describes something**. I really love following food bloggers (although I usually hate how long their pages take to load, haha), and seeing what recipes they have. Admittedly, this is not a food blogger I follow, but I googled "best brownie recipe" and this was the first recipe I found. And holy guacamole, do these brownies look amazing based off the pictures!
+
+![Gooey, fudgy chocolate brownies with melted chocolate dripping throughout](./Best-Fudgiest-Brownies-IMAGE-1001.jpg)
+<div class="source">Source: <a href="https://cafedelites.com/worlds-best-fudgiest-brownies/">Cafe Delights</a></div>
+
+How would you create this image's alt text? This is a really fun time to get creative! Because this is a food blogger, you'd probably want to describe it in a way that sounds appetizing and makes you think "I don't care if I am cutting my sugar intake, I must make those brownies now!" 
+
+Here's what I did:
+```
+<img src="Best-Fudgiest-Brownies-IMAGE-1001.jpg" alt="Gooey, fudgy chocolate brownies with melted chocolate dripping throughout">
+```
+
 
 ##What is your content strategy?
 
@@ -43,7 +82,8 @@ Now let's go to another area of the site that focuses more on marketing a new co
 
 >Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology?
 
-![George Washington](./gw2.jpg) That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. If that team doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
+![George Washington](./gw2.jpg) 
+That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. If that team doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
 
 ##Don't overthink it
 

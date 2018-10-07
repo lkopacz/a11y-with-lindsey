@@ -99,6 +99,7 @@ pre {
   margin: 0 auto;
   padding: 1rem;
   overflow: auto;
+  max-width: 590px;
 }
 
 code {
@@ -199,6 +200,11 @@ blockquote.twitter-tweet a {
 blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
   text-decoration: underline;
+}
+
+.source {
+  max-width: 590px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 767px) {
