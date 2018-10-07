@@ -2,7 +2,7 @@
 title: Writing alternative text that matters
 date: "2018-10-09"
 path: "/blog/writing-alternative-text-matters"
-tags: ["screenreaders", "images", "accessibility"]
+tags: ["screenreaders", "images", "accessibility", "alt text"]
 published: true
 ---
 
@@ -78,13 +78,14 @@ Here's what I did:
 
 Are we writing alternative text for images that are embedded in our copywriting? Is this an image that the designer specifically wanted to communicate our brand? We need to think about who is involved in these decisions because that is who we will want to be involved in writing our alternative text. 
 
-Now let's go to another area of the site that focuses more on marketing a new cookbook. Let's say that the marketing department had spent a lot of time researching their target audience using focus groups, survey's, etc. Then they put a lot of effort into their marketing plan and decided that the visuals were really important to their marketing. They partnered with a photographer and got new images of delicious recipes. Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology? We probably want to describe the recipe the same way a TV Cooking Show host might: "spicy Italian sausage and peppers with plenty of green herbs."
+Similar to food blogging, let's say that you're working with a book publisher who is working to promote a new cookbook. Let's say that the marketing department had spent a lot of time researching their target audience using focus groups, survey's, etc. Then they put a lot of effort into their marketing plan and decided that the visuals were really important to their marketing. They partnered with a photographer and got new images of delicious recipes. Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology? We probably want to describe the recipe the same way a TV Cooking Show host might: "spicy Italian sausage and peppers with plenty of flat leaf parsley and thyme."
 
 >Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology?
 
-![George Washington](./gw2.jpg) 
-That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. If that team doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
+That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. This should also be why Design should be involved on branding images and why they put them there. If those teams doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
 
 ##Don't overthink it
 
-If you are having difficulty with this, try to take these three questions with you in this order. It decreases your chances of overthinking it (which frankly, I am the queen of doing). And remember, it's a work in progress. Your alternative text can adapt and improve over time :).
+If you are having difficulty with this, try to take these three strategies with you when writing your alternative text. It decreases your chances of overthinking it (which frankly, I am the queen of doing). The strategy behind writing your alternative text is strongly coorelated to thinking through your strategy. And remember, it's a work in progress. Your alternative text can adapt and improve over time :).
+
+I hope you enjoyed learning about my approach to alternative text! Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions.
