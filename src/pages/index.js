@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
     posts = posts.slice(0, 3);
 
     return (
-      <div>
+      <main id="main-content">
         <Hero header="My Mission" img={computer} />
         <Quote 
           header="Did you know?" 
@@ -58,7 +58,7 @@ class IndexPage extends React.Component {
             <Link to="/blog">See All Blog Posts</Link>
           </div>
         </div>
-      </div>
+      </main>
     )
   }
 }

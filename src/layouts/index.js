@@ -26,6 +26,7 @@ const Layout = ({ children, data, location }) => (
         }
       ]}
     />
+    <a className="focusable visually-hidden" href="#main-content">Skip to main content</a>
     <Header siteTitle={data.site.siteMetadata.title} location={location} />
     {children()}
     <Footer />

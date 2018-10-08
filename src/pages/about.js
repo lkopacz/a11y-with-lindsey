@@ -28,7 +28,7 @@ const About = ({data}) => (
         </ol>
       </nav>
       <div className="content">
-        <main>
+        <main id="main-content">
           <h1>About</h1>
           <p>I started learning about web accessibility started in 2016 when I got 
             a ticket at work to do some accessibility testing. I was told to 

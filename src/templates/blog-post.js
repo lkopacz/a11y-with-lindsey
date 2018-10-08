@@ -36,7 +36,7 @@ export default function Template({ data }) {
             </ol>
           </nav>
           <div className="content">
-            <main>
+            <main id="main-content">
             <h1>{frontmatter.title}</h1>
             <time>
               {frontmatter.date}

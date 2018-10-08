@@ -33,6 +33,15 @@ h6 {
   overflow: hidden;
 }
 
+.focusable.visually-hidden:focus {
+  position: relative;
+  left: 0;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  border-bottom: none;
+}
+
 .wrapper {
   margin: 0 auto;
   min-height: 65vh;

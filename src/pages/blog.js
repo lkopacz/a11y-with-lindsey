@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
             </ol>
           </nav>
           <div className="content">
-            <main>
+            <main id="main-content">
               <h1>Blog</h1>
               {posts.map(({ node }) => {
                 const title = get(node, 'frontmatter.title');
