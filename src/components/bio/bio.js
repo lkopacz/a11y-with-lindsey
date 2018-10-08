@@ -13,7 +13,7 @@ const Bio = () => (
         <h2 style={{margin: 0}}>About Lindsey </h2>
         <p>Lindsey is an accessibility expert, a JavaScript lover, a Front End Developer 
         specializing in Drupal, and passionate about inclusivity outside the web. Read more 
-        about her on the <Link to="/about">About Page</Link></p>
+        about her on the <Link style={{color: "#25768F"}} to="/about">About Page</Link></p>
       </div>
     </div>
   </div>

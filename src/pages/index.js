@@ -43,10 +43,10 @@ class IndexPage extends React.Component {
                     boxSizing: 'border-box',
                   }} 
                 >
-                  <time>{node.frontmatter.date}</time>
+                  <time style={{color: "#D73C13"}}>{node.frontmatter.date}</time>
                   <h2 className="blog__title">{node.frontmatter.title}</h2>
                   <div><p>{node.excerpt}</p></div>
-                  <Link to={node.frontmatter.path}>
+                  <Link style={{color: "#25768F"}} to={node.frontmatter.path}>
                     Read more 
                     <span className="visually-hidden">about {node.frontmatter.title}</span>
                   </Link>

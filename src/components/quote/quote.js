@@ -1,19 +1,23 @@
 import React from 'react'
 import './quote.css'
 
-const Quote = (props) => (
-  <div className="quote">
-		<div className="quote__wrapper">  
-			<h2>{props.header}</h2>  
-			<div className="quote__text">{props.text}</div>
-			<div className="quote__source-wrapper">
-				<div className="quote__source-label">Source</div>
-				<div className="quote__source-item">
-					<a href="{props.link}">{props.linkText}</a>
-				</div>
-			</div>	
+const Quote = (props) => {
+	const { header, text, link, linkText } = props;
+	return (
+		<div className="quote">
+			<div className="quote__wrapper">  
+				<h2>{header}</h2>  
+				<div className="quote__text">{text}</div>
+				<div className="quote__source-wrapper">
+					<div className="quote__source-label">Source</div>
+					<div className="quote__source-item">
+						<a style={{color: "#25768F"}} href={link}>{linkText}</a>
+					</div>
+				</div>	
+			</div>
 		</div>
-	</div>
-);
+	);
+}
+ 
 
 export default Quote;

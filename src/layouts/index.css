@@ -43,7 +43,7 @@ time {
   position: relative;
   display: inline-block;
   font-family: "PT Serif", serif;
-  color: var(--vermillion);
+  color: var(--navy);
   font-size: 0.875rem;
   font-style: italic;
   font-weight: bold;
@@ -53,7 +53,7 @@ a {
   padding-bottom: 2px;
   border-bottom: 2px solid;
   text-decoration: none;
-  color: var(--teal);
+  color: var(--marron);
   font-weight: bold;
   transition: padding-bottom 0.3s ease;
 }
