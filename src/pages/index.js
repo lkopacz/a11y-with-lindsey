@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
         <div style={{margin: '6rem 0'}}>
-          {/* <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
+          <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
           <div className="blog__items">
             {posts.map(({ node }) => {
               return(
@@ -43,17 +43,17 @@ class IndexPage extends React.Component {
                     boxSizing: 'border-box',
                   }} 
                 >
-                  <time style={{color: "#D73C13"}}>{node.frontmatter.date}</time>
+                  <time>{node.frontmatter.date}</time>
                   <h2 className="blog__title">{node.frontmatter.title}</h2>
                   <div><p>{node.excerpt}</p></div>
-                  <Link style={{color: "#25768F"}} to={node.frontmatter.path}>
+                  <Link to={node.frontmatter.path}>
                     Read more 
                     <span className="visually-hidden">about {node.frontmatter.title}</span>
                   </Link>
                 </div>
               )
             })}
-          </div> */}
+          </div>
           <div className="blog__more-link">
             <Link to="/blog">See All Blog Posts</Link>
           </div>

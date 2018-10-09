@@ -1,8 +1,8 @@
 :root {
   --navy: #1E3650;
-  --teal: #25768F;
+  --teal: #24728A;
   --marron: #640D23;
-  --vermillion: #D73C13;
+  --vermillion: #C03711;
   --white: #fff;
   --off-white: #F3E9EA; 
   --peach: #FED8CE;
@@ -52,7 +52,7 @@ time {
   position: relative;
   display: inline-block;
   font-family: "PT Serif", serif;
-  color: var(--navy);
+  color: var(--vermillion);
   font-size: 0.875rem;
   font-style: italic;
   font-weight: bold;
@@ -62,7 +62,7 @@ a {
   padding-bottom: 2px;
   border-bottom: 2px solid;
   text-decoration: none;
-  color: var(--marron);
+  color: var(--teal);
   font-weight: bold;
   transition: padding-bottom 0.3s ease;
 }

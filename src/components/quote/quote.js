@@ -11,7 +11,7 @@ const Quote = (props) => {
 				<div className="quote__source-wrapper">
 					<div className="quote__source-label">Source</div>
 					<div className="quote__source-item">
-						<a style={{color: "#25768F"}} href={link}>{linkText}</a>
+						<a href={link}>{linkText}</a>
 					</div>
 				</div>	
 			</div>
