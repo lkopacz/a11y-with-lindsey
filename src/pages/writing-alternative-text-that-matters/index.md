@@ -82,7 +82,7 @@ Similar to food blogging, let's say that you're working with a book publisher wh
 
 >Wouldn't you want the _purpose_ of those photographs to be reflected with assistive technology?
 
-That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. This should also be why Design should be involved on branding images and why they put them there. If those teams doesn't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
+That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. This should also be why Design should be involved in branding images and why they put them there. If those teams don't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
 
 ##Don't overthink it
 
