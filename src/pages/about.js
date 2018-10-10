@@ -30,7 +30,7 @@ const About = ({data}) => (
       <div className="content">
         <main id="main-content">
           <h1>About</h1>
-          <p>I started learning about web accessibility started in 2016 when I got 
+          <p>I started learning about web accessibility in 2016 when I got 
             a ticket at work to do some accessibility testing. I was told to 
             download the Wave chrome extension and make a ticket for every 
             error or alert that we came across. Quite frankly, I was copying 
@@ -42,11 +42,11 @@ const About = ({data}) => (
             I challenged myself to speak about accessibility publicly that I forced 
             myself to understand why it's important. I tried to explain it to my former 
             and current self and had many a-ha moments. I was honest in explaining 
-            those to my audience and a lot of people came to me afterwards telling 
+            those to my audience and a lot of people came to me afterward telling 
             me how much they connected to it.</p>
 
           <p>I realized how much accessibility combined my love of technology 
-            and the web with my passion of diversity and inclusion. Accessibility literally 
+            and the web with my passion for diversity and inclusion. Accessibility literally 
             helps people access the web and assures everyone can use your technology.
             I stopped thinking about it as a purely technical issue and 
             more of an empathy and inclusion issue. After that, my love and 
@@ -57,8 +57,8 @@ const About = ({data}) => (
           </blockquote>
 
           <p>My approach to accessibility focuses more on the human aspect and 
-            less on the technical. Don't get me wrong, as a detail oriented person, 
-            we do get into the technical nitty gritty. However, it is my believe that 
+            less on the technical. Don't get me wrong, as a detail-oriented person, 
+            we do get into the technical nitty gritty. However, it is my belief that 
             anyone can code, but human empathy is something we are born with. I would 
             rather tap into your empathetic nature to understand <strong>why</strong> before 
             the how.</p>
