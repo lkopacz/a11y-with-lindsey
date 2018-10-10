@@ -26,6 +26,7 @@ Let’s say we have a “Team” page on our site where we can click a link that
 Another time where I can think about alternative text being empty is when we are using image icons. As a note, when I say image icons I do not mean using icon fonts like Font Awesome. Take the below example:
 
 ![List of Features in a menu decorated by icons](./powerful-features-icon-example.png)
+<div class="source">Source: <a href="https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886">Refactoring UI</a></div>
 
 In this instance, we are not using these image icons to convey any meaning. This is just to _decorate_ every list item in the "Powerful Features" list. It is adding some design pizazz, but not really adding any syntactical value that a visually impaired user would be missing out on.
 
