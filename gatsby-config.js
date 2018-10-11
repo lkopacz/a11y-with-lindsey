@@ -3,7 +3,7 @@ module.exports = {
     title: 'a11y with Lindsey',
     author: 'Lindsey Kopacz',
     description: 'a11y with Lindsey, where we want to make our internet, Everyone\'s internet!',
-    siteUrl: '',
+    siteUrl: `https://www.a11ywithlindsey.com`,
   },
   plugins: [
     {
@@ -38,6 +38,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
