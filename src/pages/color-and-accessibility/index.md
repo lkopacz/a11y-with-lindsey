@@ -42,7 +42,7 @@ While I am not a designer and don't have the same workflows as a designer might,
 
 Of course, because my blog was going to be about accessibility, I was very adamant and clear about those requirements, which may not be the case for many clients. However, Raquel would ask what I presume to be normal questions about my brand, what my message is, what are elements of my brand and personality I'd like to emphasize, etc. We also had a Pinterest board where we would brainstorm about color schemes and I would pick the ones I liked the best. I don't know much about how designers work with clients, but I suspect that this is the overall theme, although maybe the Pinterest board is more for individuals vs organizations.
 
-![Lindsey's color schemes with a variety of them as backgrounds and text colors with contrast ratio next to them](./color_schemes_example.png)
+![Lindsey's color schemes with a variety of them as backgrounds and text colors with contrast ratio next to them.](./color_schemes_example.png)
 
 Once I picked my favorite color schemes, she went above and beyond when she sent me deliverables. She gave me about 5 - 6 colors and would use a variety of them together with text and background. For each one, she would tell me what the color contrast of that combination was. It gave me a lot of confidence that all the colors I was using was at proper contrast and I was using colors appropriately. If you'd like to take a look at some of the samples that we went through,  you can [download the color schemes](./ColorSchemes.zip). Disclaimer: the source/inspiration photos in the color scheme PDFs were taken off Pinterest.
 
