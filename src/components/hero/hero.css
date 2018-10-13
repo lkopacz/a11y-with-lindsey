@@ -37,8 +37,13 @@
   transition: transform 0.3s; 
 }
 
-.hero__cta a:hover {
+.hero__cta a:hover,
+.hero__cta a:focus {
   transform: scale(1.1);
+}
+
+.hero__cta a:focus {
+  outline: solid 3px #1E3650;
 }
 
 @media only screen and (min-width: 767px) {

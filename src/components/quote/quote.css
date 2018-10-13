@@ -64,6 +64,11 @@
   content: ':';
 }
 
+.quote__source-item a:focus {
+  outline: solid 1px #1E3650;
+  padding-bottom: 4px;
+}
+
 @media only screen and (min-width: 767px) {
   .quote {
     margin-top: -100px;

@@ -9,6 +9,10 @@ header {
   padding: 0 20px;
 }
 
+header a:focus {
+  outline: solid 2px #F3E9EA;
+}
+
 .header-wrapper {
   margin: 0 auto;
   display: flex;

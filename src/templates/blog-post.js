@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Sidebar from '../components/sidebar/sidebar'
+import './blog-post.css'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
