@@ -19,8 +19,13 @@
   transition: transform 0.3s
 }
 
-.blog__more-link a:hover {
+.blog__more-link a:hover,
+.blog__more-link a:focus {
   transform: scale(1.1);
+}
+
+.blog__more-link a:focus {
+  outline: 2px solid #1E3650;
 }
 
 @media only screen and (min-width: 767px) {

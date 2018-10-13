@@ -1,0 +1,4 @@
+.source a:focus {
+  padding-bottom: 4px;
+  outline: 2px solid #1E3650;
+}

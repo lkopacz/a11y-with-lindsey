@@ -67,8 +67,13 @@ a {
   transition: padding-bottom 0.3s ease;
 }
 
-a:hover {
+a:hover,
+p a:focus {
   padding-bottom: 4px;
+}
+
+p a:focus {
+  outline: solid 1px #1E3650;
 }
 
 .gatsby-resp-image-link { 
@@ -92,6 +97,11 @@ p {
   line-height: 1.5;
 }
 
+code {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
 pre {
   background: #636363;
   color: var(--peach);
@@ -102,9 +112,11 @@ pre {
   max-width: 590px;
 }
 
-code {
+pre code {
   font-size: 0.9325rem;
+  font-weight: normal;
 }
+
 
 blockquote:not(.twitter-tweet) {
   position: relative;
@@ -154,6 +166,11 @@ input {
 .breadcrumb li:not(:last-child)::after {
   content: ' \BB ';
   padding-left: 3px;
+}
+
+.breadcrumb a:focus {
+  padding-bottom: 4px;
+  outline: solid 1px #1E3650;
 }
 
 .block__header {

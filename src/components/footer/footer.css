@@ -23,6 +23,14 @@ footer a {
   color: var(--off-white);
 }
 
+footer a:focus {
+  outline: solid 2px #F3E9EA;
+}
+
+footer input:focus {
+  outline: solid 2px #F3E9EA;
+}
+
 .social {
   display: flex;
   padding: 0;
