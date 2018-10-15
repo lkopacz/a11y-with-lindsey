@@ -67,12 +67,12 @@ Because I am all about empathy here, let's talk about what this means from a hum
 
 Imagine getting to the page and having to tab through the entire navigation again, when you just want to explore the content. This might not be a big deal for my menu, which only has 3 links. But let's be real here, mega menus are all over the web! If those mega menus are even accessible (hahaha just so you know, a lot of them aren't), that sounds like a pain in the butt. 
 
-The way to get around this is VERY low hanging fruit. The FIRST piece of HTML should be a link that says "Skip to main content." The `href` value should be a bookmark value that matches the id of the main wrapper. Here is how I do it on my current blog:
+The way to get around this is VERY low hanging fruit. The FIRST element under your `<body>` tag in your HTML should be a link that says "Skip to main content." The `href` value should be a bookmark value that matches the id of the main wrapper. Here is how I do it on my current blog:
 
 ```
 <a class="focusable visually-hidden" href="#main-content">Skip to main content</a>
 ...
-<nav class="menu-main" style="align-self: flex-end;">
+<nav class="menu-main">
   <ul class="menu">
     <li class="menu-item"><a href="/about">About</a></li>
     <li class="menu-item"><a href="/blog">Blog</a></li>
@@ -87,7 +87,7 @@ The way to get around this is VERY low hanging fruit. The FIRST piece of HTML sh
 
 As you can see here, the href value is `#main-content` and it matches the id of the `<main>` element. This makes it so if someone clicks on this link they go straight to the main content area, instead of having to use the tab key through the entire navigation. This is also helpful to people who are already familiar with the site or those who clicked on a link to your site from another source.
 
-Something I do on my site only show the link if you have focused on it. That way it only appears the first time you hit the tab key. Here is the CSS I have associated with `.focusable` and `.visually-hidden`:
+Something I do on my site is only show the link if you have focused on it. That way it only appears the first time you hit the tab key. Here is the CSS I have associated with `.focusable` and `.visually-hidden`:
 
 ```
 .visually-hidden {
