@@ -1,7 +1,7 @@
 ---
-title: 3 Tips to Improve Keyboard Accessibility
+title: 3 Simple Tips to Improve Keyboard Accessibility
 date: "2018-10-16"
-path: "/blog/3-tips-improve-keyboard-accessibility"
+path: "/blog/3-simple-tips-improve-keyboard-accessibility"
 tags: ["accessibility", "keyboard", "javascript", "tech"]
 published: true
 ---
