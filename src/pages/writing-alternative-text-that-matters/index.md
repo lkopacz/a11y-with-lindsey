@@ -10,7 +10,7 @@ If I ask anyone what accessibility means to them, usually the first thing that t
 
 Adding alt text may mean that you don’t get pesky errors about missing alternative text on an Accessibility Scan, but it doesn’t necessarily mean that your images have a better meaning. Sometimes an empty alt tag is actually what you need for a more accessible image. Are you envisioning the mind blown emoji and/or gif yet?
 
-![Gif of Chris Pratt doing a gesture about mind blowing](https://media.giphy.com/media/l0NhZ0aUSE8fXag12/giphy.gif)
+![Gif of Chris Pratt doing a gesture about mind blowing.](https://media.giphy.com/media/l0NhZ0aUSE8fXag12/giphy.gif)
 
 That’s how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. Hopefully, my conscience is clear after this blog post! I used to think that every single image had to have alternative text, and didn't really put much thought into how to write it. I would love to give some of my tips to not only help you avoid accessibility errors but to think more critically and strategically about how you are giving your visually impaired users the best experience possible.  
 
