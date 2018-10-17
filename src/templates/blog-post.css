@@ -2,3 +2,7 @@
   padding-bottom: 4px;
   outline: 2px solid #1E3650;
 }
+
+main p img {
+  max-width: 100%;
+}
