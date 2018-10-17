@@ -88,6 +88,7 @@ module.exports = {
                         date
                         path
                         title
+                        cover_image
                       }
                     }
                   }

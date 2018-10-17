@@ -9,6 +9,8 @@ export default function Template({ data }) {
   const siteTitle = data.site.siteMetadata.title;
   const { frontmatter, html, excerpt } = markdownRemark
 
+  console.log(frontmatter);
+
     return (
       <div>
         <Helmet 
