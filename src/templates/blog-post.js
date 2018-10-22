@@ -8,8 +8,11 @@ export default function Template({ data }) {
   const { markdownRemark } = data
   const siteTitle = data.site.siteMetadata.title;
   const { frontmatter, html, excerpt } = markdownRemark
+  const { src, srcSet, sizes } = frontmatter.cover_image.childImageSharp.responsiveSizes;
+  console.log(src);
+  console.log(srcSet);
+  console.log(sizes);
 
-  console.log(frontmatter);
 
     return (
       <div>
@@ -40,6 +43,7 @@ export default function Template({ data }) {
           </nav>
           <div className="content">
             <main id="main-content">
+            <img className="cover" srcSet={srcSet} sizes={sizes} src={src} alt="" />
             <h1>{frontmatter.title}</h1>
             <time>
               {frontmatter.date}
@@ -70,6 +74,15 @@ export const pageQuery = graphql`
         path
         title
         tags
+        cover_image {
+          childImageSharp {
+            responsiveSizes(maxWidth: 590) {
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
       }
     }
   }
