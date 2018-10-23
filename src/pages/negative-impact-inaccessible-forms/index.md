@@ -1,7 +1,7 @@
 ---
-title: The Negative Impact of Withholding Form Labels 
+title: Negative Impacts of Withholding Form Labels 
 date: "2018-10-23"
-path: "/blog/negative-impact-withholding-form-labels"
+path: "/blog/negative-impacts-withholding-form-labels"
 tags: ["screenreaders", "forms", "accessibility"]
 published: true
 ---
@@ -36,7 +36,7 @@ While I believe the reason to create accessible forms is that you don’t want t
 
 Let's start to think about our call to actions and how many of those actions are forms. Newsletter signups, surveys, credit card information--all of these are forms that can ultimately impact our bottom line. There could be a tremendous cost if we do not address these users. This is not an "edge case" (insert eye roll emoji here). This is actually a costly endeavor. 
 
-##The quickest way to create accessible forms: provide form labels
+##Quickest way to create accessible forms: provide form labels
 
 There is more about forms to make them even more accessible, which I will cover in other blog posts. But if I can summarize form accessibility, I would say Labels, labels, labels!
 
