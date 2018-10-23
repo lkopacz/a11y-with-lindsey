@@ -6,11 +6,13 @@ tags: ["screenreaders", "forms", "accessibility"]
 published: true
 ---
 
+_This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!_
+
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
 
 The biggest issue on both Trump and Clinton’s sites were inaccessible forms. I did an evaluation of the forms of the candidates’ donation sites and if I remember correctly (it was almost 2 years ago), both had issues with all forms having missing form labels. While I don’t know what the development cycle is for candidate sites, I would assume the strategy is something like “get the site online as quickly as possible so we can start receiving donations.”
 
-One of the most common accessibility issues I’ve seen is forms missing form labels. The great news is it’s one of the simplest accessibility issues to fixes.
+One of the most common accessibility issues I’ve seen is fields missing labels. The great news is it’s one of the simplest accessibility issues to fixes.
 
 ##The Empathetic Side of Forms
 
@@ -20,7 +22,7 @@ I imagine that I’d try if I was very passionate about that candidate, but cons
 
 ![Gif of woman who is covering her face in frustration](https://media.giphy.com/media/ql4LidslabKpi/giphy.gif)
 
-There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, Building a StoryBrand, and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that are clear. Apparently, this is due to calorie burn. 
+There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, [Building a StoryBrand](https://www.amazon.com/gp/product/0718033329/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0718033329&linkCode=as2&tag=a11ywithlinds-20&linkId=00e119a69d54ba4bd1cc3cd46c434146), and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself. 
 
 While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all. 
 
