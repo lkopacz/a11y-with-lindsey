@@ -9,9 +9,6 @@ export default function Template({ data }) {
   const siteTitle = data.site.siteMetadata.title;
   const { frontmatter, html, excerpt } = markdownRemark
   const { src, srcSet, sizes } = frontmatter.cover_image.childImageSharp.responsiveSizes;
-  console.log(src);
-  console.log(srcSet);
-  console.log(sizes);
 
 
     return (
@@ -26,6 +23,46 @@ export default function Template({ data }) {
             {
               name: "keywords",
               content: frontmatter.tags.join(", ")
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image"
+            },
+            {
+              name: "twitter:site",
+              content: "@littlekope0903"
+            },
+            {
+              name: "twitter:creator",
+              content: "@littlekope0903"
+            },
+            {
+              name: "twitter:title",
+              content: frontmatter.title
+            },
+            {
+              name: "twitter:description",
+              content: excerpt
+            },
+            {
+              name: "twitter:image",
+              content: "https://www.a11ywithlindsey.com" + src
+            },
+            {
+              name: "og:url",
+              content: "https://www.a11ywithlindsey.com" + frontmatter.path
+            },
+            {
+              name: "og:type",
+              content: "article"
+            },
+            {
+              name: "og:title",
+              content: frontmatter.title
+            },
+            {
+              name: "og:image",
+              content: "https://www.a11ywithlindsey.com" + src
             }
           ]}
         />
