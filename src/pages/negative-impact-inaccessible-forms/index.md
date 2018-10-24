@@ -4,15 +4,14 @@ date: "2018-10-23"
 path: "/blog/negative-impacts-withholding-form-labels"
 tags: ["screenreaders", "forms", "accessibility"]
 published: true
+affiliate: true
 ---
 
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
 
 The biggest issue on both Trump and Clinton’s sites were inaccessible forms. I did an evaluation of the forms of the candidates’ donation sites and if I remember correctly (it was almost 2 years ago), both had issues with all forms having missing form labels. While I don’t know what the development cycle is for candidate sites, I would assume the strategy is something like “get the site online as quickly as possible so we can start receiving donations.”
 
-One of the most common accessibility issues I’ve seen is fields missing labels. The great news is it’s one of the simplest accessibility issues to fixes.
-
-_This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!_
+One of the most common accessibility issues I’ve seen is fields missing labels. The great news is it’s one of the simplest accessibility issues to fix.
 
 ##The Empathetic Side of Forms
 
@@ -73,5 +72,3 @@ There are also people who say you can add an `aria-label` to the input in order 
 This is the simplest way to make sure that your forms are accessible. There are more topics to talk about like accessible form validation, ensuring required fields are both visually and semantically labeled as such, etc. However, this simple tip will greatly improve your forms, just by simply telling users clearly which field is which.
 
 Stay tuned for more information about accessible forms. Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post.
-
-

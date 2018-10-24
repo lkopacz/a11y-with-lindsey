@@ -9,6 +9,8 @@ export default function Template({ data }) {
   const siteTitle = data.site.siteMetadata.title;
   const { frontmatter, html, excerpt } = markdownRemark
 
+  const affiliate = 'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
+
     return (
       <div>
         <Helmet 
@@ -42,6 +44,7 @@ export default function Template({ data }) {
             <time>
               {frontmatter.date}
             </time>
+            {frontmatter.affiliate ? <p><em>{affiliate}</em></p> : ''}
             <div dangerouslySetInnerHTML={{ __html: html }} />
             </main>
             <Sidebar location="blog" />
@@ -68,6 +71,7 @@ export const pageQuery = graphql`
         path
         title
         tags
+        affiliate
       }
     }
   }
