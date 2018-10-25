@@ -44,16 +44,6 @@
   font-size: 1.75rem;
 }
 
-.quote__text::before {
-  content: '\201C';
-  font-family: Arial;
-  vertical-align: bottom;
-  font-size: 2em;
-  line-height: 0.25;
-  padding-right: 0.5rem;
-  display: inline;
-}
-
 .quote__source-label,
 .quote__source-item {
   display: inline-block;
