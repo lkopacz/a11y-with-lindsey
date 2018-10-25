@@ -1,3 +1,7 @@
+.block {
+ margin: 4rem 0;
+}
+
 .blog__items {
   margin: 0 auto;
   padding: 0 20px;

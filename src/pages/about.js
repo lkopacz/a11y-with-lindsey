@@ -93,8 +93,11 @@ const About = ({data}) => (
             day. I started getting involved with the Drupal Community and that landed me my first job. 
             That is the same drive I am bringing to this blog, and to my business.</p>
 
+          <p>While I will be blogging mostly about web accessibility, I will also blog about my adventures 
+          in blogging, side hustling, and mental health.</p>
+
           <p>Currently, I am a front-end developer who specializes in Drupal with Acquia Professional Services. 
-            In my free time, I also help lead the Front End Group for <a href="https://www.womenwhocode.com/dc">Women Who Code DC</a>. 
+            In my free time, I also help lead the Entrepreneurship Group for <a href="https://www.womenwhocode.com/dc">Women Who Code DC</a>. 
             My interests vary depending on the topic, but I love weight lifting, makeup artistry, learning more 
             about JavaScript, marketing, craft beer, cooking, and my cat!</p>
         </main>
