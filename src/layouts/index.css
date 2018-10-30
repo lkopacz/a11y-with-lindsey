@@ -76,6 +76,10 @@ p a:focus {
   outline: solid 1px #1E3650;
 }
 
+li {
+  line-height: 1.5;
+}
+
 .gatsby-resp-image-link { 
   border-bottom: none;
   padding: 0;
