@@ -23,6 +23,34 @@ export default function Template({ data }) {
             {
               name: "keywords",
               content: frontmatter.tags.join(", ")
+            },
+            {
+              name: "twitter:site",
+              content: "@littlekope0903"
+            },
+            {
+              name: "twitter:creator",
+              content: "@littlekope0903"
+            },
+            {
+              name: "twitter:title",
+              content: frontmatter.title
+            },
+            {
+              name: "twitter:description",
+              content: excerpt
+            },
+            {
+              name: "og:url",
+              content: "https://www.a11ywithlindsey.com" + frontmatter.path
+            },
+            {
+              name: "og:type",
+              content: "article"
+            },
+            {
+              name: "og:title",
+              content: frontmatter.title
             }
           ]}
         />
