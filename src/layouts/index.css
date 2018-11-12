@@ -121,6 +121,10 @@ pre code {
   font-weight: normal;
 }
 
+video {
+  max-width: 100%;
+}
+
 audio {
   display: block;
   margin: 1rem 0;
