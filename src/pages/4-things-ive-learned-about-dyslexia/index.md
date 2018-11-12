@@ -67,7 +67,7 @@ One of the best ways to help out our dyslexic users is to give people alternate 
 
 As of this date, I have been starting to use my friend [Kyle Galbraith](https://twitter.com/kylegalbraith)'s tool [parler.io](https://parler.io/). It is a service that automatically creates an audio file for your blog posts, so long as your blog has an RSS feed. Super neat! This tool is currently free to use, and I love it!
 
-<video controls width="590">
+<video controls width="590" muted>
 <source src="parler-io-demo.mov">
 </video>
 
