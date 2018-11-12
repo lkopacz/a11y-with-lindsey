@@ -5,6 +5,8 @@ path: "/blog/negative-impacts-withholding-form-labels"
 tags: ["screenreaders", "forms", "accessibility"]
 published: true
 affiliate: true
+hasAudio: true
+audioLink: "https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3"
 ---
 
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.

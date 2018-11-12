@@ -121,6 +121,11 @@ pre code {
   font-weight: normal;
 }
 
+audio {
+  display: block;
+  margin: 1rem 0;
+}
+
 
 blockquote:not(.twitter-tweet) {
   position: relative;
