@@ -5,6 +5,8 @@ path: "/blog/3-simple-tips-improve-keyboard-accessibility"
 tags: ["accessibility", "keyboard", "javascript", "tech"]
 published: true
 affiliate: false
+hasAudio: true
+audioLink: "https://www.parler.io/audio/9625517181/1ad8e5216bfc32feb30c3b6702a679f91407747b.34e94a53-efea-447e-87c5-a87a2e1b893b.mp3"
 ---
 I wanted to write a blog post about one of my favorite accessibility topics - keyboard accessibility! I test this so much without even trying because as a developer I use my keyboard so much. I use it to navigate around apps, within a web page, and scrolling through my millions of tabs on my browser (who else is guilty of that haha).
 
