@@ -19,17 +19,17 @@ There are a few things that can contribute to the readability of your site. A co
 ### Text alignment 
 Ensure left alignment. Having a fixed left alignment makes it easier for people to find the next line of text. Proper text alignment helps all people, not only dyslexic users. This is bad:
 
-![Test png](./centered-text.png)
+![Text that is centered, the new line starts at a new spot everytime.](./centered-text.png)
 ### Avoid justified text 
 The uneven spacing between the words trips people up. The reason for this is it causes dyslexic users to lose their place and start over. This is bad:
 
-![Test png](./justified-text.png)
+![Text that is justified, adding uneven spacing between words.](./justified-text.png)
 ### Typography
 Write in sans serif. Something we do not think about is that serif’s add decoration. Serifs can be distracting, particularly for dyslexic users. Using sans serifs helps dyslexic users who tend to use their memory of shapes for letters. Also, italics can be problematic and blend with regular text. If you want emphasis, use bold text. This is bad (serif and italic):
 
-![Test png](./serif.png) and this is good: 
+![Paragraph with serif fonts and italic emphasis.](./serif.png) and this is good: 
 
-![Test png](./sans-serif.png)
+![Paragraph with sans-serif fonts and bold emphasis.](./sans-serif.png)
 
 I never realized how badly this impacts those with dyslexia. The great news is these fixes are straightforward. I have a few updates that I’d like to make to my site now that I’ve learned about how these issues impact dyslexic users.
 
