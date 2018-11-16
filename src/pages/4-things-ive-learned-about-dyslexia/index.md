@@ -2,7 +2,7 @@
 title: Learn about Dyslexia for the Web with me!
 date: "2018-11-13"
 path: "/blog/learn-dyslexia-web"
-tags: ["blogging", "content strategy"]
+tags: ["dyslexia", "accessibility", "content strategy"]
 published: true
 affiliate: false
 hasAudio: true
