@@ -48,7 +48,7 @@ I've also grown to love that the industry (at least at the companies I have work
 ## Constantly learning and helping others
 I am thankful to have a platform to help others with web accessibility. Starting a blog has been out of my comfort zone, but incredibly rewarding. It has been a fantastic experience having a place where I can teach and help others, while also challenging myself to learn and grow. I love being able to see people have moments where they finally get it.
 
-![Hamster with glasses on reading a book, a metahor for learning.](https://media.giphy.com/media/tHufwMDTUi20E/giphy.gif)
+![Hamster with glasses on reading a book, a metaphor for learning.](https://media.giphy.com/media/tHufwMDTUi20E/giphy.gif)
 
 Blogging and teaching others has also encouraged me to lean further into my talents and skills. It's also forced me to explain things more in depth and expand how I think about accessibility. My last post on dyslexia was not something I had ever considered before starting this blog, and I learned so much in the process! 
 
