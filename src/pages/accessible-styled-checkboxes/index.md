@@ -10,15 +10,11 @@ I've seen a ton of designers make these GORGEOUS checkbox styles, but then you s
 
 ![Checkboxes](./Custom-teal-checkboxes.png)
 
-## Doing it the wrong way
-
 I've seen this implemented before and it looks gorgeous. However, when I press the `tab` key it zips right by. If this field is required, you're screwing over a bunch of your users. They use `::before` or `::after` pseudo-elements to make a pretty checkbox and use the `:checked` pseudo-class to determine the styling of the check itself. It looks really cool, but the problem is that they use `display: none` on the checkox input itself. When we do that, the browser ignores.
 
 <video style="margin: 1rem auto" width="590" muted autoplay loop>
 <source src="inaccessible-checkboxes.mov">
 </video>
-
-## Going through it step by step
 
 Let's walk step by step how I would go through this. Here is my starting point in terms of code and what this looks like:
 
@@ -55,6 +51,8 @@ input[type="checkbox"] + label {
 }
 ```
 
+## Create a psuedo-element on the label
+
 The first thing I want to do is make sure that I create a psuedo-element that can act in place of my block. What I'll do to achieve this is create a `::before` psuedo-element on the `<label>` element. Now it looks like this:
 
 ```
@@ -71,7 +69,10 @@ input[type="checkbox"] + label::before {
 
 ![Psuedo](./checkboxes-with-psuedo.png)
 
-I've left the non-styled checkbox there on purpose. The reason for this is it will be very easy for me to tell when a checkbox is focused, checked, etc. It helps to hold off on hiding the checkbox until the very last minute. As of right now, when something is checked, it doesn't do anything except the normal behavior. What we have to do is add a little bit of CSS magic. See Below:
+I've left the non-styled checkbox there on purpose. The reason for this is it will be very easy for me to tell when a checkbox is focused, checked, etc. It helps to hold off on hiding the checkbox until the very last minute. 
+
+## Add styling on the psuedo-element when checked
+As of right now, when something is checked, it doesn't do anything except the normal behavior. What we have to do is add a little bit of CSS magic. See Below:
 
 ```
 input[type="checkbox"]:checked + label::before {
@@ -81,7 +82,9 @@ input[type="checkbox"]:checked + label::before {
 
 ![Psuedo](./teal-checkbox.png)
 
-Now, we want to make sure that there is an actual checkmark insite of our custom element. I've done this by adding an `::after` psuedo-element. What we are doing here is creating basically a right angle with two borders and rotating it.
+## Add your custom checkmark
+
+This is actually optional. If you want to do a checkmark unicode to the `::before` element's content, you can very well do that. But I want to get a little fancy. Now, we want to make sure that there is an actual checkmark insite of our custom element. I've done this by adding an `::after` psuedo-element. What we are doing here is creating basically a right angle with two borders and rotating it.
 
 ```
 input[type="checkbox"]:checked + label::after {
@@ -98,6 +101,10 @@ input[type="checkbox"]:checked + label::after {
 ```
 
 ![Psuedo](./teal-checkbox-with-check.png)
+
+Additional challenge, instead of a check, make an "X".
+
+## Add focus styles to the pseudo element
 
 Great! We are good now, right?
 
@@ -125,3 +132,4 @@ input[type="checkbox"] {
 <source src="accessible-custom-checkboxes.mov">
 </video>
 
+So that's it! You can apply the same type of thing to radio buttons as well.  Let me know on [Twitter](https://twitter.com/littlekope0903) what you think!
