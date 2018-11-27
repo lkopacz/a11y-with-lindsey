@@ -107,7 +107,7 @@ code {
 }
 
 pre {
-  background: #636363;
+  background: #383838;
   color: var(--peach);
   display: block;
   margin: 0 auto;
@@ -122,6 +122,8 @@ pre code {
 }
 
 video {
+  display: block;
+  margin: 1rem 0;
   max-width: 100%;
 }
 
