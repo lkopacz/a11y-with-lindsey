@@ -1,7 +1,7 @@
 ---
-title: How to create custom keyboard accessible checkboxes
+title: Create custom keyboard accessible checkboxes
 date: "2018-11-27"
-path: "/blog/how-create-custom-keyboard-accesible-checkboxes"
+path: "/blog/create-custom-keyboard-accesible-checkboxes"
 tags: ["accessibility", "checkboxes", "form", "front end web development"]
 published: true
 affiliate: false
