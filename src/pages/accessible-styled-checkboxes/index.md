@@ -10,7 +10,7 @@ audioLink: "https://www.parler.io/audio/9625517181/c35f66502ddd3b9b56a4db767e00d
 ---
 I've seen a ton of designers make these GORGEOUS checkbox styles, but then you see them implemented and you can't even select it using your keyboard. Let's say we got this in our style guide from our designer.
 
-![Checkboxes design with teal color when checked and a black checkmark](./custom-teal-checkboxes.png)
+![Checkboxes design with teal color when checked and a black checkmark](./teal-checkboxes-design.png)
 
 I've seen this implemented before and it looks gorgeous. However, when I press the `tab` key, it zips right past it. If this field is required, you're screwing over a bunch of your users. They use `::before` or `::after` pseudo-elements to make a pretty checkbox and use the `:checked` pseudo-class to determine the styling of the check itself. It looks cool, but the problem is that they use `display: none` on the checkbox input itself. When we do that, we make the checkbox itself invisible to the browser, making it unusable for those who rely on keyboards to navigate a site.
 
@@ -39,7 +39,7 @@ Let's walk step by step how I would go through this. Here is what my starting co
 </fieldset>
 ```
 
-![Checkboxes](./Starting-point.png)
+![Basic checkboxes with no design.](./Starting-point.png)
 
 I would start with a bare-bones checkbox list. Here is the current CSS I have:
 
@@ -71,7 +71,7 @@ input[type="checkbox"] + label::before {
 }
 ```
 
-![Psuedo](./checkboxes-with-psuedo.png)
+![Checkboxes with both a white box and a normal checkbox.](./checkboxes-with-psuedo.png)
 
 I've left the non-styled original checkbox there on purpose. The reason for this is it makes it easier for me to tell when a checkbox is focused, checked, etc. It helps me to hold off on hiding the checkbox until the very last minute. 
 
@@ -84,7 +84,7 @@ input[type="checkbox"]:checked + label::before {
 }
 ```
 
-![Psuedo](./teal-checkbox.png)
+![Checkboxes with both a white box and a normal checkbox. One is checked and the box next to it is teal.](./teal-checkbox.png)
 
 ## Add your custom checkmark
 
@@ -104,7 +104,7 @@ input[type="checkbox"]:checked + label::after {
 }
 ```
 
-![Psuedo](./teal-checkbox-with-check.png)
+![Teal checked box with a normal checked checkbox next to it.](./teal-checkbox-with-check.png)
 
 An additional challenge, instead of a check, make an "X."
 
@@ -121,7 +121,7 @@ input[type="checkbox"]:focus + label::before {
 }
 ```
 
-![Psuedo](./receiving-focus.png)
+![Boxed item has a blue item around it, indicating the keyboard is focused on it.](./receiving-focus.png)
 
 Now we can hide it the original checkbox! See how helpful keeping it around when we were figuring this out?
 
@@ -150,7 +150,7 @@ input[type="checkbox"]:disabled + label::before {
 }
 ```
 
-![Psuedo](./disabled-checkbox.png)
+![Disabled checkbox with dark grey box.](./disabled-checkbox.png)
 
 So that's it! You can apply the same principles to radio buttons as well. Let me know on [Twitter](https://twitter.com/littlekope0903) what you think!
 
