@@ -108,7 +108,7 @@ code {
 
 pre {
   background: #383838;
-  color: var(--peach);
+  color: var(--white);
   display: block;
   margin: 0 auto;
   padding: 1rem;
@@ -119,6 +119,47 @@ pre {
 pre code {
   font-size: 0.9325rem;
   font-weight: normal;
+}
+
+.language-html .tag {
+  color: #FDB4CF;
+}
+
+.language-html .attr-value {
+  color: #B2DFEB;
+}
+
+
+.language-html .attr-value .punctuation:first-child {
+  color: #FDB4CF;
+}
+
+.language-css {
+  color: #B2DFEB;
+}
+
+.language-css .selector {
+  color: #FDB4CF;
+}
+
+.language-css .punctuation {
+  color: #fff;
+}
+
+.language-css .property {
+  color:  #fff;
+}
+
+.language-js .keyword {
+  color: #FDB4CF;
+}
+
+.language-js .function {
+  color: #B2DFEB;
+}
+
+.language-js .string {
+  color: #F0876A;
 }
 
 video {

@@ -42,14 +42,14 @@ Before thinking about the descriptor, sometimes we need to ask the question firs
 ### Images that do things
 
 First, let's cover an example that **does something**. Let's take the following code here. It's a Facebook icon that directs to the organization's Facebook page. Currently, it does not have any alt text.
-```
+```html
 <a href="https://www.facebook.com/DrupalGovCon">
   <img src="facebook.svg">
 </a>
 ```
 
 Sometimes it's tempting to add alt text here that would describe the image. Like this:
-```
+```html
 <a href="https://www.facebook.com/DrupalGovCon">
   <img src="facebook.svg" alt="facebook icon">
 </a>
@@ -57,7 +57,7 @@ Sometimes it's tempting to add alt text here that would describe the image. Like
 
 The problem with this is that describing it doesn't really help add context to what this image does. Someone using a screen reader may be able to take a logical guess about where the link is going based on all the other context of the entire site. However, I don't want my users to guess, I want them to know! If one clicks on this image, it will go to the DrupalGovCon Facebook page. Let's make it super clear to the end user, regardless of visual ability where this link is going:
 
-```
+```html
 <a href="https://www.facebook.com/DrupalGovCon">
   <img src="facebook.svg" alt="Go to the DrupalGovCon Facebook Page">
 </a>
@@ -73,7 +73,7 @@ Now let's go over an example that **describes something**. I really love followi
 How would you create this image's alt text? This is a really fun time to get creative! Because this is a food blogger, you'd probably want to describe it in a way that sounds appetizing and makes you think "I don't care if I am cutting my sugar intake, I must make those brownies now!" 
 
 Here's what I did:
-```
+```html
 <img src="Best-Fudgiest-Brownies-IMAGE-1001.jpg" alt="Gooey, fudgy chocolate brownies with melted chocolate dripping throughout">
 ```
 
