@@ -24,7 +24,7 @@ I’ve seen a lot of people create beautifully designed interactive apps. I clic
 What gives? My focus indicator passes RIGHT past the hamburger icon. Does this mean I cannot open the menu? Is there another way to open the menu that I am unaware of? I go to that fancy select list to find a topic and I cannot even open it up. Imagine how you might feel if you literally depend on your keyboard? I am having a fit while writing this because it ticks me off when people don’t pay attention to this. Thank you for listening to my soapbox.
 
 Why are these items not working on our keyboard? Let’s take a look at that HTML for that menu.
-```
+```html
 <div class="hamburger-menu">
   <span class="line"></span>
   <span class="line"></span>
@@ -48,7 +48,7 @@ By default in all browsers, links, buttons and form elements are all focusable. 
 PSA: When you try to make a `<div>` something similar to a button without adjusting the tabindex, it will not be accessible to a keyboard. It also won't announce nicely on a screenreader by default, even if you do give it a `tabindex="0"`. You are better off using HTML how it was defined and making the hamburger menu into a `<button>` element. Most people don't like doing that because of the button's default browser styling. But guess what? You can solve that with CSS! Win-Win! Another benefit is because of the default behaviors and event listeners of buttons, you don't have to hack a div to act **exactly** as a button would.
 
 This is how I would reformat the above HTML (see below for CSS associated with `.visually-hidden`:
-```
+```html
 <button class="hamburger-menu">
   <span class="line"></span>
   <span class="line"></span>
@@ -72,7 +72,7 @@ Imagine getting to the page and having to tab through the entire navigation agai
 
 The way to get around this is VERY low hanging fruit. The FIRST element under your `<body>` tag in your HTML should be a link that says "Skip to main content." The `href` value should be a bookmark value that matches the id of the main wrapper. Here is how I do it on my current blog:
 
-```
+```html
 <a class="focusable visually-hidden" href="#main-content">Skip to main content</a>
 ...
 <nav class="menu-main">
@@ -92,7 +92,7 @@ As you can see here, the href value is `#main-content` and it matches the id of 
 
 Something I do on my site is only show the link if you have focused on it. That way it only appears the first time you hit the tab key. Here is the CSS I have associated with `.focusable` and `.visually-hidden`:
 
-```
+```css
 .visually-hidden {
   position: absolute;
   left: -10000px;

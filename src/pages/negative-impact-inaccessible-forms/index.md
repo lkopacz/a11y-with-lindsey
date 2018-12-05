@@ -45,7 +45,7 @@ Something that I see frequently is designers and developers putting the placehol
 
 ![Inaccessible form with no form label using the text inside the input to label it](./search-without-label.png)
 
-```
+```html
 <input placeholder="Search" type="text">
 <input name="Submit" type="submit">
 ```
@@ -58,7 +58,7 @@ In order to associate a label with a field, you must have an `id` attribute on t
 
 ![search form with label](./search-with-label.png)
 
-```
+```html
 <label for="search-field">Search:</label>
 <input placeholder="Search" type="text" id="search-field">
 <input name="Submit" type="submit">
@@ -66,7 +66,7 @@ In order to associate a label with a field, you must have an `id` attribute on t
 
 
 There are also people who say you can add an `aria-label` to the input in order to label it, and that is true. However, I always prefer semantic HTML over aria-labels. If you can solve a problem with HTML5, why would you do something else? Below is how [dev.to](https://dev.to) does it and it accomplishes the same goal:
-```
+```html
 <input type="text" placeholder="search" aria-label="search">
 ```
 
