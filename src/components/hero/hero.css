@@ -6,7 +6,6 @@
   color: #1E3650;
   background: rgba(254, 216, 206, 0.7);
   text-shadow: 0.5px 0.5px grey;
-  text-align: center;
 }
 
 .hero__background-image {
@@ -19,6 +18,11 @@
 .hero__background-image img {
   width: 100%; 
   height: calc(100vh - 152px);
+}
+
+.hero__text-wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero__body p {
@@ -54,7 +58,7 @@
 
   .hero__background-image img {
     height: calc(100vh - 161px);
-  }
+  } 
 
   .hero__body--break {
     display: block;
@@ -63,4 +67,11 @@
   .hero__body p {
     line-height: 1.5;
   }
+}
+
+@media only screen and (min-width: 1024px) {
+
+.hero__text-wrapper {
+  max-width: 1024px;
+}
 }

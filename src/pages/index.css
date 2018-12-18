@@ -1,5 +1,20 @@
+.blocks {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .block {
- margin: 4rem 0;
+  padding: 0 20px;
+}
+
+.block__header {
+  font-size: 2rem;
+}
+
+.block__body {
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 .blog__items {
@@ -33,6 +48,16 @@
 }
 
 @media only screen and (min-width: 767px) {
+  .blocks {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 767px;
+  }
+
+  .blocks > .block {
+    flex-basis: 47%;
+  }
+
   .blog__items {
     display: flex;
     justify-content: space-between;
@@ -45,6 +70,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .blocks,
   .blog__items {
     max-width: 1024px;
   }

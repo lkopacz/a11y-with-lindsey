@@ -20,22 +20,24 @@ class IndexPage extends React.Component {
           link="https://www.census.gov/newsroom/releases/archives/miscellaneous/cb12-134.html" 
           linkText="U.S. Census, 2010"
         />
+        <div className="blocks">
         <div className="block">
-          <h2 className="block__header">What is "a11y?"</h2>
-          <div className="block__body">
-            <p>"a11y" stands for accessibility. It comes from the 11 letters between 
-            the first and last letter. This has become a common phrase for 
-            Web Accessibility.</p>
+            <h2 className="block__header">What is "a11y?"</h2>
+            <div className="block__body">
+              <p>"a11y" stands for accessibility. It comes from the 11 letters between 
+              the first and last letter. This has become a common phrase for 
+              Web Accessibility.</p>
+            </div>
+          </div>
+          <div className="block">
+            <h2 className="block__header">What is this blog?</h2>
+            <div className="block__body">
+              <p>I plan to write mostly about web accessibility. However, sometimes you'll 
+              see a sprinkle of entreprenuership, mental health, and working remotely.</p>
+            </div>
           </div>
         </div>
-        <div className="block">
-          <h2 className="block__header">What to expect from this blog?</h2>
-          <div className="block__body">
-            <p>I plan to write mostly about web accessibility. However, sometimes you'll 
-            see a sprinkle of entreprenuership, mental health, and working remotely.</p>
-          </div>
-        </div>
-        <div style={{margin: '6rem 0'}}>
+        <div style={{margin: '3rem 0 5rem'}}>
           <h2 style={{ textAlign: 'center' }}>Recent Blog Posts</h2>
           <div className="blog__items">
             {posts.map(({ node }) => {
@@ -43,7 +45,7 @@ class IndexPage extends React.Component {
                 <div 
                   className="blog__item" 
                   style={{
-                    margin: '1.5rem 0',
+                    margin: '1.5rem 0 3rem',
                     padding: '1.5rem',
                     background: '#fff', 
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.11)',

@@ -9,14 +9,14 @@ const Hero = (props) => (
 		</div>
     <div className="hero__text-wrapper">
       <h2 style={{fontSize: '3rem', margin: 0}}>{props.header}</h2>
-      <div className="hero__body" style={{fontSize: '1.5rem', margin: '0 auto 10px', padding: '0 20px', boxSizing: 'border-box'}}>
+      <div className="hero__body" style={{fontSize: '1.5rem', margin: '0 auto 10px', boxSizing: 'border-box'}}>
         <p>To help developers navigate accessibility jargon, write better code, 
         <span className="hero__body--break">and to empower them to make their Internet, </span>
             <span className="hero__body--break"><strong>Everyone's Internet.</strong></span></p>
             {/* <p>Empowering and teaching developers to make their Internet, <br /><strong>Everyone's Internet.</strong></p> */}
       </div>
       <div className="hero__cta">
-        <Link to="/about">About Me</Link>
+        <a href="http://eepurl.com/dy1USP">Get Updates</a>
       </div>
     </div>
   </div>
