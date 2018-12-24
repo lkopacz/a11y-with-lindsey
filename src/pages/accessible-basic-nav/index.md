@@ -5,6 +5,8 @@ path: "/blog/create-accessible-dropdown-navigation"
 tags: ["accessibility", "navigation", "javascript", "front end web development"]
 published: true
 affiliate: false
+hasAudio: true 
+audioLink: https://www.parler.io/audio/7119149108/fa3668f4a9c5c5483cd4424d1c0bbc5a45401e35.6e119819-3442-454a-863e-8c0f7276101b.mp3
 ---
 
 Hover navigations are pretty simple to do without JavaScript, which is how I usually see them implemented. The HTML and CSS are pretty simple. 
