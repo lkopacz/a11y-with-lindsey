@@ -229,18 +229,6 @@ input {
   outline: solid 1px #1E3650;
 }
 
-.block__header {
-  text-align: center;
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-
-.block__body {
-  width: 60%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-}
-
 blockquote.twitter-tweet {
   display: inline-block;
   font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;

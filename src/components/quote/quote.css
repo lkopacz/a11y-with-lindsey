@@ -4,25 +4,9 @@
   position: relative;
   z-index: 20;
   margin-top: 30px;
-  margin-bottom: 50px;
   box-sizing: border-box;
-  text-align: center;
   color: #640D23;
   padding: 0 20px;
-}
-
-
-@media only screen and (min-width: 767px) {
-  .quote {
-    max-width: 767px;
-    padding: 0;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .quote {
-    max-width: 1024px;
-  }
 }
 
 .quote__wrapper {
@@ -34,13 +18,13 @@
 }
 
 .quote__wrapper > h2 {
-  letter-spacing: 4px;
+  margin-top: 0;
   line-height: 1;
   font-size: 2.5rem;
 }
 
 .quote__text {
-  margin-top: 2rem;
+  margin: 2rem 0 1rem;
   font-size: 1.75rem;
 }
 
@@ -61,6 +45,25 @@
 
 @media only screen and (min-width: 767px) {
   .quote {
-    margin-top: -100px;
+    max-width: 767px;
+    margin-top: -140px;
+    margin-bottom: 2rem;
+  }
+
+  .quote::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .quote__wrapper {
+    width: 44%;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .quote {
+    max-width: 1024px;
   }
 }
