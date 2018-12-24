@@ -5,7 +5,7 @@
 }
 
 .block {
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .block__header {
@@ -19,7 +19,7 @@
 
 .blog__items {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .blog__more-link {
@@ -29,7 +29,7 @@
 .blog__more-link a {
   border-radius: 5px;
   border: none;
-  padding: 7px;
+  padding: 0.4375rem;
   font-weight: 500;
   color: #fff;
   background: #C03711;
