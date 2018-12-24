@@ -16,15 +16,32 @@ HTML:
 <nav>
   <ul class="menu">
     <li class="menu__item">
-      <a href="/" class="menu__link">About</a>
+      <a href="/about" class="menu__link">About</a>
       <ul class="submenu">
         <li class="submenu__item">
-          <a class="submenu__link" href="/our-mission">Our Mission</a>
+          <a class="submenu__link" href="/about/our-mission">Our Mission</a>
         </li>
         <li class="submenu__item">
-          <a class="submenu__link" href="/our-team">Our Team</a>
+          <a class="submenu__link" href="/about/our-team">Our Team</a>
         </li>
       </ul>
+    </li>
+    <li class="menu__item">
+      <a href="/news" class="menu__link">News</a>
+      <ul class="submenu">
+        <li class="submenu__item">
+          <a href="/news/press-releases" class="submenu__link">Press Releases</a>
+        </li>
+        <li class="submenu__item">
+          <a href="/news/blog" class="submenu__link">Blog</a>
+        </li>
+        <li class="submenu__item">
+          <a href="/news/in-the-media" class="submenu__link">In the Media</a>
+        </li>
+      </ul>
+    </li>
+    <li class="menu__item">
+      <a href="/contact" class="menu__link">Contact</a>
     </li>
   </ul>
 </nav>
