@@ -7,7 +7,7 @@ const Sidebar = (props) => {
     return (
       <aside>
         <Bio />
-        <Subscribe color="#1E3650" hasBackground={true} />
+        <Subscribe color="#1E3650" hasBackground={true} title="Learn more about Accessibility!"/>
       </aside>  
     )
   }

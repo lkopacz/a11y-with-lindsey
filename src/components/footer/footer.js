@@ -25,7 +25,7 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-        <Subscribe color="#F3E9EA"/>
+        <Subscribe color="#F3E9EA" title="Get Updates"/>
       </div>
     </div>
     <div className="credit">

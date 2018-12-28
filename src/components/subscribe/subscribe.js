@@ -39,7 +39,7 @@ class Subscribe extends React.Component {
 		return(
 			<div className={bgClass}>
 				<form className="mailchimp-signup__form" action="https://twitter.us12.list-manage.com/subscribe/post" method="POST">
-					<h2>Get Updates</h2>
+					<h2>{this.props.title}</h2>
 					<input type="hidden" name="u" value="f3d8a4a93db24975a2da9565b" />
 					<input type="hidden" name="id" value="1e7e011a5b" />
 					<div className="mailchimp-signup__email">
