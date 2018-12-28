@@ -5,7 +5,7 @@ path: "/blog/create-custom-keyboard-accesible-checkboxes"
 tags: ["accessibility", "checkboxes", "form", "front end web development"]
 published: true
 affiliate: false
-hasAudio: true
+hasAudio: true 
 audioLink: "https://www.parler.io/audio/9625517181/c35f66502ddd3b9b56a4db767e00d2e69455810c.36b95f33-8819-457e-be2e-6d137985f731.mp3"
 ---
 I've seen a ton of designers make these GORGEOUS checkbox styles, but then you see them implemented and you can't even select it using your keyboard. Let's say we got this in our style guide from our designer.
@@ -14,14 +14,12 @@ I've seen a ton of designers make these GORGEOUS checkbox styles, but then you s
 
 I've seen this implemented before and it looks gorgeous. However, when I press the `tab` key, it zips right past it. If this field is required, you're screwing over a bunch of your users. They use `::before` or `::after` pseudo-elements to make a pretty checkbox and use the `:checked` pseudo-class to determine the styling of the check itself. It looks cool, but the problem is that they use `display: none` on the checkbox input itself. When we do that, we make the checkbox itself invisible to the browser, making it unusable for those who rely on keyboards to navigate a site.
 
-<video style="margin: 1rem auto" width="590" muted autoplay loop>
-<source src="inaccessible-checkboxes.mov">
-</video>
+![Gif of keyboard trying to access the custom checkmarks but skipping to the link.](https://media.giphy.com/media/3Fd7rUatwPzyAloC5O/giphy.gif)
 
 ## Starting point
 Let's walk step by step how I would go through this. Here is what my starting code looks like:
 
-```
+```html
 <fieldset>
   <legend>Accessible Checkboxes</legend>
 
@@ -43,7 +41,7 @@ Let's walk step by step how I would go through this. Here is what my starting co
 
 I would start with a bare-bones checkbox list. Here is the current CSS I have:
 
-```
+```css
 input[type="checkbox"] {
   position: absolute;
 }
@@ -59,7 +57,7 @@ input[type="checkbox"] + label {
 
 The first thing I want to do is make sure that I create a pseudo-element that can act in place of my checkbox. What I'll do to achieve this is create a `::before` pseudo-element on the `<label>` element. Now it looks like this:
 
-```
+```css
 input[type="checkbox"] + label::before {
   content: '';
   position: relative;
@@ -78,7 +76,7 @@ I've left the non-styled original checkbox there on purpose. The reason for this
 ## Add styling on the pseudo-element when checked
 As of right now, when we try to check the checkbox, it doesn't do anything except the normal behavior. What we have to do is add a little bit of CSS magic using the `:checked` pseudo-class. See Below:
 
-```
+```css
 input[type="checkbox"]:checked + label::before {
   background: #5ac5c9;
 }
@@ -90,7 +88,7 @@ input[type="checkbox"]:checked + label::before {
 
 If you want to do a checkmark unicode to the `::before` element's content, you can very well do that. However, I want to get a little fancy. Now, we want to make sure that there is a perpendicular checkmark inside of our custom element. I've done this by adding an `::after` pseudo-element. What we are doing here is creating a right angle with two borders and rotating it.
 
-```
+```css
 input[type="checkbox"]:checked + label::after {
   content: '';
   position: absolute;
@@ -114,7 +112,7 @@ Great! Are we good to go now? Well, not quite.
 
 We still need to ensure that the pseudo-element "receives focus." What we are going to do now is replicate the focus styling on when the checkbox receives focus. The reason why we don't want to do `display: none` is because removing the display prevents the checkbox from receiving focus at all. I wanted to have some concrete focus styling since they can vary from browser to browser. Below is what I ended up doing because I wanted to replicate the default focus for Chrome, but in all browsers. It's not the same, but it's close!
 
-```
+```css
 input[type="checkbox"]:focus + label::before {
   outline: #5d9dd5 solid 1px;
   box-shadow: 0 0px 8px #5e9ed6;
@@ -125,22 +123,24 @@ input[type="checkbox"]:focus + label::before {
 
 Now we can hide it the original checkbox! See how helpful keeping it around when we were figuring this out?
 
-```
+```css
 input[type="checkbox"] {
-  position: absolute;
-  left: -99999px;
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }
 ```
+Note: I have used the [visually-hidden](https://a11yproject.com/posts/how-to-hide-content/) styling here. I would normally use a Sass mixin or a class for this.
 
-<video style="margin: 1rem auto" width="590" muted autoplay loop>
-<source src="accessible-custom-checkboxes.mov">
-</video>
+![Gif of keyboard focusing on custom checkboxes and checking](https://media.giphy.com/media/1ynEvIv4dpGRPB7cyI/giphy.gif)
 
 ## Add some styling for the disabled checkboxes
 
 One last thing, we should probably make that disabled checkbox stylistically different. Below is what I did:
 
-```
+```css
 input[type="checkbox"]:disabled + label {
   color: #575757;
 }
