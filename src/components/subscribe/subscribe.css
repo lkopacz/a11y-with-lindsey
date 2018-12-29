@@ -1,3 +1,10 @@
+.mailchimp-signup.mailchimp-signup--white-bg {
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .11);
+  font-weight:bold;
+}
+
 .mailchimp-signup__form h2 {
   margin-top: 0;
 }

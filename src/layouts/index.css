@@ -209,6 +209,10 @@ input {
   border-bottom: 2px solid;
 }
 
+input[type="submit"] {
+  cursor: pointer;
+}
+
 .breadcrumb ol {
   padding: 0;
 }

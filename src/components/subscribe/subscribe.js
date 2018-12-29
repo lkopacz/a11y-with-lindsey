@@ -30,10 +30,16 @@ class Subscribe extends React.Component {
 	}
 	
 	render() {
+		let bgClass;
+		if (this.props.hasBackground) {
+			bgClass = 'mailchimp-signup mailchimp-signup--white-bg';
+		} else {
+			bgClass = 'mailchimp-signup';
+		}
 		return(
-			<div className="mailchimp-signup">
+			<div className={bgClass}>
 				<form className="mailchimp-signup__form" action="https://twitter.us12.list-manage.com/subscribe/post" method="POST">
-					<h2>Get Updates</h2>
+					<h2>{this.props.title}</h2>
 					<input type="hidden" name="u" value="f3d8a4a93db24975a2da9565b" />
 					<input type="hidden" name="id" value="1e7e011a5b" />
 					<div className="mailchimp-signup__email">
@@ -46,8 +52,8 @@ class Subscribe extends React.Component {
 							id="MERGE0" 
 							size="25" 
 							style={{
-								borderColor: '#F3E9EA', 
-								color: '#F3E9EA',
+								borderColor: this.props.color, 
+								color: this.props.color,
 								fontSize: '1rem'
 							}}
 							value={this.state.emailValue} 
@@ -62,8 +68,8 @@ class Subscribe extends React.Component {
 							id="MERGE1" 
 							size="25" 
 							style={{
-								borderColor: '#F3E9EA',
-								color: '#F3E9EA',
+								borderColor: this.props.color,
+								color: this.props.color,
 								fontSize: '1rem'
 							}}
 							value={this.state.nameValue}
