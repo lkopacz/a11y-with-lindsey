@@ -8,9 +8,9 @@ affiliate: false
 ---
 
 
-After cross-posting my last post about [dropdowns](/blog/create-accessible-dropdown-navigation) on [dev.to](https://dev.to/), I was reading through the comments and someone posted about `:focus-within`. The best thing about sharing my knowledge on the internet is learning how other people are approaching things. Quite frankly, I have never used `:focus-within` before, so this is me learning and testing it out. Because this blog post will primarily be based on a continuation of the previous dropdown post, I highly suggest reading that beforehand if you haven't already.
+After cross-posting my last accessibility post about [dropdowns](/blog/create-accessible-dropdown-navigation) on [dev.to](https://dev.to/), I was reading through the comments and someone posted about `:focus-within`. The best thing about sharing my knowledge on the internet is learning how other people are approaching things. Quite frankly, I have never used `:focus-within` before, so this is me learning and testing it out. Because this blog post will primarily be based on a continuation of the [previous dropdown post](/blog/create-accessible-dropdown-navigation), I highly suggest reading that beforehand if you haven't already.
 
-As a reminder, here is the same HTML from the previous post:
+As a reminder, here is the same HTML structure from the previous post:
 ```html
 <nav>
   <ul class="menu">
@@ -77,8 +77,8 @@ The major con here is browser support. This is not supported in the latest versi
 
 ## My thoughts
 
-The stubborn part of me really wanted to create a small polyfill. I tried what was suggested to me on [dev.to](https://dev.to/link2twenty/comment/7bp1) with no success. I also attempted [a solution](https://gomakethings.com/testing-for-css-pseudo-class-support-with-vanilla-javascript/) after scouring the Internet, and I couldn't seem to get this to work either. In the end, I was spending way more time searching the Internet and writing and rewriting JS. It took away the simplicity of that one line of CSS for me. In the end, I gave up and didn't resolve the issue. 
+The stubborn part of me really wanted to create a small polyfill. I tried what was suggested to me on [dev.to](https://dev.to/link2twenty/comment/7bp1) with no success. I also attempted [a solution](https://gomakethings.com/testing-for-css-pseudo-class-support-with-vanilla-javascript/) after scouring the Internet, and I couldn't seem to get this to work either. In the end, I was spending way more time searching the Internet and writing and rewriting JS. It took away the simplicity of that one line of CSS for me. In the end, I gave up and didn't figure out a polyfill for the issue. 
 
-If there's a simple way to polyfill support for pseudo classes in Vanilla JS, I am all about it. In fact, if you get something working, please let me know. However, I get anxious at the thought of leaving the latest versions of browsers unsupported. In fact, part of [WCAG's POUR principles](https://webaim.org/articles/pour/) is that sites should have **robust** support across browsers. While I love to use modern tricks, I may stick to my way for now, and try to improve the JS I had to make it work backward and forward. 
+If there's a simple way to polyfill support for pseudo classes in Vanilla JS, I am all about it. In fact, if you get something working, please let me know. Send me a codepen or jsfiddle! However, I get anxious at the thought of leaving the latest versions of browsers unsupported. In fact, part of [WCAG's POUR principles](https://webaim.org/articles/pour/) is that sites should have **robust** support across browsers. While I love to use modern tricks, I may stick to my way for now, and try to improve the JS I had to make it work backward and forward. 
 
 So that's it for now! If you find a simple, non-bloated way to polyfill `:focus-within`, let me know on [Twitter](https://twitter.com/littlekope0903)!
