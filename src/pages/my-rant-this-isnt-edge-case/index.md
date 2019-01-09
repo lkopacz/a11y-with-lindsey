@@ -30,7 +30,7 @@ Approximately one of every five people suffer from a disability, which means tha
 
 ## Legal
 
-There have been three lawsuits that come to mind when I think of the legal implications of accessibility. Most recently is the Beyoncé lawsuit for her site being inacessible for visually impaired users. There was also the Target lawsuit and the Winn Dixie lawsuits. There has always been Section 508 of the Rehabilitation Act that inforces United States government agencies to be accessible. But these lawsuits bring into question what does the ADA cover in terms of the web. And while your site may not **technically** be breaking the law, wouldn't you rather save money on lawyers and settlements? Let's go over these trials in a little more detail.
+There have been three lawsuits that come to mind when I think of the legal implications of accessibility. Most recently is the Beyoncé lawsuit for her site being inacessible for visually impaired users. There was also the Target lawsuit and the Winn Dixie lawsuits. There has always been Section 508 of the Rehabilitation Act that inforces United States government agencies to be accessible. But these lawsuits bring into question what does the ADA cover in terms of the web. And while your site may not **technically** be breaking the law, wouldn't you rather save money on lawyers and settlements? While I could go on about all three, this post would get really long. I'm primarily going to go over the most recent Beyonce lawsuit, and provide links to learn more about the Winn Dixie Lawsuit. 
 
 ### Beyoncé.com lawsuit
 
@@ -44,8 +44,11 @@ This also helps me remember that we absolutely cannot sugar coat the implication
 
 Source: [Beyonce.com Lawsuit Reminds Us How Shitty the Web Is for Users With Visual Impairment](https://gizmodo.com/beyonce-com-lawsuit-reminds-us-how-shitty-the-web-is-fo-1831493336)
 
-### Target lawsuit
+### Links about Winn Dixie and Target Lawsuits
 
-
+- [W3C WAI - The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/) (go to the minimize legal risk section)
+- [Ars Technica - Target to pay $6 million to settle site accessibility suit](https://arstechnica.com/uncategorized/2008/08/target-to-pay-6-million-to-settle-site-accessibility-suit/)
+- [Defendants Fighting Website Accessibility Cases Face An Uphill Battle In 2018](https://www.adatitleiii.com/tag/winn-dixie/)
+- [First-Of-Its-Kind Trial Goes Plaintiff's Way; Winn-Dixie Must Update Website For The Blind](https://www.forbes.com/sites/legalnewsline/2017/06/13/first-of-its-kind-trial-goes-plaintiffs-way-winn-dixie-must-update-website-for-the-blind/#2890a7561b38)
 
 ## Good HTML 
