@@ -5,6 +5,8 @@ path: "/blog/create-accessible-dropdown-navigation-without-js"
 tags: ["accessibility", "navigation", "css", "front end web development"]
 published: true
 affiliate: false
+hasAudio: true
+audioLink: "https://www.parler.io/audio/7119149108/2cdfdce373d5b6114644114a22a9fb7fd60ab264.5e9775fc-2449-4d02-ac37-3627f767bfdd.mp3"
 ---
 
 
