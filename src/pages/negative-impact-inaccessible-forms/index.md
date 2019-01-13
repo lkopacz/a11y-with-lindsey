@@ -4,7 +4,7 @@ date: "2018-10-23"
 path: "/blog/negative-impacts-withholding-form-labels"
 tags: ["screenreaders", "forms", "accessibility"]
 published: true
-affiliate: true
+affiliate: false
 hasAudio: true
 audioLink: "https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3"
 ---
@@ -23,7 +23,7 @@ I imagine that I’d try if I was very passionate about that candidate, but cons
 
 ![Gif of woman who is covering her face in frustration](https://media.giphy.com/media/ql4LidslabKpi/giphy.gif)
 
-There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, [Building a StoryBrand](https://www.amazon.com/gp/product/0718033329/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0718033329&linkCode=as2&tag=a11ywithlinds-20&linkId=00e119a69d54ba4bd1cc3cd46c434146), and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself. 
+There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, Building a StoryBrand, and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself. 
 
 While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all. 
 
