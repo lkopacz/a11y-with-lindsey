@@ -63,3 +63,5 @@ Even the [MDN docs](https://developer.mozilla.org/en-US/docs/Learn/Accessibility
 
 ## Conclusion
 As you can see, there are many reasons why this is not an edge case. “Just make it work” is subjective, and that bias can end up costing you a lot of money along the line and alienate your users. Remember that your target audience always has some folks from these communities, so it’s best not to ignore them.
+
+How do you talk to your stakeholders about accessibility? Let me know on [Twitter](https://twitter.com/littlekope0903) or tweet me if you have questions about this blog post.
