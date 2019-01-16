@@ -5,6 +5,8 @@ path: "/blog/2018-year-in-review"
 tags: ["accessibility", "year in review", "goals", "side hustle"]
 published: true
 affiliate: false
+hasAudio: true
+audioLink: "https://www.parler.io/audio/7119149108/2807a3de0b61446fdc71a748f040f6d531a264b4.6718b88f-04db-48db-98f8-88ca7c5cfb49.mp3"
 ---
 
 It's that time of year where I utter the same predictable phrase: "This year feels like it's been so long and yet so short!" As some may have noticed, I took a bit of a break from blogging in December. However, the positive of that is I've had a lot of time to reflect on the year and my goals for the upcoming year.

@@ -11,7 +11,6 @@ export default function Template({ data }) {
 
   const affiliate = 'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
   const audio = frontmatter.hasAudio ? frontmatter.audioLink : '';
-  console.log(frontmatter);
     return (
       <div>
         <Helmet 
