@@ -4,6 +4,8 @@ date: "2019-01-16"
 path: "/blog/3-reasons-why-accessibility-not-edge-case"
 tags: ["ux", "accessibility"]
 published: true
+hasAudio: true
+audioLink: "https://www.parler.io/audio/7119149108/68a55ac9f32155276ec3f8fd63b57e87ab25acf6.05adf8b2-34cd-4a74-8a95-5ed875db72db.mp3"
 ---
 
 The primary question I get from developers is “How do I get my clients on board” or sometimes “How do I convince my boss that it’s worth investing in?” I was asked this once at a panel, and my response was “I don’t, I just do it.” Because I understand accessibility pretty well and build with accessibility in mind from the start, I am usually able to solve accessibility problems relatively quickly without people even noticing that I spent extra time on it. But when developers who are still newer to accessibility are trying to convince their bosses, sometimes they clap back that “this is a low priority” or “that is an edge case.”
