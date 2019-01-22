@@ -7,7 +7,7 @@ published: true
 affiliate: false
 ---
 
-When I was a Drupal developer, a great deal of interest went into Automated Accessibility Testing. I very much loved working on automation especially when it was incorporated into our Continuous Integration. This would fail builds that introduced accessibility errors, which was a great way to ensure that we were thinking about accessibility from the start and not adding new problems. However, I feel like we like to automate our problems away and it cannot fix everything for you. Automated accessibility testing catches that nitpicky HTML errors so that you can focus on the more significant and subjective items manually. 
+When I was a Drupal developer, a great deal of interest went into Automated Accessibility Testing. I very much loved working on automation especially when it was incorporated into our Continuous Integration. This would fail builds that introduced accessibility errors, which was a great way to ensure that we were thinking about accessibility from the start and not adding new problems. However, I feel like we like to automate our problems away and it cannot fix everything for you. Automated accessibility testing catches those nitpicky HTML errors so that you can focus on the more significant and subjective items manually. 
 
 Accessibility is empathy-driven, and you can not automate empathy. Automation certainly makes a lot of things easier, like catching a text input without an associated label, but here are a few things that I do to ensure that my sites are accessible as possible.
 
@@ -20,7 +20,7 @@ This is usually the first thing I test. You can start navigating the website usi
 - Can I interact with Select Lists? This is important to test as a lot of people design these to not use the default HTML for them.
 - Is there any moment that I press my tab key that I am unsure where I am at? Am I focusing on items that aren’t visible on the screen?
 
-In the below gif, you see that when we focus on the top menu links, it doesn’t even expand the submenu. It does expand it when we hover over the top menu links though. In this example, automated accessibility testing may not have caught this flaw, but if someone tabbed through the menu, they may have caught it. 
+In the below gif, you see that when we focus on the top menu links, it doesn’t even expand the submenu. It does expand it when we hover over the top menu links though. In this example, automated accessibility testing may not have caught this flaw, but if someone tabbed through the menu, they might find it.
 
 ![Gif tabbing through a menu, seeing that the submenu doesn't expand, then hovering and showing the submenu expand.](https://media.giphy.com/media/jlrAWR6325DrxGWghX/giphy.gif)
 
@@ -40,9 +40,9 @@ Ask yourself these questions:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I would like to introduce you to my most viral tweet: <a href="https://t.co/lDrKUqmC6Z">https://t.co/lDrKUqmC6Z</a><br><br>I&#39;m proud of the fact that it&#39;s promoting something important rather than a silly meme.</p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/1083392902716219392?ref_src=twsrc%5Etfw">January 10, 2019</a></blockquote>
 
-We think we are being fresh and modern, but sometimes things like multiple emojis, fancy font, and other random oddities that can negatively impact screenreaders. It’s always good to catch that before you deploy something out.
+We think we are being fresh and modern, but sometimes things like multiple emojis, fancy font, and other random oddities can negatively impact screenreaders. It’s always good to catch that before you deploy something out.
 
-Once you’ve familiarized yourself with the basic screenreader commands, go through your site with a blindfold. That will make things crystal clear about whether or not they are accessible or not.
+Once you’ve familiarized yourself with the basic screenreader commands, go through your site with a blindfold. That will make things crystal clear about whether or not they are accessible.
 
 ## Make sure your alt text makes sense
 
