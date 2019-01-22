@@ -1,18 +1,22 @@
 ---
 title: 4 things that I always manually test
-date: "2019-01-22"
-path: "/blog/4-things-always-manually-test"
-tags: ["accessibility", "testing", "front end web development"]
+date: '2019-01-22'
+path: '/blog/4-things-always-manually-test'
+tags: ['accessibility', 'testing', 'front end web development']
 published: true
 affiliate: false
+hasAudio: true
+audioLink: 'https://www.parler.io/audio/502080242/fe487c06f516e2c9a627b987a5ed0a7b4aa7b405.49f907de-8e08-421a-be73-a522dc5894c6.mp3'
 ---
 
-When I was a Drupal developer, a great deal of interest went into Automated Accessibility Testing. I very much loved working on automation especially when it was incorporated into our Continuous Integration. This would fail builds that introduced accessibility errors, which was a great way to ensure that we were thinking about accessibility from the start and not adding new problems. However, I feel like we like to automate our problems away and it cannot fix everything for you. Automated accessibility testing catches those nitpicky HTML errors so that you can focus on the more significant and subjective items manually. 
+When I was a Drupal developer, a great deal of interest went into Automated Accessibility Testing. I very much loved working on automation especially when it was incorporated into our Continuous Integration. This would fail builds that introduced accessibility errors, which was a great way to ensure that we were thinking about accessibility from the start and not adding new problems. However, I feel like we like to automate our problems away and it cannot fix everything for you. Automated accessibility testing catches those nitpicky HTML errors so that you can focus on the more significant and subjective items manually.
 
 Accessibility is empathy-driven, and you can not automate empathy. Automation certainly makes a lot of things easier, like catching a text input without an associated label, but here are a few things that I do to ensure that my sites are accessible as possible.
 
 ## Go through the Website with my Keyboard
+
 This is usually the first thing I test. You can start navigating the website using the `tab` key. This is something I don’t actually go out of my way to test because I always use my keyboard to navigate these days, so I am already testing and finding issues by default. Here are a few of the things that I think about when I am testing with my keyboard:
+
 - Can I get through my navigation with ease?
 - Is this a mega menu? If so, is there a way to quickly skip to the next top-level link and browse through those? For example, when I am on an e-commerce clothing site navigating through the menu. If I am on the “men’s” top-level menu link and looking for women’s clothing, I don’t want to go through all the menu links “Jackets,” “Bottoms,” “Accessories,” and “Watches” for men. I'd like to jump to the Women's top-level menu link instead.
 - For things that pop up like modals, is there a way to quickly exit out of them that is intuitive? For example, is there a “No Thanks” link or a way to exit with the “Esc” key?
@@ -33,6 +37,7 @@ Did you know that on MacOS there is a built-in screen reader? Did you know that 
 The first thing I would do is familiarize yourself with the [basic screen reader commands](https://developer.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/). This will help you tremendously because you do need more than just the `tab` key to navigate through a page.
 
 Ask yourself these questions:
+
 - Is it obvious how to navigate through my interactive features? If not, does the screen reader explain it?
 - Does the screenreader go through the logical order of the page and how I’d imagine my sighted users would go through it?
 
@@ -51,11 +56,13 @@ Technically, if you have alt text or empty alt text, you won’t flag on an acce
 If you want to have a bit more info on this, I highly recommend reading my previous post about alt text - [Writing alternative text that matters](/blog/writing-alternative-text-matters). I go through this in much more detail, but I would keep reviewing the alt text of your images on your manual testing checklist.
 
 ## Go through the Wave Tool
+
 This is technically somewhat automated, but I always like to double check my site with the [Wave Tool](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US). It’s just a habit that I still do to make sure that anything that comes up on my automated testing is no surprise. I really like this tool; I know there are a ton of other ones out there, but I always come back to this one. One of my favorite things about it is it documents what the error means, why it matters, and how to fix the error.
 
 ![Screen Shot of the Wave Tool being used showing how to fix accessibility issues.](./wave-tool-documentation-screenshot.png)
 
 ## Conclusion
+
 While automated accessibility testing is a great tool that makes our life a ton more manageable, I am always an advocate for manually testing the items that can be a little more nuanced. Also, manually testing is a great place to get your UX experts involved. This will help you and your teammate figure out the best behavior to make your application as minimally frustrating to all your users, not just your users with disabilities.
 
 What do you manually test? Let me know on [Twitter](https://twitter.com/littlekope0903) or tweet me if you have questions about this blog post.
