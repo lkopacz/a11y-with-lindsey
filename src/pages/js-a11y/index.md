@@ -18,7 +18,7 @@ Then more recently (last week as of this writing), Chris Coyier came out with an
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Nitpick: I think it would be great to avoid juxtaposing e.g. “JavaScript” with “accessibility” as if those skillsets were somehow at odds. <a href="https://t.co/8OSjWoP2E1">pic.twitter.com/8OSjWoP2E1</a></p>&mdash; Dan Abramov (@dan_abramov) <a href="https://twitter.com/dan_abramov/status/1087398276817666048?ref_src=twsrc%5Etfw">January 21, 2019</a></blockquote>
 
-I’ve never been the type to avoid JavaScript like the plague. In fact, that would probably be bad because I write JavaScript every single day for my day job. But there seems to be this myth that JavaScript and accessibility are enemies. I wanted to accumulate my own list of how vanilla JavaScript when appropriately used, can actually **enhance** accessibility and not harm it.
+I’ve never been the type to avoid JavaScript like the plague. In fact, that would probably be bad because I write JavaScript every single day for my day job. But there seems to be this myth that JavaScript and accessibility are enemies. I wanted to accumulate my own list of how vanilla JavaScript, when appropriately used, can actually **enhance** accessibility, not harm it.
 
 ## Menus and Megamenus 
 
@@ -36,13 +36,28 @@ I know there are a ton of accordions libraries out there, but I tend to code the
 
 I once had to create a keyboard accessible accordion and wasn’t allowed to edit the markup due to client requirements. The markup was basically an entire unordered list. `<li>` have a tabindex of `-1` which means they are not focusable. I wanted to add `<button>`s to allow myself to add some focusability and built-in JavaScript, but because I wasn’t allowed I had to update the tabIndex’s and create some `keypress` events as well. There’s a more straightforward way to do it, and I plan to make a pretty yet accessible JavaScript accordion in a future post.
 
-Take a look at this [codepen](https://codepen.io/sedlukha/pen/WPeemb). It works beautifully with clicks, but at the time of this writing I couldn't seem to use my keyboard to access it.
+Take a look at this codepen. It works beautifully with clicks, but at the time of this writing I couldn't seem to use my keyboard to access it.
 
-![test](https://media.giphy.com/media/8BlCtwIYxgbVb6UypX/giphy.gif)
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accordion react component with animation " src="//codepen.io/sedlukha/embed/WPeemb/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/sedlukha/pen/WPeemb/'>Accordion react component with animation </a> by Artur Sedlukha
+  (<a href='https://codepen.io/sedlukha'>@sedlukha</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 
 ## Modals
 
-Have you ever had a modal popup and the focus is still “behind” it? I personally have issues with popup modals from a User Experience perspective. However, it is actually an effective sales and marketing tactic. But when you pop up a modal without a user asking, is the focus still behind it? When the modal pop up after a certain amount of time on the site, do you also account for the focus to go to that modal? How is someone supposed to exit the modal and use the rest of the site if they aren’t interested? Or what if they are interested? How are they going to get to the sign up for that coupon or email newsletter?
+Have you ever had a modal popup and the focus is still “behind” it? You are tabbing and tabbing to try to get out of it, but unfortunately, it's going through all the links in the menu instead of helping you get out and read the page. 
+
+I personally have issues with popup modals from a User Experience perspective, regardless of accessibility. I don't like to have my train of thought be interrupted. However, it is actually an effective sales and marketing tactic and therefore as developers, we have the duty to ensure that we are making them accessible. 
+
+When you pop up a modal with or without a user asking, is the focus on other items behind it? Can you even see where the item is focused without looking at the bottom of the screen? When the modal pops up after a certain amount of time on the site, do you also ensure that the focus is on that modal? How is someone supposed to exit the modal and use the rest of the site if they aren’t interested? What if they are interested? How are they going to get to the sign up for that coupon or email newsletter?
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Modal Popup " src="//codepen.io/jsayner/embed/xvEca/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/jsayner/pen/xvEca/'>Modal Popup </a> by Jordan Sayner
+  (<a href='https://codepen.io/jsayner'>@jsayner</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+If you take a look at the above codepen, you'll notice that the focus does not immediately go to the modal once we click on it.
 
 You’re probably already using JavaScript to make that modal popup, so why not add a few extra lines of code to make sure it’s easy for the user to sign up or exit out? I’ll probably do an egghead.io video and a separate blog post showing how I would think through this, but it’s something to think through.
 
