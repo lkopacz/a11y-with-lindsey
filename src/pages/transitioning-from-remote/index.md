@@ -5,6 +5,8 @@ path: "/blog/3-things-I-learned-transitioning-remote-office"
 tags: ["remote", "tech", "office", "career"]
 published: true
 affiliate: false
+hasAudio: true 
+audioLink: "https://www.parler.io/audio/7119149108/a88ce8308a91df4488a3fdcef775a20bdacc2e2f.0310f77e-6797-446e-bd96-50bd083c8e74.mp3"
 ---
 
 Back in October, I wrote a post about [10 things I've learned from working remotely](https://dev.to/lkopacz/10-things-ive-learned-from-working-remotely-240h), and it was a big hit. It actually made the top 7 posts that week on [dev.to](https://dev.to/devteam/the-7-most-popular-dev-posts-from-the-past-week-2bdb)! I had been working remotely for about 16 months at that point, and I shared a bunch of things that I had learned.

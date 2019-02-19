@@ -5,6 +5,8 @@ path: '/blog/beginning-demystify-aria'
 tags: ['accessibility', 'html', 'front end web development', 'aria']
 published: true
 affiliate: false
+hasAudio: true 
+audioLink: "https://www.parler.io/audio/7119149108/67927009fe10c9ec137aa9ff973489b3948157c0.a5c18b68-29ba-482a-8c62-3e2c033c4447.mp3"
 ---
 
 If you didn’t know this already, I usually cross post all these on [DEV](https://dev.to). When I cross-posted about why accessibility isn’t an edge case, I got a comment wishing accessibility was more straightforward to implement. I didn’t find learning to make accessible solutions to be that challenging once I was up to date on HTML and CSS best practices, so I was genuinely curious about where they found it difficult. When [they answered](https://dev.to/marek/comment/882m), it seemed like the primary pain point was ARIA. 
