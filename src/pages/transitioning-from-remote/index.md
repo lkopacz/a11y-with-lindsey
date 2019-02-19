@@ -1,21 +1,21 @@
 ---
 title: 3 Things I learned transitioning from Remote to an Office
-date: "2019-02-19"
+date: "2019-02-20"
 path: "/blog/3-things-I-learned-transitioning-remote-office"
 tags: ["remote", "tech", "office", "career"]
 published: true
 affiliate: false
 ---
 
-Back in October, I wrote a post about [10 things I've learned from working remotely](https://dev.to/lkopacz/10-things-ive-learned-from-working-remotely-240h), and it was a big hit. It actually made the top 7 posts that week! I had been working remotely for about 16 months at that point, and I shared a bunch of things that I had learned.
+Back in October, I wrote a post about [10 things I've learned from working remotely](https://dev.to/lkopacz/10-things-ive-learned-from-working-remotely-240h), and it was a big hit. It actually made the top 7 posts that week on [dev.to](https://dev.to/devteam/the-7-most-popular-dev-posts-from-the-past-week-2bdb)! I had been working remotely for about 16 months at that point, and I shared a bunch of things that I had learned.
 
-A few months ago, I got an incredible offer. It was approximately 32% more than I was making - but there was a catch. I had to go back into working at an office. The commute was about 20 minutes - so not bad at all. However, I didn’t take it with a grain of salt. The work seemed way more exciting than what I was doing at my remote job, and the money was handsome. I decided to go for it, but it was definitely an adjustment. It’s been about 2 months into my new gig, and I wanted to share a few things that I’ve learned and even enjoyed with the new change.
+A few months ago, I got an incredible offer. It was approximately 32% more than I was making - but there was a catch. I had to go back into working at an office. The commute was about 20 minutes - so not bad at all. However, I didn’t take it with a grain of salt. The work seemed way more exciting than what I was doing at my remote job, and the money was amazing. However, I was very attached to my lifestyle as a remote employee. I decided to go for it, but it was definitely an adjustment. It’s been about 2 months into my new gig, and I wanted to share a few things that I’ve learned and even enjoyed with the new change.
 
 ## 1. Prioritize what is important in your routine
 
 The hardest adjustment for me was shifting my routine around. When I was working remotely, I usually woke up between 6 and 7. I’d hit the gym, shower up, have some breakfast and get to writing. While my new commute is one that many in the DC area dream of (the rush hour traffic gets terrible here), it was quite an adjustment for me in terms of what I could get done in my mornings. This became even harder as I have become more diligent about creating [egghead.io](https://egghead.io/instructors/lindsey-kopacz) content.
 
-I realized that I could not focus on both the gym and content creation on the same days. To do so, I would need to wake up even earlier than I already do. Anytime before 5:30AM is incredibly difficult for me. Mainly because I am an avid weightlifter, so it’s not just “get my exercise in.” Depending on how much rest I need between sets, I could sometimes take up to an hour getting ready for the gym, getting to and from the gym, and working out. When I didn’t have a commute (or really wear anything business casual), this wasn’t a huge deal.
+I realized that I could not focus on both the gym and content creation on the same days. To do so, I would need to wake up even earlier than I already do. Anytime before 5:30AM is incredibly difficult for me. Because I am an avid weightlifter, going to the gym is a goal that deserves undivided focus from me. I could sometimes take up to an hour getting ready for the gym, getting to and from the gym, and working out, depending on how many exercises I was doing and how much rest I needed between sets. When I didn’t have a commute, this wasn’t a huge deal.
 
 ![Gif with a stick figure going to bed and then working.](https://media.giphy.com/media/3GYmecuz4ncOc/giphy.gif)
 
@@ -35,7 +35,7 @@ This is going to get a bit personal. If you’re not into that, skip ahead.
 
 Strangely enough, the moment I started my blog was the moment that shit hit the fan at my last job. The day after I launched my blog I had a large work emergency that felt unsolvable. I was new to the project, and the people who had more context were either on PTO or sick. I had a panic attack the following day while on a call with a client (which is not fun). I was talking to a friend, one I will always be thankful for at that moment, and he said “Lindsey, it’s a website. Nobody is going to die.” It was that blunt statement I needed to calm me down.
 
-I tried to take that statement and remember that work is work. I don’t need it to be fun all the time, that’s why it’s called work. So I would acknowledge my feelings of stress, and attempt to keep it in perspective. I was only one person, and I had to manage expectations of what I could do and what I couldn’t and reach out for help when needed.
+I tried to take that statement and remember that work is work. I don’t need it to be fun all the time, that’s why it’s called work. So I would acknowledge my feelings of stress and attempt to keep it in perspective. I was only one person, and I had to manage expectations of what I could do and what I couldn’t and reach out for help when needed.
 
 Sometime during that month, I started to get depressed. My employer was going through some changes that made it really hard for me to let go. I was open about it with my coworkers, but it didn’t seem to help. It got to the point that to protect my mental health, I needed to literally **not care**. I know a lot of my readers only see an Internet version of me, but I hope it’s clear that I am a very passionate person. Not caring made me even more depressed, so it became a no-win situation for me. While I could stand to have **some** detachment from clients for boundary purposes, I can’t turn it off completely.
 
