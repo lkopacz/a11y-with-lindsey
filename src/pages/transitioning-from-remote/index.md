@@ -1,6 +1,6 @@
 ---
 title: 3 Things I learned transitioning from Remote to an Office
-date: "2019-02-20"
+date: "2019-02-19"
 path: "/blog/3-things-I-learned-transitioning-remote-office"
 tags: ["remote", "tech", "office", "career"]
 published: true
