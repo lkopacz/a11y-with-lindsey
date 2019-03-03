@@ -1,103 +1,103 @@
 import React from 'react'
 import './subscribe.css'
 
-class Subscribe extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      emailValue: '',
-      nameValue: '',
-      robotValue: '',
-    }
+const Subscribe = props => {
+  let bgClass
+  if (props.hasBackground) {
+    bgClass = 'convertkit-signup convertkit-signup--white-bg'
+  } else {
+    bgClass = 'convertkit-signup'
   }
+  return (
+    <div className={bgClass}>
+      <script src="https://f.convertkit.com/ckjs/ck.5.js" />
+      <form
+        action="https://app.convertkit.com/forms/866792/subscriptions"
+        className="seva-form formkit-form"
+        method="post"
+        data-sv-form="866792"
+        data-uid="4218bd5fb5"
+        data-format="inline"
+        data-version="5"
+        data-options='{"settings":{"after_subscribe":{"action":"message","success_message":null,"redirect_url":""},"modal":{"trigger":null,"scroll_percentage":null,"timer":null,"devices":null,"show_once_every":null},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":null},"slide_in":{"display_in":null,"trigger":null,"scroll_percentage":null,"timer":null,"devices":null,"show_once_every":null}}}'
+      >
+        <h2>Get my blogs first</h2>
+        <div data-style="clean">
+          <ul
+            className="formkit-alert formkit-alert-error"
+            data-element="errors"
+            data-group="alert"
+          />
+          <div
+            data-element="fields"
+            data-stacked="false"
+            className="seva-fields formkit-fields"
+          >
+            <div className="formkit-field">
+              <input
+                className="formkit-input"
+                aria-label="Your first name"
+                name="fields[first_name]"
+                required
+                placeholder="Your first name"
+                type="text"
+                style={{
+                  color: 'rgb(30, 54, 80)',
+                  borderColor: 'rgb(227, 227, 227)',
+                  borderRadius: '4px',
+                  fontWeight: 400,
+                }}
+              />
+            </div>
 
-  handleEmailInput = event => {
-    this.setState({
-      emailValue: event.target.value,
-    })
-  }
+            <div className="formkit-field">
+              <input
+                className="formkit-input"
+                name="email_address"
+                placeholder="Your email address"
+                aria-label="Your email address"
+                required=""
+                type="email"
+                style={{
+                  color: 'rgb(30, 54, 80)',
+                  borderColor: 'rgb(227, 227, 227)',
+                  borderRadius: '4px',
+                  fontWeight: 400,
+                }}
+              />
+            </div>
 
-  handleNameInput = event => {
-    this.setState({
-      nameValue: event.target.value,
-    })
-  }
-
-  handleRobot = event => {
-    this.setState({
-      robotValue: event.target.value,
-    })
-  }
-
-  render() {
-    let bgClass
-    if (this.props.hasBackground) {
-      bgClass = 'mailchimp-signup mailchimp-signup--white-bg'
-    } else {
-      bgClass = 'mailchimp-signup'
-    }
-    return (
-      <div className={bgClass}>
-        <form
-          className="mailchimp-signup__form"
-          action="https://twitter.us12.list-manage.com/subscribe/post"
-          method="POST"
-        >
-          <h2>{this.props.title}</h2>
-          <input type="hidden" name="u" value="f3d8a4a93db24975a2da9565b" />
-          <input type="hidden" name="id" value="1e7e011a5b" />
-          <div className="mailchimp-signup__email">
-            <label htmlFor={`${this.props.id}-MERGE0`}>Email Address</label>
-            <input
-              type="email"
-              autocapitalize="off"
-              autocorrect="off"
-              name="MERGE0"
-              id={`${this.props.id}-MERGE0`}
-              size="25"
+            <button
+              data-element="submit"
+              className="formkit-submit formkit-submit"
               style={{
-                borderColor: this.props.color,
-                color: this.props.color,
-                fontSize: '1rem',
+                color: 'rgb(255, 255, 255)',
+                backgroundColor: 'rgb(192, 55, 17)',
+                borderRadius: '4px',
+                fontWeight: 700,
               }}
-              value={this.state.emailValue}
-              onChange={this.handleEmailInput}
-            />
+            >
+              <div className="formkit-spinner">
+                <div />
+                <div />
+                <div />
+              </div>
+              <span>Subscribe</span>
+            </button>
           </div>
-          <div className="mailchimp-signup__name">
-            <label htmlFor={`${this.props.id}-MERGE1`}>First Name</label>
-            <input
-              type="text"
-              name="MERGE1"
-              id={`${this.props.id}-MERGE1`}
-              size="25"
-              style={{
-                borderColor: this.props.color,
-                color: this.props.color,
-                fontSize: '1rem',
-              }}
-              value={this.state.nameValue}
-              onChange={this.handleNameInput}
-            />
-          </div>
-          <div style={{ position: 'absolute', left: -5000 }} aria-hidden="true">
-            <label htmlFor={`${this.props.id}-test`}>Name:</label>
-            <input
-              id={`${this.props.id}-test`}
-              type="text"
-              name="b_f3d8a4a93db24975a2da9565b_1e7e011a5b"
-              tabindex="-1"
-              value={this.state.robotValue}
-              onChange={this.handleRobot}
-            />
-          </div>
-          <div className="mailchimp-signup__submit">
-            <input type="submit" name="submit" value="Subscribe" />
-          </div>
-        </form>
-      </div>
-    )
-  }
+          <a
+            href="https://convertkit.com/?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"
+            className="formkit-powered-by"
+            data-element="powered-by"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered By ConvertKit
+          </a>
+        </div>
+      </form>
+    </div>
+  )
 }
 
 export default Subscribe

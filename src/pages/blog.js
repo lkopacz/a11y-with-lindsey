@@ -6,22 +6,24 @@ import Sidebar from '../components/sidebar/sidebar'
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = 'Blog | ' + get(this, 'props.data.site.siteMetadata.title') 
-    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    const siteTitle =
+      'Blog | ' + get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <div>
-        <Helmet 
-          title={siteTitle} 
+        <Helmet
+          title={siteTitle}
           meta={[
-            { 
+            {
               name: 'description',
-              content: 'a11y with Lindsey blog, where you can learn tidbits of accessibility tips for developers' 
+              content:
+                'a11y with Lindsey blog, where you can learn tidbits of accessibility tips for developers',
             },
             {
               name: 'keywords',
-              content: 'accessibility, blogging, DC, inclusion, empathy'
-            }
+              content: 'accessibility, blogging, DC, inclusion, empathy',
+            },
           ]}
         />
         <div className="wrapper with-sidebar">
@@ -37,11 +39,11 @@ class BlogIndex extends React.Component {
             <main id="main-content">
               <h1>Blog</h1>
               {posts.map(({ node }) => {
-                const title = get(node, 'frontmatter.title');
-                const path = get(node, 'frontmatter.path');
+                const title = get(node, 'frontmatter.title')
+                const path = get(node, 'frontmatter.path')
                 return (
-                  <div style={{marginTop: 24, marginBottom: 24}} key={path}>
-                    <h2 style={{marginTop: 10, marginBottom: 10}} >
+                  <div style={{ marginTop: 24, marginBottom: 24 }} key={path}>
+                    <h2 style={{ marginTop: 10, marginBottom: 10 }}>
                       <Link style={{ boxShadow: 'none' }} to={path}>
                         {title}
                       </Link>
@@ -49,7 +51,8 @@ class BlogIndex extends React.Component {
                     <time>{node.frontmatter.date}</time>
                     <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                     <Link to={path}>
-                      Read more<span className="visually-hidden"> about {title}</span>
+                      Read more
+                      <span className="visually-hidden"> about {title}</span>
                     </Link>
                   </div>
                 )
