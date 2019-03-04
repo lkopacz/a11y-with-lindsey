@@ -5,6 +5,8 @@ path: '/blog/7-ways-tweets-more-accessible'
 tags: ['twitter', 'a11y', 'accessibility', 'screen reader', 'blind']
 published: true
 affiliate: false
+hasAudio: true
+audioLink: 'https://www.parler.io/audio/7119149108/06080083b67ba91f497d9138a9e69982c81b93d5.12f6ed3d-c72c-4be5-9429-b343c920d39f.mp3'
 ---
 
 I wrote a tweet thread a while back where I started talking about ways to keep accessibility in mind on the platforms we use such as Twitter. Sometimes we don’t have control over the platforms we use, and the best we can do is ensure our content is accessible. This tweet thread got a decent amount of attention, but unfortunately, it’s easy for things to get lost in the Twitterverse. I decided to write a blog post elaborating a bit more on each of the critical points I made while also ensuring that you could find them more easily.
@@ -47,7 +49,7 @@ And actually use them! If you’re on your Desktop computer, you can enable them
 
 Look, I even recorded it for you!
 
-<img src="https://media.giphy.com/media/wJ51taGkDDNftOFMPt/giphy.gif" alt="" style="width: auto;height: auto;max-width: none;">
+![Screenshare of the above instructions](https://media.giphy.com/media/wJ51taGkDDNftOFMPt/giphy.gif)
 
 Once you get this enabled, you should be able to see an “Add Description” on your images. Also, Twitter, why isn't this enabled by default?
 
