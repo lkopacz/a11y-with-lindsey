@@ -5,12 +5,15 @@ path: '/blog/a11y-js-seemingly-unconventional-romance'
 tags: ['accessibility', 'javascript', 'front end web development']
 published: true
 affiliate: false
+featuredImage: './a11y-js.png'
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/4d72855d6900f3209c1790440bbbb3bdda3a568f.b7306f01-8672-4861-9a24-9a4f3d3a84b5.mp3'
 ---
+
 This post was inspired by a few things. First, a few months ago Rian Rietveld announced she was [resigning as the WordPress accessibility lead](https://rianrietveld.com/2018/10/09/i-have-resigned-the-wordpress-accessibility-team/). I read through the post, and the reason seemed to be mainly about Gutenberg. It seemed that despite all the wpa11y’s team’s warnings, they were pushing to release it while it was almost unusable for those who need assistive devices. I found there to be a tremendous opportunity to educate communities and help to others learn.
 
 In Rian’s blog post, a few things stuck out to me as main problems (these are directly from her site):
+
 - "The codebase of Gutenberg is difficult for all of us, because no one in the wpa11y team is a skilled React developer. So it was hard to implement changes and write PRs ourselves."
 - "There was no React developer with accessibility experience in the community."
 
@@ -20,7 +23,7 @@ Then more recently (last week as of this writing), Chris Coyier came out with an
 
 I’ve never been the type to avoid JavaScript like the plague. In fact, that would probably be bad because I write JavaScript every single day for my day job. But there seems to be this myth that JavaScript and accessibility are enemies. I wanted to accumulate my own list of how vanilla JavaScript when appropriately used, can actually **enhance** accessibility, not harm it.
 
-## Menus and Megamenus 
+## Menus and Megamenus
 
 Menus are a great place to think through your JavaScript because almost all sites have them. I usually use vanilla JavaScript to open and close menus on focus. I wrote about that in my blog post about [building a basic keyboard accessible navigation](/blog/create-accessible-dropdown-navigation) that uses vanilla JavaScript. You can also use them to toggle the state of `aria-expanded` when submenus are open. I’ll be writing a bit more about ARIA in a future post, but just know that `aria-expanded` will tell a screenreader the state of something that opens and closes.
 
@@ -30,7 +33,7 @@ Something I mentioned in my previous post about [manual accessibility testing](/
 
 What are some things we could do? Maybe create a button to close the menu that focuses on the top of the content (similar to how a Skip to Content link would). We may want to create a button that says something like “Skip to ‘Women’s.” Maybe we only want to include these links IF we use our keyboard to navigate and don’t want to put those in if someone is using their mouse. These are all questions we can think through to make things easier.
 
-## Accordions 
+## Accordions
 
 I know there are a ton of accordions libraries out there, but I tend to code them myself or use CodePens for inspiration. If you walk through the problem of how you want to interact with it, what keys you want to trigger, how to write your HTML, it’s enjoyable to start solving this problem! A lot of times when I see Accordions that are coded by hand, the JavaScript only works with clicks. Not only that, but a lot of times you cannot focus on the arrow that opens the accordion section. Sometimes there are even hidden links within the accordion that get focused on without you being able to see it.
 
@@ -60,13 +63,14 @@ If you take a look at the above codepen, you’ll notice that the focus does not
 
 You’re probably already using JavaScript to make that modal popup, so why not add a few extra lines of code to make sure it’s easy for the user to sign up or exit out? I’ll probably do an egghead.io video and a separate blog post showing how I would think through this, but it’s something to think through.
 
-## Interactivity 
- 
+## Interactivity
+
 Have you ever thought through how you want to code through a slider that you have to click to move manually? You’re likely using JavaScript and adding click events to them. Are they focusable? Hint: there should be `<button>`s if they aren’t already and if you’d like to read more on this check out my post on [3 Simple Tips to Improve Keyboard Accessibility](/blog/3-simple-tips-improve-keyboard-accessibility). This will make it focusable and respond to click events!
 
 Is there a feature that uses your mouse to interact with it? Is this an essential feature of your site? You’re already using JavaScript for that, and if you’re using it for click events, might as well think through `keypress` events, focus and all of that!
 
 ## Conclusion
+
 Something I also mentioned in my previous post is that Accessibility is empathy-driven. I think the beauty of combining JavaScript and accessibility is it lends itself to being an empathy exercise. You think through questions like “What would I like this MegaMenu to be if I were a user who was unable to use a mouse? What would make my life easier navigating through this?”
 
 My goal is to have blog posts going through each of these concepts in more depth. But I want you to know that JavaScript isn’t the enemy of accessibility. Instead, lack of empathy is. With some empathy and your awesome JavaScript skills, you CAN make your sites accessible!

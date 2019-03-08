@@ -1,12 +1,13 @@
 ---
-title: Negative Impacts of Withholding Form Labels 
-date: "2018-10-23"
-path: "/blog/negative-impacts-withholding-form-labels"
-tags: ["screenreaders", "forms", "accessibility"]
+title: Negative Impacts of Withholding Form Labels
+date: '2018-10-23'
+path: '/blog/negative-impacts-withholding-form-labels'
+tags: ['screenreaders', 'forms', 'accessibility']
 published: true
 affiliate: false
+featuredImage: './negative-impacts.png'
 hasAudio: true
-audioLink: "https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3"
+audioLink: 'https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3'
 ---
 
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
@@ -23,34 +24,33 @@ I imagine that I’d try if I was very passionate about that candidate, but cons
 
 ![Gif of woman who is covering her face in frustration](https://media.giphy.com/media/ql4LidslabKpi/giphy.gif)
 
-There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, Building a StoryBrand, and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself. 
+There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, Building a StoryBrand, and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself.
 
-While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all. 
+While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all.
 
 ##The Business Side of Forms
 
-Let’s reflect on the above scenario for a second, but from the business side of it. How much money did we miss out on by not including something like form labels on our donation form? According to the [National Federation of the Blind](https://nfb.org/blindness-statistics), in 2015, 7,297,100 or 2.3% of the American population reported having a visual disability. Over 7 million people - think about that. That’s a lot of money potential. 
+Let’s reflect on the above scenario for a second, but from the business side of it. How much money did we miss out on by not including something like form labels on our donation form? According to the [National Federation of the Blind](https://nfb.org/blindness-statistics), in 2015, 7,297,100 or 2.3% of the American population reported having a visual disability. Over 7 million people - think about that. That’s a lot of money potential.
 
 While I believe the reason to create accessible forms is that you don’t want to create a frustrating experience for your users, I know that it’s not really convincing to tell your boss or your clients “Hey we just need to be nicer and more empathetic!” But lost dollars might raise some eyebrows.
 
 ![Money on a cutting board being cut up, representing the metaphor of wasting money](https://media.giphy.com/media/3ohze3cqkv058SUy2s/giphy.gif)
 
-Let's start to think about our call to actions and how many of those actions are forms. Newsletter signups, surveys, credit card information--all of these are forms that can ultimately impact our bottom line. There could be a tremendous cost if we do not address these users. This is not an "edge case" (insert eye roll emoji here). This is actually a costly endeavor. 
+Let's start to think about our call to actions and how many of those actions are forms. Newsletter signups, surveys, credit card information--all of these are forms that can ultimately impact our bottom line. There could be a tremendous cost if we do not address these users. This is not an "edge case" (insert eye roll emoji here). This is actually a costly endeavor.
 
 ##Quickest way to create accessible forms: provide form labels
 
 There is more about forms to make them even more accessible, which I will cover in other blog posts. But if I can summarize form accessibility, I would say Labels, labels, labels!
 
-Something that I see frequently is designers and developers putting the placeholder attribute as a substitute for the label.  See the screenshot and markup below for the **wrong** way.
+Something that I see frequently is designers and developers putting the placeholder attribute as a substitute for the label. See the screenshot and markup below for the **wrong** way.
 
 ![Inaccessible form with no form label using the text inside the input to label it](./search-without-label.png)
 
 ```html
-<input placeholder="Search" type="text">
-<input name="Submit" type="submit">
+<input placeholder="Search" type="text" /> <input name="Submit" type="submit" />
 ```
 
-A lot of designs withhold a label and use the placeholder (what’s inside the input) as a visual cue or implication of the label. However, without a physical label in the markup, a visually impaired user cannot identify what the field input is. The placeholder text was created to be that, a placeholder. Using it as a label does not give assistive technology the context to know that the placeholder has a different meaning now. 
+A lot of designs withhold a label and use the placeholder (what’s inside the input) as a visual cue or implication of the label. However, without a physical label in the markup, a visually impaired user cannot identify what the field input is. The placeholder text was created to be that, a placeholder. Using it as a label does not give assistive technology the context to know that the placeholder has a different meaning now.
 
 Not only must there be a label, but the label must be **associated** with the field. If you have a label that isn't "attached" to the field it's associated with, it defeats the purpose. If it is imperative to a design to not have a label, you can visually hide it which I will talk about in another blog post.
 
@@ -60,16 +60,15 @@ In order to associate a label with a field, you must have an `id` attribute on t
 
 ```html
 <label for="search-field">Search:</label>
-<input placeholder="Search" type="text" id="search-field">
-<input name="Submit" type="submit">
+<input placeholder="Search" type="text" id="search-field" />
+<input name="Submit" type="submit" />
 ```
-
 
 There are also people who say you can add an `aria-label` to the input in order to label it, and that is true. However, I always prefer semantic HTML over aria-labels. If you can solve a problem with HTML5, why would you do something else? Below is how [dev.to](https://dev.to) does it and it accomplishes the same goal:
-```html
-<input type="text" placeholder="search" aria-label="search">
-```
 
+```html
+<input type="text" placeholder="search" aria-label="search" />
+```
 
 This is the simplest way to make sure that your forms are accessible. There are more topics to talk about like accessible form validation, ensuring required fields are both visually and semantically labeled as such, etc. However, this simple tip will greatly improve your forms, just by simply telling users clearly which field is which.
 

@@ -1,12 +1,13 @@
 ---
 title: 3 Things I learned transitioning from Remote to an Office
-date: "2019-02-19"
-path: "/blog/3-things-I-learned-transitioning-remote-office"
-tags: ["remote", "tech", "office", "career"]
+date: '2019-02-19'
+path: '/blog/3-things-I-learned-transitioning-remote-office'
+tags: ['remote', 'tech', 'office', 'career']
 published: true
 affiliate: false
-hasAudio: true 
-audioLink: "https://www.parler.io/audio/7119149108/a88ce8308a91df4488a3fdcef775a20bdacc2e2f.0310f77e-6797-446e-bd96-50bd083c8e74.mp3"
+featuredImage: './transitioning-remote.png'
+hasAudio: true
+audioLink: 'https://www.parler.io/audio/7119149108/a88ce8308a91df4488a3fdcef775a20bdacc2e2f.0310f77e-6797-446e-bd96-50bd083c8e74.mp3'
 ---
 
 Back in October, I wrote a post about [10 things I've learned from working remotely](https://dev.to/lkopacz/10-things-ive-learned-from-working-remotely-240h), and it was a big hit. It actually made the top 7 posts that week on [dev.to](https://dev.to/devteam/the-7-most-popular-dev-posts-from-the-past-week-2bdb)! I had been working remotely for about 16 months at that point, and I shared a bunch of things that I had learned.
@@ -24,6 +25,7 @@ I realized that I could not focus on both the gym and content creation on the sa
 I now focus on either content creation/editing in the morning OR the gym, but not both. But I’ve also noticed that now I am even more focused because my goals have not really changed. No futzing around on Twitter or Slack while I write. I will set a timer and see how much I can get done before it’s up! While I miss that extra hour in my day, I’ve noticed that I am using my morning time way more wisely than I was before.
 
 ## 2. The built-in boundaries are a welcome change
+
 I do not struggle tremendously with setting boundaries, which what made working remotely really great for me. But I will say, it’s nice to have them built in. When I was working remotely if I forgot “one little quick thing” after I concluded my workday, I could quickly hop on the computer. I tried my hardest not too, but sometimes when you’re stressed out about work, it takes a lot of mental will power which also takes up headspace.
 
 In my article about my tips working remotely, the first thing I emphasized was learning to set boundaries. I think this is still great advice, both in your personal and professional life. But if you’re newer to setting limits, it takes A LOT of mental effort to shift your mindset. A lot of self-improvement books talk about shifting mindset as if it’s easy, and it’s not. It’s something you should do, but sometimes when you have as much going on as I do, it’s nice to have some built-in boundaries that you don’t need to overthink.
@@ -33,6 +35,7 @@ In my article about my tips working remotely, the first thing I emphasized was l
 Now, I don’t have the work Slack or email on my phone. I also keep my laptop there. It’s…kinda nice. I literally forget about work when I get home and don’t think about it until I get in the next day. In our ever busy lives, we have this anxiety about not being able to be reached. But it’s been about 2 months, and nobody seems to mind. Luckily, if I am sick, I can log into the browser version of my email or slack on my home computer and let people know.
 
 ## 3. Staying remote is not a higher priority than mental health
+
 This is going to get a bit personal. If you’re not into that, skip ahead.
 
 Strangely enough, the moment I started my blog was the moment that shit hit the fan at my last job. The day after I launched my blog I had a large work emergency that felt unsolvable. I was new to the project, and the people who had more context were either on PTO or sick. I had a panic attack the following day while on a call with a client (which is not fun). I was talking to a friend, one I will always be thankful for at that moment, and he said “Lindsey, it’s a website. Nobody is going to die.” It was that blunt statement I needed to calm me down.
@@ -50,6 +53,7 @@ Long story short, I found a non-remote job. And I can tell you I am immensely ha
 Some people actually prefer remote for their mental health, which I totally get. The private nature of my last job made a lot of self-care things a TON easier. My previous job wasn’t a strain on my mental health because it was remote. It was a strain because of a high profile client and the companies transitional changes. Remote or not, companies going through changes can harm mental health, and sometimes it’s not worth staying.
 
 ## Conclusion
+
 This has been a really great time for my career. I’ve reignited my passion for math by building graphs with d3. I’ve finally learned how to use `.reduce()` in JavaScript. I’m making enough money to save for my wedding, enjoy my life a bit, and pay my bills. It’s lovely.
 
 I’d eventually like to be remote again because being remote isn’t what harmed my mental health, it was a lot of company changes and lack of client boundaries. It wasn’t feeling like I was paid enough for the pain I was dealing with. I miss remote a ton, especially as my blog and egghead.io stuff take off. Maybe someday, but for now things are going great, and **what** I am doing and **how** I am feeling is way more important.
