@@ -12,7 +12,11 @@ class ReduceToggle extends React.Component {
   }
 
   componentDidMount() {
-    const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    let reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    if (typeof reduceMotionOn === 'string') {
+      reduceMotionOn = JSON.parse(reduceMotionOn)
+    }
+
     if (reduceMotionOn === null) {
       localStorage.setItem('reduceMotionOn', false)
     }
