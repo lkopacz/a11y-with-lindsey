@@ -3,13 +3,14 @@ import './subscribe.css'
 
 const Subscribe = props => {
   let bgClass
+  console.log(props)
   if (props.hasBackground) {
     bgClass = 'convertkit-signup convertkit-signup--white-bg'
   } else {
     bgClass = 'convertkit-signup'
   }
   return (
-    <div className={bgClass}>
+    <div className={`${bgClass} convertkit-signup--${props.id}`}>
       <script src="https://f.convertkit.com/ckjs/ck.5.js" />
       <form
         action="https://app.convertkit.com/forms/866792/subscriptions"
@@ -35,47 +36,41 @@ const Subscribe = props => {
           >
             <div className="formkit-field">
               <input
-                className="formkit-input"
+                className="formkit-input formkit-input--name"
                 aria-label="Your first name"
                 name="fields[first_name]"
                 required
                 placeholder="Your first name"
                 type="text"
-                style={{
-                  color: 'rgb(30, 54, 80)',
-                  borderColor: 'rgb(227, 227, 227)',
-                  borderRadius: '4px',
-                  fontWeight: 400,
-                }}
+                // style={{
+                //   color: 'rgb(30, 54, 80)',
+                //   borderColor: 'rgb(227, 227, 227)',
+                //   borderRadius: '4px',
+                //   fontWeight: 400,
+                // }}
               />
             </div>
 
             <div className="formkit-field">
               <input
-                className="formkit-input"
+                className="formkit-input formkit-input--email"
                 name="email_address"
                 placeholder="Your email address"
                 aria-label="Your email address"
                 required=""
                 type="email"
-                style={{
-                  color: 'rgb(30, 54, 80)',
-                  borderColor: 'rgb(227, 227, 227)',
-                  borderRadius: '4px',
-                  fontWeight: 400,
-                }}
+                // style={{
+                //   color: 'rgb(30, 54, 80)',
+                //   borderColor: 'rgb(227, 227, 227)',
+                //   borderRadius: '4px',
+                //   fontWeight: 400,
+                // }}
               />
             </div>
 
             <button
               data-element="submit"
               className="formkit-submit formkit-submit"
-              style={{
-                color: 'rgb(255, 255, 255)',
-                backgroundColor: 'rgb(192, 55, 17)',
-                borderRadius: '4px',
-                fontWeight: 700,
-              }}
             >
               <div className="formkit-spinner">
                 <div />
