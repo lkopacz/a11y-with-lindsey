@@ -12,6 +12,9 @@ export default function Template({ data }) {
   const affiliate =
     'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
   const audio = frontmatter.hasAudio ? frontmatter.audioLink : ''
+  const cover = frontmatter.featuredImage.childImageSharp
+    ? frontmatter.featuredImage.childImageSharp
+    : false
   return (
     <div>
       <Helmet
@@ -42,6 +45,10 @@ export default function Template({ data }) {
             content: excerpt,
           },
           {
+            name: 'twitter:image',
+            content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
+          },
+          {
             name: 'og:url',
             content: 'https://www.a11ywithlindsey.com' + frontmatter.path,
           },
@@ -53,11 +60,12 @@ export default function Template({ data }) {
             name: 'og:title',
             content: frontmatter.title,
           },
+          {
+            name: 'og:image',
+            content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
+          },
         ]}
-      >
-        {/* <script src="https://f.convertkit.com/ckjs/ck.5.js" /> */}
-      </Helmet>
-
+      />
       <div className="wrapper with-sidebar">
         <nav className="breadcrumb">
           <ol>
@@ -110,6 +118,15 @@ export const pageQuery = graphql`
         affiliate
         hasAudio
         audioLink
+        featuredImage {
+          childImageSharp {
+            sizes(maxWidth: 1240) {
+              srcSet
+              sizes
+              src
+            }
+          }
+        }
       }
     }
   }

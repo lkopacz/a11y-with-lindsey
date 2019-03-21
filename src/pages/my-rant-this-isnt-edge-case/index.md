@@ -1,18 +1,19 @@
 ---
 title: 3 Reasons Why Accessibility is NOT an Edge Case
-date: "2019-01-16"
-path: "/blog/3-reasons-why-accessibility-not-edge-case"
-tags: ["ux", "accessibility"]
+date: '2019-01-16'
+path: '/blog/3-reasons-why-accessibility-not-edge-case'
+tags: ['ux', 'accessibility']
 published: true
+featuredImage: './not-edge-case.png'
 hasAudio: true
-audioLink: "https://www.parler.io/audio/7119149108/68a55ac9f32155276ec3f8fd63b57e87ab25acf6.05adf8b2-34cd-4a74-8a95-5ed875db72db.mp3"
+audioLink: 'https://www.parler.io/audio/7119149108/68a55ac9f32155276ec3f8fd63b57e87ab25acf6.05adf8b2-34cd-4a74-8a95-5ed875db72db.mp3'
 ---
 
 The primary question I get from developers is “How do I get my clients on board” or sometimes “How do I convince my boss that it’s worth investing in?” I was asked this once at a panel, and my response was “I don’t, I just do it.” Because I understand accessibility pretty well and build with accessibility in mind from the start, I am usually able to solve accessibility problems relatively quickly without people even noticing that I spent extra time on it. But when developers who are still newer to accessibility are trying to convince their bosses, sometimes they clap back that “this is a low priority” or “that is an edge case.”
 
 ![Gif of Pixar character Anger from the movie inside out having fire shooting from his head.](https://media.giphy.com/media/11tTNkNy1SdXGg/giphy.gif)
 
-Oh goodness, nothing gets my blood boiling more when someone dismisses the needs of their users. If your product or website doesn’t work for any one person who wants to use it, it’s not an edge case. It’s a severe usability problem that is costing you money and potentially a lawsuit. 
+Oh goodness, nothing gets my blood boiling more when someone dismisses the needs of their users. If your product or website doesn’t work for any one person who wants to use it, it’s not an edge case. It’s a severe usability problem that is costing you money and potentially a lawsuit.
 
 I’ve brought up issues on accessibility before to clients, and they ask me how much time it would take to fix it. I understand that their budgets are limited; however, it’s ultimately less expensive to fix the problem than the lost business, or even a lawsuit. While I personally am motivated from an empathetic nature, it usually doesn’t go over well to tell your client or boss “Why can’t you just care about people, this isn’t an edge case!”
 
@@ -20,7 +21,7 @@ Below I’ve come up with the 3 main reasons why accessibility is NOT an edge ca
 
 ## Business
 
-Let’s think of a simple user experience exercise. In my post about the [Negative Impacts of Withholding Form Labels](/blog/negative-impacts-withholding-form-labels), I wrote about how back in 2016 that I did an audit of the 2 candidates donation sites. While that’s **technically** not a business, it’s still a place where they are asking for your money. 
+Let’s think of a simple user experience exercise. In my post about the [Negative Impacts of Withholding Form Labels](/blog/negative-impacts-withholding-form-labels), I wrote about how back in 2016 that I did an audit of the 2 candidates donation sites. While that’s **technically** not a business, it’s still a place where they are asking for your money.
 
 My main point was if their sites are not accessible, particularly in an area where they are asking for your money, how much time do you think your users are going to spend on figuring it out before they give up? If you are a UX expert, you probably have some specific metric that you could tell me, but my guess would be…pretty quickly.
 
@@ -49,11 +50,11 @@ Source: [Beyonce.com Lawsuit Reminds Us How Shitty the Web Is for Users With Vis
 ### Links about Winn Dixie and Target Lawsuits
 
 - [W3C WAI - The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/) (go to the minimize legal risk section)
-- [Ars Technica - Target to pay $6 million to settle site accessibility suit](https://arstechnica.com/uncategorized/2008/08/target-to-pay-6-million-to-settle-site-accessibility-suit/)
+- [Ars Technica - Target to pay \$6 million to settle site accessibility suit](https://arstechnica.com/uncategorized/2008/08/target-to-pay-6-million-to-settle-site-accessibility-suit/)
 - [Defendants Fighting Website Accessibility Cases Face An Uphill Battle In 2018](https://www.adatitleiii.com/tag/winn-dixie/)
 - [First-Of-Its-Kind Trial Goes Plaintiff's Way; Winn-Dixie Must Update Website For The Blind](https://www.forbes.com/sites/legalnewsline/2017/06/13/first-of-its-kind-trial-goes-plaintiffs-way-winn-dixie-must-update-website-for-the-blind/#2890a7561b38)
 
-## Good HTML 
+## Good HTML
 
 I am going to cut to the chase and be an opinionated developer. If you say that HTML is easy, you are wrong. It’s syntactically simpler than other languages, but it requires strategy, semantics and proper naming just like most programming languages. Most of the people I see minimize HTML are the ones who are misusing it.
 
@@ -64,6 +65,7 @@ Even the [MDN docs](https://developer.mozilla.org/en-US/docs/Learn/Accessibility
 3. I love how they position that it’s **easier to develop with**. It is designed to be more helpful for not only your users but also your developers.
 
 ## Conclusion
+
 As you can see, there are many reasons why this is not an edge case. “Just make it work” is subjective, and that bias can end up costing you a lot of money along the line and alienate your users. Remember that your target audience always has some folks from these communities, so it’s best not to ignore them.
 
 How do you talk to your stakeholders about accessibility? Let me know on [Twitter](https://twitter.com/littlekope0903) or tweet me if you have questions about this blog post.
