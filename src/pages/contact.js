@@ -9,6 +9,7 @@ const Contact = ({ data }) => (
       meta={[
         {
           name: 'description',
+<<<<<<< HEAD
           content:
             "a11y with Lindsey, where we want to make our internet, Everyone's internet!",
         },
@@ -18,6 +19,16 @@ const Contact = ({ data }) => (
         },
       ]}
     />
+=======
+          content: 'a11y with Lindsey, where we want to make our internet, Everyone\'s internet!'
+        },
+        {
+          name: 'keywords',
+          content: 'accessibility, DC, inclusion, empathy'
+        }
+      ]}
+      />
+>>>>>>> Replacing old twitter links.
     <div className="wrapper">
       <nav className="breadcrumb">
         <ol>
