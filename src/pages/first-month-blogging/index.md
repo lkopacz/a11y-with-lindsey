@@ -59,4 +59,4 @@ Back to my motivations, when I think of a blog topic I ask - "Does this support 
 
 Without keeping your goals for writing into account, it's easy to fall into the multi-passionate person you are. Hell, I have so many passions - weightlifting, makeup artistry, accessibility, cooking. Imagine if I wrote all about that in this blog. It would have 0 clarity and people would be confused and lose interest. Even the topics that I have written about that deviate from accessibility still support my long-term goals.
 
-This blog post was something different than I normally do, and I hope you liked it! Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post.
+This blog post was something different than I normally do, and I hope you liked it! Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions about this blog post.

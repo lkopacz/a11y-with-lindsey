@@ -63,4 +63,4 @@ When I have an instance where a client minimizes contrast, there are several thi
 
 In the case of color contrast, it would depend on the audience. I really like to use the football example above if I am speaking with an audience that loves that sport. At a minimum, they can understand how frustrating it could be if you couldn't understand which team got a touchdown, which team fumbled, who intercepted whom. If you relate it to the web, I usually like to explain it to them by saying that we want to make sure that people can distinguish items regardless of their ability.
 
-I plan on writing more about color because I personally find the science of visual perception fascinating. I hope this is a great start. Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions.
+I plan on writing more about color because I personally find the science of visual perception fascinating. I hope this is a great start. Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions.

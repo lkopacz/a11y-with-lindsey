@@ -158,6 +158,6 @@ input[type='checkbox']:disabled + label::before {
 
 ![Disabled checkbox with dark grey box.](./disabled-checkbox.png)
 
-So that's it! You can apply the same principles to radio buttons as well. Let me know on [Twitter](https://twitter.com/littlekope0903) what you think!
+So that's it! You can apply the same principles to radio buttons as well. Let me know on [Twitter](https://twitter.com/LittleKope/) what you think!
 
 **Disclaimer:** I almost didn't post this. Last night as I was scrolling through Twitter, I saw a post that has almost the same tips in it. After asking the Twitterverse if I should post it, I got an overwhelming amount of people saying "YES!" I haven't read the other one, only skimmed, mostly because I didn't want to impact my writing. However, I wanted to link it up for you, in case you wanted to read it: [How to Make Custom Accessible Checkboxes and Radio Buttons](https://webdesign.tutsplus.com/tutorials/how-to-make-custom-accessible-checkboxes-and-radio-buttons--cms-32074).

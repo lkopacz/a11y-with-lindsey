@@ -66,4 +66,4 @@ This is technically somewhat automated, but I always like to double check my sit
 
 While automated accessibility testing is a great tool that makes our life a ton more manageable, I am always an advocate for manually testing the items that can be a little more nuanced. Also, manually testing is a great place to get your UX experts involved. This will help you and your teammate figure out the best behavior to make your application as minimally frustrating to all your users, not just your users with disabilities.
 
-What do you manually test? Let me know on [Twitter](https://twitter.com/littlekope0903) or tweet me if you have questions about this blog post.
+What do you manually test? Let me know on [Twitter](https://twitter.com/LittleKope/) or tweet me if you have questions about this blog post.

@@ -124,4 +124,4 @@ So, while this isn’t the most challenging thing to do, it’s way easier to ch
 
 The way I like to think about ARIA is **context**. Sometimes you don’t need additional background - the HTML is surely enough. Sometimes it could be better though, especially if it’s a custom widget. I’ll do more about ARIA in the future regarding specific attributes and what they do - mainly because the documentation can be a bit daunting. Cheers to that!
 
-Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post!
+Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions about this blog post!

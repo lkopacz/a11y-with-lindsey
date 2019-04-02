@@ -72,4 +72,4 @@ There are also people who say you can add an `aria-label` to the input in order 
 
 This is the simplest way to make sure that your forms are accessible. There are more topics to talk about like accessible form validation, ensuring required fields are both visually and semantically labeled as such, etc. However, this simple tip will greatly improve your forms, just by simply telling users clearly which field is which.
 
-Stay tuned for more information about accessible forms. Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post.
+Stay tuned for more information about accessible forms. Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions about this blog post.

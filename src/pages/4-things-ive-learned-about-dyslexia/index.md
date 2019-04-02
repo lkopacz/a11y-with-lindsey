@@ -93,4 +93,4 @@ I need to give credit where credit is due, because I barely had any information 
 - [Five ways to make usable websites for people with dyslexia](https://www.userzoom.com/blog/five-ways-to-make-usable-websites-for-people-with-dyslexia/)
 - [6 Surprising Bad Practices That Hurt Dyslexic Users](http://uxmovement.com/content/6-surprising-bad-practices-that-hurt-dyslexic-users/)
 
-What are your thoughts on dyslexia for the web? Do you have Dyslexia? If so, I’d love to hear what helps you as I am learning as I go with this one. Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post.
+What are your thoughts on dyslexia for the web? Do you have Dyslexia? If so, I’d love to hear what helps you as I am learning as I go with this one. Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions about this blog post.
