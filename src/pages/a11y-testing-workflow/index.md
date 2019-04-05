@@ -32,4 +32,10 @@ I won't go further into how I think through a design things because that could b
 
 ## Running it through automated tools
 
-While I am working, I take a first stab at running things through something like the Wave tool. This works really well on local environments when I want to get a sense of where my issues are. Through this, I learned that I have some redundant links. While this is not as detrimental as say a missing form label, it
+While I am working, I take a first try at running things through something like the Wave tool. This works really well on local environments when I want to get a sense of where my issues are. Through this, I learned that I have some redundant links.
+
+While this is not as detrimental as say a missing form label, it is important to address. I admittedly should have fixed this before, but I am leaving it here for the sake of transparency and learning. I may have corrected this by the time I have posted, but the screenshots will still be here.
+
+![](./wave-tool-blog.png)
+
+As you can see here, I have 0 errors (yay) and 18 alerts for redundant links. Alerts are lower priority than errors, but because I don't have any errors
