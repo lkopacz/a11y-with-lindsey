@@ -32,7 +32,7 @@ const Contact = ({ data }) => (
           <h1>Contact</h1>
           <p>
             The best way to contact me for a quick question is on{' '}
-            <a href="https://twitter.com/littlekope0903">my Twitter page.</a>
+            <a href="https://twitter.com/LittleKope">my Twitter page.</a>
           </p>
           <p>
             Feel free to reach out to me for speaking inquiries, blog

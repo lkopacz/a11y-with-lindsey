@@ -50,10 +50,6 @@ class BlogIndex extends React.Component {
                     </h2>
                     <time>{node.frontmatter.date}</time>
                     <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                    <Link to={path}>
-                      Read more
-                      <span className="visually-hidden"> about {title}</span>
-                    </Link>
                   </div>
                 )
               })}
