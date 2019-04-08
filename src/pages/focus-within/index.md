@@ -88,4 +88,4 @@ The stubborn part of me really wanted to create a small polyfill. I tried what w
 
 If there's a simple way to polyfill support for pseudo classes in Vanilla JS, I am all about it. In fact, if you get something working, please let me know. Send me a codepen or jsfiddle! However, I get anxious at the thought of leaving the latest versions of browsers unsupported. In fact, part of [WCAG's POUR principles](https://webaim.org/articles/pour/) is that sites should have **robust** support across browsers. While I love to use modern tricks, I may stick to my way for now, and try to improve the JS I had to make it work backward and forward.
 
-So that's it for now! If you find a simple, non-bloated way to polyfill `:focus-within`, let me know on [Twitter](https://twitter.com/littlekope0903)!
+So that's it for now! If you find a simple, non-bloated way to polyfill `:focus-within`, let me know on [Twitter](https://twitter.com/LittleKope/)!

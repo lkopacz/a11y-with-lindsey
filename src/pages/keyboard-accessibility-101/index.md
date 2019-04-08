@@ -138,4 +138,4 @@ Instead of removing the focus indicator because your designer thinks they are ug
 
 Please, whatever you do though, do not write `outline: none;` in your CSS. Thank you for coming to my TED Talk.
 
-I hope these tips help you get started on keyboard accessibility. Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions.
+I hope these tips help you get started on keyboard accessibility. Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions.

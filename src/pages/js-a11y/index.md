@@ -77,4 +77,4 @@ My goal is to have blog posts going through each of these concepts in more depth
 
 ![Gif of two men saying We Got This](https://media.giphy.com/media/3og0IxDd2sAT4y24zC/giphy.gif)
 
-If you want to learn more about JavaScript and Accessibility, be sure to [subscribe to my newsletter](http://eepurl.com/dJTkXg) about the course I'll be coming out with! Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions about this blog post.
+If you want to learn more about JavaScript and Accessibility, be sure to [subscribe to my newsletter](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) about the course I'll be coming out with! Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions about this blog post.

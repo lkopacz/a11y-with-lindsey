@@ -99,4 +99,4 @@ That's why strategy is more important than the technical aspect. This means that
 
 If you are having difficulty with this, try to take these three strategies with you when writing your alternative text. It decreases your chances of overthinking it (which frankly, I am the queen of doing). The strategy behind writing your alternative text is strongly correlated to thinking through your strategy. And remember, it's a work in progress. Your alternative text can adapt and improve over time :).
 
-I hope you enjoyed learning about my approach to alternative text! Feel free to reach out to me on [Twitter](https://twitter.com/littlekope0903) if you have questions.
+I hope you enjoyed learning about my approach to alternative text! Feel free to reach out to me on [Twitter](https://twitter.com/LittleKope/) if you have questions.

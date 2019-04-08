@@ -52,4 +52,4 @@ I am thankful to have a platform to help others with web accessibility. Starting
 
 Blogging and teaching others has also encouraged me to lean further into my talents and skills. It's also forced me to explain things more in depth and expand how I think about accessibility. My last post on dyslexia was not something I had ever considered before starting this blog, and I learned so much in the process!
 
-I'd love to hear what you're thankful for this year! Let me know on [Twitter](https://twitter.com/littlekope0903)!
+I'd love to hear what you're thankful for this year! Let me know on [Twitter](https://twitter.com/LittleKope/)!

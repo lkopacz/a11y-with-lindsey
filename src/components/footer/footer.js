@@ -19,7 +19,7 @@ const Footer = () => (
           </li>
           <li>
             <a
-              href="https://twitter.com/littlekope0903"
+              href="https://https://twitter.com/LittleKope/"
               aria-label="Lindsey's Twitter"
             >
               <i className="fab fa-twitter" aria-hidden="true" />

@@ -283,4 +283,4 @@ topLevelLinks.forEach(link => {
 
 This blog post is getting VERY long, so maybe I'll do a follow-up post next week. The one thing I haven't solved here that I'd like to in my follow-up post is how to go backward in the menu. If you use the `tab` and `shift` key simultaneously, this doesn't work when going back in the menu. If you want an additional challenge, try it out yourself!
 
-So that's it for now! I'd love to see how you come up with a solution to this if it's different from mine. Let me know on [Twitter](https://twitter.com/littlekope0903) what you think!
+So that's it for now! I'd love to see how you come up with a solution to this if it's different from mine. Let me know on [Twitter](https://twitter.com/LittleKope/) what you think!
