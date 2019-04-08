@@ -66,7 +66,8 @@ Here are some examples of problems I've dealt with
 - Going to an e-commerce site and seeing a “Related Item” slideshow and being unable to use the arrows.
 - Using the "Login" button that pops up a modal, and the focus is still "behind" the modal and cannot reach the form.
 
-Approaching these challenges is a great way to improve your JavaScript skills! I learned a ton about JavaScript this way. I needed the [tabIndex](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex) property to be `-1` when the links were non-visible. Furthermore, I will use an event listener to toggle the `tabIndex` to `0` when we toggle open a menu. We can also ensure that the product slider arrows are buttons so that they work on click events!
+Approaching these challenges is a great way to improve your JavaScript skills! I learned a ton about JavaScript this way. I needed the [tabIndex](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex) property to be `-1` when the links were non-visible. Furthermore, I will use an event listener to toggle the `tabIndex` to `0` when we toggle open a menu. We can also ensure that the product slider arrows are buttons so that they work on click events! I talk about using semantic buttons in my previous post about [3 Simple Tips to Improve Keyboard Accessibility](https://www.a11ywithlindsey.com/blog/3-simple-tips-improve-keyboard-accessibility). If you want to see a demo of this and have an Egghead PRO account, I demonstrate this in my
+[Use Semantic HTML to Improve Hamburger Menu Accessibility](https://egghead.io/lessons/html-5-use-semantic-html-to-improve-hamburger-menu-accessibility) lesson.
 
 ## Screenreader testing
 
@@ -80,4 +81,4 @@ Something I still am working on is learning how to use a screen reader better. I
 
 This post is getting a bit long because I wanted to ensure that I go through what I do on my personal projects. I want to do a follow-up post about Continuous Integration, all the testing libraries, and how I use react-testing-library for my integration tests. The reality is that most of us are working on teams and we need some automation built into the workflow. That post is coming soon! Stay tuned!
 
-Feel free to let me know what you think on [Twitter](https://twitter.com/LittleKope).
+Feel free to let me know what you think on [Twitter](https://twitter.com/LittleKope). If you're interested in hearing more content from me [subscribe to my newsletter](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) (unsubscribe, anytime).
