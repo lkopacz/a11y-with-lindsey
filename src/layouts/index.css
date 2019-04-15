@@ -108,6 +108,7 @@ code {
   padding: 5px;
   color: var(--off-white);
   border-radius: 6px;
+  line-height: 1.5;
 }
 
 h2 code {
@@ -169,6 +170,14 @@ pre code {
   color: #f0876a;
 }
 
+.language-json .property {
+  color: #f0876a;
+}
+
+.language-json .string {
+  color: #b2dfeb;
+}
+
 video {
   display: block;
   margin: 1rem 0;
@@ -185,23 +194,13 @@ blockquote:not(.twitter-tweet) {
   margin: 3rem auto;
   border-left: 8px solid var(--vermillion);
   background: #fff;
-  padding: 3rem 3rem 3rem 5rem;
+  padding: 3rem;
   width: 60%;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
   color: var(--marron);
   box-shadow: 1px 0.5px 0px rgba(0, 0, 0, 0.11);
-}
-
-blockquote:not(.twitter-tweet)::before {
-  position: absolute;
-  content: '\201C';
-  font-family: Arial;
-  top: 5px;
-  left: 33px;
-  font-size: 4em;
-  color: var(--marron);
 }
 
 twitterwidget {

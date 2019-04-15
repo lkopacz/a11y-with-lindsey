@@ -86,7 +86,7 @@ Welcome to Pa11y
 No issues found!
 ```
 
-Well, that was easy to set up! So far, I like pa11y. I would love to play around more is to look into all their other tools, such as the pa11y dashboard. However, the CLI seems to be the most beneficial for the point of this blog post.
+Well, that was easy to set up! So far, I like pa11y. I would love to play around more with this and look into all their other tools, such as the pa11y dashboard. However, the CLI seems to be the most beneficial for the point of this blog post.
 
 ## aXe-cli
 
@@ -166,7 +166,7 @@ CONS:
 
 PROS:
 
-1. As I stated above, I love the disclaimer that you **should**\_\*\* be manually testing to catch other issues. Please see my [last post](/blog/web-accessibility-testing-process) about my accessibility testing process. I also have a checklist of [what I manually test](/blog/4-things-always-manually-test).
+1. As I stated above, I love the disclaimer that you **should** be manually testing to catch other issues. Please see my [last post](/blog/web-accessibility-testing-process) about my accessibility testing process. I also have a checklist of [what I manually test](/blog/4-things-always-manually-test).
 2. I also like that it gives you some links to the rules that failed.
 
 CONS:
@@ -175,6 +175,6 @@ CONS:
 
 ## Conclusion
 
-Well, I got started in automated accessibility testing late, but I am a convert. If you noticed, I forgot a couple of things **even as an expert**. We are not perfect. If you're working with teams newer to accessibility, it's a powerful tool. It ensures that other team members do not introduce new issues errors. I think both of these tools are super solid out of the box. I'm planning on going through both their documentation more and seeing how I can further configure it!
+Well, I got started in automated accessibility testing late, but I am a convert. If you noticed, I forgot a couple of things **even as an expert**. We are not perfect. If you're working with teams newer to accessibility, it's a powerful tool. It ensures that other team members do not introduce new issues or errors. I think both of these tools are super solid out of the box. I'm planning on going through both their documentation more and seeing how I can further configure it!
 
 Do you have any accessibility testing tips? Let me know [on Twitter](https://twitter.com/LittleKope). If you're interested in hearing more content from me, [subscribe to my newsletter](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) (unsubscribe, anytime).
