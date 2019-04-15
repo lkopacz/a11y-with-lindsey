@@ -6,6 +6,8 @@ tags: ['accessibility', 'testing', 'cli', 'continuous integration']
 published: true
 affiliate: false
 featuredImage: './exploring-accessibility-cli-tools.png'
+hasAudio: true
+audioLink: 'https://www.parler.io/audio/7119149108/8c43e17ea969064b97ba1969698144bc7bad5b5a.fe699bb2-88fa-4b7e-adbf-a758631737ad.mp3'
 ---
 
 Happy Tax day (at least if you're American)!
