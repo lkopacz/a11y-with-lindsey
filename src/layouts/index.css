@@ -1,16 +1,16 @@
 :root {
-  --navy: #1E3650;
-  --teal: #24728A;
-  --marron: #640D23;
-  --vermillion: #C03711;
+  --navy: #1e3650;
+  --teal: #24728a;
+  --marron: #640d23;
+  --vermillion: #c03711;
   --white: #fff;
-  --off-white: #F3E9EA; 
-  --peach: #FED8CE;
+  --off-white: #f3e9ea;
+  --peach: #fed8ce;
 }
 
 body {
   margin: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   background: var(--off-white);
   color: var(--navy);
 }
@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
 }
 
 .visually-hidden {
@@ -51,7 +51,7 @@ h6 {
 time {
   position: relative;
   display: inline-block;
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
   color: var(--vermillion);
   font-size: 0.875rem;
   font-style: italic;
@@ -73,14 +73,14 @@ p a:focus {
 }
 
 p a:focus {
-  outline: solid 1px #1E3650;
+  outline: solid 1px #1e3650;
 }
 
 li {
   line-height: 1.5;
 }
 
-.gatsby-resp-image-link { 
+.gatsby-resp-image-link {
   border-bottom: none;
   padding: 0;
 }
@@ -104,6 +104,11 @@ p {
 code {
   font-weight: bold;
   font-size: 1.25rem;
+  background-color: #383838;
+  padding: 5px;
+  color: var(--off-white);
+  border-radius: 6px;
+  line-height: 1.5;
 }
 
 h2 code {
@@ -126,24 +131,23 @@ pre code {
 }
 
 .language-html .tag {
-  color: #FDB4CF;
+  color: #fdb4cf;
 }
 
 .language-html .attr-value {
-  color: #B2DFEB;
+  color: #b2dfeb;
 }
 
-
 .language-html .attr-value .punctuation:first-child {
-  color: #FDB4CF;
+  color: #fdb4cf;
 }
 
 .language-css {
-  color: #B2DFEB;
+  color: #b2dfeb;
 }
 
 .language-css .selector {
-  color: #FDB4CF;
+  color: #fdb4cf;
 }
 
 .language-css .punctuation {
@@ -151,19 +155,27 @@ pre code {
 }
 
 .language-css .property {
-  color:  #fff;
+  color: #fff;
 }
 
 .language-js .keyword {
-  color: #FDB4CF;
+  color: #fdb4cf;
 }
 
 .language-js .function {
-  color: #B2DFEB;
+  color: #b2dfeb;
 }
 
 .language-js .string {
-  color: #F0876A;
+  color: #f0876a;
+}
+
+.language-json .property {
+  color: #f0876a;
+}
+
+.language-json .string {
+  color: #b2dfeb;
 }
 
 video {
@@ -177,29 +189,18 @@ audio {
   margin: 1rem 0;
 }
 
-
 blockquote:not(.twitter-tweet) {
   position: relative;
   margin: 3rem auto;
   border-left: 8px solid var(--vermillion);
   background: #fff;
-  padding: 3rem 3rem 3rem 5rem;
+  padding: 3rem;
   width: 60%;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
   color: var(--marron);
-  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, .11);
-}
-
-blockquote:not(.twitter-tweet)::before {
-  position: absolute;
-  content: '\201C';
-  font-family: Arial;
-  top: 5px;
-  left: 33px;
-  font-size: 4em;
-  color: var(--marron);
+  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, 0.11);
 }
 
 twitterwidget {
@@ -213,7 +214,7 @@ input {
   border-bottom: 2px solid;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer;
 }
 
@@ -234,12 +235,12 @@ input[type="submit"] {
 
 .breadcrumb a:focus {
   padding-bottom: 4px;
-  outline: solid 1px #1E3650;
+  outline: solid 1px #1e3650;
 }
 
 blockquote.twitter-tweet {
   display: inline-block;
-  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
