@@ -36,11 +36,24 @@ Now I am going to create an npm script to run pa11y. In my `package.json` file:
 }
 ```
 
-Then I went to my command line and typed `npm run test-a11y` and got errors. I got a SyntaxError that I remember seeing 2 years ago, and I happened to remember that it was a node version issue. When I checked what node version I was using, I learned that somehow, I had switched from node v.8 to node v.6. Embarrassing to admit I didn't catch this and I was on an older version of node.
+Then I went to my command line and typed `npm run test-a11y` and got errors. I got a SyntaxError that I remember seeing 2 years ago, and I happened to remember that it was a node version issue.
+
+```bash
+$ npm run test-a11y
+
+> egghead-focus-event@1.0.0 test-a11y /Users/lkopacz/Sites/egghead-focus-event
+> pa11y ./index.html
+
+/Users/lkopacz/Sites/egghead-focus-event/node_modules/pa11y/bin/pa11y.js:92
+async function runProgram() {
+      ^^^^^^^^
+```
+
+When I checked what node version I was using, I learned that somehow, I had switched from node v.8 to node v.6. Embarrassing to admit I didn't catch this and I was on an older version of node.
 
 `nvm use v8.9.1`
 
-It works now! I ran it and got an error. The accessibility expert forgot something!
+Now the script appears to run properly! I ran it and got an accessibility error.
 
 ```bash
 $ npm run test-a11y
@@ -176,5 +189,7 @@ CONS:
 ## Conclusion
 
 Well, I got started in automated accessibility testing late, but I am a convert. If you noticed, I forgot a couple of things **even as an expert**. We are not perfect. If you're working with teams newer to accessibility, it's a powerful tool. It ensures that other team members do not introduce new issues or errors. I think both of these tools are super solid out of the box. I'm planning on going through both their documentation more and seeing how I can further configure it!
+
+For now, I am planning on implementing pa11y on my projects. I prefer that one out of the box for my team because I can explain to my team why the errors are occurring. I want to explore aXe-cli more because I think the verbosity was much clearer. I'm sure with more configuration, I'd be able to have aXe work more to my liking.
 
 Do you have any accessibility testing tips? Let me know [on Twitter](https://twitter.com/LittleKope). If you're interested in hearing more content from me, [subscribe to my newsletter](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) (unsubscribe, anytime).
