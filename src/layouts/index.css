@@ -178,6 +178,14 @@ pre code {
   color: #b2dfeb;
 }
 
+.language-diff .inserted {
+  color: #a9f9b2;
+}
+
+.language-diff .deleted {
+  color: #f0876a;
+}
+
 video {
   display: block;
   margin: 1rem 0;

@@ -80,15 +80,42 @@ Another solution would be to include a legend. I like this solution; however, it
   (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Here is the change I made:
+I made a few changes here:
 
-```js
-const barColors = ['#000', '#d35f5f', '#fff']
-barGroups
-  .selectAll('rect')
-  .data(data)
-  .enter()
-  .append('rect')
+```diff
++ const barColors = ['#000', '#d35f5f', '#fff']
+  barGroups
+    .selectAll('rect')
+    .data(data)
+    .enter()
+    .append('rect')
+-   .attr("fill", "#d35f5f")
++   .attr('fill', (d, i) => barColors[i])
++   .attr('stroke', '#000')
+    .attr('class', 'bar')
+    .attr('x', d => xScale(d.name))
+    .attr('y', d => yScale(d.value))
+    .attr('width', xScale.bandwidth())
+    .attr('height', d => height - yScale(d.value))
+```
+
+I added the `barColors` variable as an array, then used an anonymous function to dynamically choose the fill color. I also added a stroke color, because we need that to show the white bar!
+
+We aren't done yet though! We still need to add the legend! Something I learned here through error is that we have to refactor this code a bit. I am still a bit of a d3 newbie, so a lot of times it's me aimlessly trying things and realizing I need to take a bit of a different approach. What I need to do here is refactor it this way:
+
+```diff
++ const g = barGroups
++   .selectAll('g')
++   .data(data)
++   .enter()
++   .append('g')
+
+- barGroups
+-   .selectAll("rect")
+-   .data(data)
+-   .enter()
+-   .append("rect")
++ g.append('rect')
   .attr('fill', (d, i) => barColors[i])
   .attr('stroke', '#000')
   .attr('class', 'bar')
@@ -98,6 +125,146 @@ barGroups
   .attr('height', d => height - yScale(d.value))
 ```
 
-I added the `barColors` variable as an array, then used an anonymous function to dynamically choose the fill color. I also added a stroke color, because we need that to show the white bar!
+I am not an SVG expert, so to be quite frank, I am not sure why this is (feel free to tweet me about it). But because we will need have multiple `<rect>` bound to the same data, I decided to bind the data to the `<g>` instead and append whatever elements I needed to that. I wanted to use the same data binding for the legend, so I went with that!
 
-We aren't done yet though! We still need to add the legend!
+So I started adding some new `<rect>` and `<text>` tags to make the legend!
+
+```js
+const lineItemHeight = 30
+g.append('rect')
+  .attr('fill', (d, i) => barColors[i])
+  .attr('stroke', '#000')
+  .attr('width', 20)
+  .attr('height', 20)
+  .attr('x', width + margin.right)
+  .attr('y', (d, i) => lineItemHeight * (i + 1))
+
+g.append('text')
+  .text(d => `${d.name} - ${d.value}`)
+  .attr('x', width + margin.right + 30)
+  .attr('y', (d, i) => lineItemHeight * (i + 1) + 15)
+```
+
+Because we have some text that reflects the actual data and the label, this is much more friendly to screen readers. One of last things we want to do is format the numbers so that it reads nicely.
+
+```diff
+g.append('text')
+- .text(d => `${d.name} - ${d.value}`)
++ .text(d => `${d.name} - ${d3.format(".2s")(d.value).replace("G", "B")}`)
+```
+
+Now let's add a title to the legend and say that B = billions.
+
+```diff
+const svg = d3
+  .select("#chart")
+  .attr("width", width + margin.left + margin.right + legendWidth)
+  .attr("height", height + margin.top + margin.bottom)
+  .attr('aria-labelledby', 'title');
+
++ svg.append('text')
++  .text('Legend')
++  .attr('x', width + margin.right)
++  .attr('y', 20)
+
++ svg.append('text')
++  .text('B = billion')
++  .attr('x',width + margin.right)
++  .attr('y', 40)
+```
+
+Additionally, we want to adjust the positioning with those other legend items since the Legend title and the key took up some space.
+
+```diff
+g.append('rect')
+  .attr("fill", (d, i) => barColors[i])
+  .attr("stroke", "#000")
+  .attr('width', 20)
+  .attr('height', 20)
+  .attr('x', width + margin.right)
+- .attr('y', (d, i) => lineItemHeight * (i + 1))
++ .attr('y', (d, i) => lineItemHeight * (i + 1) + 30)
+
+g.append('text')
+  .text(d => `${d.name} - ${d3.format(".2s")(d.value).replace("G", "B")}`)
+  .attr('x', width + margin.right + 30)
+- .attr('y', (d, i) => lineItemHeight * (i + 1) + 15)
++ .attr('y', (d, i) => lineItemHeight * (i + 1) + 45)
+```
+
+And here is the final result!
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 2 Continued" src="//codepen.io/littlekope0903/embed/dLBYaN/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/dLBYaN/'>Accessible Bar Chart - Solution 2 Continued</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Adding more context
+
+I used [Heather Migliorisi's graph CodePen](https://codepen.io/hmig/pen/MeJKee) as inspiration for this post. While technically we have given screen readers a text version of our visualizations, I noticed her amazing use of ARIA to add more context to the graph. I'm going to take some of the same principles she did and apply them to this graph with d3 (she wrote her's in straight SVG).
+
+The first thing I am going to do is add a title to my SVG.
+
+```diff
+const svg = d3
+  .select("#chart")
+  .attr("width", width + margin.left + margin.right + legendWidth)
+  .attr("height", height + margin.top + margin.bottom)
++ .attr('aria-labelledby', 'bar-chart-title');
+
++ svg.append('title')
++  .text('2018 Donors By Organization')
++  .attr('id', 'bar-chart-title')
+```
+
+If you want to read more about why this is good practice, I would recommend going through Heather's article on [Accessible SVGs](https://css-tricks.com/accessible-svgs/). She went through a lot of research and frankly knows more about SVG than I do!
+
+I liked how she made the bar graph read out like a list. I think I am going to add those to each of them as well! I'm also going to add an `aria-label` to the group with the `list` role.
+
+```diff
+const barGroups = svg
+  .append("g")
++ .attr('role', 'list')
++ .attr('aria-label', 'bar chart')
+  .attr("class", "data")
+  .attr("transform", `translate(${margin.left}, 0)`);
+
+const barColors = ["#000", "#d35f5f", "#fff"];
+
+const g = barGroups
+  .selectAll('g')
+  .data(data)
+  .enter()
+  .append('g')
++ .attr('role', 'listitem');
+```
+
+Something that Heather does that I am not going to do here is adding `role="presentation"` to the axises. The reason for that is I posed this question on Twitter and got mixed responses.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have an <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> question that feels subjective. If you&#39;re creating an SVG graph, wouldn&#39;t the axis be a bit useless to a screen reader if you are announcing the data points a different way? <br><br>For example, &quot;Donations - $100k&quot;. If that gets read - wouldn&#39;t the axis be redundant?</p>&mdash; Lindsey Kopacz 🐞 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1123571021120827394?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+
+I had mostly thought about the redundancy of screen readers, but someone else brought up a really good point.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Not necessarily. People don&#39;t always use accessibility tools in the way you would expect.<br><br>For instance, I have ADHD and often use a screen reader to help me with my writing. No vision problems, I just need something to read it back to me, so I know it all makes sense. 😊</p>&mdash; Chris Kitchens (@imchriskitchens) <a href="https://twitter.com/imchriskitchens/status/1123708336212516864?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+
+This is something I hadn't thought about, even as someone with ADHD myself. So with that I've decided to put the axises later in the DOM and added an `aria-label` to those groups in the SVG.
+
+```diff
+svg
+  .append("g")
+  .attr("class", "x-axis")
++ .attr('aria-label', 'x axis')
+  .attr("transform", `translate(${margin.left}, ${height})`)
+  .call(xAxis);
+
+svg
+  .append("g")
+  .attr("class", "y-axis")
++ .attr('aria-label', 'y axis')
+  .attr("transform", `translate(${margin.left}, 0)`)
+  .call(yAxis);
+```
+
+## Conclusion
+
+There is probably a lot to be improved here! I am still relatively new to SVG and some of this is subjective. For example, I had no idea if the axis points would redundant and I got mixed answers about whether I should hide it from a screen reader or not.
