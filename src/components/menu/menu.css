@@ -3,17 +3,15 @@
   padding: 0;
 }
 
-
-
 .menu a {
   position: relative;
   display: inline-block;
-  color: #F3E9EA;
+  color: #f3e9ea;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 1rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   border: none;
   transition: all 0.3s;
   text-decoration: none;

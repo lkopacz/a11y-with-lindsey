@@ -2,28 +2,29 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './menu.css'
 
-const Menu = (props) => {
-  let privacyPolicy;
+const Menu = props => {
+  let privacyPolicy
   if (props.hasPrivacyPolicy) {
-    privacyPolicy = <li className="menu-item privacy-policy"><Link to="/privacy-policy">Privacy Policy</Link></li>
+    privacyPolicy = (
+      <li className="menu-item privacy-policy">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+      </li>
+    )
   }
   return (
-    <nav className={props.class} style={{alignSelf: props.position }}>
+    <nav className={props.class} style={{ alignSelf: props.position }}>
       <ul className="menu">
         <li className="menu-item">
-          <Link to="/about">
-            About
-          </Link>
+          <Link to="/about">About</Link>
         </li>
         <li className="menu-item">
-          <Link to="/blog">
-            Blog
-          </Link>
+          <Link to="/blog">Blog</Link>
         </li>
         <li className="menu-item">
-          <Link to="/contact">
-            Contact
-          </Link>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/support-me">Support Me</Link>
         </li>
         {privacyPolicy}
       </ul>
