@@ -170,6 +170,10 @@ pre code {
   color: #f0876a;
 }
 
+.language-js .number {
+  color: #b2dfeb;
+}
+
 .language-json .property {
   color: #f0876a;
 }
