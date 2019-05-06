@@ -80,6 +80,10 @@ li {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+}
+
 .gatsby-resp-image-link {
   border-bottom: none;
   padding: 0;
