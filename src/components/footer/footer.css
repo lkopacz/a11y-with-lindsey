@@ -1,6 +1,6 @@
 :root {
-  --navy: #1E3650;
-  --off-white: #F3E9EA; 
+  --navy: #1e3650;
+  --off-white: #f3e9ea;
 }
 
 footer {
@@ -19,16 +19,21 @@ footer {
   text-align: left;
 }
 
+.footer-details {
+  display: flex;
+  flex-direction: column;
+}
+
 footer a {
   color: var(--off-white);
 }
 
 footer a:focus {
-  outline: solid 2px #F3E9EA;
+  outline: solid 2px #f3e9ea;
 }
 
 footer input:focus {
-  outline: solid 2px #F3E9EA;
+  outline: solid 2px #f3e9ea;
 }
 
 .social {
@@ -64,6 +69,9 @@ footer input:focus {
 
   .credit {
     text-align: center;
+  }
+  .convertkit-signup--footer {
+    align-self: flex-end;
   }
 }
 
