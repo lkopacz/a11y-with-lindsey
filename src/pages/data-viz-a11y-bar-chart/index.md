@@ -5,7 +5,7 @@ path: '/blog/accessibility-d3-bar-charts'
 tags: ['accessibility', 'bar chart', 'data viz', 'data visualizations']
 published: true
 affiliate: false
-featuredImage: './a11y-data-viz-bar-charts.png'
+featuredImage: './a11y-d3-bar-charts.png'
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/de227e02a8de9baf9ee0672bae9a9f27a2c7485f.3477c826-1e13-4084-9266-6af9016a1c57.mp3'
 ---
