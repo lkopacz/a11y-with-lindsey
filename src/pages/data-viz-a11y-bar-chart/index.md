@@ -1,0 +1,312 @@
+---
+title: Accessibility in d3 Bar Charts
+date: '2019-05-06'
+path: '/blog/accessibility-d3-bar-charts'
+tags: ['accessibility', 'bar chart', 'data viz', 'data visualizations']
+published: true
+affiliate: false
+featuredImage: './a11y-data-viz-bar-charts.png'
+---
+
+Hey y’all! First off, I want to thank people for their patience with this post. I had a very stressful few weeks after I published my last post. Of course, I chose to do a highly technical post in the middle of a stressful deadline at work. That deadline has since past, and I finally finished this post!
+
+I asked on Twitter what you’d like for me to write about next. Many people requested they wanted me to talk about accessibility for data visualizations. Because there’s so much that I have learned about data visualizations, I decided to make this a series.
+
+For the first part of my series, I am going to talk to you about Accessible Bar Charts!
+
+## Starting out
+
+I am going to be using the d3 JavaScript library because of my familiarity with it. I am building an inline SVG, and the principles we go over apply to SVG. The great thing about SVG is that if you know what you’re doing, it’s pretty simple to make accessible bar charts. However, there is that, knowing what you’re doing!
+
+Below is the following data set I'm using:
+
+```js
+const data = [
+  {
+    name: 'World Bank',
+    value: 20223290811,
+  },
+  {
+    name: 'World Health Org',
+    value: 8191091088.532,
+  },
+  {
+    name: 'Food and Agriculture Org',
+    value: 1162341399.19,
+  },
+]
+```
+
+The problem that I see with most bar charts is the absence of text elements indicating what the data is. They only have visual bars with the axis indicating it’s value.
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart Part 2" src="//codepen.io/littlekope0903/embed/BEMNGO/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/BEMNGO/'>Accessible Bar Chart Part 2</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+So what is the problem with this? We have some text for the labels of the bars and the axis. However, the screen reader won’t reflect the **value** associated with the dataset.
+
+<video controls>
+  <source src="/bar-chart-not-a11y.mov" type="video/mp4">
+</video>
+
+As you can see here, when using the VoiceOver commands, it only reads the labels and then the axis ticks. What I want to read is the label and then the data value.
+
+What we’d want is to have `<text>` elements that are next to the `<rect>` elements that have visual meaning. The best thing to do for screen readers is to ensure there is **readable content**. Inline SVGs are great for accessibility because images become markup. It’s fabulous. However, if your bar chart only communicates data with shapes, screen readers won’t read it by default.
+
+## Potential Solution #1
+
+The first solution to make my bar chart accessible is adding a text element after I called the `xAxis`.
+
+```js
+d3.selectAll('.tick')
+  .append('text')
+  .text((d, i) =>
+    d3
+      .format('.2s')(data[i].value)
+      .replace('G', 'B')
+  )
+```
+
+The `.tick` class is what comes by default with d3-axis, and it attaches to the `<g>` element that it comes with. I selected all the `.tick` elements and appended a formatted text element to it.
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 1" src="//codepen.io/littlekope0903/embed/vMwPdx/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/vMwPdx/'>Accessible Bar Chart - Solution 1</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+While this works for screen readers, I don’t think this is the most accessible data visualization experience for everyone. The vast range of the yAxis might make it challenging to understand the value to visual users. Because the y-axis goes to over 16 billion, it may be safe to assume that it may not be evident to our users what the value of the data is. It might be different if the y-axis range was 0 - 10.
+
+<video controls>
+  <source src="/a11y-data-viz-solution-1.mov" type="video/mp4">
+</video>
+
+Having `<text>` element is a better experience for screen reader users, but we could improve it for sighted users.
+
+## Potential Solution #2
+
+Another solution would be to include a legend. It’s important to note that having a color-coded bar chart may not be the most accessible for colorblindness. If we go this route, we have to ensure a drastic and accessible contrast between each bar.
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 2" src="//codepen.io/littlekope0903/embed/WWBmWY/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/WWBmWY/'>Accessible Bar Chart - Solution 2</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+I made a few changes here:
+
+```diff
++ const barColors = ['#000', '#d35f5f', '#fff'];
+  barGroups
+    .selectAll('rect')
+    .data(data)
+    .enter()
+    .append('rect')
+-   .attr("fill", "#d35f5f")
++   .attr('fill', (d, i) => barColors[i])
++   .attr('stroke', '#000')
+    .attr('class', 'bar')
+    .attr('x', d => xScale(d.name))
+    .attr('y', d => yScale(d.value))
+    .attr('width', xScale.bandwidth())
+    .attr('height', d => height - yScale(d.value));
+```
+
+I added the `barColors` variable as an array full of hex colors. I used an anonymous function to choose the fill color. I also added a stroke color because we need that to show the white bar!
+
+I also made the SVG wider and added some legend width. Otherwise, the legend would be cut off!
+
+```diff
+const margin = { top: 20, right: 20, bottom: 70, left: 90 };
+const width = 600 - margin.left - margin.right;
+const height = 300 - margin.top - margin.bottom;
++ const legendWidth = 300;
+
+const svg = d3
+  .select("#chart")
+- .attr("width", width + margin.left + margin.right)
++ .attr("width", width + margin.left + margin.right + legendWidth)
+  .attr("height", height + margin.top + margin.bottom);
+```
+
+We aren’t done yet though! We still need to add the legend! Something I learned here through error is that we have to refactor this code a bit. I am a bit of a d3 newbie. Many times it’s me aimlessly trying things and realizing I need to take a bit of a different approach. What I need to do here is refactor it this way:
+
+```diff
++ const g = barGroups
++   .selectAll('g')
++   .data(data)
++   .enter()
++   .append('g')
+
+- barGroups
+-   .selectAll("rect")
+-   .data(data)
+-   .enter()
+-   .append("rect")
++ g.append('rect')
+  .attr('fill', (d, i) => barColors[i])
+  .attr('stroke', '#000')
+  .attr('class', 'bar')
+  .attr('x', d => xScale(d.name))
+  .attr('y', d => yScale(d.value))
+  .attr('width', xScale.bandwidth())
+  .attr('height', d => height - yScale(d.value))
+```
+
+We need to have multiple `<rect>` elements bound to the same data. I decided to bind the data to the `<g>` instead and append whatever elements I needed to that. I wanted to use the same data binding for the legend, so I went with that!
+
+So I started adding some new `<rect>` and `<text>` tags to make the legend!
+
+```js
+const lineItemHeight = 30
+g.append('rect')
+  .attr('fill', (d, i) => barColors[i])
+  .attr('stroke', '#000')
+  .attr('width', 20)
+  .attr('height', 20)
+  .attr('x', width + margin.right)
+  .attr('y', (d, i) => lineItemHeight * (i + 1))
+
+g.append('text')
+  .text(d => `${d.name} - ${d.value}`)
+  .attr('x', width + margin.right + 30)
+  .attr('y', (d, i) => lineItemHeight * (i + 1) + 15)
+```
+
+Now we have some text that reflects the actual data and the label. One of the last things we want to do is format the numbers so that it reads nicely.
+
+```diff
+g.append('text')
+- .text(d => `${d.name} - ${d.value}`)
++ .text(d => `${d.name} - ${d3.format(".2s")(d.value).replace("G", "B")}`)
+```
+
+Now let’s add a title to the legend and say that B = billions.
+
+```diff
+const svg = d3
+  .select("#chart")
+  .attr("width", width + margin.left + margin.right + legendWidth)
+  .attr("height", height + margin.top + margin.bottom)
+  .attr('aria-labelledby', 'title');
+
++ svg.append('text')
++  .text('Legend')
++  .attr('x', width + margin.right + margin.left)
++  .attr('y', 20)
+
++ svg.append('text')
++  .text('B = billion')
++  .attr('x',width + margin.right + margin.left)
++  .attr('y', 40)
+```
+
+We want to adjust the positioning of the legend items because the Legend title and the key took up some space.
+
+```diff
+g.append('rect')
+  .attr("fill", (d, i) => barColors[i])
+  .attr("stroke", "#000")
+  .attr('width', 20)
+  .attr('height', 20)
+  .attr('x', width + margin.right)
+- .attr('y', (d, i) => lineItemHeight * (i + 1))
++ .attr('y', (d, i) => lineItemHeight * (i + 1) + 30)
+
+g.append('text')
+  .text(d => `${d.name} - ${d3.format(".2s")(d.value).replace("G", "B")}`)
+  .attr('x', width + margin.right + 30)
+- .attr('y', (d, i) => lineItemHeight * (i + 1) + 15)
++ .attr('y', (d, i) => lineItemHeight * (i + 1) + 45)
+```
+
+Here is the final result!
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 2 Continued" src="//codepen.io/littlekope0903/embed/dLBYaN/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/dLBYaN/'>Accessible Bar Chart - Solution 2 Continued</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Adding more context
+
+I used [Heather Migliorisi’s graph CodePen](https://codepen.io/hmig/pen/MeJKee) as inspiration for this post. As it is now, screen readers have a text version of our visualizations. However, I noticed her fantastic use of ARIA to add more context to her graph. I’m going to take some of the same principles she did and apply them to this graph with d3 (she wrote her’s in straight SVG).
+
+The first thing I am going to do is add a title to my SVG.
+
+```diff
+const svg = d3
+  .select("#chart")
+  .attr("width", width + margin.left + margin.right + legendWidth)
+  .attr("height", height + margin.top + margin.bottom)
++ .attr('aria-labelledby', 'bar-chart-title');
+
++ svg.append('text')
++  .text('2018 Donors By Organization')
++  .attr('id', 'bar-chart-title')
++  .attr("x", margin.left)
++  .attr("y", 250)
+```
+
+I recommend going through her piece on [Accessible SVGs](https://css-tricks.com/accessible-svgs/) to learn why this is good practice. She went through plentiful research and knows more about SVG than I do!
+
+I liked how she made the bar graph read out like a list. I am going to add those to each of them as well! I’m also going to add an `aria-label` to the group with the `list` role.
+
+```diff
+const barGroups = svg
+  .append("g")
++ .attr('role', 'list')
++ .attr('aria-label', 'bar chart')
+  .attr("class", "data")
+  .attr("transform", `translate(${margin.left}, 0)`);
+
+const barColors = ["#000", "#d35f5f", "#fff"];
+
+const g = barGroups
+  .selectAll('g')
+  .data(data)
+  .enter()
+  .append('g')
++ .attr('role', 'listitem');
+```
+
+Something that Heather does that I am not going to do here is adding `role="presentation"` to the axes. The reason for that is that I posted this question on Twitter and got mixed responses.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have an <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> question that feels subjective. If you&#39;re creating an SVG graph, wouldn&#39;t the axis be a bit useless to a screen reader if you are announcing the data points a different way? <br><br>For example, &quot;Donations - $100k&quot;. If that gets read - wouldn&#39;t the axis be redundant?</p>&mdash; Lindsey Kopacz 🐞 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1123571021120827394?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+
+I had thought about the redundancy of screen readers, but someone else brought up an excellent point.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Not necessarily. People don&#39;t always use accessibility tools in the way you would expect.<br><br>For instance, I have ADHD and often use a screen reader to help me with my writing. No vision problems, I just need something to read it back to me, so I know it all makes sense. 😊</p>&mdash; Chris Kitchens (@imchriskitchens) <a href="https://twitter.com/imchriskitchens/status/1123708336212516864?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+
+This is something I hadn’t thought about, even as someone with ADHD myself. So with that said, I’ve decided to put the axes later in the DOM and added an `aria-label` to those groups in the SVG.
+
+```diff
+svg
+  .append("g")
+  .attr("class", "x-axis")
++ .attr('aria-label', 'x axis')
+  .attr("transform", `translate(${margin.left}, ${height})`)
+  .call(xAxis);
+
+svg
+  .append("g")
+  .attr("class", "y-axis")
++ .attr('aria-label', 'y axis')
+  .attr("transform", `translate(${margin.left}, 0)`)
+  .call(yAxis);
+```
+
+Now here’s the final run through:
+
+<video controls>
+  <source src="/a11y-data-viz-solution-2.mov" type="video/mp4">
+</video>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Adding ARIA" src="//codepen.io/littlekope0903/embed/qwepvj/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/littlekope0903/pen/qwepvj/'>Accessible Bar Chart - Adding ARIA</a> by Lindsey Kopacz
+  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Conclusion
+
+I’m sure I could improve this visualization a lot! I am still relatively new to SVG, and some of this is subjective. It’s unclear if the axis points would be redundant. I got mixed answers about whether I should hide it from a screen reader or not. I decided to go with more context is better, unless it’s annoying.
+
+What do you think? Let me know on [Twitter](https://twitter.com/LittleKope/)! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!

@@ -3,7 +3,6 @@ import './subscribe.css'
 
 const Subscribe = props => {
   let bgClass
-  console.log(props)
   if (props.hasBackground) {
     bgClass = 'convertkit-signup convertkit-signup--white-bg'
   } else {

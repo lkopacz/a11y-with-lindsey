@@ -29,6 +29,10 @@ export default function Template({ data }) {
             content: frontmatter.tags.join(', '),
           },
           {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+          {
             name: 'twitter:site',
             content: '@littlekope0903',
           },

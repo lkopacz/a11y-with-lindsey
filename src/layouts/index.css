@@ -80,6 +80,10 @@ li {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+}
+
 .gatsby-resp-image-link {
   border-bottom: none;
   padding: 0;
@@ -170,12 +174,24 @@ pre code {
   color: #f0876a;
 }
 
+.language-js .number {
+  color: #b2dfeb;
+}
+
 .language-json .property {
   color: #f0876a;
 }
 
 .language-json .string {
   color: #b2dfeb;
+}
+
+.language-diff .inserted {
+  color: #a9f9b2;
+}
+
+.language-diff .deleted {
+  color: #f0876a;
 }
 
 video {
