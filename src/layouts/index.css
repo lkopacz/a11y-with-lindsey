@@ -109,7 +109,7 @@ code {
   font-weight: bold;
   font-size: 1.25rem;
   background-color: #383838;
-  padding: 5px;
+  padding: 2px 5px;
   color: var(--off-white);
   border-radius: 6px;
   line-height: 1.5;
@@ -134,6 +134,10 @@ pre code {
   font-weight: normal;
 }
 
+.gatsby-highlight {
+  margin: 1rem 0;
+}
+
 .language-html .tag {
   color: #fdb4cf;
 }
@@ -146,19 +150,23 @@ pre code {
   color: #fdb4cf;
 }
 
-.language-css {
+.language-css,
+.language-scss {
   color: #b2dfeb;
 }
 
-.language-css .selector {
+.language-css .selector,
+.language-scss .selector {
   color: #fdb4cf;
 }
 
-.language-css .punctuation {
+.language-css .punctuation,
+.language-scss .punctuation {
   color: #fff;
 }
 
-.language-css .property {
+.language-css .property,
+.language-scss .property {
   color: #fff;
 }
 
@@ -176,6 +184,14 @@ pre code {
 
 .language-js .number {
   color: #b2dfeb;
+}
+
+.language-js .comment {
+  color: #b0b0b0;
+}
+
+.language-js .operator {
+  color: #fdb4cf;
 }
 
 .language-json .property {
