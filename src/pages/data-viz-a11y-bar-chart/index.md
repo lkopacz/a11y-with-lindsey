@@ -25,17 +25,17 @@ Below is the following data set I'm using:
 ```js
 const data = [
   {
-    name: 'World Bank',
-    value: 20223290811,
+    name: "Banana Production",
+    value: 20223290811
   },
   {
-    name: 'World Health Org',
-    value: 8191091088.532,
+    name: "Apple Production",
+    value: 8191091088.532
   },
   {
-    name: 'Food and Agriculture Org',
-    value: 1162341399.19,
-  },
+    name: "Clementine Production",
+    value: 1162341399.19
+  }
 ]
 ```
 
@@ -48,11 +48,7 @@ The problem that I see with most bar charts is the absence of text elements indi
 
 So what is the problem with this? We have some text for the labels of the bars and the axis. However, the screen reader won’t reflect the **value** associated with the dataset.
 
-<video controls>
-  <source src="/bar-chart-not-a11y.mov" type="video/mp4">
-</video>
-
-As you can see here, when using the VoiceOver commands, it only reads the labels and then the axis ticks. What I want to read is the label and then the data value.
+When using the VoiceOver commands, it only reads the labels and then the axis ticks. What I want to read is the label and then the data value.
 
 What we’d want is to have `<text>` elements that are next to the `<rect>` elements that have visual meaning. The best thing to do for screen readers is to ensure there is **readable content**. Inline SVGs are great for accessibility because images become markup. It’s fabulous. However, if your bar chart only communicates data with shapes, screen readers won’t read it by default.
 
@@ -78,10 +74,6 @@ The `.tick` class is what comes by default with d3-axis, and it attaches to the 
 </iframe>
 
 While this works for screen readers, I don’t think this is the most accessible data visualization experience for everyone. The vast range of the yAxis might make it challenging to understand the value to visual users. Because the y-axis goes to over 16 billion, it may be safe to assume that it may not be evident to our users what the value of the data is. It might be different if the y-axis range was 0 - 10.
-
-<video controls>
-  <source src="/a11y-data-viz-solution-1.mov" type="video/mp4">
-</video>
 
 Having `<text>` element is a better experience for screen reader users, but we could improve it for sighted users.
 
@@ -242,7 +234,7 @@ const svg = d3
 + .attr('aria-labelledby', 'bar-chart-title');
 
 + svg.append('text')
-+  .text('2018 Donors By Organization')
++  .text('2018 Fruit Production')
 +  .attr('id', 'bar-chart-title')
 +  .attr("x", margin.left)
 +  .attr("y", 250)
@@ -295,12 +287,6 @@ svg
   .attr("transform", `translate(${margin.left}, 0)`)
   .call(yAxis);
 ```
-
-Now here’s the final run through:
-
-<video controls>
-  <source src="/a11y-data-viz-solution-2.mov" type="video/mp4">
-</video>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Adding ARIA" src="//codepen.io/littlekope0903/embed/qwepvj/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/littlekope0903/pen/qwepvj/'>Accessible Bar Chart - Adding ARIA</a> by Lindsey Kopacz
