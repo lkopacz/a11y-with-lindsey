@@ -2,7 +2,7 @@
 title: 'My Blogging Editing Process'
 date: '2019-05-28'
 path: '/blog/blogging-editing-process'
-tags: ['accessibility', 'testing', 'front end web development']
+tags: ['blogging', 'adhd', 'editing', 'accessibility']
 published: true
 affiliate: false
 featuredImage: './blogging-editing-process.png'
