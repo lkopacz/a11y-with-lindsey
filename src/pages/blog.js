@@ -39,8 +39,8 @@ class BlogIndex extends React.Component {
             <main id="main-content">
               <h1>Blog</h1>
               {posts.map(({ node }) => {
-                const image = get(node, 'frontmatter.featuredImage')
-                const { sizes, src, srcSet } = image.childImageSharp.sizes
+                // const image = get(node, 'frontmatter.featuredImage')
+                // const { sizes, src, srcSet } = image.childImageSharp.sizes
                 const title = get(node, 'frontmatter.title')
                 const path = get(node, 'frontmatter.path')
                 return (
@@ -50,9 +50,9 @@ class BlogIndex extends React.Component {
                         {title}
                       </Link>
                     </h2>
-                    <div>
+                    {/* <div>
                       <img srcSet={srcSet} sizes={sizes} src={src} alt="" />
-                    </div>
+                    </div> */}
                     <time>{node.frontmatter.date}</time>
                     <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                   </div>
