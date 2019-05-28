@@ -24,8 +24,6 @@ First comes writing the thing. Many people have formats like writing outlines an
 
 Instead of creating a formal outline, I pull up my Markdown file. In the markdown file, I start creating headings about how I want to group my thoughts. These headings are pseudo outlining, I suppose, but I don’t go through the bullet-pointed list. I tend to add structure during my editing process and let my creative juices flow. I firmly believe that my blog posts are unique because I start this way, then make it more coherent later. That energy is part of who I am, and I also think it helps me relate to people and helps me creatively solve problems.
 
-![Writing a list.](https://media.giphy.com/media/IuMDWLXhjOQ1O/giphy.gif)
-
 If you struggle with feeling all over the place, remember you can always edit it out later. I use tools to help me edit my sloppy writing into cohesive sentences. Some of my best writing comes from going with the flow.
 
 My only exception is when I write code-heavy posts, which takes a little more planning.
