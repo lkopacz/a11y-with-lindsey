@@ -108,20 +108,17 @@ p {
 code {
   font-weight: bold;
   font-size: 1.25rem;
-  background-color: #383838;
   padding: 2px 5px;
-  color: var(--off-white);
-  border-radius: 6px;
   line-height: 1.5;
 }
 
 h2 code {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 pre {
-  background: #383838;
-  color: var(--white);
+  background: var(--navy);
+  color: var(--off-white);
   display: block;
   margin: 0 auto;
   padding: 1rem;
