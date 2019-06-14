@@ -101,10 +101,10 @@
 }
 
 .formkit-form[data-uid='4218bd5fb5'] .formkit-input {
-  background: #ffffff;
+  background: transparent;
   font-size: 15px;
   padding: 12px;
-  border: 1px solid #e3e3e3;
+  /* border: 1px solid #e3e3e3; */
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -121,20 +121,52 @@
   transition: border-color ease 300ms;
 }
 
-.formkit-form[data-uid='4218bd5fb5'] .formkit-input::-webkit-input-placeholder {
-  color: #848585;
+.convertkit-signup--footer
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::-webkit-input-placeholder {
+  color: #f3e9ea;
 }
 
-.formkit-form[data-uid='4218bd5fb5'] .formkit-input::-moz-placeholder {
-  color: #848585;
+.convertkit-signup--footer
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::-moz-placeholder {
+  color: #f3e9ea;
 }
 
-.formkit-form[data-uid='4218bd5fb5'] .formkit-input:-ms-input-placeholder {
-  color: #848585;
+.convertkit-signup--footer
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input:-ms-input-placeholder {
+  color: #f3e9ea;
 }
 
-.formkit-form[data-uid='4218bd5fb5'] .formkit-input::placeholder {
-  color: #848585;
+.convertkit-signup--footer
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::placeholder {
+  color: #f3e9ea;
+}
+
+.convertkit-signup--sidebar
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::-webkit-input-placeholder {
+  color: #1e3650;
+}
+
+.convertkit-signup--sidebar
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::-moz-placeholder {
+  color: #1e3650;
+}
+
+.convertkit-signup--sidebar
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input:-ms-input-placeholder {
+  color: #1e3650;
+}
+
+.convertkit-signup--sidebar
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input::placeholder {
+  color: #1e3650;
 }
 
 .formkit-form[data-uid='4218bd5fb5'] [data-group='dropdown'] {
@@ -542,4 +574,10 @@
 .convertkit-signup.convertkit-signup--footer {
   width: 65%;
   float: right;
+}
+
+.convertkit-signup.convertkit-signup--footer
+  .formkit-form[data-uid='4218bd5fb5']
+  .formkit-input {
+  background: transparent !important;
 }
