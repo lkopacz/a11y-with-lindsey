@@ -106,4 +106,63 @@ This does not need to match the `id` of another element. It can be it's own stri
 
 While there are definitely a lot of confusing aria attributes, these took me the longest to demystify. They sound **so similar**. So let's think about what they do quite literally.
 
-Labels are almost like titles. They tell you what something is. Descriptions
+Labels are almost like titles. They tell you what something is. When do we announce a title or a label: before the element.
+
+Let's take the third example from the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+
+```html
+<div id="radio_label">My radio label</div>
+<ul role="radiogroup" aria-labelledby="radio_label">
+  <li role="radio">Item #1</li>
+  <li role="radio">Item #2</li>
+  <li role="radio">Item #3</li>
+</ul>
+```
+
+When we use VoiceOver to go through this it reads like such:
+
+<!--INSERT VIDEO-->
+
+Did you notice once we navigated to the radio group it read "My radio label, radio group?" The radio label got announced **before** it told us about the radio group.
+
+On the contrary, we have descriptions, which provide more information about what something is. When do we do that: after the element.
+
+Let's take the same markup from above and add an `aria-describedby` attribute with a div.
+
+```html
+<div id="radio_label">My radio label</div>
+<ul
+  role="radiogroup"
+  aria-labelledby="radio_label"
+  aria-describedby="radio_desc"
+>
+  <li role="radio">Item #1</li>
+  <li role="radio">Item #2</li>
+  <li role="radio">Item #3</li>
+</ul>
+<div id="radio_desc">
+  A bit more about this radio group. Here are some words.
+</div>
+```
+
+When we use VoiceOver to go through this it reads like such:
+
+<!-- ADD VIDEO -->
+
+Did you notice how the text "A bit more about this radio group. Here are some words" happened after VoiceOver announced the radio group? That's the major difference. It's very subtle difference where in most cases, it won't matter. I find that tooltip content is the best place to use `aria-describedby` because we want the tooltip content to be read **after** the element is focused on.
+
+```html
+<label for="name">Name:</label>
+<input type="text" id="name" aria-describedby="name-tooltip" required="" />
+<div role="tooltip" id="name-tooltip">
+  Please use the following format: "Last name, first name."
+</div>
+```
+
+The strings that we put in these attributes are similar to the form labels above. We want the `aria-describedby` or `aria-labelledby` attribute to match the `id` of the element that we want the screen reader to read.
+
+## Conclusion
+
+I hope I helped you understand a bit more about the confusing world of labelling for accessibility! Let me know on [Twitter](https://twitter.com/LittleKope) what you thought or if you have any other questions.
+
+Also, I have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a $1 monthly pledge. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!
