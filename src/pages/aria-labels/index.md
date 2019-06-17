@@ -8,7 +8,7 @@ affiliate: false
 featuredImage: './aria-labels.png'
 ---
 
-Last week, I got a decent amount of folks who found the [aria states blog post] helpful, so this week I wanted to continue on with that and go over something that took me a long time to understand: labeling. How do you actually label things? What needs labeling? What is the difference between all the ways to label things?
+Last week, I got a decent amount of folks who found the [aria states blog post](/blog/introduction-aria-states) helpful. This week I wanted to continue on with that and go over something that took me a long time to understand: labeling. How do you actually label things? What needs labeling? What is the difference between all the ways to label things?
 
 After this post, you should have a firmer understanding of all things labels.
 
@@ -16,30 +16,30 @@ After this post, you should have a firmer understanding of all things labels.
 
 Form labels are one of the most common place I see accessibility errors. Most people will do something like this:
 
-```html
+<!-- ```html
 <form>
   <input type="search" placeholder="Search" />
 </form>
-```
+``` -->
 
-I'm going to say it again for those in the back:
+I’m going to say it again for those in the back:
 
 > Placeholder attributes are **not** enough to label a field for a screen reader.
 
-To label this properly, we need to ensure that there is a `<label>` that exists and is also **associated** with the input. The way to associate it is to give the `<input>` element an `id` and to match that value to a `for` attribute on the label.
+To properly label this, we need to ensure that there is a `<label>` that exists and is also **associated** with the input. The way to associate it is to give the `<input>` element an `id` and to match that value to a `for` attribute on the label.
 
-```html
+<!-- ```html
 <form>
   <label for="search">Search</label>
   <input type="search" placeholder="Search" id="search" />
 </form>
-```
+``` -->
 
 Take note that the string in the `for` attribute matches the `id` in the input. This is how you associate them!
 
-If a designer gives you a design and there is absolutely no way to tell them to add a label to the design, you're in luck. You can add a `visually-hidden` or `sr-only` (screen reader only) class and use this CSS that I always steal from [the a11y project](https://a11yproject.com/posts/how-to-hide-content/):
+If a designer gives you a design and there is absolutely no way to tell them to add a label to the design, you’re in luck. You can add a `visually-hidden` or `sr-only` (screen reader only) class. I always use this CSS from [the a11y project](https://a11yproject.com/posts/how-to-hide-content/):
 
-```css
+<!-- ```css
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -48,40 +48,40 @@ If a designer gives you a design and there is absolutely no way to tell them to 
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
-```
+``` -->
 
 The above code would turn into this:
 
-```html
+<!-- ```html
 <form>
   <label class="visually-hidden" for="search">Search</label>
   <input type="search" placeholder="Search" id="search" />
 </form>
-```
+``` -->
 
 Pretty simple, this applies to `<select>` elements as well.
 
 ### Nesting inputs in labels
 
-I've also seen people nest their inputs. This isn't my preferred method, but if I do something like this:
+I’ve also seen people nest their inputs. This isn’t my preferred method, but if I do something like this:
 
-```html
+<!-- ```html
 <form>
   <label>
     Search:
     <input type="search" />
   </label>
 </form>
-```
+``` -->
 
-This is valid and doesn't produce any errors with the Wave tool. However, it makes it more difficult to visually hide the label, if that's what you need to do. So choose your method based on your needs!
+This is valid and doesn’t produce any errors with the Wave tool. However, it makes it more difficult to visually hide the label, if that’s what you need to do. So choose your method based on your needs!
 
 ## Using `aria-label`
 
-As a disclaimer, this is my least favorite way to label things for screen readers. But sometimes, it is necessary. A few times I've found it necessary:
+As a disclaimer, this is my least favorite way to label things for screen readers. But sometimes, it is necessary. A few times I’ve found it necessary:
 
-1. I had no control of the markup. If I am changing up the DOM in JavaScript, it's way easier to `setAttribute()` than it is to create an entire element and append it.
-1. I was working in an SVG that I couldn't add `<text>` elements to
+1. I had no control of the markup and had to change up the DOM in JavaScript. It’s way easier to `setAttribute()` than it is to create an entire element and append it.
+1. I was working in an SVG that I couldn’t add `<text>` elements to
 
 The way you use an `aria-label` is to put the string in the attribute. For example, I found this on the MDN site:
 
@@ -100,36 +100,36 @@ The way you use an `aria-label` is to put the string in the attribute. For examp
 </svg>
 ```
 
-This does not need to match the `id` of another element. It can be it's own string!
+This does not need to match the `id` of another element. It can be it’s own string!
 
 ## `aria-describedby` and `aria-labelledby`
 
-While there are definitely a lot of confusing aria attributes, these took me the longest to demystify. They sound **so similar**. So let's think about what they do quite literally.
+`aria-describedby` and `aria-labelledby` took awhile to demystify because they sound **so similar**. So let’s break them down into the literal sense.
 
-Labels are almost like titles. They tell you what something is. When do we announce a title or a label: before the element.
+Labels are like titles. They tell you what something is. When do we announce a title or a label: before the element.
 
-Let's take the third example from the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+Let’s take the third example from the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 
-```html
+<!-- ```html
 <div id="radio_label">My radio label</div>
 <ul role="radiogroup" aria-labelledby="radio_label">
   <li role="radio">Item #1</li>
   <li role="radio">Item #2</li>
   <li role="radio">Item #3</li>
 </ul>
-```
+``` -->
 
 When we use VoiceOver to go through this it reads like such:
 
 <!--INSERT VIDEO-->
 
-Did you notice once we navigated to the radio group it read "My radio label, radio group?" The radio label got announced **before** it told us about the radio group.
+Did you notice once we navigated to the radio group it read “My radio label, radio group?” The radio label got announced **before** it told us about the radio group.
 
-On the contrary, we have descriptions, which provide more information about what something is. When do we do that: after the element.
+Then we have descriptions, which provide more information about what something is. When do we do that: after the element.
 
-Let's take the same markup from above and add an `aria-describedby` attribute with a div.
+Let’s take the same markup from above and add an `aria-describedby` attribute with a div.
 
-```html
+<!-- ```html
 <div id="radio_label">My radio label</div>
 <ul
   role="radiogroup"
@@ -143,23 +143,15 @@ Let's take the same markup from above and add an `aria-describedby` attribute wi
 <div id="radio_desc">
   A bit more about this radio group. Here are some words.
 </div>
-```
+``` -->
 
 When we use VoiceOver to go through this it reads like such:
 
 <!-- ADD VIDEO -->
 
-Did you notice how the text "A bit more about this radio group. Here are some words" happened after VoiceOver announced the radio group? That's the major difference. It's very subtle difference where in most cases, it won't matter. I find that tooltip content is the best place to use `aria-describedby` because we want the tooltip content to be read **after** the element is focused on.
+Did you notice how the text “A bit more about this radio group. Here are some words” happened after VoiceOver announced the radio group? That’s the major difference. It’s very subtle difference where in most cases, it won’t matter.
 
-```html
-<label for="name">Name:</label>
-<input type="text" id="name" aria-describedby="name-tooltip" required="" />
-<div role="tooltip" id="name-tooltip">
-  Please use the following format: "Last name, first name."
-</div>
-```
-
-The strings that we put in these attributes are similar to the form labels above. We want the `aria-describedby` or `aria-labelledby` attribute to match the `id` of the element that we want the screen reader to read.
+The strings that we put in these attributes are like the form labels above. We want the `aria-describedby` or `aria-labelledby` attribute to match the `id` of the element that we want the screen reader to read.
 
 ## Conclusion
 
