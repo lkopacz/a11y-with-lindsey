@@ -1,6 +1,6 @@
 ---
 title: An Introduction to Accessible Labeling
-date: '2019-06-12'
+date: '2019-06-17'
 path: '/blog/introduction-accessible-labeling'
 tags: ['accessibility', 'label', 'aria', 'forms']
 published: true
