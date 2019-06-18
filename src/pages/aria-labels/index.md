@@ -8,7 +8,7 @@ affiliate: false
 featuredImage: './aria-labels.png'
 ---
 
-Last week, I got a decent amount of folks who found the [aria states blog post](<(/blog/introduction-aria-states)>) helpful. This week I wanted to continue with that and go over something that took me a long time to understand: labeling. How do you label things? What needs labeling? What is the difference between all the ways to label things?
+Last week, I got a decent amount of folks who found the [aria states blog post](/blog/introduction-aria-states) helpful. This week I wanted to continue with that and go over something that took me a long time to understand: labeling. How do you label things? What needs labeling? What is the difference between all the ways to label things?
 
 After this post, you should have a firmer understanding of all things labels.
 
