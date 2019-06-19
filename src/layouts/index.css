@@ -306,6 +306,22 @@ blockquote.twitter-tweet a:focus {
   margin: 0 auto;
 }
 
+.sidebar--white-bg {
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+  font-weight: bold;
+}
+
+.right-arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  padding: 3px;
+}
+
 @media only screen and (min-width: 767px) {
   .wrapper {
     max-width: 767px;
