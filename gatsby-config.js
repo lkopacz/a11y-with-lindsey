@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'a11y with Lindsey',
     author: 'Lindsey Kopacz',
-    description: 'a11y with Lindsey, where we want to make our internet, Everyone\'s internet!',
+    description:
+      "a11y with Lindsey, where we want to make our internet, Everyone's internet!",
     siteUrl: `https://www.a11ywithlindsey.com`,
   },
   plugins: [
@@ -21,7 +22,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
             },
           },
           {
@@ -30,7 +31,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '÷',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -68,7 +74,7 @@ module.exports = {
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.id,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -94,13 +100,13 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
-          }
-        ]
-      }
+            output: '/rss.xml',
+          },
+        ],
+      },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-twitter`
+    `gatsby-plugin-twitter`,
   ],
 }
