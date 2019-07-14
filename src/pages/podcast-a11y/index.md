@@ -44,7 +44,7 @@ Cons:
 
 ### Using Artificial Intelligence
 
-The other option is to use AI software to parse through your text and provide a transcript for you. We tried [Trint](https://app.trint.com) and [Otter AI](https://otter.ai), which are both were great tools. AI also has some pros and cons.
+The other option is to use AI software to parse through your audio and provide a transcript for you. We tried [Trint](https://app.trint.com) and [Otter AI](https://otter.ai), which are both great tools. AI also has some pros and cons.
 
 Pros:
 
@@ -54,7 +54,7 @@ Pros:
 
 Cons:
 
-- Especially at first, you have to edit it. We didn't want to have random words in there, so we took some time to listen to the tool as it read the transcript to me.
+- Especially at first, you have to edit it. We didn't want to have random words in there, so we took some time to listen to the tool as it read the transcript to us.
 - I feel a little guilty when I use Machine Learning to replace a job that a person could do.
 
 ### What we ended up doing
@@ -104,7 +104,7 @@ This gives me the ability to access all the methods of the audio. I can use them
 
 In the podcast player, I used the following methods:
 
-- [HTMLMediaElement.currentTime](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime) - This tells you what point in the audio you are, in seconds.
+- [HTMLMediaElement.currentTime](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/currentTime) - This tells you current time in the audio, in seconds.
 - [HTMLMediaElement.playbackRate](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/playbackRate) - This tells you the speed at which you are playing. We can set this property when we press a button to increase the speed!
 - [HTMLMediaElement.volume](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume) - This tells you the current volume level.
 - [HTMLMediaElement.play()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play) - This plays the audio.
@@ -172,7 +172,7 @@ I have 3 children divs of the player: `.player__progress-loaded`, `.player__prog
 
 - `.player__progress-loaded` corresponds to the width of the entire slider. This div has no semantic value to a screen reader user.
 - `.player__progress-played` is the visual representation of the total amount played.
-- `.player__slider` is the most important element for accessibility. It tells the screen reader what time it currently is, and allows us to move it with our keyboard.
+- `.player__slider` is the most important element for accessibility. It tells the screen reader user what time it currently is, and allows us to move it with our keyboard.
 
 Now let's take a look at some of the events and style here:
 
@@ -281,7 +281,7 @@ As stated before, this was a little buggy. A few things that are buggy:
 1. Browser support (I got a comment from a listener, but haven't checked it out yet)
 1. I couldn’t figure out dragging the slider with your mouse.
 
-So, for whatever reason, I assumed (don't assume folks, it's dangerous) that you could not custom style a slider.
+So, for whatever reason, I assumed (don't assume folks, it's dangerous) that you could not custom style a range input.
 
 I was wrong. You totally can.
 
