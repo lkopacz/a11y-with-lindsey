@@ -135,11 +135,13 @@ pre code {
   margin: 1rem 0;
 }
 
-.language-html .tag {
+.language-html .tag,
+.language-jsx .tag {
   color: #fdb4cf;
 }
 
-.language-html .attr-value {
+.language-html .attr-value,
+.language-jsx .attr-name {
   color: #b2dfeb;
 }
 
@@ -167,27 +169,33 @@ pre code {
   color: #fff;
 }
 
-.language-js .keyword {
+.language-js .keyword,
+.language-jsx .keyword {
   color: #fdb4cf;
 }
 
-.language-js .function {
+.language-js .function,
+.language-jsx .function {
   color: #b2dfeb;
 }
 
-.language-js .string {
+.language-js .string,
+.language-jsx .string {
   color: #f0876a;
 }
 
-.language-js .number {
+.language-js .number,
+.language-jsx .operator {
   color: #b2dfeb;
 }
 
-.language-js .comment {
+.language-js .comment,
+.language-jsx .operator {
   color: #b0b0b0;
 }
 
-.language-js .operator {
+.language-js .operator,
+.language-jsx .operator {
   color: #fdb4cf;
 }
 
@@ -205,6 +213,16 @@ pre code {
 
 .language-diff .deleted {
   color: #f0876a;
+}
+
+.gatsby-highlight-code-line {
+  display: block;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 1rem;
+  padding-left: 0.25rem;
+  border-left: 8px solid #c03711;
+  background: #305282;
 }
 
 video {
