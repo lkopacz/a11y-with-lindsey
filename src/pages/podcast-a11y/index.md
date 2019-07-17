@@ -296,4 +296,10 @@ Two key takeaways from this post:
 
 If you're interested in the LadyBug Podcast, be sure to [subscribe](https://link.chtbl.com/ladybugpodcast) to have them downloaded!
 
-That's all folks! Let me know on [Twitter](https://twitter.com/LittleKope) what you thought or if you have any other questions. Also, I have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a $1 monthly pledge. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!
+Stay in touch! If you liked this article:
+
+- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
+- Support me on [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a $1 monthly pledge. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! I also do a monthly Ask Me Anything Session for all Patrons!
+- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
+
+Cheers! Have a great week!
