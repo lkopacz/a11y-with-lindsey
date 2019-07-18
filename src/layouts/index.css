@@ -12,7 +12,7 @@ body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
   background: var(--off-white);
-  color: var(--navy);
+  color: var(--marron);
 }
 
 h1,
@@ -62,7 +62,7 @@ a {
   padding-bottom: 2px;
   border-bottom: 2px solid;
   text-decoration: none;
-  color: var(--teal);
+  color: var(--marron);
   font-weight: bold;
   transition: padding-bottom 0.3s ease;
 }
@@ -97,8 +97,9 @@ img {
   margin-bottom: 1rem;
 }
 
-h2 a {
-  color: var(--navy);
+h2 a,
+h3 a {
+  color: var(--marron);
 }
 
 p {
@@ -332,7 +333,7 @@ blockquote.twitter-tweet a:focus {
 }
 
 .right-arrow {
-  border: solid white;
+  border: solid;
   border-width: 0 3px 3px 0;
   display: inline-block;
   transform: rotate(-45deg);

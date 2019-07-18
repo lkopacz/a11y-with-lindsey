@@ -1,16 +1,17 @@
 :root {
   --navy: #1e3650;
-  --off-white: #f3e9ea;
+  --pale-blue: #b5d8ff;
 }
 
 footer {
-  background: var(--navy);
+  background: var(--pale-blue);
   padding: 15px 0;
-  color: var(--off-white);
+  color: var(--navy);
 }
 
 .footer-wrapper {
   margin: 0 auto;
+  max-width: 52rem;
   padding: 0 20px;
 }
 
@@ -25,15 +26,15 @@ footer {
 }
 
 footer a {
-  color: var(--off-white);
+  color: var(--navy);
 }
 
 footer a:focus {
-  outline: solid 2px #f3e9ea;
+  outline: solid 2px var(--navy);
 }
 
 footer input:focus {
-  outline: solid 2px #f3e9ea;
+  outline: solid 2px var(--navy);
 }
 
 .social {
@@ -60,7 +61,6 @@ footer input:focus {
   .footer-wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 767px;
   }
 
   .social {
@@ -72,11 +72,5 @@ footer input:focus {
   }
   .convertkit-signup--footer {
     align-self: flex-end;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .footer-wrapper {
-    max-width: 1024px;
   }
 }

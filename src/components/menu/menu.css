@@ -1,3 +1,7 @@
+:root {
+  --marron: #640d23;
+}
+
 .menu {
   margin: 0;
   padding: 0;
@@ -6,7 +10,6 @@
 .menu a {
   position: relative;
   display: inline-block;
-  color: #f3e9ea;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -15,6 +18,10 @@
   border: none;
   transition: all 0.3s;
   text-decoration: none;
+}
+
+.menu-main a {
+  color: var(--marron);
 }
 
 .menu a:hover {
