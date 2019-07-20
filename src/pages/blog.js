@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import Sidebar from '../components/sidebar/sidebar'
+// import Sidebar from '../components/sidebar/sidebar'
 
 class BlogIndex extends React.Component {
   render() {
@@ -26,41 +26,41 @@ class BlogIndex extends React.Component {
             },
           ]}
         />
-        <div className="wrapper with-sidebar">
-          <nav className="breadcrumb">
-            <ol>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>Blog</li>
-            </ol>
-          </nav>
-          <div className="content">
-            <main id="main-content">
-              <h1>Blog</h1>
-              {posts.map(({ node }) => {
-                // const image = get(node, 'frontmatter.featuredImage')
-                // const { sizes, src, srcSet } = image.childImageSharp.sizes
-                const title = get(node, 'frontmatter.title')
-                const path = get(node, 'frontmatter.path')
-                return (
-                  <div style={{ marginTop: 24, marginBottom: 24 }} key={path}>
-                    <h2 style={{ marginTop: 10, marginBottom: 10 }}>
-                      <Link style={{ boxShadow: 'none' }} to={path}>
-                        {title}
-                      </Link>
-                    </h2>
-                    {/* <div>
-                      <img srcSet={srcSet} sizes={sizes} src={src} alt="" />
-                    </div> */}
-                    <time>{node.frontmatter.date}</time>
-                    <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  </div>
-                )
-              })}
-            </main>
-            <Sidebar location="blog" />
-          </div>
+        <div className="content">
+          <main id="main-content">
+            <div className="content__heading">
+              <div className="wrapper">
+                <nav className="breadcrumb">
+                  <ol>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>Blog</li>
+                  </ol>
+                </nav>
+                <h1>Blog</h1>
+              </div>
+            </div>
+            <div className="content__body">
+              <div className="wrapper">
+                {posts.map(({ node }) => {
+                  const title = get(node, 'frontmatter.title')
+                  const path = get(node, 'frontmatter.path')
+                  return (
+                    <div style={{ marginTop: 24, marginBottom: 24 }} key={path}>
+                      <h2 style={{ marginTop: 10, marginBottom: 10 }}>
+                        <Link style={{ boxShadow: 'none' }} to={path}>
+                          {title}
+                        </Link>
+                      </h2>
+                      <time>{node.frontmatter.date}</time>
+                      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </main>
         </div>
       </div>
     )
@@ -87,15 +87,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM D, YYYY")
             title
             path
-            featuredImage {
-              childImageSharp {
-                sizes(maxWidth: 1240) {
-                  srcSet
-                  sizes
-                  src
-                }
-              }
-            }
           }
         }
       }

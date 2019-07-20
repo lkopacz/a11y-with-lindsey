@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Sidebar from '../components/sidebar/sidebar'
+import Bio from '../components/bio/bio'
 import './blog-post.css'
 
 export default function Template({ data }) {
@@ -70,34 +70,64 @@ export default function Template({ data }) {
           },
         ]}
       />
-      <div className="wrapper with-sidebar">
-        <nav className="breadcrumb">
-          <ol>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>{frontmatter.title}</li>
-          </ol>
-        </nav>
-        <div className="content">
-          <main id="main-content">
-            <h1>{frontmatter.title}</h1>
-            <time>{frontmatter.date}</time>
-            {frontmatter.hasAudio ? <audio src={audio} controls /> : ''}
-            {frontmatter.affiliate ? (
-              <p>
-                <em>{affiliate}</em>
-              </p>
-            ) : (
-              ''
-            )}
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </main>
-          <Sidebar location="blog" />
-        </div>
+      <div className="content">
+        <main id="main-content">
+          <div className="content__heading">
+            <div className="wrapper">
+              <nav className="breadcrumb">
+                <ol>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                  <li>{frontmatter.title}</li>
+                </ol>
+              </nav>
+              <h1>{frontmatter.title}</h1>
+            </div>
+          </div>
+          <div className="content__body">
+            <div className="wrapper">
+              <time>{frontmatter.date}</time>
+              {frontmatter.hasAudio ? <audio src={audio} controls /> : ''}
+              {frontmatter.affiliate ? (
+                <p>
+                  <em>{affiliate}</em>
+                </p>
+              ) : (
+                ''
+              )}
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <p>Stay in touch! If you liked this article:</p>
+              <ul>
+                <li>
+                  Let me know on{' '}
+                  <a href="https://twitter.com/LittleKope">Twitter</a> and share
+                  this article with your friends! Also, feel free to tweet me
+                  any follow up questions or thoughts.
+                </li>
+                <li>
+                  Support me on{' '}
+                  <a href="https://www.patreon.com/a11ywithlindsey">patreon</a>!
+                  If you like my work, consider making a $1 monthly pledge.
+                  You’ll be able to vote on future blog posts if you make a $5
+                  pledge or higher! I also do a monthly Ask Me Anything Session
+                  for all Patrons!
+                </li>
+                <li>
+                  <a href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a">
+                    Be the first to learn about my posts
+                  </a>{' '}
+                  for more accessibility funsies!
+                </li>
+              </ul>
+              <p>Cheers! Have a great week!</p>
+              <Bio />
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   )

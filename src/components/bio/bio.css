@@ -1,8 +1,8 @@
 .featured-image-block {
   margin: 3rem 0;
-  border-top: 15px solid #24728A;
+  /* border-top: 15px solid #24728A; */
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .11);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
 }
 
 .featured-image-block__wrapper {
@@ -18,5 +18,5 @@
 
 .featured-image-block__img img {
   border-radius: 60px;
-  border: 6px solid #FED8CE;
+  border: 6px solid #fed8ce;
 }

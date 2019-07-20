@@ -6,6 +6,7 @@
   --white: #fff;
   --off-white: #f3e9ea;
   --peach: #fed8ce;
+  --pale-blue: #b5d8ff;
 }
 
 body {
@@ -44,8 +45,17 @@ h6 {
 
 .wrapper {
   margin: 0 auto;
-  min-height: 65vh;
+  max-width: 52rem;
   padding: 20px;
+}
+
+.content__heading {
+  background: var(--pale-blue);
+  color: var(--navy);
+}
+
+.content__heading a {
+  color: var(--navy);
 }
 
 time {
@@ -182,7 +192,7 @@ pre code {
 
 .language-js .string,
 .language-jsx .string {
-  color: #f0876a;
+  color: #f8b4a0;
 }
 
 .language-js .number,
@@ -201,7 +211,7 @@ pre code {
 }
 
 .language-json .property {
-  color: #f0876a;
+  color: #f8b4a0;
 }
 
 .language-json .string {
@@ -213,7 +223,7 @@ pre code {
 }
 
 .language-diff .deleted {
-  color: #f0876a;
+  color: #f8b4a0;
 }
 
 .gatsby-highlight-code-line {
@@ -241,14 +251,12 @@ blockquote:not(.twitter-tweet) {
   position: relative;
   margin: 3rem auto;
   border-left: 8px solid var(--vermillion);
-  background: #fff;
   padding: 3rem;
   width: 60%;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6;
   color: var(--marron);
-  box-shadow: 1px 0.5px 0px rgba(0, 0, 0, 0.11);
 }
 
 twitterwidget {
@@ -342,7 +350,7 @@ blockquote.twitter-tweet a:focus {
 }
 
 @media only screen and (min-width: 767px) {
-  .wrapper {
+  /* .wrapper {
     max-width: 767px;
   }
 
@@ -358,11 +366,11 @@ blockquote.twitter-tweet a:focus {
   aside {
     padding-left: 25px;
     flex-basis: 30%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1024px) {
-  .wrapper {
+  /* .wrapper {
     max-width: 1024px;
-  }
+  } */
 }
