@@ -100,30 +100,6 @@ export default function Template({ data }) {
                 ''
               )}
               <div dangerouslySetInnerHTML={{ __html: html }} />
-              <p>Stay in touch! If you liked this article:</p>
-              <ul>
-                <li>
-                  Let me know on{' '}
-                  <a href="https://twitter.com/LittleKope">Twitter</a> and share
-                  this article with your friends! Also, feel free to tweet me
-                  any follow up questions or thoughts.
-                </li>
-                <li>
-                  Support me on{' '}
-                  <a href="https://www.patreon.com/a11ywithlindsey">patreon</a>!
-                  If you like my work, consider making a $1 monthly pledge.
-                  You’ll be able to vote on future blog posts if you make a $5
-                  pledge or higher! I also do a monthly Ask Me Anything Session
-                  for all Patrons!
-                </li>
-                <li>
-                  <a href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a">
-                    Be the first to learn about my posts
-                  </a>{' '}
-                  for more accessibility funsies!
-                </li>
-              </ul>
-              <p>Cheers! Have a great week!</p>
               <Bio />
             </div>
           </div>

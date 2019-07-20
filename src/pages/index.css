@@ -27,3 +27,8 @@
   display: inline-block;
   transition: transform 0.3s;
 }
+
+.blog__more-link a:hover,
+.blog__more-link a:focus {
+  transform: scale(1.1);
+}

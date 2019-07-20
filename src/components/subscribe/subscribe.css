@@ -64,7 +64,7 @@
 .formkit-form[data-uid='4218bd5fb5'] .formkit-submit {
   border: 2px solid;
   border-radius: 16px;
-  color: #1e3650;
+  color: #640d23;
   cursor: pointer;
   display: inline-block;
   /* font-size: 15px; */
@@ -109,49 +109,49 @@
 .convertkit-signup--footer
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::-webkit-input-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--footer
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::-moz-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--footer
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input:-ms-input-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--footer
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--sidebar
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::-webkit-input-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--sidebar
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::-moz-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--sidebar
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input:-ms-input-placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .convertkit-signup--sidebar
   .formkit-form[data-uid='4218bd5fb5']
   .formkit-input::placeholder {
-  color: #1e3650;
+  color: #640d23;
 }
 
 .formkit-form[data-uid='4218bd5fb5'] [data-group='dropdown'] {
@@ -534,7 +534,7 @@
   font-weight: 500;
   font-family: 'PT Sans', sans-serif;
   color: #fff;
-  border: 1px solid #1e3650;
+  border: 1px solid #640d23;
   background: transparent;
   font-size: 1rem;
   -webkit-appearance: none;
@@ -546,8 +546,8 @@
   background: transparent;
   border: none;
   border-bottom: 2px solid;
-  border-color: #1e3650;
-  color: #1e3650;
+  border-color: #640d23;
+  color: #640d23;
   font-size: 1rem;
 }
 

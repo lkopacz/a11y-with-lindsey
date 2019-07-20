@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
-const About = ({ data }) => (
+const About = () => (
   <div>
     <Helmet
       title="About | a11y with Lindsey"

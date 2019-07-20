@@ -1,12 +1,14 @@
 :root {
   --navy: #1e3650;
   --pale-blue: #b5d8ff;
+  --off-white: #f3e9ea;
+  --marron: #640d23;
 }
 
 footer {
-  background: var(--pale-blue);
+  background: var(--off-white);
   padding: 15px 0;
-  color: var(--navy);
+  color: var(--marron);
 }
 
 .footer-wrapper {
@@ -26,15 +28,15 @@ footer {
 }
 
 footer a {
-  color: var(--navy);
+  color: var(--marron);
 }
 
 footer a:focus {
-  outline: solid 2px var(--navy);
+  outline: solid 2px var(--marron);
 }
 
 footer input:focus {
-  outline: solid 2px var(--navy);
+  outline: solid 2px var(--marron);
 }
 
 .social {

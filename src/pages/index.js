@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/hero/hero'
-import Quote from '../components/quote/quote'
 import computer from '../images/computer.jpg'
 import get from 'lodash/get'
 import './index.css'
@@ -13,7 +12,7 @@ class IndexPage extends React.Component {
 
     return (
       <main id="main-content">
-        <Hero header="My Mission" img={computer} />
+        <Hero header="My Mission" />
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">
