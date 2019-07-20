@@ -2,6 +2,18 @@
   --marron: #640d23;
 }
 
+:root[data-user-reduced-motion] .menu a {
+  padding: 0.875rem;
+  text-decoration: none;
+}
+
+.menu-main {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  justify-self: end;
+  align-self: end;
+}
+
 .menu {
   margin: 0;
   padding: 0;
@@ -51,5 +63,17 @@
   .privacy-policy a {
     text-transform: none;
     font-size: 0.75rem;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  :root:not([data-user-reduced-motion]) .menu a {
+    padding: 0.875rem;
+    text-decoration: none;
+  }
+
+  :root[data-user-reduced-motion] .menu a {
+    padding: 0.875rem;
+    text-decoration: none;
   }
 }
