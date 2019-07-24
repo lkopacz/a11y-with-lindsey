@@ -24,7 +24,10 @@ const Menu = props => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/support-me">Support Me</Link>
+          <a href="https://www.patreon.com/a11ywithlindsey">Patreon</a>
+        </li>
+        <li>
+          <a href="https://egghead.io/instructors/lindsey-kopacz">Egghead</a>
         </li>
         {privacyPolicy}
       </ul>

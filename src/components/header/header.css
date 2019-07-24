@@ -1,20 +1,7 @@
-:root {
-  --navy: #1E3650;
-  --teal: #24728A;
-}
-
-header {
-  background: var(--navy);
-  border-top: 15px solid var(--teal);
-  padding: 0 20px;
-}
-
-header a:focus {
-  outline: solid 2px #F3E9EA;
-}
-
 .header-wrapper {
   margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 52rem;
   display: flex;
   justify-content: space-between;
 }
@@ -25,22 +12,11 @@ header a:focus {
 }
 
 .logo img {
-  width: 175px; 
+  width: 175px;
 }
 
 @media only screen and (min-width: 767px) {
-  .header-wrapper {
-    max-width: 767px;
-  }
-
   .logo img {
-    width: 200px; 
+    width: 200px;
   }
 }
-
-@media only screen and (min-width: 1024px) {
-  .header-wrapper {
-    max-width: 1024px;
-  }
-}
-

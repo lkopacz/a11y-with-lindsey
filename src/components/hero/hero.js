@@ -3,15 +3,6 @@ import './hero.css'
 
 const Hero = props => (
   <div className="hero">
-    <div className="hero__background-image">
-      <img
-        src={props.img}
-        width="4831"
-        height="3221"
-        alt=""
-        typeof="foaf:Image"
-      />
-    </div>
     <div className="hero__text-wrapper">
       <h2 style={{ fontSize: '3rem', margin: 0 }}>{props.header}</h2>
       <div
@@ -34,7 +25,7 @@ const Hero = props => (
       </div>
       <div className="hero__cta">
         <a href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a">
-          Get Updates
+          Get Updates <span className="right-arrow"></span>
         </a>
       </div>
     </div>
