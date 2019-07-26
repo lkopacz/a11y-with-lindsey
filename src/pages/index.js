@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/hero/hero'
-import computer from '../images/computer.jpg'
+import webflow from './webflow.svg'
 import get from 'lodash/get'
 import './index.css'
 
@@ -32,8 +32,49 @@ class IndexPage extends React.Component {
               )
             })}
           </div>
-          <div className="blog__more-link">
-            <Link to="/blog">See All Blog Posts</Link>
+          <div className="blog__more">
+            <Link to="/blog" className="blog__more-link">
+              See All Blog Posts
+            </Link>
+          </div>
+        </div>
+        <div className="support">
+          <div className="wrapper">
+            <h2>Supporters</h2>
+            <p>
+              Thank you to my supporters! Supporting me financially helps me
+              dedicate more time to writing great content!
+            </p>
+            <h3>Top Supporters - $20 Tier or more</h3>
+            <div className="supporters-tier supporters-tier--top">
+              <ul>
+                <li>
+                  <a
+                    href="https://webflow.com/"
+                    style={{ padding: 0, border: 0 }}
+                  >
+                    <img src={webflow} alt="Webflow's website" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h3>Supporters - $10 Tier</h3>
+            <div className="supporters-tier">
+              <ul>
+                <li>
+                  <a href="https://twitter.com/fimion">Alex Riviere</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/JS_Jedi">Craig Drummond</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/jmdembe">Jessica Dembe</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/er1p">Erik Riedel</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>
