@@ -2,7 +2,7 @@
 title: Create custom keyboard accessible radio buttons
 date: '2019-07-30'
 path: '/blog/create-custom-keyboard-accessible-radio-buttons'
-tags: ['accessibility', 'checkboxes', 'form', 'front end web development']
+tags: ['accessibility', 'radio', 'css3', 'html5']
 published: true
 affiliate: false
 featuredImage: './radio-buttons.png'
