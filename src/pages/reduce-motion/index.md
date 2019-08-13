@@ -8,16 +8,16 @@ affiliate: false
 featuredImage: './reduce-motion-a11y.png'
 ---
 
-Hey friends! In this post, I am going to walk you through a newer media query (to me): `prefers-reduce-motion`.
+Hey friends! In this post, I am going to walk you through a newer media query (to me): `prefers-reduced-motion`.
 
 Quick confession: I know CSS fundamentals, but I am pretty behind on all the new stuff that has been coming out. Because my focus is usually on accessibility, I am focusing far more on HTML and JavaScript. When I focus on CSS, it's ensuring proper color contrast or custom focus states. Sometimes I use CSS to make [checkboxes keyboard accessible](/blog/create-custom-keyboard-accesible-checkboxes). I always associated media queries with responsive design. I never thought of media queries as an accessibility enhancement.
 
 In this post, we are updating my blog by:
 
-1. Adding the `prefers-reduce-motion` query
+1. Adding the `prefers-reduced-motion` query
 1. Adding a user-controlled setting for reducing motion.
 
-## Understanding `prefers-reduce-motion`
+## Understanding `prefers-reduced-motion`
 
 Animations, zooming, and panning can be problematic for people who have vestibular disorders. These disorders can cause motion sickness and vertigo. These are uncomfortable feelings that you don't want to deal with ever, let alone on a website. From what I understand, the [vestibular system](https://a11yproject.com/posts/understanding-vestibular-disorders/) is in your inner ear and helps to control balance.
 
