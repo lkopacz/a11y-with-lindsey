@@ -24,8 +24,11 @@ const Hero = props => (
         </p>
       </div>
       <div className="hero__cta">
-        <a href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a">
-          Get Updates <span className="right-arrow"></span>
+        <a
+          className="hero__cta__link"
+          href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a"
+        >
+          Get Updates <span className="right-arrow" />
         </a>
       </div>
     </div>

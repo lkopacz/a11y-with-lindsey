@@ -2,13 +2,19 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   max-width: 52rem;
+  display: grid;
+  grid-template-rows: 3rem 5.875rem;
+  grid-template-columns: 25% auto 13rem;
+}
+
+.header__right {
   display: flex;
-  justify-content: space-between;
 }
 
 .logo {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
   margin: 0;
-  padding: 3rem 0 1rem;
 }
 
 .logo img {

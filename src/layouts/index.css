@@ -9,6 +9,18 @@
   --pale-blue: #b5d8ff;
 }
 
+:root[data-user-reduced-motion='true'] * {
+  animation-play-state: paused !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+:root[data-user-reduced-motion='true'] a {
+  padding-bottom: 0;
+  border-bottom: none;
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   font-family: 'PT Sans', sans-serif;
@@ -349,28 +361,69 @@ blockquote.twitter-tweet a:focus {
   padding: 3px;
 }
 
-@media only screen and (min-width: 767px) {
-  /* .wrapper {
-    max-width: 767px;
-  }
-
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .with-sidebar main {
-    flex-basis: 66%;
-  }
-
-  aside {
-    padding-left: 25px;
-    flex-basis: 30%;
-  } */
+.toggle__button {
+  opacity: 0;
 }
 
-@media only screen and (min-width: 1024px) {
-  /* .wrapper {
-    max-width: 1024px;
-  } */
+.toggle__button + label {
+  margin-left: 20px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.toggle__button + label::before {
+  content: '';
+  position: absolute;
+  left: -39px;
+  top: -2px;
+  border: 2px solid;
+  border-radius: 10px;
+  width: 15px;
+  height: 15px;
+  transition: all 0.3s;
+}
+
+.toggle__button:focus + label::before {
+  box-shadow: 1px 1px 10px #1e3650;
+}
+
+.toggle__button:hover + label::before {
+  cursor: pointer;
+}
+
+.toggle__button + label::after {
+  content: '';
+  position: absolute;
+  border-radius: 14px;
+  border: 2px solid;
+  left: -45px;
+  top: -6px;
+  z-index: -10;
+  width: 35px;
+  height: 24px;
+}
+
+.toggle__button:checked + label::before {
+  left: -30px;
+  background: #f3e9ea;
+}
+
+.center {
+  width: 50%;
+  display: block;
+  margin: 1rem auto;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  :root:not([data-user-reduced-motion]) * {
+    animation-play-state: paused !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  :root:not([data-user-reduced-motion]) a {
+    padding-bottom: 0;
+    border-bottom: none;
+    text-decoration: underline;
+  }
 }
