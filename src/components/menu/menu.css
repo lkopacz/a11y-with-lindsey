@@ -8,10 +8,10 @@
 }
 
 .menu-main {
-  grid-row: 2;
-  grid-column: 2 / span 2;
-  justify-self: end;
-  align-self: end;
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  /* justify-self: end;
+  align-self: end; */
 }
 
 .menu {
@@ -47,6 +47,13 @@
 }
 
 @media only screen and (min-width: 767px) {
+  .menu-main {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    justify-self: end;
+    align-self: end;
+  }
+
   .menu-main li {
     display: inline-block;
   }
@@ -67,6 +74,18 @@
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+  :root:not([data-user-reduced-motion]) .menu a {
+    padding: 0.375rem;
+    text-decoration: none;
+  }
+
+  :root[data-user-reduced-motion] .menu a {
+    padding: 0.375rem;
+    text-decoration: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) and (min-width: 767px) {
   :root:not([data-user-reduced-motion]) .menu a {
     padding: 0.875rem;
     text-decoration: none;
