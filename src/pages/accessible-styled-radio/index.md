@@ -110,6 +110,7 @@ $muted-red: #db3846;
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
@@ -129,16 +130,18 @@ input[type='radio'] {
 
 Now let's remove that background color and round out the edges.
 
-```scss{11,12,15}
+```scss{13,14,17}
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -24px; /* This will be adjusted */
       border-radius: 50%;
       border: 1px solid #6f686a;
@@ -158,16 +161,18 @@ As a note, I am going to leave the standard radio buttons for debugging purposes
 
 If you've read my post on [keyboard accessible checkboxes](/blog/create-custom-keyboard-accesible-checkboxes) you know about the `:checked` pseudo-class. First, we need to put add an `::after` pseudo-element on the label.
 
-```scss{18-27}
+```scss{20-30}
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -24px; /* This will be adjusted */
       border-radius: 50%;
       border: 1px solid #6f686a;
@@ -179,6 +184,7 @@ input[type='radio'] {
     &::after {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -20px;
       top: 4px;
       border-radius: 50%;
@@ -196,12 +202,13 @@ Now, this is what that looks like:
 
 Now we have the styling in place. Let's only add the `background` of the `::after` pseudo-element when the radio input is `:checked`.
 
-```scss{14-18}
+```scss{15-19}
 input[type='radio'] {
   + label {
     &::after {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -20px;
       top: 4px;
       border-radius: 50%;
@@ -255,6 +262,7 @@ input[type='radio'] {
 
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
   }
 }
