@@ -75,9 +75,14 @@ time {
   display: inline-block;
   font-family: 'PT Serif', serif;
   color: var(--vermillion);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: bold;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
 a {
@@ -86,6 +91,7 @@ a {
   text-decoration: none;
   color: var(--marron);
   font-weight: bold;
+  font-size: 1.125rem;
   transition: padding-bottom 0.3s ease;
 }
 
@@ -122,10 +128,7 @@ img {
 h2 a,
 h3 a {
   color: var(--marron);
-}
-
-p {
-  line-height: 1.5;
+  font-size: inherit;
 }
 
 code {
