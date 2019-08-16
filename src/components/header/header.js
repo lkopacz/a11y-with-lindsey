@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Menu from '../menu/menu'
 import ReduceToggle from '../reduce-toggle/reduceToggle'
 import Logo from '../../images/logo.svg'

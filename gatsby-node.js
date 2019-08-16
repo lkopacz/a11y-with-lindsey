@@ -1,9 +1,9 @@
-const path = require("path");
+const path = require('path')
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
 
   return graphql(`
     {
@@ -17,23 +17,23 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               tags
             }
-           }
+          }
         }
       }
     }
   `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors);
+      return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const posts = result.data.allMarkdownRemark.edges
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
-      });
-    });
-  });
-};
+        context: {}, // additional data can be passed via context
+      })
+    })
+  })
+}

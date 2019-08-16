@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import Hero from '../components/hero/hero'
 import webflow from './webflow.svg'
 import get from 'lodash/get'
@@ -16,9 +16,9 @@ class IndexPage extends React.Component {
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">
-            {posts.map(({ node }) => {
+            {posts.map(({ node }, i) => {
               return (
-                <div className="blog__item">
+                <div key={i} className="blog__item">
                   <h3 className="blog__title">
                     <Link to={node.frontmatter.path}>
                       {node.frontmatter.title}

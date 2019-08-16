@@ -1,6 +1,6 @@
 import React from 'react'
 import headshot from './headshot.jpg'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import './bio.css'
 
 const Bio = () => (
@@ -10,13 +10,16 @@ const Bio = () => (
         <img src={headshot} width="100" height="100" alt="" />
       </div>
       <div className="featured-image-block__content">
-        <h2 style={{margin: 0}}>About Lindsey </h2>
-        <p>Lindsey is an accessibility expert, JavaScript lover, and Front End Developer who's passionate about 
-        inclusivity both inside and outside the web. Read more 
-        about her on the <Link to="/about">About Page</Link></p>
+        <h2 style={{ margin: 0 }}>About Lindsey </h2>
+        <p>
+          Lindsey is an accessibility expert, JavaScript lover, and Front End
+          Developer who's passionate about inclusivity both inside and outside
+          the web. Read more about her on the{' '}
+          <Link to="/about">About Page</Link>
+        </p>
       </div>
     </div>
   </div>
-);
+)
 
 export default Bio

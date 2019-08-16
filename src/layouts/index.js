@@ -1,13 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 import Header from '../components/header/header'
 import Footer from '../components/footer/footer'
 
 import './index.css'
 import './fonts.css'
 
-const Layout = ({ children, data, location }) => {
+const Layout = ({ children, location }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <div>
       <Helmet
@@ -33,24 +43,14 @@ const Layout = ({ children, data, location }) => {
         Skip to main content
       </a>
       <Header siteTitle={data.site.siteMetadata.title} location={location} />
-      {children()}
+      {children}
       <Footer />
     </div>
   )
 }
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

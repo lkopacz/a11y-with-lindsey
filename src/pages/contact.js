@@ -1,8 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
-const Contact = ({ data }) => (
+const Contact = () => (
   <div style={{ minHeight: '65vh' }}>
     <Helmet
       title="Contact | a11y with Lindsey"
