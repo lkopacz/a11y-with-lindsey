@@ -43,11 +43,11 @@ I decided to create a simple group of radio buttons asking what your favorite an
 </fieldset>
 ```
 
-The `fieldset` groups all the radio buttons together logically. The radios inputs are all options to the question in the `legend`. Also, remember to associate those form labels with the radio buttons!
+The `fieldset` groups all the radio buttons together logically. The radios inputs are all options to the question in the `legend`. Also, remember to associate those form labels with the radio buttons! If you don't know what that means, I suggest taking a look at my [introduction to accessible labeling](/blog/introduction-accessible-labeling).
 
 ![A Fieldset with the question 'What is your favorite Wild Animal?' with four options: Elephant, Monkey, Cheetah, Giraffe.](./beginning-html.png)
 
-I'm going to add some straightforward CSS to clean it up a bit.
+I'm going to add some straightforward SCSS to clean it up a bit.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -77,12 +77,14 @@ $muted-red: #db3846;
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -22px; /* This will be adjusted */
       width: 20px;
       height: 20px;
@@ -108,6 +110,7 @@ $muted-red: #db3846;
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
@@ -127,16 +130,18 @@ input[type='radio'] {
 
 Now let's remove that background color and round out the edges.
 
-```scss{11,12,15}
+```scss{13,14,17}
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -24px; /* This will be adjusted */
       border-radius: 50%;
       border: 1px solid #6f686a;
@@ -156,16 +161,18 @@ As a note, I am going to leave the standard radio buttons for debugging purposes
 
 If you've read my post on [keyboard accessible checkboxes](/blog/create-custom-keyboard-accesible-checkboxes) you know about the `:checked` pseudo-class. First, we need to put add an `::after` pseudo-element on the label.
 
-```scss{18-27}
+```scss{20-30}
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -24px; /* This will be adjusted */
       border-radius: 50%;
       border: 1px solid #6f686a;
@@ -177,6 +184,7 @@ input[type='radio'] {
     &::after {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -20px;
       top: 4px;
       border-radius: 50%;
@@ -194,12 +202,13 @@ Now, this is what that looks like:
 
 Now we have the styling in place. Let's only add the `background` of the `::after` pseudo-element when the radio input is `:checked`.
 
-```scss{14-18}
+```scss{15-19}
 input[type='radio'] {
   + label {
     &::after {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -20px;
       top: 4px;
       border-radius: 50%;
@@ -253,6 +262,7 @@ input[type='radio'] {
 
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
   }
 }
@@ -277,6 +287,15 @@ If you want to play around with it, here is the finished CodePen!
 <iframe height="445" style="width: 100%;" scrolling="no" title="Starting HTML - Keyboard Accessible Custom Radio Buttons" src="//codepen.io/littlekope0903/embed/jjgRPL/?height=445&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/littlekope0903/pen/jjgRPL/'>Starting HTML - Keyboard Accessible Custom Radio Buttons</a> by Lindsey Kopacz
   (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+**EDIT:**
+
+I wanted to give a shout out to some feedback/help from some cool people from Twitter for helping me polish a few things. In particular, I wanted to shout out [Elizabeth Schafer](https://twitter.com/elizschafer) for forking this and making some tweaks for windows high contrast mode! Super cool!
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="Keyboard Accessible Custom Radio Buttons" src="//codepen.io/eschafer/embed/wVmwoy/?height=450&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/eschafer/pen/wVmwoy/'>Keyboard Accessible Custom Radio Buttons</a> by Elizabeth Schafer
+  (<a href='https://codepen.io/eschafer'>@eschafer</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 Stay in touch! If you liked this article:
