@@ -43,7 +43,7 @@ I decided to create a simple group of radio buttons asking what your favorite an
 </fieldset>
 ```
 
-The `fieldset` groups all the radio buttons together logically. The radios inputs are all options to the question in the `legend`. Also, remember to associate those form labels with the radio buttons!
+The `fieldset` groups all the radio buttons together logically. The radios inputs are all options to the question in the `legend`. Also, remember to associate those form labels with the radio buttons! If you don't know what that means, I suggest taking a look at my [introduction to accessible labeling](/blog/introduction-accessible-labeling).
 
 ![A Fieldset with the question 'What is your favorite Wild Animal?' with four options: Elephant, Monkey, Cheetah, Giraffe.](./beginning-html.png)
 
@@ -287,6 +287,15 @@ If you want to play around with it, here is the finished CodePen!
 <iframe height="445" style="width: 100%;" scrolling="no" title="Starting HTML - Keyboard Accessible Custom Radio Buttons" src="//codepen.io/littlekope0903/embed/jjgRPL/?height=445&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/littlekope0903/pen/jjgRPL/'>Starting HTML - Keyboard Accessible Custom Radio Buttons</a> by Lindsey Kopacz
   (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+**EDIT:**
+
+I wanted to give a shout out to some feedback/help from some cool people from Twitter for helping me polish a few things. In particular, I wanted to shout out [Elizabeth Schafer](https://twitter.com/elizschafer) for forking this and making some tweaks for windows high contrast mode! Super cool!
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="Keyboard Accessible Custom Radio Buttons" src="//codepen.io/eschafer/embed/wVmwoy/?height=450&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/eschafer/pen/wVmwoy/'>Keyboard Accessible Custom Radio Buttons</a> by Elizabeth Schafer
+  (<a href='https://codepen.io/eschafer'>@eschafer</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 Stay in touch! If you liked this article:
