@@ -47,7 +47,7 @@ The `fieldset` groups all the radio buttons together logically. The radios input
 
 ![A Fieldset with the question 'What is your favorite Wild Animal?' with four options: Elephant, Monkey, Cheetah, Giraffe.](./beginning-html.png)
 
-I'm going to add some straightforward CSS to clean it up a bit.
+I'm going to add some straightforward SCSS to clean it up a bit.
 
 ```scss
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -77,12 +77,14 @@ $muted-red: #db3846;
 input[type='radio'] {
   + label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-left: 20px; /* This will be adjusted */
 
     &::before {
       content: '';
       position: absolute;
+      display: inline-block;
       left: -22px; /* This will be adjusted */
       width: 20px;
       height: 20px;
