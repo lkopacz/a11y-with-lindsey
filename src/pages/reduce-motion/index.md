@@ -464,7 +464,7 @@ export default ReduceToggle
 
 Now what we want to do is create a default localStorage state for the user if the `reduceMotionOn` is null. I'm going to set that to `false`.
 
-```jsx{12-17}
+```jsx{12-24}
 import React from 'react'
 
 class ReduceToggle extends React.Component {
@@ -478,6 +478,13 @@ class ReduceToggle extends React.Component {
 
   componentDidMount() {
     const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+
+    // Just a way to get around localStorage being
+    // stored as a string and not a bool
+    if (typeof reduceMotionOn === 'string') {
+      reduceMotionOn = JSON.parse(reduceMotionOn)
+    }
+
     if (reduceMotionOn === null) {
       localStorage.setItem('reduceMotionOn', false)
     }
@@ -500,7 +507,7 @@ export default ReduceToggle
 
 The last thing I am going to do upon mounting the component is set the state in the app. I want to ensure that my app's is the same as the `localStorage`.
 
-```jsx{17}
+```jsx{21}
 import React from 'react'
 
 class ReduceToggle extends React.Component {
@@ -514,6 +521,10 @@ class ReduceToggle extends React.Component {
 
   componentDidMount() {
     const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    if (typeof reduceMotionOn === 'string') {
+      reduceMotionOn = JSON.parse(reduceMotionOn)
+    }
+
     if (reduceMotionOn === null) {
       localStorage.setItem('reduceMotionOn', false)
     }
