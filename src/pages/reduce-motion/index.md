@@ -441,7 +441,7 @@ class ReduceToggle extends React.Component {
   }
 
   componentDidMount() {
-    const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    let reduceMotionOn = localStorage.getItem('reduceMotionOn')
     console.log(reduceMotionOn)
     // if we haven't been to the site before
     // this will return null
@@ -477,7 +477,7 @@ class ReduceToggle extends React.Component {
   }
 
   componentDidMount() {
-    const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    let reduceMotionOn = localStorage.getItem('reduceMotionOn')
 
     // Just a way to get around localStorage being
     // stored as a string and not a bool
@@ -520,7 +520,7 @@ class ReduceToggle extends React.Component {
   }
 
   componentDidMount() {
-    const reduceMotionOn = localStorage.getItem('reduceMotionOn')
+    let reduceMotionOn = localStorage.getItem('reduceMotionOn')
     if (typeof reduceMotionOn === 'string') {
       reduceMotionOn = JSON.parse(reduceMotionOn)
     }
