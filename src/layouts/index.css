@@ -26,6 +26,7 @@ body {
   font-family: 'PT Sans', sans-serif;
   background: var(--off-white);
   color: var(--marron);
+  font-size: 1.125rem;
 }
 
 h1,
@@ -75,13 +76,12 @@ time {
   display: inline-block;
   font-family: 'PT Serif', serif;
   color: var(--vermillion);
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-style: italic;
   font-weight: bold;
 }
 
 p {
-  font-size: 1.125rem;
   line-height: 1.5;
 }
 
@@ -91,7 +91,7 @@ a {
   text-decoration: none;
   color: var(--marron);
   font-weight: bold;
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   transition: padding-bottom 0.3s ease;
 }
 
