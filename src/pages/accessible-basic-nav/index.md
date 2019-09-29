@@ -80,7 +80,7 @@ Note: I have used the [visually-hidden](https://a11yproject.com/posts/how-to-hid
 
 I've taken out some of the general styling, but this CSS is what contributes to the hover effect. However, as you can see with the gif below, it doesn't work the same way if you use your tab key.
 
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"><img src="https://media.giphy.com/media/2zowLUY2M9lEhvFc6m/giphy.gif" alt="Gif of mouse hovering over navigation displaying the submenu, and the top level items receiving focus and not doing anything."></span>
+<img class="center" src="https://media.giphy.com/media/2zowLUY2M9lEhvFc6m/giphy.gif" alt="Gif of mouse hovering over navigation displaying the submenu, and the top level items receiving focus and not doing anything.">
 
 Before we jump into coding, I wanted to share my approach to this problem. First, I want to solve the problem of opening the nav on not only on hover but also on focus. Second, I want to ensure that on focus each submenu "opens" as it does with the hover. Third, I want to make sure that once I tab through the links, that particular submenu closes when I leave it. Now let's get started!
 
@@ -139,7 +139,7 @@ topLevelLinks.forEach(link => {
 })
 ```
 
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"><img src="https://media.giphy.com/media/8vLkeYAqm3AeRoWGTP/giphy.gif" alt="Gif displaying the adding of the focus class as we tab to the top level menu items."></span>
+<img class="center" src="https://media.giphy.com/media/8vLkeYAqm3AeRoWGTP/giphy.gif" alt="Gif displaying the adding of the focus class as we tab to the top level menu items.">
 
 ```css
 .menu__item:hover .submenu,
@@ -152,7 +152,7 @@ topLevelLinks.forEach(link => {
 }
 ```
 
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"><img src="https://media.giphy.com/media/1k4svGjvxOSwCdijta/giphy.gif" alt="Gif displaying what adding the styling to the focus class does, similar to the hover pseudo-class."></span>
+<img class="center" src="https://media.giphy.com/media/1k4svGjvxOSwCdijta/giphy.gif" alt="Gif displaying what adding the styling to the focus class does, similar to the hover pseudo-class.">
 
 As you'll see, the menu doesn't close after we leave it which is one of our action items that I laid out. Before we do that, let's take a second to learn about the `blur` event and what that means.
 
@@ -234,7 +234,7 @@ topLevelLinks.forEach(link => {
 })
 ```
 
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"><img src="https://media.giphy.com/media/jUgOxI3K1QIPLgx8l3/giphy.gif" alt="Gif displaying the parent element in the console after we tab away from the last item in that submenu."></span>
+<img class="center" src="https://media.giphy.com/media/jUgOxI3K1QIPLgx8l3/giphy.gif" alt="Gif displaying the parent element in the console after we tab away from the last item in that submenu.">
 
 Now that we have what we expect, I am going to do the opposite that I do on the focus event listener.
 
@@ -257,7 +257,7 @@ topLevelLinks.forEach(link => {
 })
 ```
 
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"><img src="https://media.giphy.com/media/1xVfHck3wmbrBtwEWt/giphy.gif" alt="Gif showing menu that opens and closes when we tab through the links and the submenu."></span>
+<img class="center" src="https://media.giphy.com/media/1xVfHck3wmbrBtwEWt/giphy.gif" alt="Gif showing menu that opens and closes when we tab through the links and the submenu.">
 
 One last thing I am going to do is place the focus event listener within that conditional statement. The reality is that we don't need to add a focus class to an item that doesn't have a submenu.
 

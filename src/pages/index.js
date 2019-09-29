@@ -56,6 +56,11 @@ class IndexPage extends React.Component {
                     <img src={webflow} alt="Webflow's website" />
                   </a>
                 </li>
+                <li>
+                  <a href="https://twitter.com/er1p">Erik Riedel</a>
+                </li>
+                <li>
+                  Simon Welsh</li>
               </ul>
             </div>
             <h3>Supporters - $10 Tier</h3>
@@ -67,12 +72,7 @@ class IndexPage extends React.Component {
                 <li>
                   <a href="https://twitter.com/JS_Jedi">Craig Drummond</a>
                 </li>
-                <li>
-                  <a href="https://twitter.com/jmdembe">Jessica Dembe</a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/er1p">Erik Riedel</a>
-                </li>
+                <li>Simon Siefke</li>
               </ul>
             </div>
           </div>
