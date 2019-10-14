@@ -6,6 +6,7 @@ tags: ['accessibility', 'bar chart', 'data viz', 'data visualizations']
 published: true
 affiliate: false
 featuredImage: './a11y-d3-bar-charts.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/de227e02a8de9baf9ee0672bae9a9f27a2c7485f.3477c826-1e13-4084-9266-6af9016a1c57.mp3'
 ---
@@ -25,17 +26,17 @@ Below is the following data set I'm using:
 ```js
 const data = [
   {
-    name: "Banana Production",
-    value: 20223290811
+    name: 'Banana Production',
+    value: 20223290811,
   },
   {
-    name: "Apple Production",
-    value: 8191091088.532
+    name: 'Apple Production',
+    value: 8191091088.532,
   },
   {
-    name: "Clementine Production",
-    value: 1162341399.19
-  }
+    name: 'Clementine Production',
+    value: 1162341399.19,
+  },
 ]
 ```
 

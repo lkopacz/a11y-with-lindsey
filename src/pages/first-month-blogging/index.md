@@ -6,6 +6,7 @@ tags: ['blogging', 'content strategy']
 published: true
 affiliate: false
 featuredImage: './active-blogging.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/19a753d9c6dbb910412cfa899fd86ae80e64a05b.c402014b-649e-4e13-a9d0-023f90ca14b8.mp3'
 ---

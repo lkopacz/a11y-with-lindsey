@@ -6,6 +6,7 @@ tags: ['accessibility', 'a11y', 'reflections', 'birthday']
 published: true
 affiliate: false
 featuredImage: './reflections.png'
+draft: false
 ---
 
 Hey friends! Guess what?? It’s my 30th birthday! And because I really love to be poetic, one year ago today, I decided to launch A11y with Lindsey. So my blog’s birthday is on my birthday!

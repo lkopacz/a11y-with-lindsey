@@ -7,6 +7,7 @@ tags:
 published: true
 affiliate: false
 featuredImage: './colors-and-design-a11y.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/611001e2df08446a55fd876dec8e1286605845f1.7cfe201d-2419-4fc6-b3e1-d164dcaf92d2.mp3'
 ---

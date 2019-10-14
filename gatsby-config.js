@@ -54,6 +54,26 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`,
     {
+      resolve: "gatsby-plugin-draft",
+      options: {
+        /**
+         * be added field name
+         * Default is 'draft'
+         **/
+        fieldName: "draft",
+        /**
+         * moment-timezone
+         * Default is 'UTC'
+         **/
+        timezone: "America/New_York",
+        /**
+         * publish draft posts
+         * Default is 'false'
+         **/
+        publishDraft: process.env.NODE_ENV !== "production",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-122458440-1`,

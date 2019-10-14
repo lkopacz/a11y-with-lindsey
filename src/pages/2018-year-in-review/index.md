@@ -6,6 +6,7 @@ tags: ['accessibility', 'year in review', 'goals', 'side hustle']
 published: true
 affiliate: false
 featuredImage: './2018-in-review.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/2807a3de0b61446fdc71a748f040f6d531a264b4.6718b88f-04db-48db-98f8-88ca7c5cfb49.mp3'
 ---

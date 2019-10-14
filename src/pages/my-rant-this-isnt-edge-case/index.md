@@ -5,6 +5,7 @@ path: '/blog/3-reasons-why-accessibility-not-edge-case'
 tags: ['ux', 'accessibility']
 published: true
 featuredImage: './not-edge-case.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/68a55ac9f32155276ec3f8fd63b57e87ab25acf6.05adf8b2-34cd-4a74-8a95-5ed875db72db.mp3'
 ---

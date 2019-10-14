@@ -6,6 +6,7 @@ tags: ['developer', 'thanksgiving', 'accessibility']
 published: true
 affiliate: false
 featuredImage: './thanksgiving-2018.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/37ddc5388264f6e9bae7106e3e0260ffcc1ccec9.c5e1d161-0c99-45d1-82c2-219f8eb5add9.mp3'
 ---
