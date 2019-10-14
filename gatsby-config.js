@@ -37,13 +37,20 @@ module.exports = {
               inlineCodeMarker: '÷',
             },
           },
+          {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+              useMozJpeg: false,
+              stripMetadata: true,
+              defaultQuality: 75,
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`,
     {
