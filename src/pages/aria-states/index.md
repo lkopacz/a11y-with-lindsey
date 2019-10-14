@@ -6,6 +6,7 @@ tags: ['accessibility', 'states', 'aria']
 published: true
 affiliate: false
 featuredImage: './aria-states.png'
+draft: false
 ---
 
 Hey friends! Today’s blog post comes to you from my [Patreon folks'](https://www.patreon.com/a11ywithlindsey) poll. It’s a follow up from one of my previous posts about [Demystifying ARIA](/blog/beginning-demystify-aria). ARIA can be utterly mysterious and daunting, but it’s handy. One of my favorite ways to use it is to communicate state to screen readers.

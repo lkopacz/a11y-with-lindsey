@@ -6,6 +6,7 @@ tags: ['accessibility', 'javascript', 'front end web development']
 published: true
 affiliate: false
 featuredImage: './a11y-js.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/4d72855d6900f3209c1790440bbbb3bdda3a568f.b7306f01-8672-4861-9a24-9a4f3d3a84b5.mp3'
 ---

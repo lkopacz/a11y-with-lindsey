@@ -6,6 +6,7 @@ tags: ['blogging', 'adhd', 'editing', 'accessibility']
 published: true
 affiliate: false
 featuredImage: './blogging-editing-process.png'
+draft: false
 ---
 
 <span lang="sv">Hej från sverige!</span> I’m writing this from Stockholm Airport! I’m on my way to Copenhagen to visit a friend (although when I publish this, I likely will be back in America). I am coming back into my blogging headspace after a bit of a wild week. I spoke about JavaScript and Accessibility for the Spotify Engineering team! Preparing to speak for my first time internationally was rough. However, I cannot even begin to explain how rewarding this experience has been. It’s a talk I’ve wanted to give for a long time, and for a good reason. It was well received, and I had many folks come up to me afterward.
@@ -91,4 +92,4 @@ This last one is important. There were a couple of times where I thought somethi
 
 I love using tools to help me edit. The anxiety and time that it takes to write and publish a post can be downright daunting. I’ve used this process to cut down the amount of time it takes me to edit, and I hope it helps you as well! Blogging as a developer is very rewarding, and I’m glad I’ve found a process that works for me.
 
-Let me know on [Twitter](https://twitter.com/LittleKope/) what you think! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a $5 pledge or higher! Cheers! Have a great week!
+Let me know on [Twitter](https://twitter.com/LittleKope/) what you think! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!

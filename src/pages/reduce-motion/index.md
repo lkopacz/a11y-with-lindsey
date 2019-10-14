@@ -6,6 +6,7 @@ tags: ['media queries', 'css', 'reduce motion', 'accessibility', 'a11y']
 published: true
 affiliate: false
 featuredImage: './reduce-motion-a11y.png'
+draft: false
 ---
 
 Hey friends! In this post, I am going to walk you through a newer media query (to me): `prefers-reduced-motion`.

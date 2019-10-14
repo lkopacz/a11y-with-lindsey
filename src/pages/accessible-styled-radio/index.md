@@ -6,6 +6,7 @@ tags: ['accessibility', 'radio', 'css3', 'html5']
 published: true
 affiliate: false
 featuredImage: './radio-buttons.png'
+draft: false
 ---
 
 Hey friends! Today we'll be creating custom keyboard accessible radio buttons! This blog post is a follow-up post from [my accessible checkboxes post](/blog/create-custom-keyboard-accesible-checkboxes).

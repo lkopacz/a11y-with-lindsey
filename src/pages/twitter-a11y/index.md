@@ -6,6 +6,7 @@ tags: ['twitter', 'a11y', 'accessibility', 'screen reader', 'blind']
 published: true
 affiliate: false
 featuredImage: './twitter-a11y-2.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/06080083b67ba91f497d9138a9e69982c81b93d5.12f6ed3d-c72c-4be5-9429-b343c920d39f.mp3'
 ---

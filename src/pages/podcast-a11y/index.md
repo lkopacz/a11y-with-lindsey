@@ -6,6 +6,7 @@ tags: ['podcasting', 'a11y', 'accessibility', 'transcripts']
 published: true
 affiliate: false
 featuredImage: './podcast-a11y.png'
+draft: false
 ---
 
 If you haven’t noticed, I haven’t been around! It’s been a month since I posted, and there’s been a good reason for that. Kelly Vaughn, Ali Spittel, Emma Wedekind, and I started [the LadyBug Podcast](https://ladybug.dev/). This podcast came to fruition with much labor. As a result, I’ve been figuring out how to balance this blog with that side project! Don’t worry, though, this isn’t going away. My blog is my passion project!

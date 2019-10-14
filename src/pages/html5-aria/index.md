@@ -6,6 +6,7 @@ tags: ['accessibility', 'html', 'front end web development', 'aria']
 published: true
 affiliate: false
 featuredImage: './aria.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/67927009fe10c9ec137aa9ff973489b3948157c0.a5c18b68-29ba-482a-8c62-3e2c033c4447.mp3'
 ---

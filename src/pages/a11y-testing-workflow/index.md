@@ -7,6 +7,7 @@ published: true
 affiliate: false
 featuredImage: './a11y-testing-workflow.png'
 hasAudio: true
+draft: false
 audioLink: 'https://www.parler.io/audio/7119149108/9e5dc5641e88e812e0903c9df90a0933946bc91c.67256623-e5a3-4d82-b83b-9d4c7502bb75.mp3'
 ---
 

@@ -6,6 +6,7 @@ tags: ['accessibility', 'javascript', 'front end web development', 'accordions']
 published: true
 affiliate: false
 featuredImage: './accordion.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/dbd2a6e8f7bcbfd853450c16d776560d9259319c.568362ee-3b2c-4ac1-8d7b-4cd0b3d99d20.mp3'
 ---
@@ -13,6 +14,7 @@ audioLink: 'https://www.parler.io/audio/7119149108/dbd2a6e8f7bcbfd853450c16d7765
 When I first wrote my post about [JavaScript and Accessibility](/blog/a11y-js-seemingly-unconventional-romance), I promised I would make it a series. I've decided to use my [patreon](https://www.patreon.com/a11ywithlindsey) to have votes on what my next blog post is. This topic won, and I'm finally getting more time to write about JavaScript!
 
 So this topic I am going to go into a deep dive on how to make accordions accessible! Our focus is:
+
 - Accessing the accordion with a keyboard
 - Screen reader support
 
@@ -22,7 +24,7 @@ I did a few pieces of research about the HTML structure. I read the [a11y projec
 
 So if you read my post [3 Simple Tips to Improve Keyboard Accessibility](/blog/3-simple-tips-improve-keyboard-accessibility), you may recall my love for semantic HTML.
 
->If you need JavaScript for accessibility, semantic HTML makes your job significantly easier.
+> If you need JavaScript for accessibility, semantic HTML makes your job significantly easier.
 
 Many of the examples I found use semantic button elements for the accordion headings. Then the examples used div tags as siblings. Below is how my code starts:
 
@@ -266,9 +268,11 @@ When I go through the accordions headers without opening them, they do not read 
 ![Neil Patrick Harris sitting in the driver's seat of a car, making a large grin. Then he nods his head and puts his thumb up.](https://media.giphy.com/media/vtVpHbnPi9TLa/giphy.gif)
 
 ## Progressive Enhancement
+
 Now, I know how much we all rely on JavaScript loading, particularly with all the frameworks we use. Now that we know the functionality, let's refactor the code a bit. The goal is to ensure anyone can access the accordion if JavaScript is not enabled or the user has connectivity issues.
 
 My final touch is to
+
 - Keep all the accordion sections open by default (Adding an `.open` class to the HTML sections)
 - Remove the 'open' class once the JavaScript loads.
 - Add all the aria attributes with JavaScript and remove that from the HTML
@@ -293,13 +297,14 @@ accordionButtons.forEach(button => {
 ```
 
 Then I want to create an `accordionsSections` variable and do two things:
+
 - set the `aria-hidden` attribute
 - remove the `.open` class.
 
 ```js
-const accordionSections = document.querySelectorAll('.accordion__section');
+const accordionSections = document.querySelectorAll('.accordion__section')
 
-accordionSections.forEach(section =>  {
+accordionSections.forEach(section => {
   section.setAttribute('aria-hidden', true)
   section.classList.remove('open')
 })
@@ -313,4 +318,5 @@ We're done! Remember, we haven't removed any of the other code or event listener
 </iframe>
 
 ## Conclusion
+
 What did you think of this post? Did it help you? Are you excited for the `<details>` element? Let me know on [Twitter](https://twitter.com/LittleKope/) what you think! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!

@@ -6,6 +6,7 @@ tags: ['remote', 'tech', 'office', 'career']
 published: true
 affiliate: false
 featuredImage: './transitioning-remote.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/a88ce8308a91df4488a3fdcef775a20bdacc2e2f.0310f77e-6797-446e-bd96-50bd083c8e74.mp3'
 ---

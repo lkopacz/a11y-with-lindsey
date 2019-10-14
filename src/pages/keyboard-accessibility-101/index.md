@@ -6,6 +6,7 @@ tags: ['accessibility', 'keyboard', 'javascript', 'tech']
 published: true
 affiliate: false
 featuredImage: './keyboard-a11y.png'
+draft: false
 hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/1ad8e5216bfc32feb30c3b6702a679f91407747b.34e94a53-efea-447e-87c5-a87a2e1b893b.mp3'
 ---
