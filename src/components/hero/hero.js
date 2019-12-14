@@ -16,10 +16,10 @@ const Hero = props => (
         <p>
           To help developers navigate accessibility jargon, write better code,
           <span className="hero__body--break">
-            and to empower them to make their Internet,{' '}
+            and to empower them to make the Internet,{' '}
           </span>
           <span className="hero__body--break">
-            <strong>Everyone's Internet.</strong>
+            <strong>An Inclusive Internet.</strong>
           </span>
         </p>
       </div>
