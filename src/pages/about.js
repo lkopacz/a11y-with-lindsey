@@ -58,7 +58,7 @@ const About = () => (
             <p>
               I am a self-taught web developer with ADHD. I never really
               considered myself cognitively disabled, despite how much I
-              struggled teaching myself to code. When I was starting out, I
+              struggled to teach myself to code. When I was starting out, I
               taught myself by studying for 1 hour before my desk job every
               single day. That's more time than a lot of people have, but it
               took me 18 months to get my first developer job in May 2014. Even
@@ -75,7 +75,7 @@ const About = () => (
             </p>
             <p>
               That's when I started really diving in and learning why it was
-              important. Once I did that, the errors became so much easier to
+              meaningful. Once I did that, the errors became so much easier to
               decipher.
             </p>
 
@@ -85,34 +85,33 @@ const About = () => (
               finger while I was at the gym at the squat rack. It turns out I
               had broken my right middle finger. It wasn't until that day that I
               realized how much I centered around my own abled body experience.
-              I was unable to use my mouse. I was unable to type in the way that
-              I was used to. I had difficulty chopping veggies. My whole life
-              was impacted for 2 months because the technology and day to day
-              things I use, do not take into account people with a broken
+              I was unable to use my mouse. I was incapable of typing in the way
+              that I was used to. I had difficulty chopping veggies. My whole
+              life was impacted for 2 months because the technology and day to
+              day things I use, do not take into account people with a broken
               finger.
             </p>
             <p>I was selfish.</p>
             <p>
-              This story made me think, EVERYONE will have the need for
-              accessibility at some point. I have previously used the phrase
-              "Accessibility is for everyone". Sure, it does benefit everyone.
-              But I have learned so much in the past year about my own ableism.
-              This perspective centers around me, a physically abled person, not
-              around the people I ultimately want to make space for in this
-              Internet space.
+              This story made me think, EVERYONE will require accessibility at
+              some point. I have previously used the phrase "Accessibility is
+              for everyone." Sure, it does benefit everyone. But I have learned
+              so much in the past year about my own ableism. This perspective
+              centers around me, a physically abled person, not around the
+              people I ultimately want to make space for in this Internet space.
             </p>
             <p>
               As someone whose specialty is in web accessibility, it was an
               eye-opening experience for me to realize how much I had framed
-              accessibility. How I hadn't really reflected about my own ableism.
+              accessibility. How I hadn't really reflected upon my own ableism.
               It changed how I think about accessibility, how I empathize with
               my end users, and it also changed my perspective on user
               experience. My goal is to help others learn about web
-              accessibility by sharing why it's important. Once I learned why my
+              accessibility by sharing why it's crucial. Once I learned why my
               skills as a developer improved tremendously.
             </p>
             <blockquote>
-              I'm on my journey to becoming anti-ableist. <br />
+              I'm on my journey to becoming an anti-ableist. <br />
               I'd love to have you join me.
             </blockquote>
 
@@ -120,8 +119,8 @@ const About = () => (
             <p>
               I want people to confront their own ableism and use their tech
               skills to make the web more accessible. Accessibility literally
-              helps a marginalized group of people access the web and assures
-              they aren't excluded from using your technology. I stopped
+              helps a marginalized group of people access the Internet and
+              assures they aren't excluded from using your technology. I stopped
               thinking about it as a purely technical issue and more of an
               inclusion and trust issue. After that, my love and desire to teach
               people about it and how approachable the problem can be has been
@@ -134,26 +133,25 @@ const About = () => (
             <p>
               My approach to accessibility focuses more on the human aspect and
               less on the technical. Don't get me wrong, as a detail-oriented
-              person, we do get into the technical nitty gritty. However, it is
+              person, we do get into the technical nitty-gritty. However, it is
               my belief that anyone can learn to code, but human trust and
-              compassion is something we are born with. I would rather tap into
-              your empathetic nature to understand <strong>why</strong> before
-              the how.
+              compassion is something we are born with. I want to tap into your
+              empathetic nature to understand <strong>why</strong>, before how.
             </p>
             <h2>A Bit More About Me</h2>
             <p>
               Currently, I am a software developer who works as a contractor for
               the government. I play around a lot with React and data viz at my
-              day job and a lot of it inspires my blog posts. My day job also
+              day job, and a lot of it inspires my blog posts. My day job also
               inspires a lot of my{' '}
               <a href="https://egghead.io/instructors/lindsey-kopacz">
                 Egghead videos
               </a>
             </p>
             <p>
-              My interests vary depending on the topic, but I love weight
-              lifting, makeup artistry, learning more about JavaScript,
-              marketing, craft beer, cooking, and my cat!
+              My interests vary, depending on the topic. I love weight lifting,
+              makeup artistry, learning more about JavaScript, marketing, craft
+              beer, cooking, and my cat!
             </p>
             <img
               src={halloween}
