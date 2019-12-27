@@ -71,6 +71,25 @@ h6 {
   color: var(--navy);
 }
 
+.promo {
+  position: fixed;
+  transform: translateY(-80px);
+  width: 100%;
+  background: var(--white);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.promo-showing .promo {
+  transform: translateY(0);
+}
+
+/* .promo-showing .content {
+  transform: translateY(40px);
+} */
+
 time {
   position: relative;
   display: inline-block;

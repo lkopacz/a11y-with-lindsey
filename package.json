@@ -34,7 +34,8 @@
     "react-helmet": "^5.2.0",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "typography-theme-wordpress-2016": "^0.15.10",
+    "use-debounce": "^3.3.0"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
