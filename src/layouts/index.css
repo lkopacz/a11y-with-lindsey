@@ -71,12 +71,27 @@ h6 {
   color: var(--navy);
 }
 
+.promo {
+  position: fixed;
+  transform: translateY(-80px);
+  width: 100%;
+  z-index: 10;
+  background: var(--white);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.promo-showing .promo {
+  transform: translateY(0);
+}
+
 time {
   position: relative;
   display: inline-block;
   font-family: 'PT Serif', serif;
   color: var(--vermillion);
-  /* font-size: 1rem; */
   font-style: italic;
   font-weight: bold;
 }
