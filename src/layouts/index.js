@@ -30,7 +30,7 @@ const Layout = ({ children, location }) => {
   }, [])
 
   useEffect(() => {
-    if (position > 90) {
+    if (position > 50) {
       document.body.classList.add('promo-showing')
     } else {
       document.body.classList.remove('promo-showing')
@@ -79,12 +79,14 @@ const Layout = ({ children, location }) => {
         Skip to main content
       </a>
       <div className="promo">
-        <div>
-          Things about my promo{' '}
-          <a onFocus={onFocusFunc} onBlur={onBlurFunc} href="">
-            Click here
-          </a>
-        </div>
+        Want to level up in accessibility?{' '}
+        <a
+          onFocus={onFocusFunc}
+          onBlur={onBlurFunc}
+          href="https://a11y-with-lindsey.ck.page/b4e437f629"
+        >
+          Get my 10 day guide
+        </a>
       </div>
       <div className="content">
         <Header siteTitle={data.site.siteMetadata.title} location={location} />
