@@ -10,7 +10,7 @@ import './index.css'
 import './fonts.css'
 
 const Layout = ({ children, location }) => {
-  const [position, setPosition] = useState(window.pageYOffset)
+  const [position, setPosition] = useState(0)
 
   const [scrollHandler] = useDebouncedCallback(() => {
     setPosition(window.pageYOffset)
