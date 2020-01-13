@@ -54,23 +54,32 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`,
     {
-      resolve: "gatsby-plugin-draft",
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve('./src/layouts/index.js'),
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-draft',
       options: {
         /**
          * be added field name
          * Default is 'draft'
          **/
-        fieldName: "draft",
+        fieldName: 'draft',
         /**
          * moment-timezone
          * Default is 'UTC'
          **/
-        timezone: "America/New_York",
+        timezone: 'America/New_York',
         /**
          * publish draft posts
          * Default is 'false'
          **/
-        publishDraft: process.env.NODE_ENV !== "production",
+        publishDraft: process.env.NODE_ENV !== 'production',
       },
     },
     {
