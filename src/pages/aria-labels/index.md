@@ -123,7 +123,7 @@ Let’s take the third example from the [MDN docs](https://developer.mozilla.org
 When we use VoiceOver to go through this, it reads like such:
 
 <video controls>
-  <source src="/aria-labelledby.mov" type="video/mp4">
+  <source src="/aria-labelledby.mov" type="video/mp4" />
 </video>
 
 Did you notice once we navigated to the radio group it read “My radio label, radio group?” The radio label got announced **before** it told us about the radio group.
@@ -149,7 +149,7 @@ Let’s take the same markup from above and add an `aria-describedby` attribute 
 When we use VoiceOver to go through this, it reads like such:
 
 <video controls>
-  <source src="/aria-describedby.mov" type="video/mp4">
+  <source src="/aria-describedby.mov" type="video/mp4" />
 </video>
 
 Did you notice how the text “A bit more about this radio group. Here are some words” happened after VoiceOver announced after the radio group? It’s a very subtle difference where, in most cases, it won’t matter.

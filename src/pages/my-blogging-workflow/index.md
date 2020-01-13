@@ -15,7 +15,7 @@ This post isn’t going to be a talk about speaking. I wanted to give you a glim
 
 A few weeks ago, I asked people if they had an interest in my blog editing process. I’m very public about my writing process, and the idea popped into my head.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Random question: would people be interested to hear about my editing process?<br><br>I have ADHD and I&#39;m a Type A perfectionist. Editing used to be a challenge, but I&#39;ve gotten way better and shortened my process a ton! <a href="https://t.co/3HdXdgHMM1">https://t.co/3HdXdgHMM1</a></p>&mdash; Lindsey Kopacz 🐞in Stockholm 🇸🇪 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1124278521378037760?ref_src=twsrc%5Etfw">May 3, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Random question: would people be interested to hear about my editing process?<br/><br/>I have ADHD and I&#39;m a Type A perfectionist. Editing used to be a challenge, but I&#39;ve gotten way better and shortened my process a ton! <a href="https://t.co/3HdXdgHMM1">https://t.co/3HdXdgHMM1</a></p>&mdash; Lindsey Kopacz 🐞in Stockholm 🇸🇪 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1124278521378037760?ref_src=twsrc%5Etfw">May 3, 2019</a></blockquote>
 
 I had an overwhelming response that said yes. I also asked on my [Patreon](https://www.patreon.com/join/a11ywithlindsey). While my last post about [JavaScript and Accordions](/blog/javascript-accessibility-accordions) won out, this topic was a close second. So here we are!
 

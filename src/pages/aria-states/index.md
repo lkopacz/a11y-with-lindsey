@@ -29,7 +29,7 @@ _Note: I changed the code in the above sample to have the CSS tied more to the a
 If you go through this on a screen reader, you’ll get something like this:
 
 <video controls>
-  <source src="/aria-expanded.mov" type="video/mp4">
+  <source src="/aria-expanded.mov" type="video/mp4" />
 </video>
 
 Imagine if we took off the `aria-expanded` attribute which I did in a [separate CodePen](https://codepen.io/littlekope0903/pen/GazpwN/).
@@ -37,7 +37,7 @@ Imagine if we took off the `aria-expanded` attribute which I did in a [separate 
 _Note: I kept most of the original code in here. That way, I could demonstrate the visual opening and closing. Additionally, it shows how it doesn’t work for a screen reader user._
 
 <video controls>
-  <source src="/no-aria-expanded.mov" type="video/mp4">
+  <source src="/no-aria-expanded.mov" type="video/mp4" />
 </video>
 
 Do you notice how when I open the button, it doesn’t communicate whether the section is open or closed? This is critical for a screen reader user to know what is going on. Withholding verbal communication of state is confusing for screen reader users.

@@ -45,11 +45,11 @@ There are a few places I have some animations for my links.
 
 First, there are my links where I have a border-bottom that moves down when you hover over it.
 
-<img class="center" src="https://media.giphy.com/media/MY7TMjVSbUUITM2Brh/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/MY7TMjVSbUUITM2Brh/giphy.gif" alt="" />
 
 Then there is my call to action link that scales 1.1x larger when we hover over it.
 
-<img class="center" src="https://media.giphy.com/media/XdIJqlqTIXZG3SyS3V/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/XdIJqlqTIXZG3SyS3V/giphy.gif" alt="" />
 
 I was talking to [Andy Bell](https://twitter.com/andybelldesign/), and he gave me [some suggestions](https://github.com/andybelldesign/stalfos/blob/feature/v2/src/utilities/_reset.scss#L71) on implementation.
 
@@ -65,9 +65,9 @@ I was talking to [Andy Bell](https://twitter.com/andybelldesign/), and he gave m
 
 After implementing the changes, we have the hover effects, but none of the transitions.
 
-<img class="center" src="https://media.giphy.com/media/W30RUUrYrc94jOvaau/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/W30RUUrYrc94jOvaau/giphy.gif" alt="" />
 
-<img class="center" src="https://media.giphy.com/media/fszlV41WjnJrjIpoVx/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/fszlV41WjnJrjIpoVx/giphy.gif" alt="" />
 
 This strategy technically works well. However, I want to remove the hover effect altogether and keep the link as an underline. I may also play with the scale.
 
@@ -125,7 +125,7 @@ Without the transition animation, the call to action links are a bit jarring goi
 }
 ```
 
-<img class="center" src="https://media.giphy.com/media/jtjBSsS5KPvtCCNqYn/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/jtjBSsS5KPvtCCNqYn/giphy.gif" alt="" />
 
 ### How to test on a mac
 
@@ -284,7 +284,7 @@ I always like to double-check that the state is working using [React Developer T
 - Find the `ReduceToggle` component
 - Ensure the state is working correctly!
 
-<img class="center" src="https://media.giphy.com/media/d83SPyGS9K9Pm6GQhw/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/d83SPyGS9K9Pm6GQhw/giphy.gif" alt="" />
 
 Now we know the state is working. Let's toggle the `data-user-reduced-motion` attribute value on the `documentElement`. I'm going to add that in the `componentDidUpdate` lifecycle method.
 
@@ -337,7 +337,7 @@ class ReduceToggle extends React.Component {
 export default ReduceToggle
 ```
 
-<img class="center" src="https://media.giphy.com/media/gIrdrOgahVAwaRsOW0/giphy.gif" alt="">
+<img class="center" src="https://media.giphy.com/media/gIrdrOgahVAwaRsOW0/giphy.gif" alt="" />
 
 ### Adding CSS to the `data-user-reduced-motion`
 

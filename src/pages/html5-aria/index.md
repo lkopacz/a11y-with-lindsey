@@ -42,12 +42,12 @@ The documentation on ARIA is pretty damn intimidating. Even as an accessibility 
 I spot two ARIA attributes at first glance: `role="button"` and `aria-haspopup="true"`. So what does this mean when I use my screenreader.
 
 <figure>
-  <img src="/profile-settings-popup-button-voiceover.png" alt="VoiceOver text that says Profile and Settings, pop up button">
+  <img src="/profile-settings-popup-button-voiceover.png" alt="VoiceOver text that says Profile and Settings, pop up button" />
   <figcaption>First thing VoiceOver says.</figcaption>
 </figure>
 
 <figure>
-  <img src="/popup-button-instructions-voiceover.png" alt="VoiceOver text that says You are currently on a po pup button, to display a list of options press control option space.">
+  <img src="/popup-button-instructions-voiceover.png" alt="VoiceOver text that says You are currently on a po pup button, to display a list of options press control option space." />
   <figcaption>Second thing VoiceOver says.</figcaption>
 </figure>
 

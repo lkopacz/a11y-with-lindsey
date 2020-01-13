@@ -82,7 +82,7 @@ One of the best ways to help out our dyslexic users is to give people alternate 
 As of this date, I have been using my friend [Kyle Galbraith](https://twitter.com/kylegalbraith)'s tool [parler.io](https://parler.io/). It is a service that automatically creates an audio file for your blog posts, so long as your blog has an RSS feed. Super neat! This tool is currently free to use, and I love it!
 
 <video controls width="590" muted>
-<source src="parler-io-demo.mov">
+<source src="parler-io-demo.mov" />
 </video>
 
 If you don't want to use this service and creating your own audio files is outside of your budget, ensure that your web pages are screen reader friendly. From what I understand, dyslexic users sometimes use screen readers to assist them with content, so navigating a page with a screen reader should be intuitive.
