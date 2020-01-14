@@ -145,8 +145,6 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1240) {
               src
-              srcSet
-              sizes
             }
           }
         }
