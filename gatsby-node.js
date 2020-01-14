@@ -7,16 +7,14 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(
-        filter: { fields: { draft: { eq: false } } }
-        sort: { order: DESC, fields: [frontmatter___date] }
+      allMdx(
+        filter: { frontmatter: { draft: { eq: false } } }
+        sort: { order: DESC, fields: frontmatter___date }
       ) {
-        edges {
-          node {
-            frontmatter {
-              path
-              tags
-            }
+        nodes {
+          frontmatter {
+            path
+            tags
           }
         }
       }
@@ -26,11 +24,11 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMdx.nodes
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMdx.nodes.forEach(({ frontmatter }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: frontmatter.path,
         component: blogPostTemplate,
         context: {}, // additional data can be passed via context
       })

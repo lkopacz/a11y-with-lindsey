@@ -44,7 +44,7 @@ class BlogIndex extends React.Component {
               <div className="wrapper">
                 {posts.map(({excerpt, frontmatter}, i) => {
                   return (
-                    <div style={{ marginTop: 24, marginBottom: 24 }} key={i}>
+                    <article style={{ marginTop: 24, marginBottom: 24 }} key={i}>
                       <h2 style={{ marginTop: 10, marginBottom: 10 }}>
                         <Link style={{ boxShadow: 'none' }} to={frontmatter.path}>
                           {frontmatter.title}
@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
                       </h2>
                       <time>{frontmatter.date}</time>
                       <p dangerouslySetInnerHTML={{ __html: excerpt }} />
-                    </div>
+                    </article>
                   )
                 })}
               </div>

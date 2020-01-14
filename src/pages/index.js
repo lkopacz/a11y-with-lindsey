@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
           <div className="blog__items">
             {posts.map(({excerpt, frontmatter}, i) => {
               return (
-                <div key={i} className="blog__item">
+                <article key={i} className="blog__item">
                   <h3 className="blog__title">
                     <Link to={frontmatter.path}>
                       {frontmatter.title}
@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
                   <div>
                     <p>{excerpt}</p>
                   </div>
-                </div>
+                </article>
               )
             })}
           </div>
