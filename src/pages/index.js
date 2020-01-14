@@ -7,7 +7,7 @@ import './index.css'
 
 class IndexPage extends React.Component {
   render() {
-    let posts = get(this, 'props.data.allMarkdownRemark.edges')
+    let posts = get(this, 'props.data.allMdx.edges')
     posts = posts.slice(0, 3)
 
     return (
@@ -91,9 +91,9 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fields: { draft: { eq: false } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+    allMdx(
+      filter: { frontmatter: { draft: { eq: false } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -108,3 +108,19 @@ export const pageQuery = graphql`
     }
   }
 `
+
+  // allMdx(
+  //   filter: { frontmatter: { draft: { eq: false } } }
+  //   sort: { order: DESC, fields: frontmatter___date }
+  // ) {
+  //   edges {
+  //     node {
+  //       excerpt
+  //       frontmatter {
+  //         date(formatString: "MMMM D, YYYY")
+  //         title
+  //         path
+  //       }
+  //     }
+  //   }
+  // }
