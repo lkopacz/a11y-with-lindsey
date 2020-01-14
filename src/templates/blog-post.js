@@ -1,141 +1,152 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Bio from '../components/bio/bio'
 import './blog-post.css'
 
-export default function Template({ data }) {
-  const { mdx } = data
-  const siteTitle = data.site.siteMetadata.title
-  console.log(mdx)
-  return (<div>data</div>)
+const Template = ({ data: { mdx: post, site } }) => {
+  const { frontmatter, excerpt, body } = post
+  const siteTitle = site.siteMetadata.title
+  const {
+    title,
+    tags,
+    path,
+    date,
+    affiliate,
+    audioLink,
+    hasAudio,
+    featuredImage,
+  } = frontmatter
 
-  // const { frontmatter, html, excerpt } = markdownRemark
-  // const affiliate =
-  //   'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
-  // const audio = frontmatter.hasAudio ? frontmatter.audioLink : ''
-  // const cover = frontmatter.featuredImage.childImageSharp
-  //   ? frontmatter.featuredImage.childImageSharp
-  //   : false
-  // return (
-  //   <div>
-  //     <Helmet
-  //       title={`${frontmatter.title} | ${siteTitle}`}
-  //       meta={[
-  //         {
-  //           name: 'description',
-  //           content: excerpt,
-  //         },
-  //         {
-  //           name: 'keywords',
-  //           content: frontmatter.tags.join(', '),
-  //         },
-  //         {
-  //           name: 'twitter:card',
-  //           content: 'summary_large_image',
-  //         },
-  //         {
-  //           name: 'twitter:site',
-  //           content: '@littlekope0903',
-  //         },
-  //         {
-  //           name: 'twitter:creator',
-  //           content: '@littlekope0903',
-  //         },
-  //         {
-  //           name: 'twitter:title',
-  //           content: frontmatter.title,
-  //         },
-  //         {
-  //           name: 'twitter:description',
-  //           content: excerpt,
-  //         },
-  //         {
-  //           name: 'twitter:image',
-  //           content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
-  //         },
-  //         {
-  //           name: 'og:url',
-  //           content: 'https://www.a11ywithlindsey.com' + frontmatter.path,
-  //         },
-  //         {
-  //           name: 'og:type',
-  //           content: 'article',
-  //         },
-  //         {
-  //           name: 'og:title',
-  //           content: frontmatter.title,
-  //         },
-  //         {
-  //           name: 'og:image',
-  //           content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
-  //         },
-  //       ]}
-  //     />
-  //     <div className="content">
-  //       <main id="main-content">
-  //         <div className="content__heading">
-  //           <div className="wrapper">
-  //             <nav className="breadcrumb">
-  //               <ol>
-  //                 <li>
-  //                   <Link to="/">Home</Link>
-  //                 </li>
-  //                 <li>
-  //                   <Link to="/blog">Blog</Link>
-  //                 </li>
-  //                 <li>{frontmatter.title}</li>
-  //               </ol>
-  //             </nav>
-  //             <h1>{frontmatter.title}</h1>
-  //           </div>
-  //         </div>
-  //         <div className="content__body">
-  //           <div className="wrapper">
-  //             <time>{frontmatter.date}</time>
-  //             {frontmatter.hasAudio ? <audio src={audio} controls /> : ''}
-  //             {frontmatter.affiliate ? (
-  //               <p>
-  //                 <em>{affiliate}</em>
-  //               </p>
-  //             ) : (
-  //               ''
-  //             )}
-  //             <div dangerouslySetInnerHTML={{ __html: html }} />
-  //             <Bio />
-  //           </div>
-  //         </div>
-  //       </main>
-  //     </div>
-  //   </div>
-  // )
+  const affiliateText =
+    'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
+  const audio = hasAudio ? audioLink : ''
+
+  const cover = featuredImage.childImageSharp
+    ? featuredImage.childImageSharp
+    : false
+
+  return (
+    <div>
+      <Helmet
+        title={`${title} | ${siteTitle}`}
+        meta={[
+          {
+            name: 'description',
+            content: excerpt,
+          },
+          {
+            name: 'keywords',
+            content: tags.join(', '),
+          },
+          {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+          {
+            name: 'twitter:site',
+            content: '@littlekope0903',
+          },
+          {
+            name: 'twitter:creator',
+            content: '@littlekope0903',
+          },
+          {
+            name: 'twitter:title',
+            content: title,
+          },
+          {
+            name: 'twitter:description',
+            content: excerpt,
+          },
+          {
+            name: 'twitter:image',
+            content: 'https://www.a11ywithlindsey.com' + cover.fluid.src,
+          },
+          {
+            name: 'og:url',
+            content: 'https://www.a11ywithlindsey.com' + path,
+          },
+          {
+            name: 'og:type',
+            content: 'article',
+          },
+          {
+            name: 'og:title',
+            content: title,
+          },
+          {
+            name: 'og:image',
+            content: 'https://www.a11ywithlindsey.com' + cover.fluid.src,
+          },
+        ]}
+      />
+      <div className="content">
+        <main id="main-content">
+          <div className="content__heading">
+            <div className="wrapper">
+              <nav className="breadcrumb">
+                <ol>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                  <li>{title}</li>
+                </ol>
+              </nav>
+              <h1>{title}</h1>
+            </div>
+          </div>
+          <div className="content__body">
+            <div className="wrapper">
+              <time>{date}</time>
+              {hasAudio ? <audio src={audio} controls /> : ''}
+              {affiliate ? (
+                <p>
+                  <em>{affiliateText}</em>
+                </p>
+              ) : (
+                ''
+              )}
+              <MDXRenderer>{body}</MDXRenderer>
+              <Bio />
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  )
 }
+
+export default Template
 
 export const pageQuery = graphql`
   query BlogPostBySlug($path: String!) {
     site {
       siteMetadata {
         title
-        author
       }
     }
-    mdx(frontmatter: {path: {eq: $path}}) {
-      html
-      excerpt(pruneLength: 150)
+    mdx(frontmatter: { path: { eq: $path } }) {
+      excerpt
+      body
       frontmatter {
-        date(formatString: "MMMM D, YYYY")
-        path
         title
         tags
+        path
+        date(formatString: "MMMM D, YYYY")
         affiliate
         audioLink
         hasAudio
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 1240) {
+            fluid(maxWidth: 1240) {
+              src
               srcSet
               sizes
-              src
             }
           }
         }
@@ -143,4 +154,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
