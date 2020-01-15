@@ -1,5 +1,13 @@
 import React from 'react'
 
-const CallToAction = () => <div>Call To Action</div>
+import './call-to-action.css'
 
-export default CallToAction;
+const CallToAction = ({ link, linkText, body, title }) => (
+  <aside className="call-to-action">
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <a href={link}>{linkText}</a>
+  </aside>
+)
+
+export default CallToAction

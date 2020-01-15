@@ -1,0 +1,26 @@
+.call-to-action {
+  background: #24728a;
+  color: white;
+  padding: 2rem;
+}
+
+.call-to-action h2 {
+  margin-top: 0;
+}
+
+.call-to-action a {
+  color: white;
+  border-radius: 16px;
+  border: 2px solid;
+  padding: 12px 14px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.call-to-action a:hover,
+.call-to-action a:focus {
+  transform: scale(1.1);
+  padding: 12px 14px;
+}

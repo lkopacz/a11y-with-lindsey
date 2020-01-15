@@ -60,6 +60,15 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve('./src/layouts/index.js'),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       },
     },
     {
