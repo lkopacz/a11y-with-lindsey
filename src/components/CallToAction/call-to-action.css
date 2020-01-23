@@ -1,6 +1,6 @@
 .call-to-action {
-  background: #24728a;
-  color: white;
+  background: #fff;
+  color: #24728a;
   padding: 2rem;
 }
 
@@ -9,7 +9,8 @@
 }
 
 .call-to-action a {
-  color: white;
+  background: #c03711;
+  color: #fff;
   border-radius: 16px;
   border: 2px solid;
   padding: 12px 14px;

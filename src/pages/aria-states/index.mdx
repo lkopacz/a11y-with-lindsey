@@ -9,6 +9,7 @@ draft: false
 ---
 
 import CallToAction from '../../components/CallToAction/CallToAction'
+import Png from './egghead-cat.png'
 
 Hey friends! Today’s blog post comes to you from my [Patreon folks'](https://www.patreon.com/a11ywithlindsey) poll. It’s a follow up from one of my previous posts about [Demystifying ARIA](/blog/beginning-demystify-aria). ARIA can be utterly mysterious and daunting, but it’s handy. One of my favorite ways to use it is to communicate state to screen readers.
 I’m seeing a positive trend in the a11y community. Instead of using classes to style elements, a11y folks are styling by using ARIA attributes in the CSS. This helps enforce accessibility standards and prevent people from cheating accessibility. The attributes I’ll be going over today are `aria-expanded`, `hidden`, `aria-hidden`, and `aria-current`.
@@ -21,9 +22,12 @@ I’m seeing a positive trend in the a11y community. Instead of using classes to
   {...{
     link:
       'https://egghead.io/lessons/aria-add-aria-expanded-to-add-semantic-value-and-styling',
+    body:
+      "I've created a 5 minute series where I apply all that you learned in this blog post.",
     linkText: 'Go To My Free Egghead Lesson',
-    body: 'I created a collection all about this!',
-    title: 'Prefer Videos?',
+    title: 'Want to see this in Action?',
+    image: Png,
+    imageAlt: '',
   }}
 />
 
