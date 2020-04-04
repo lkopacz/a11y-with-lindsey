@@ -9,7 +9,7 @@ featuredImage: './blogging-editing-process.png'
 draft: false
 ---
 
-<span lang="sv">Hej från sverige!</span> I’m writing this from Stockholm Airport! I’m on my way to Copenhagen to visit a friend (although when I publish this, I likely will be back in America). I am coming back into my blogging headspace after a bit of a wild week. I spoke about JavaScript and Accessibility for the Spotify Engineering team! Preparing to speak for my first time internationally was rough. However, I cannot even begin to explain how rewarding this experience has been. It’s a talk I’ve wanted to give for a long time, and for a good reason. It was well received, and I had many folks come up to me afterward.
+<p><span lang="sv">Hej från sverige!</span> I’m writing this from Stockholm Airport! I’m on my way to Copenhagen to visit a friend (although when I publish this, I likely will be back in America). I am coming back into my blogging headspace after a bit of a wild week. I spoke about JavaScript and Accessibility for the Spotify Engineering team! Preparing to speak for my first time internationally was rough. However, I cannot even begin to explain how rewarding this experience has been. It’s a talk I’ve wanted to give for a long time, and for a good reason. It was well received, and I had many folks come up to me afterward.</p>
 
 This post isn’t going to be a talk about speaking. I wanted to give you a glimpse because if you don’t follow me on Twitter, you would have no idea! Onto blogging!
 
