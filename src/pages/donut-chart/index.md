@@ -5,6 +5,7 @@ path: '/blog/accessibility-d3-donut-charts'
 tags: ['accessibility', 'donut chart', 'data viz', 'data visualizations', 'd3']
 published: true
 affiliate: false
+draft: false
 featuredImage: './a11y-donut-chart.png'
 ---
 
