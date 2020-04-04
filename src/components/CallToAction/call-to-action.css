@@ -1,11 +1,11 @@
 .call-to-action {
   background: #fff;
   color: #24728a;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
-.call-to-action h2 {
-  margin-top: 0;
+.call-to-action p:first-of-type {
+  display: none;
 }
 
 .call-to-action a {
@@ -24,4 +24,34 @@
 .call-to-action a:focus {
   transform: scale(1.1);
   padding: 12px 14px;
+}
+
+@media only screen and (min-width: 767px) {
+  .call-to-action {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    max-height: 270px;
+    margin: 2rem 0 3rem;
+    padding: 0;
+  }
+
+  .call-to-action h2 {
+    grid-column-start: 2;
+    margin: 0 2rem;
+    align-self: center;
+  }
+
+  .call-to-action p {
+    grid-column-start: 2;
+    margin: 1rem 2rem;
+  }
+
+  .call-to-action p:first-of-type {
+    display: block;
+    margin: -1.375rem 0 0;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
