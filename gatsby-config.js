@@ -100,8 +100,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
@@ -112,19 +112,18 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { published: { eq: true } } }
+                allMdx(
+                  filter: {frontmatter: {published: {eq: true}}}, limit: 1000,
+                  sort: {order: DESC, fields: frontmatter___date}
                 ) {
                   edges {
                     node {
                       id
-                      html
+                      body
                       excerpt(pruneLength: 800)
                       frontmatter {
-                        date
                         path
+                        date
                         title
                       }
                     }
