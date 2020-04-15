@@ -20,7 +20,7 @@ I wrote a tweet thread a while back where I started talking about ways to keep a
 Marcy pointed out here how the clapping hands are actually a pain for screenreaders. Here’s what it sounds like if you turn on your screenreader:
 
 <video controls>
-  <source src="/marcy-sutton-clapping-tweet.mp4" type="video/mp4">
+  <source src="/marcy-sutton-clapping-tweet.mp4" type="video/mp4" />
 </video>
 
 “Thank clapping hands you clapping hands Kent.” Can you imagine if it was done between every single word on a longer sentence? I see passionate people do this all the time, particularly when they want to say something regarding social issues. I get torn between two worlds because I know how awful it is for screenreaders, but usually, there is a message behind the tweet that I support.
@@ -28,7 +28,7 @@ Marcy pointed out here how the clapping hands are actually a pain for screenread
 In general, we should be careful about our emoji use. I created a tweet just for the purposes of this blog post. If we clog an entire tweet with just emojis and no words, this is what it sounds like:
 
 <video controls>
-  <source src="/emojis-screenreader.mp4" type="video/mp4">
+  <source src="/emojis-screenreader.mp4" type="video/mp4" />
 </video>
 
 I love emojis, but let's not abuse them. We should use words more!
@@ -78,12 +78,12 @@ So if you count that, out of 10 themes only 1 (!!) has a passing contrast on bot
 
 “Today’s tea” seems to be pretty popular on Twitter, but I can’t stop thinking about what this sounds like on a screen reader.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today&#39;s tea:<br>                      (<br>            (           )        )<br>_(_____)____(_____(____(_<br> \          Grad students /_<br>   \       should be         /    |<br>     \      paid livable    /___|<br>       \    wages for     /<br>         \   their hard   /<br>           \_   work     _/</p>&mdash; Jay Shelat (@jshelat1) <a href="https://twitter.com/jshelat1/status/1093314977077911558?ref_src=twsrc%5Etfw">February 7, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today&#39;s tea:<br/>                      (<br/>            (           )        )<br/>_(_____)____(_____(____(_<br/> \          Grad students /_<br/>   \       should be         /    |<br/>     \      paid livable    /___|<br/>       \    wages for     /<br/>         \   their hard   /<br/>           \_   work     _/</p>&mdash; Jay Shelat (@jshelat1) <a href="https://twitter.com/jshelat1/status/1093314977077911558?ref_src=twsrc%5Etfw">February 7, 2019</a></blockquote>
 
 Because I couldn't stop thinking about it, I found a tweet and turned on my screen reader. This is what it sounds like:
 
 <video controls>
-  <source src="todays-tea.mov">
+  <source src="todays-tea.mov" />
 </video>
 
 So, uh, yeah. Not sure how to fix it aside from not doing it.

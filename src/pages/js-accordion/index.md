@@ -260,7 +260,7 @@ Now we can open and close the accordion with the spacebar or the enter key!
 Let's test on our screen reader to be extra sure.
 
 <video controls>
-  <source src="/accordion-screenreader.mov" type="video/mp4">
+  <source src="/accordion-screenreader.mov" type="video/mp4" />
 </video>
 
 When I go through the accordions headers without opening them, they do not read them in the section. That's a good thing! When I open it, I'm able to read it.

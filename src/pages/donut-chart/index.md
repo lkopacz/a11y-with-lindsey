@@ -5,6 +5,7 @@ path: '/blog/accessibility-d3-donut-charts'
 tags: ['accessibility', 'donut chart', 'data viz', 'data visualizations', 'd3']
 published: true
 affiliate: false
+draft: false
 featuredImage: './a11y-donut-chart.png'
 ---
 
@@ -73,7 +74,7 @@ Why is this not accessible?
 In the video below, I show you what happens when I try to use my keyboard to access the data of the chart:
 
 <video controls>
-  <source src="/unfocusable.mov" type="video/mp4">
+  <source src="/unfocusable.mov" type="video/mp4" />
 </video>
 
 [Video alt text: a video of me attempting to tab to the donut chart. Instead of seeing any data, I keep tabbing to the URL bar.]
@@ -118,7 +119,7 @@ arcGroup
 Now we can reach the arcs with our keyboard:
 
 <video controls>
-  <source src="/focusable.mov" type="video/mp4">
+  <source src="/focusable.mov" type="video/mp4" />
 </video>
 
 [Video alt text: Tabbing to the arcs in the donut chart. We do not see any data; however, we do get the outline of the arcs showing that we can see them with our keyboard.]
@@ -272,7 +273,7 @@ Let's go over a bit of what we've done here.
 Below is a video showing how it looks when we use our tab key.
 
 <video controls>
-  <source src="/tooltips-focusing.mov" type="video/mp4">
+  <source src="/tooltips-focusing.mov" type="video/mp4" />
 </video>
 
 [Video Alt Text: Tabbing to each of the donut arcs, and the label of the data and the spending is represented.]
@@ -280,7 +281,7 @@ Below is a video showing how it looks when we use our tab key.
 Below is how it sounds on a donut chart:
 
 <video controls>
-  <source src="/tooltips-screenreader.mov" type="video/mp4">
+  <source src="/tooltips-screenreader.mov" type="video/mp4" />
 </video>
 
 [Video Alt Text: Tabbing to each of the donut arcs, and the the data gets read out to you.]
@@ -371,7 +372,7 @@ So we are good, right? Well, not quite. We need to test this visualization manua
 I'm turning on VoiceOver and using it in Safari (you should always test in Safari since both are Native to macOS)
 
 <video controls>
-  <source src="/image-roles.mov" type="video/mp4">
+  <source src="/image-roles.mov" type="video/mp4" />
 </video>
 
 [Video Alt Text: Using VoiceOver, the screenreader picks up on every single arc and announces it as an image.]

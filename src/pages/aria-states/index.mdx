@@ -4,13 +4,13 @@ date: '2019-06-03'
 path: '/blog/introduction-aria-states'
 tags: ['accessibility', 'states', 'aria']
 published: true
-affiliate: false
 featuredImage: './aria-states.png'
 draft: false
 ---
 
-Hey friends! Today’s blog post comes to you from my [Patreon folks'](https://www.patreon.com/a11ywithlindsey) poll. It’s a follow up from one of my previous posts about [Demystifying ARIA](/blog/beginning-demystify-aria). ARIA can be utterly mysterious and daunting, but it’s handy. One of my favorite ways to use it is to communicate state to screen readers.
+import CallToAction from '../../components/CallToAction/CallToAction'
 
+Hey friends! Today’s blog post comes to you from my [Patreon folks'](https://www.patreon.com/a11ywithlindsey) poll. It’s a follow up from one of my previous posts about [Demystifying ARIA](/blog/beginning-demystify-aria). ARIA can be utterly mysterious and daunting, but it’s handy. One of my favorite ways to use it is to communicate state to screen readers.
 I’m seeing a positive trend in the a11y community. Instead of using classes to style elements, a11y folks are styling by using ARIA attributes in the CSS. This helps enforce accessibility standards and prevent people from cheating accessibility. The attributes I’ll be going over today are `aria-expanded`, `hidden`, `aria-hidden`, and `aria-current`.
 
 ## The `aria-expanded` attribute
@@ -19,9 +19,23 @@ I’m seeing a positive trend in the a11y community. Instead of using classes to
 
 Why is this helpful? Let’s take the accordion example that I went through in the blog post that I linked in the previous paragraph:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Accordion - aria-expanded" src="//codepen.io/littlekope0903/embed/OYqNOd/?height=450&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href='https://codepen.io/littlekope0903/pen/OYqNOd/'>Accordion - aria-expanded</a> by Lindsey Kopacz
-(<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accordion - aria-expanded"
+  src="//codepen.io/littlekope0903/embed/OYqNOd/?height=450&theme-id=dark&default-tab=html,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/OYqNOd/">
+    Accordion - aria-expanded
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 _Note: I changed the code in the above sample to have the CSS tied more to the attributes and less to CSS classes._
@@ -29,7 +43,7 @@ _Note: I changed the code in the above sample to have the CSS tied more to the a
 If you go through this on a screen reader, you’ll get something like this:
 
 <video controls>
-  <source src="/aria-expanded.mov" type="video/mp4">
+  <source src="./aria-expanded.mov" type="video/mp4" />
 </video>
 
 Imagine if we took off the `aria-expanded` attribute which I did in a [separate CodePen](https://codepen.io/littlekope0903/pen/GazpwN/).
@@ -37,7 +51,7 @@ Imagine if we took off the `aria-expanded` attribute which I did in a [separate 
 _Note: I kept most of the original code in here. That way, I could demonstrate the visual opening and closing. Additionally, it shows how it doesn’t work for a screen reader user._
 
 <video controls>
-  <source src="/no-aria-expanded.mov" type="video/mp4">
+  <source src="./no-aria-expanded.mov" type="video/mp4" />
 </video>
 
 Do you notice how when I open the button, it doesn’t communicate whether the section is open or closed? This is critical for a screen reader user to know what is going on. Withholding verbal communication of state is confusing for screen reader users.
@@ -89,7 +103,20 @@ With that being said, my rule is if we are toggling states, I use `hidden`. If t
 
 Fun fact, this one is totally new to me. I didn’t learn about this until I saw [Eric Bailey](https://twitter.com/ericwbailey/)’s tweet about the [a11y project](https://a11yproject.com/) redesign:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A little detail I&#39;m proud of for the upcoming <a href="https://twitter.com/A11YProject?ref_src=twsrc%5Etfw">@A11YProject</a> redesign is using `[aria-current]` as a styling hook for our table of contents component. Instead of using a &quot;.is-current&quot; class or the like, we&#39;re typing visual appearance to semantic state for where you are on the page. <a href="https://t.co/tt3k3MYEuk">pic.twitter.com/tt3k3MYEuk</a></p>&mdash; Eric Bailey (@ericwbailey) <a href="https://twitter.com/ericwbailey/status/1134863254310797312?ref_src=twsrc%5Etfw">June 1, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+    A little detail I&#39;m proud of for the upcoming{' '}
+    <a href="https://twitter.com/A11YProject?ref_src=twsrc%5Etfw">
+      @A11YProject
+    </a>{' '}
+    redesign is using `[aria-current]` as a styling hook for our table of
+    contents component. Instead of using a &quot;.is-current&quot; class or the
+    like, we&#39;re typing visual appearance to semantic state for where you are
+    on the page.{' '}
+    <a href="https://t.co/tt3k3MYEuk">pic.twitter.com/tt3k3MYEuk</a>
+  </p>
+  &mdash; Eric Bailey (@ericwbailey) <a href="https://twitter.com/ericwbailey/status/1134863254310797312?ref_src=twsrc%5Etfw">June 1, 2019</a>
+</blockquote>
 
 The best part about the web and accessibility practices is I learn something new every day. After seeing this tweet, I found [Léonie’s post on aria-current](https://tink.uk/using-the-aria-current-attribute/). Something they pointed out is that we predominately use CSS to show the “current” element visually. In my Drupal days, most themes had an `.is-active` class if you were on a menu item that reflected the current URL.
 

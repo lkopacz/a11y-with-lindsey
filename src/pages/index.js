@@ -7,7 +7,7 @@ import './index.css'
 
 class IndexPage extends React.Component {
   render() {
-    let posts = get(this, 'props.data.allMarkdownRemark.edges')
+    let posts = get(this, 'props.data.allMdx.nodes')
     posts = posts.slice(0, 3)
 
     return (
@@ -16,19 +16,17 @@ class IndexPage extends React.Component {
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">
-            {posts.map(({ node }, i) => {
+            {posts.map(({ excerpt, frontmatter }, i) => {
               return (
-                <div key={i} className="blog__item">
+                <article key={i} className="blog__item">
                   <h3 className="blog__title">
-                    <Link to={node.frontmatter.path}>
-                      {node.frontmatter.title}
-                    </Link>
+                    <Link to={frontmatter.path}>{frontmatter.title}</Link>
                   </h3>
-                  <time>{node.frontmatter.date}</time>
+                  <time>{frontmatter.date}</time>
                   <div>
-                    <p>{node.excerpt}</p>
+                    <p>{excerpt}</p>
                   </div>
-                </div>
+                </article>
               )
             })}
           </div>
@@ -59,8 +57,7 @@ class IndexPage extends React.Component {
                 <li>
                   <a href="https://twitter.com/er1p">Erik Riedel</a>
                 </li>
-                <li>
-                  Simon Welsh</li>
+                <li>Simon Welsh</li>
               </ul>
             </div>
             <h3>Supporters - $10 Tier</h3>
@@ -91,18 +88,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fields: { draft: { eq: false } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+    allMdx(
+      filter: { frontmatter: { draft: { eq: false } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            date(formatString: "MMMM D, YYYY")
-            title
-            path
-          }
+      nodes {
+        excerpt
+        frontmatter {
+          path
+          title
+          date(formatString: "MMMM D, YYYY")
         }
       }
     }

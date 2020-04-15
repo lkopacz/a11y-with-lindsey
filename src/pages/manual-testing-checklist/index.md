@@ -45,7 +45,7 @@ Ask yourself these questions:
 
 [Kent C Dodds](https://twitter.com/kentcdodds) wrote his most viral tweet to date, and it was all about empathy for those using screen readers.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I would like to introduce you to my most viral tweet: <a href="https://t.co/lDrKUqmC6Z">https://t.co/lDrKUqmC6Z</a><br><br>I&#39;m proud of the fact that it&#39;s promoting something important rather than a silly meme.</p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/1083392902716219392?ref_src=twsrc%5Etfw">January 10, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I would like to introduce you to my most viral tweet: <a href="https://t.co/lDrKUqmC6Z">https://t.co/lDrKUqmC6Z</a><br/><br/>I&#39;m proud of the fact that it&#39;s promoting something important rather than a silly meme.</p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/1083392902716219392?ref_src=twsrc%5Etfw">January 10, 2019</a></blockquote>
 
 We think we are being fresh and modern, but sometimes things like multiple emojis, fancy font, and other random oddities can negatively impact screenreaders. It’s always good to catch that before you deploy something out.
 

@@ -78,11 +78,11 @@ I'm going to keep this short as this isn't my personal diary. If you want to kno
 
 I've gotten way more into lifting and gotten super strong!
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Y’all. I had 2 PRs (personal records not pull requests).<br><br>Bench pressed 135lbs<br>Deadlifted 200lbs<br><br>💪🏼💪🏼💪🏼</p>&mdash; Lindsey Kopacz (@littlekope0903) <a href="https://twitter.com/littlekope0903/status/1071567729843421184?ref_src=twsrc%5Etfw">December 9, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Y’all. I had 2 PRs (personal records not pull requests).<br/><br/>Bench pressed 135lbs<br/>Deadlifted 200lbs<br/><br/>💪🏼💪🏼💪🏼</p>&mdash; Lindsey Kopacz (@littlekope0903) <a href="https://twitter.com/littlekope0903/status/1071567729843421184?ref_src=twsrc%5Etfw">December 9, 2018</a></blockquote>
 
 I got engaged!
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I’ve been holding off on posting this on social media until we told our families.... but my boyfriend and I got engaged over the holiday 🥰😍. <br><br>I’ve been with this man for 4 years. He’s supported me through all my highs and lows. I cannot be more thrilled 😁 <a href="https://t.co/ihXNnEE1zP">pic.twitter.com/ihXNnEE1zP</a></p>&mdash; Lindsey Kopacz (@littlekope0903) <a href="https://twitter.com/littlekope0903/status/1077757311362519040?ref_src=twsrc%5Etfw">December 26, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I’ve been holding off on posting this on social media until we told our families.... but my boyfriend and I got engaged over the holiday 🥰😍. <br/><br/>I’ve been with this man for 4 years. He’s supported me through all my highs and lows. I cannot be more thrilled 😁 <a href="https://t.co/ihXNnEE1zP">pic.twitter.com/ihXNnEE1zP</a></p>&mdash; Lindsey Kopacz (@littlekope0903) <a href="https://twitter.com/littlekope0903/status/1077757311362519040?ref_src=twsrc%5Etfw">December 26, 2018</a></blockquote>
 
 And finally, my mental health has improved because I stopped shaming myself and learned to set boundaries with myself and with others.
 

@@ -359,7 +359,7 @@ panels.forEach(panel => {
 Now let's hear this on a screenreader and hear the final verdict.
 
 <video controls height="500" style="margin: 1rem auto;">
-  <source src="/final-screenreader.mov" type="video/mp4">
+  <source src="/final-screenreader.mov" type="video/mp4" />
 </video>
 
 If you want to play around with the code, fork the CodePen and check it out.

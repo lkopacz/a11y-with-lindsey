@@ -59,7 +59,7 @@ Wrong.
 
 When we do it this way, we can focus on links that are not visible. Take a look at this gif, and particularly the bottom left corner where you see the links. Do you notice when we focus on the button, we see a blue outline? When we start tabbing again, **all the links** we hid are focusable. We cannot see **where** it the focus of the link is
 
-<img class="center" src="./focus-on-visually-hidden-links.gif" alt="">
+<img class="center" src="./focus-on-visually-hidden-links.gif" alt="" />
 
 What I did in the past was **way more** overkill than I needed. I set all the tabindexes of the links inside that menu to be `-1` upon page load. In that event listener, I also checked to see if the class existed and based the tabindex toggle off that. There is a silver lining of me going over the top with my code. I learned a lot about the properties of HTML elements in JavaScript. Which was valuable to me strengthening my skills in JavaScript. All while learning about focus management, which is important for accessibility.
 
@@ -68,7 +68,7 @@ What I did in the past was **way more** overkill than I needed. I set all the ta
   (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-<img class="center" src="./proper-focus.gif" alt="">
+<img class="center" src="./proper-focus.gif" alt="" />
 
 Ah much better, at least functionally.
 
@@ -129,7 +129,7 @@ To test on macOS:
 See the video below:
 
 <video controls>
-  <source src="/a11y-aria-js.mov" type="video/mp4">
+  <source src="/a11y-aria-js.mov" type="video/mp4" />
 </video>
 
 These aria attributes give direction to a screen reader user about **how** to interact with the button. It would be even better if I had a more verbose button label with more context telling you what you're opening up, too!

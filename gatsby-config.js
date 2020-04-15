@@ -14,10 +14,17 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-layout`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve('./src/layouts/index.js'),
+        },
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -50,27 +57,24 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-layout`,
     {
-      resolve: "gatsby-plugin-draft",
+      resolve: 'gatsby-plugin-draft',
       options: {
         /**
          * be added field name
          * Default is 'draft'
          **/
-        fieldName: "draft",
+        fieldName: 'draft',
         /**
          * moment-timezone
          * Default is 'UTC'
          **/
-        timezone: "America/New_York",
+        timezone: 'America/New_York',
         /**
          * publish draft posts
          * Default is 'false'
          **/
-        publishDraft: process.env.NODE_ENV !== "production",
+        publishDraft: process.env.NODE_ENV !== 'production',
       },
     },
     {
@@ -96,8 +100,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
@@ -108,19 +112,18 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { published: { eq: true } } }
+                allMdx(
+                  filter: {frontmatter: {published: {eq: true}}}, limit: 1000,
+                  sort: {order: DESC, fields: frontmatter___date}
                 ) {
                   edges {
                     node {
                       id
-                      html
+                      body
                       excerpt(pruneLength: 800)
                       frontmatter {
-                        date
                         path
+                        date
                         title
                       }
                     }

@@ -1,24 +1,36 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Bio from '../components/bio/bio'
 import './blog-post.css'
 
-export default function Template({ data }) {
-  const { markdownRemark } = data
-  const siteTitle = data.site.siteMetadata.title
-  const { frontmatter, html, excerpt } = markdownRemark
+const Template = ({ data: { mdx: post, site } }) => {
+  const { frontmatter, excerpt, body } = post
+  const siteTitle = site.siteMetadata.title
+  const {
+    title,
+    tags,
+    path,
+    date,
+    affiliate,
+    audioLink,
+    hasAudio,
+    featuredImage,
+  } = frontmatter
 
-  const affiliate =
+  const affiliateText =
     'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
-  const audio = frontmatter.hasAudio ? frontmatter.audioLink : ''
-  const cover = frontmatter.featuredImage.childImageSharp
-    ? frontmatter.featuredImage.childImageSharp
+  const audio = hasAudio ? audioLink : ''
+
+  const cover = featuredImage.childImageSharp
+    ? featuredImage.childImageSharp
     : false
+
   return (
     <div>
       <Helmet
-        title={`${frontmatter.title} | ${siteTitle}`}
+        title={`${title} | ${siteTitle}`}
         meta={[
           {
             name: 'description',
@@ -26,7 +38,7 @@ export default function Template({ data }) {
           },
           {
             name: 'keywords',
-            content: frontmatter.tags.join(', '),
+            content: tags.join(', '),
           },
           {
             name: 'twitter:card',
@@ -42,7 +54,7 @@ export default function Template({ data }) {
           },
           {
             name: 'twitter:title',
-            content: frontmatter.title,
+            content: title,
           },
           {
             name: 'twitter:description',
@@ -50,11 +62,11 @@ export default function Template({ data }) {
           },
           {
             name: 'twitter:image',
-            content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
+            content: 'https://www.a11ywithlindsey.com' + cover.fluid.src,
           },
           {
             name: 'og:url',
-            content: 'https://www.a11ywithlindsey.com' + frontmatter.path,
+            content: 'https://www.a11ywithlindsey.com' + path,
           },
           {
             name: 'og:type',
@@ -62,11 +74,11 @@ export default function Template({ data }) {
           },
           {
             name: 'og:title',
-            content: frontmatter.title,
+            content: title,
           },
           {
             name: 'og:image',
-            content: 'https://www.a11ywithlindsey.com' + cover.sizes.src,
+            content: 'https://www.a11ywithlindsey.com' + cover.fluid.src,
           },
         ]}
       />
@@ -82,24 +94,24 @@ export default function Template({ data }) {
                   <li>
                     <Link to="/blog">Blog</Link>
                   </li>
-                  <li>{frontmatter.title}</li>
+                  <li>{title}</li>
                 </ol>
               </nav>
-              <h1>{frontmatter.title}</h1>
+              <h1>{title}</h1>
             </div>
           </div>
           <div className="content__body">
             <div className="wrapper">
-              <time>{frontmatter.date}</time>
-              {frontmatter.hasAudio ? <audio src={audio} controls /> : ''}
-              {frontmatter.affiliate ? (
+              <time>{date}</time>
+              {hasAudio ? <audio src={audio} controls /> : ''}
+              {affiliate ? (
                 <p>
-                  <em>{affiliate}</em>
+                  <em>{affiliateText}</em>
                 </p>
               ) : (
                 ''
               )}
-              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <MDXRenderer>{body}</MDXRenderer>
               <Bio />
             </div>
           </div>
@@ -109,30 +121,29 @@ export default function Template({ data }) {
   )
 }
 
+export default Template
+
 export const pageQuery = graphql`
   query BlogPostBySlug($path: String!) {
     site {
       siteMetadata {
         title
-        author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      excerpt(pruneLength: 150)
+    mdx(frontmatter: { path: { eq: $path } }) {
+      excerpt
+      body
       frontmatter {
-        date(formatString: "MMMM D, YYYY")
-        path
         title
         tags
+        path
+        date(formatString: "MMMM D, YYYY")
         affiliate
-        hasAudio
         audioLink
+        hasAudio
         featuredImage {
           childImageSharp {
-            sizes(maxWidth: 1240) {
-              srcSet
-              sizes
+            fluid(maxWidth: 1240) {
               src
             }
           }
