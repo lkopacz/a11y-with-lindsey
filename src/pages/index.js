@@ -16,13 +16,11 @@ class IndexPage extends React.Component {
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">
-            {posts.map(({excerpt, frontmatter}, i) => {
+            {posts.map(({ excerpt, frontmatter }, i) => {
               return (
                 <article key={i} className="blog__item">
                   <h3 className="blog__title">
-                    <Link to={frontmatter.path}>
-                      {frontmatter.title}
-                    </Link>
+                    <Link to={frontmatter.path}>{frontmatter.title}</Link>
                   </h3>
                   <time>{frontmatter.date}</time>
                   <div>
@@ -59,8 +57,7 @@ class IndexPage extends React.Component {
                 <li>
                   <a href="https://twitter.com/er1p">Erik Riedel</a>
                 </li>
-                <li>
-                  Simon Welsh</li>
+                <li>Simon Welsh</li>
               </ul>
             </div>
             <h3>Supporters - $10 Tier</h3>
@@ -106,19 +103,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-  // allMdx(
-  //   filter: { frontmatter: { draft: { eq: false } } }
-  //   sort: { order: DESC, fields: frontmatter___date }
-  // ) {
-  //   edges {
-  //     node {
-  //       excerpt
-  //       frontmatter {
-  //         date(formatString: "MMMM D, YYYY")
-  //         title
-  //         path
-  //       }
-  //     }
-  //   }
-  // }
