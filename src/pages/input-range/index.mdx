@@ -1,6 +1,6 @@
 ---
 title: 'Creating an Accessible Range Slider with CSS'
-date: '2020-02-25'
+date: '2020-04-29'
 path: '/blog/creating-accessible-range-slider-css'
 tags:
   ['linear gradient', 'accessibility', 'css', 'semantic html', 'input range']
@@ -36,7 +36,7 @@ When I go through these steps, I am considering the following:
 
 When we first create that HTML, the appearance is pretty unimpressive.
 
-![](./unstyled-input.png)
+![An input range slider unstyled.](./unstyled-input.png)
 
 The first thing we want to do is start with a clean slate in our CSS. We are going to add a `position: relative;` on our `wrapper` class. Then we add an `appearance: none;` to our range input. If you check out the [Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance), prepending `-webkit-` should cover us for Firefox, Chrome, and edge.
 
@@ -51,7 +51,7 @@ input[type='range'] {
 }
 ```
 
-![](./appearance-none.png)
+![The slider with no track, only the thumb.](./appearance-none.png)
 
 There are a few things that I am going to “normalize” before I start going into the pseudo-elements. I am adding a width and a transparent background. For this particular item, I am going to add a `max-width` as well.
 
@@ -82,7 +82,7 @@ input[type='range'] {
 
 However, if you use something like BrowserStack, you'll see something like this in IE11.
 
-![](./IE-11-no-pseudo.png)
+![An input range that has a blue fill for the lower track on the left side of the thumb and white fill for the upper track on the right side of the thumb. There is a dark grey background behind the slider.](./IE-11-no-pseudo.png)
 
 Depending on what your analytics say for your audience's browser usage, this may be moot. And take that knowledge and apply it how you please. But I believe in robust browser support, so I’m going to cover the following pseudo-elements:
 
@@ -125,29 +125,43 @@ input[type='range']::-ms-fill-lower {
 
 In Chrome:
 
-![](./with-background-chrome.png)
+![In Chrome, unstyled, round, light grey thumb, with a dark grey rectangular track.](./with-background-chrome.png)
 
 In Firefox:
 
-![](./firefox-new.png)
+![In Firefox, unstyled, round, light grey thumb, with a dark grey rectangular track.](./firefox-new.png)
 
 In Edge:
 
-![](./edge.png)
+![In Edge, unstyled, square, black thumb, with a dark grey rectangular track.](./edge.png)
 
 In IE11:
 
-![](./IE-11-new.png)
+![In IE11, unstyled, square, black thumb, with a dark grey rectangular track.](./IE-11-new.png)
 
 The main difference between the properties inside the blocks is the `::-ms-track` pseudo-element needs a `color: transparent`. We also need to have a `::-ms-fill-lower` otherwise it looks like this:
 
-![](./no-fill-lower-ms.png)
+![In IE11, unstyled, square, black thumb, with a rectangular track. The lower left track is a light blue and the upper right track is dark grey.](./no-fill-lower-ms.png)
 
 When we add all these in, we have a starting out point for our volume slider:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Volume Slider - Starting out" src="https://codepen.io/littlekope0903/embed/KKpMvXM?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/KKpMvXM'>Volume Slider - Starting out</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Volume Slider - Starting out"
+  src="https://codepen.io/littlekope0903/embed/KKpMvXM?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/KKpMvXM">
+    Volume Slider - Starting out
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 Now we get to play around with the part I explored the most - linear gradient.
@@ -158,7 +172,7 @@ Linear gradient confused me for the longest time. Because I focus on accessibili
 
 Our goal would be to have something that looks similar to this:
 
-![](./volume-goal.png)
+![A dark grey right triangle, the right angle being the bottom right. There is a tall yet narrow rounded corner thumb.](./volume-goal.png)
 
 `linear-gradient` is a CSS function that transforms a background from one or many colors into another. This function takes on many arguments and can be very simple or very complex.
 
@@ -172,9 +186,23 @@ I have a few examples that I played with that I show in the following CodePens.
 
 First a rainbow:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Linear Gradient - Blurry Rainbow" src="https://codepen.io/littlekope0903/embed/povBzqX?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/povBzqX'>Linear Gradient - Blurry Rainbow</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Linear Gradient - Blurry Rainbow"
+  src="https://codepen.io/littlekope0903/embed/povBzqX?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/povBzqX">
+    Linear Gradient - Blurry Rainbow
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 A few of my observations:
@@ -184,9 +212,23 @@ A few of my observations:
 
 Now a French Flag:
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Linear Gradient - French Flag" src="https://codepen.io/littlekope0903/embed/LYEvPay?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/LYEvPay'>Linear Gradient - French Flag</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Linear Gradient - French Flag"
+  src="https://codepen.io/littlekope0903/embed/LYEvPay?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/LYEvPay">
+    Linear Gradient - French Flag
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 My first observation: I associate linear gradients as fades. But if you want a straight line, you have to put the “stop” to be at equal values.
@@ -212,9 +254,23 @@ My first observation: I associate linear gradients as fades. But if you want a s
 
 What if we want to start playing with fades and make it more blurry?
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Linear Gradient - blurry French Flag" src="https://codepen.io/littlekope0903/embed/yLyrBQm?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/yLyrBQm'>Linear Gradient - blurry French Flag</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Linear Gradient - blurry French Flag"
+  src="https://codepen.io/littlekope0903/embed/yLyrBQm?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/yLyrBQm">
+    Linear Gradient - blurry French Flag
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 There is a gap between the stops at full opacity, and in between that gap, there is a fade. Fun stuff!
@@ -237,7 +293,7 @@ There is a gap between the stops at full opacity, and in between that gap, there
 }
 ```
 
-![](./french-gradient-annotated.png)
+<img src="./french-gradient-annotated.png" alt="" />
 
 I'm still a complete newb to this stuff, so I bet I am missing many details. But this is my "explain like I'm five" version of this.
 
@@ -289,7 +345,7 @@ input[type=range]::-ms-track {
 
 Now, this looks like a right triangle, with the 90degrees mark being at the bottom right-hand corner.
 
-![](./gradient-without-thumb.png)
+![A dark grey right triangle, the right angle being the bottom right. The thumb is the original round thumb.](./gradient-without-thumb.png)
 
 My SCSS linter will yell at me about having 2 background properties. But I like having the background as a solid color as a fallback. If the browser doesn’t support linear-gradient, we have a browser fallback.
 
@@ -336,7 +392,7 @@ input[type='range']::-ms-thumb {
 
 Now we will see the track is tall and white with a black border.
 
-![](./rectangle-thumb.png)
+![A dark grey right triangle, the right angle being the bottom right. There is a tall yet narrow rectangular thumb.](./rectangle-thumb.png)
 
 Now we can just round out the edges and add a pointer cursor.
 
@@ -400,24 +456,50 @@ input[type='range']:focus::-ms-thumb {
 }
 ```
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Volume Slider" src="https://codepen.io/littlekope0903/embed/PowVaJd?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/PowVaJd'>Volume Slider</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Volume Slider"
+  src="https://codepen.io/littlekope0903/embed/PowVaJd?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/PowVaJd">Volume Slider</a> by
+  Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ## When it gets hairy
 
 If you want the area between the thumb and the start of the range to be a different color, it can begin to get complicated. This differentiation indicates progress, not to be confused with the progress element.
 
-![](./audio-progress.png)
+![An audio bar slider with a round white thumb. The left of the thumb is navy blue indicating progess. The right of the thumb is pale blue, indicating non played audio.](./audio-progress.png)
 
 Unfortunately, using pseudo-elements, we only have support for Edge, IE, and Firefox. There is the pseudo-element `::-ms-fill-lower` and `::-moz-range-progress`, but none for Chrome. I’ve played with doing this in JavaScript, but it sounds like a performance nightmare and too much math.
 
 You can check out the CodePen where I use these pseudo-elements.
 
-<iframe height="450" style="width: 100%;" scrolling="no" title="Slider with Progress Bar (Supports Mozilla, Edge, &amp; IE)" src="https://codepen.io/littlekope0903/embed/rNabEbm?height=450&theme-id=default&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/rNabEbm'>Slider with Progress Bar (Supports Mozilla, Edge, &amp; IE)</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="450"
+  style="width: 100%;"
+  scrolling="no"
+  title="Slider with Progress Bar (Supports Mozilla, Edge, &amp; IE)"
+  src="https://codepen.io/littlekope0903/embed/rNabEbm?height=450&theme-id=default&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/rNabEbm">
+    Slider with Progress Bar (Supports Mozilla, Edge, &amp; IE)
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ## Conclusion
