@@ -1,0 +1,55 @@
+---
+title: Accessible Interactive Components with React
+date: '2020-04-03'
+path: '/blog/accessible-interactive-components-react'
+tags: ['accessibility', 'components', 'react', 'interactive']
+published: true
+featuredImage: './react-a11y.png'
+draft: false
+---
+
+Some text.
+
+## React Hamburger Menu
+
+- Talk about some of the features.
+
+1. `npm i react-burger-menu`
+2. add it to the layout or app component (whatever works best in your use case)
+3. Add some starter CSS to it because it looks like crap right now
+
+```css
+.bm-burger-button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.bm-burger-bars,
+.bm-cross {
+  background: black;
+}
+```
+
+## React Modal
+
+What makes a modal accessible:
+
+- Can't focus inside of the modal until it's open
+- When modal is open, focus trapping occurs - focus won't be anywhere else on the screen except inside the modal
+- closes on esc
+- upon close, focuses on the thing it was on last
+
+1. `npm i react-modal`
+2. add useState to the component that you're putting the modal in
+3. Following the basic instructions to getting a modal setup
+
+- Adding Modal root element
+- Adding open and close modal state setting functions
+- Add a button that opens the modal
+- Add a button inside the Modal component that closes it
+- Necessary props to add for a11y - `isOpen={open} onRequestClose={closeModal}`
+
+## React Accordion
+
+## React Tabs
