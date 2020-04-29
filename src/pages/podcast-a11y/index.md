@@ -9,7 +9,9 @@ featuredImage: './podcast-a11y.png'
 draft: false
 ---
 
-If you haven’t noticed, I haven’t been around! It’s been a month since I posted, and there’s been a good reason for that. Kelly Vaughn, Ali Spittel, Emma Wedekind, and I started [the LadyBug Podcast](https://ladybug.dev/). This podcast came to fruition with much labor. As a result, I’ve been figuring out how to balance this blog with that side project! Don’t worry, though, this isn’t going away. My blog is my passion project!
+_EDIT: I resigned from the podcast in late August 2019. The accessibility lessons I learned are still relevant if you'd like to start a podcast, but in full transparency, this post is technically out of date._
+
+If you haven’t noticed, I haven’t been around! It’s been a month since I posted, and there’s been a good reason for that. Kelly Vaughn, Ali Spittel, Emma Bostian, and I started the Ladybug Podcast. This podcast came to fruition with much labor. As a result, I’ve been figuring out how to balance this blog with that side project! Don’t worry, though, this isn’t going away. My blog is my passion project!
 
 Now that you know where I’ve been, I’ve learned a lot about podcasting and how it intersects with accessibility. I knew some of these things at a high level, but in this post, we’re going to get a little bit more in-depth.
 
