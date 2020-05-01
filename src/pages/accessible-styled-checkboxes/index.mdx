@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/c35f66502ddd3b9b56a4db767e00d2e69455810c.36b95f33-8819-457e-be2e-6d137985f731.mp3'
 ---
 
+import CallToAction from '../../components/CallToAction/CallToAction'
+
 I've seen a ton of designers make these GORGEOUS checkbox styles, but then you see them implemented and you can't even select it using your keyboard. Let's say we got this in our style guide from our designer.
 
 ![Checkboxes design with teal color when checked and a black checkmark](./teal-checkboxes-design.png)
@@ -18,6 +20,18 @@ I've seen a ton of designers make these GORGEOUS checkbox styles, but then you s
 I've seen this implemented before and it looks gorgeous. However, when I press the `tab` key, it zips right past it. If this field is required, you're screwing over a bunch of your users. They use `::before` or `::after` pseudo-elements to make a pretty checkbox and use the `:checked` pseudo-class to determine the styling of the check itself. It looks cool, but the problem is that they use `display: none` on the checkbox input itself. When we do that, we make the checkbox itself invisible to the browser, making it unusable for those who rely on keyboards to navigate a site.
 
 ![Gif of keyboard trying to access the custom checkmarks but skipping to the link.](https://media.giphy.com/media/3Fd7rUatwPzyAloC5O/giphy.gif)
+
+<CallToAction>
+
+  ![](./egghead.png)
+
+  ## Want to see this in action?
+
+  I created a less than 3 minute video lesson!
+
+  [Go To My Free Egghead Lesson](https://egghead.io/lessons/css-create-custom-keyboard-accessible-checkboxes)
+
+</CallToAction>
 
 ## Starting point
 
