@@ -20,13 +20,14 @@ I'd recommend before you read this blog post, brushing up on how to fix some com
 
 But for those that are well versed on how to write accessible HTML in React, I wanted to give my peers and colleagues a quick reference of how to use some well supported React packages to create accessible interactive comoponents.
 
-This blog post writes under the assumption that you are familiar with the basic terms of React and understand the syntax of JSX. If you are not familiar with it, I highly suggest you get familiar with it, I suggest that you read through the following resources:
+This blog post writes under the assumption that you are familiar with the basic terms of React and understand the syntax of JSX. If you are not familiar with it, I suggest that you read through the following resources:
 
 1. Read through the [React docs](https://reactjs.org/docs/getting-started.html) and play around with their [Tutorial](https://reactjs.org/tutorial/tutorial.html)
 1. Have a familiarity with [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 1. Understand using the [spread operator](https://reactjs.org/docs/jsx-in-depth.html#spread-attributes) into a React Component.
+1. Understand the map array method. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
-I use CodeSandbox for all of my examples, so if you'd like to learn by doing and don't feel like setting up your environment, I highly recommend you Codesandbox. If you'd like you can fork my examples, play with the styling, and manually test the components.
+I use CodeSandbox for all of my examples. If you like to learn by doing and don't feel like setting up your environment, I highly recommend forking my examples, play with the styling, and manually test the components.
 
 ## React Hamburger Menu
 
@@ -36,18 +37,27 @@ One react library I like to use if I am in a pinch is the [react-burger-menu](ht
 
 What are some features of an accessible hamburger menu?
 
-1. The hamburger button has clear focus
+1. The hamburger button has clear focus state
 1. The hamburger button has some text that labels it, even if it's visually-hidden
 1. You cannot focus on the links inside the menu when the menu is closed. This happens very often when we have a menu that slides in.
 1. The menu closes on ESC keypress
 1. There is an easy way to close the menu - whether there's a Close button inside the menu, or you tab back to the hamburger button and use that to close it.
 
+Below I've created a quick demo of what we expect the functionality to be:
+
+<!-- {/* <video controls>
+  <source src="/hamburger.mp4" type="video/mp4" />
+</video> */} -->
+
 How to install:
 
 1. If you're on your local: In your project directory, enter `npm i react-burger-menu` in command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-burger-menu` as a dependency.
-1. In `src` directory, create a component called `BurgerMenu.js`. Import the desired Menu animation (I used `slide`) and use that component to add links to your menu.
 
-```jsx
+There are many different hamburger menu animation styles you can use. I chose `slide` for this example, but you can see how all the options animate in the [demo](https://negomi.github.io/react-burger-menu/).
+
+2. In `src` directory, create a component called `BurgerMenu.js`. Go to the Import the desired Menu animation (here's a list of the animation [options](https://github.com/negomi/react-burger-menu#animations)) and use that component to add links to your menu. I am adding the `noOverlay` prop to my Menu because I personally don't like the look of overlays.
+
+<!-- ```jsx
 import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
@@ -68,13 +78,11 @@ const BurgerMenu = () => {
 }
 
 export default BurgerMenu
-```
+``` -->
 
-_NOTE: there are many different animation styles you can use. I chose slide for this example, but you can see how all the options animate in the [demo](https://negomi.github.io/react-burger-menu/). Switch out the `slide` for whichever animation you'd like, spelled out in the [docs](https://github.com/negomi/react-burger-menu#animations)_
+3. Add it to the `App.js` component
 
-1. Add it to the `App.js` component
-
-```jsx
+<!-- ```jsx
 import React from 'react'
 import './styles.css'
 import BurgerMenu from './components/BurgerMenu'
@@ -91,18 +99,18 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
-1. Create a CSS file and import it into your react component. Add some CSS to position some of the elements, give background colors to the close cross button and the hamburger bars, etc.
+4. Create a CSS file and import it into your react component. Add some CSS to position some of the elements, give background colors to the close cross button and the hamburger bars, etc.
 
-```jsx{4}
+<!-- ```jsx{4}
 import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 
 import './burger.css'
 ```
 
-and the css
+And the css
 
 ```css
 .bm-burger-button {
@@ -145,17 +153,25 @@ and the css
   display: block;
   color: #bdc3c7;
 }
-```
+``` -->
 
-Do some manual testing because you never know even if it seems ok.
+Something I always do, even if a library says it's accessible is go through some basic manual testing with both my keyboard and VoiceOver.
 
-1. Go through on a keyboard 👍🏼 TODO ADD VIDEO WITH KEYBOARD.
-1. Go through on a VoiceOver (learn that you can still hear all the links even though you can't tab to them)
-1. Voiceover goes to menu items that are hidden, we need to add aria-hidden and toggle it. We'll use `useEffect` on the parent component to add that attribute when the component has mounted.
+1. Go through on a keyboard 👍
 
-In the App.js parent component, we want to set the aria-hidden attribute on the `bm-menu-wrap` class.:
+![](./hamburger-keyboard-test.gif)
 
-```jsx{2-7}
+2. Go through the hamburger menu using VoiceOver on Safari.
+
+<!-- {/* <video controls>
+  <source src="/hamburger-voiceover-test.mov" type="video/mp4" />
+</video> */} -->
+
+Voiceover goes to menu items that are hidden. What we need to do is hide the content we need to add aria-hidden and toggle it. Because this attribute is not included in the library, we are going to add an effect (`useEffect`) on the parent component to add that attribute to the appropriate element when the component has mounted. _Learn more about [useEffect](https://reactjs.org/docs/hooks-effect.html)_
+
+In the App.js parent component, we want to set the `aria-hidden` attribute on the `bm-menu-wrap` class:
+
+<!-- ```jsx{2-7}
 export default function App() {
   React.useEffect(() => {
     const menuWrap = document.querySelector('.bm-menu-wrap')
@@ -175,9 +191,9 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
-- After reading the [docs](https://github.com/negomi/react-burger-menu#state-change), I saw `onStateChange` so we are going to use that to toggle the aria-hidden attribute dependent on the isOpen state.
+After reading the [`react-burger-menu` docs](https://github.com/negomi/react-burger-menu#state-change), I saw `onStateChange` so we are going to use that to toggle the aria-hidden attribute dependent on the isOpen state.
 
 ```jsx
 <Menu noOverlay onStateChange={toggleMenu}>
@@ -185,46 +201,56 @@ export default function App() {
 </Menu>
 ```
 
-```jsx
+<!-- ```jsx
 const toggleMenu = state => {
   console.log(state)
 }
-```
+``` -->
 
-refactor with destructuring the state (add a link to explain desctructuring in the parameters)
+I prefer using destructuring to save a couple lines of code. _Read more about destructuring assignment in the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (go to the "Unpacking fields from objects passed as function parameter" section)._
 
-```jsx
+<!-- ```jsx
 const toggleMenu = ({ isOpen }) => {
   console.log(isOpen)
 }
-```
+``` -->
 
-then use the state to control the aria hidden
+Then I use the `isOpen` state to control the aria-hidden attribute value.
 
-```jsx
+<!-- ```jsx
 const toggleMenu = ({ isOpen }) => {
   const menuWrap = document.querySelector('.bm-menu-wrap')
   isOpen
     ? menuWrap.setAttribute('aria-hidden', false)
     : menuWrap.setAttribute('aria-hidden', true)
 }
-```
+``` -->
 
-Now we want to make sure that everything is working how we would expect with both a screen reader and a keyboard.
+Now we want to make sure that everything is working how we would expect a screen reader.
 
-<!-- Add a few things about the differences between adding the UL versus just the links -->
+On VoiceOver:
 
+<!--
+<video controls>
+  <source src="/hamburger-voiceover-test-pass.mov" type="video/mp4" />
+</video> -->
+
+As a note:
+
+As of this writing, the Menu doesn't work if you add a menu using unordered lists of list items. I found why that is in the code, and I plan on making a PR when I finally have some spare time 😁. I personally prefer to write my menus using unordered lists, but I wanted to be sure I made that disclaimer so you didn't have to go through the debugging pain that I did.
+
+<!--
 <iframe
   src="https://codesandbox.io/embed/peaceful-dew-06mzr?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
   title="a11y-react-burger-menu"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-/>
+/> -->
 
 ## React Modal
 
-<!-- 3.11.2 -->
+_NOTE: This is using react-modal version 3.11.2. I'll do my best to keep this blog post up to date_
 
 The top of the react community documentation shows that the top focus of the `react-modal` library is accessibility.
 
@@ -235,10 +261,14 @@ First, let's go over what makes a modal accessible:
 - closes on esc
 - upon close, focuses on the thing it was on last
 
-1. If you're on your local: In your project directory, enter `npm i react-modal` in command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-modal` as a dependency.
-1. 1. In `src` directory, create a component called `Modal.js`. Import `ReactModal` and create the base of your function component.
+Below I've created a quick demo of what we expect the functionality to be:
 
-```jsx
+![](./modal-desired.gif)
+
+1. If you're on your local: In your project directory, enter `npm i react-modal` in command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-modal` as a dependency.
+1. In `src` directory, create a component called `Modal.js`. Import `ReactModal` and create the base of your function component.
+
+<!-- ```jsx
 import React from 'react'
 import ReactModal from 'react-modal'
 
@@ -251,11 +281,11 @@ const Modal = () => {
 }
 
 export default Modal
-```
+``` -->
 
-1. Attach the Modal to the root of your app (this toggles aria-hidden on the root when it's open)
+Attach the Modal to the root of your app (this toggles aria-hidden on the root when it's open, which helps with focus trapping)
 
-```jsx{4}
+<!-- ```jsx{4}
 import React from 'react'
 import ReactModal from 'react-modal'
 
@@ -270,11 +300,11 @@ const Modal = () => {
 }
 
 export default Modal
-```
+``` -->
 
-1. add `useState` hook to the Modal component and use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
+add `useState` hook to the Modal component and use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
 
-```jsx{1,7}
+<!-- ```jsx{1,7}
 import React, { useState } from 'react'
 import ReactModal from 'react-modal'
 
@@ -290,11 +320,11 @@ const Modal = () => {
 }
 
 export default Modal
-```
+``` -->
 
 1. Next we want to create an `openModal` and `closeModal` function that sets the state appropriately.
 
-```jsx{4-5}
+<!-- ```jsx{4-5}
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -307,11 +337,11 @@ const Modal = () => {
     </ReactModal>
   )
 }
-```
+``` -->
 
 1. Now we want to add some props to `ReactModal` to make it work the way we want to. The most important ones we want to pass are `isOpen` and `onRequestClose`. `isOpen` should take on the `isOpen` state and `onRequestClose` should take the `closeModal` function. The latter is important to ensure that the Modal closes on the ESC key.
 
-```jsx{8}
+<!-- ```jsx{8}
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -324,13 +354,11 @@ const Modal = () => {
     </ReactModal>
   )
 }
-```
+``` -->
 
-1. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'm going to place this button right before the ReactModal component, but because React must have a singular parent element, I am going to use a React Fragment.
+1. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'm going to place this button right before the ReactModal component, but because React must have a singular parent element, I am going to use a React Fragment. Read more about [Fragments](https://reactjs.org/docs/fragments.html)
 
-(add link about react fragments)
-
-```jsx{9}
+<!-- ```jsx{9}
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -346,11 +374,11 @@ const Modal = () => {
     </>
   )
 }
-```
+``` -->
 
 1. As it is, this Modal closes on the escape key. But I want to create a button that always inside the modal to close it to make it obvious to non keyboard users.
 
-```jsx{11}
+<!-- ```jsx{11}
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -367,11 +395,11 @@ const Modal = () => {
     </>
   )
 }
-```
+``` -->
 
 Make it adaptable with children props and a button text.
 
-```jsx{1,9,12}
+<!-- ```jsx{1,9,12}
 const Modal = ({ children, openButtonText }) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -388,11 +416,11 @@ const Modal = ({ children, openButtonText }) => {
     </div>
   )
 }
-```
+``` -->
 
 And on our App component, let's add the Modal component and the props!
 
-```jsx
+<!-- ```jsx
 import React from 'react'
 import Modal from './components/Modal'
 import './styles.css'
@@ -417,18 +445,18 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
 (Make a note about the children prop)
 Now we manually test, because while many libraries say they're accessible, we should always ensure that there are no bugs.
 
-<iframe
+<!-- {/* <iframe
   src="https://codesandbox.io/embed/a11y-react-modal-k4p4q?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
   title="a11y-react-modal"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-/>
+/> */} -->
 
 <!-- Add videos -->
 
@@ -443,10 +471,14 @@ To get up an accessible accordion in a since I use `react-accessible-accordion`,
 - Cannot access the inside of a closed accordion with the keyboard.
 - Up & Down Arrow goes to the Previous & Next Accordion header when focused on another accordion header
 
+Desired keyboard interactions:
+
+![](./accordion-desired.gif)
+
 1. If you're on your local: In your project directory, enter `npm i react-accessible-accordion` in command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-accessible-accordion` as a dependency.
 1. In `src` directory, create a component called `Accordion.js`. We'll be importing a bunch of components from the library, as shown below.
 
-```jsx
+<!-- ```jsx
 import React from 'react'
 import {
   Accordion as AccordionComponent,
@@ -455,11 +487,11 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion'
-```
+``` -->
 
 1. and create the base of your function component.
 
-```jsx{10-14}
+<!-- ```jsx
 import React from 'react'
 import {
   Accordion as AccordionComponent,
@@ -509,11 +541,11 @@ const Accordion = () => (
 )
 
 export default Accordion
-```
+``` -->
 
 Now let's add it to the App component so we can see what we are working with.
 
-```jsx
+<!-- ```jsx
 import React from 'react'
 import './styles.css'
 
@@ -528,11 +560,11 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
-Something I am going to do to make this Accordion more reusable, is pass all the data into the component using a prop. Then we can map through the data and make our code cleaner.
+I want to make this Accordion more reusable, so instead of hardcoding the accordion headings and content, I want to pass a data array using a prop. Then we can map through the data and make our code cleaner.
 
-```js
+<!-- ```js
 const data = [
   {
     heading: 'Heading 1',
@@ -550,11 +582,11 @@ const data = [
       'Vestibulum id volutpat ante, pharetra pharetra nunc. In suscipit turpis vel molestie consectetur. Duis eu congue massa. Duis eu ligula dictum, consectetur elit vitae, tristique nibh.',
   },
 ]
-```
+``` -->
 
 Now to add that array to our Accordion component
 
-```jsx{6}
+<!-- ```jsx{6}
 export default function App() {
   return (
     <div className="App">
@@ -564,11 +596,11 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
 And then refactor our Accordion to map through the data.
 
-```jsx
+<!-- ```jsx
 const Accordion = ({ data }) => (
   <AccordionComponent allowZeroExpanded={allowZeroExpanded}>
     {data.map(({ heading, body }, i) => (
@@ -581,7 +613,7 @@ const Accordion = ({ data }) => (
     ))}
   </AccordionComponent>
 )
-```
+``` -->
 
 And that's all you need to do. Let's test to make sure all the features are working.
 
@@ -589,7 +621,7 @@ A few cleanup items and personal preferences.
 
 when I have more than one prop, I like to create an object of props and spread them into the component. I personally want to set `allowZeroExpanded` to `true`. So I will add the `data` array as a property to an object we'll call accordionProps. We will also add a `allowZeroExpanded` with a value of true.
 
-```js
+<!-- ```js
 const accordionProps = {
   data: [
     {
@@ -610,32 +642,30 @@ const accordionProps = {
   ],
   allowZeroExpanded: true,
 }
-```
+``` -->
 
 then we can add them in using the spread operator.
 
-```jsx
+<!-- ```jsx
 <Accordion {...accordionProps} />
-```
+``` -->
 
 would be the same as
 
-```jsx
+<!-- ```jsx
 <Accordion
   data={accordionProps.data}
   allowZeroExpanded={accordionProps.allowZeroExpanded}
 />
-```
-
+``` -->
+<!--
 <iframe
   src="https://codesandbox.io/embed/a11y-accordion-react-8524z?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
   title="a11y-accordion-react"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-/>
-
-https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
+/> -->
 
 ## React Tabs
 
@@ -647,14 +677,14 @@ Getting started.
 1. If you're on your local: In your project directory, enter `npm i react-tabs` in command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-tabs` as a dependency.
 1. In `src` directory, create a component called `Tabs.js`. We'll be importing a bunch of components from the library, as shown below.
 
-```jsx
+<!-- ```jsx
 import React from 'react'
 import { Tab, Tabs as TabsComponent, TabList, TabPanel } from 'react-tabs'
-```
+``` -->
 
 1. and create the base of your function component.
 
-```jsx
+<!-- ```jsx
 const Tabs = () => (
   <TabsComponent>
     <TabList>
@@ -669,11 +699,11 @@ const Tabs = () => (
 )
 
 export default Tabs
-```
+``` -->
 
 Now let's add it to the App component so we can see what we are working with.
 
-```jsx
+<!-- ```jsx
 import React from 'react'
 import './styles.css'
 
@@ -688,11 +718,11 @@ export default function App() {
     </div>
   )
 }
-```
+``` -->
 
 We are going to do the same thing that we did for the Accordion component, and add a data prop and make that an array. We will map through to make all the tabs and panels.
 
-```js
+<!-- ```js
 const data = [
   {
     heading: 'Item 1',
@@ -707,11 +737,11 @@ const data = [
     body: 'Hi from item 3',
   },
 ]
-```
+``` -->
 
 and refactoring with maps
 
-```jsx
+<!-- ```jsx
 const Tabs = ({ data }) => (
   <TabsComponent>
     <TabList>
@@ -724,20 +754,25 @@ const Tabs = ({ data }) => (
     ))}
   </TabsComponent>
 )
-```
+``` -->
 
 then test
 
-## Sources
-
-features https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
-
-## Conclusion
-
-<iframe
+<!-- {/* <iframe
   src="https://codesandbox.io/embed/a11y-tabs-s205s?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
   title="a11y-tabs"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-/>
+/> */} -->
+
+## Sources & React/JavaScript Resources
+
+a11y Matters - https://www.a11ymatters.com/pattern/mobile-nav/
+W3C WAI Modal Features: https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/dialog.html
+Accordion Features: https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html
+Tabs Features: https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
+
+All the React resources mentioned
+
+## Conclusion
