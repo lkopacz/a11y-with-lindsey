@@ -16,9 +16,12 @@ Today we are going to talk about `input[type="range"]`. These inputs where you s
 
 ```html
 <div class="wrapper">
-  <input type="range" min="0" max="100" />
+  <input type="range" min="0" max="100" id="volume" />
+  <label class="visually-hidden" for="volume">Volume</label>
 </div>
 ```
+
+_NOTE: I use the [visually hidden](https://a11yproject.com/posts/how-to-hide-content/) class to ensure that we have a label for screen readers._
 
 Selecting a purpose for an input range slider has many possibilities. You could use it for volume decibel. You could use it for an audio player. You could use it in a survey when rating from 1-10. Many times, when people make these features custom, they don't think to use the semantic features. They make a bunch of divs, and don't think about the keyboard or screen reader accessibility.
 
