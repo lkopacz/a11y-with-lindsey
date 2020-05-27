@@ -8,9 +8,9 @@ featuredImage: './react-a11y.png'
 draft: false
 ---
 
-I've been wanting to write this blog post ever since I wrote [a11y and JS - A Seemingly Unconventional Romance](./blog/a11y-js-seemingly-unconventional-romance). I love JavaScript, and I primarily work in React. Something I see often is folks (rightly) critique that React Apps are incredibly inaccessible. According the the [WebAIM Million report](https://webaim.org/projects/million/#frameworks), "the adoption of [React] corresponded with [5.7%] more accessibility errors than the average home page."
+I’ve been wanting to write this blog post ever since I wrote [a11y and JS - A Seemingly Unconventional Romance](/blog/a11y-js-seemingly-unconventional-romance). I love JavaScript, and my job is to code in React. I often observe folks (rightly) critique that React Apps are inaccessible. According the [WebAIM Million report](https://webaim.org/projects/million/#frameworks), “the adoption of [React] corresponded with [5.7%] more accessibility errors than the average home page.”
 
-WebAIM Million tests the sample using the WAVE stand-alone API, and is catching all the crawlable issues. I'm not going to use this blog post to talk about those issues, but if you're interested in learning more about that I've created a [Email Course](https://a11y-with-lindsey.ck.page/b4e437f629) on the topic.
+WebAIM Million tests the sample using the WAVE stand-alone API. The WAVE tool catches all crawlable issues, which don't involve a ton of interactivity. I’m not going to use this blog post to talk about those issues. If you’re interested in learning more about that I’ve created an [Email Course](https://a11y-with-lindsey.ck.page/b4e437f629) on the topic.
 
 There are two points that I want to drive home about JavaScript frameworks:
 
@@ -18,16 +18,18 @@ There are two points that I want to drive home about JavaScript frameworks:
 
 I'd recommend before you read this blog post, brushing up on how to fix some common HTML errors.
 
-But for those that are well versed on how to write accessible HTML in React, I wanted to give my peers and colleagues a quick reference of how to use some well supported React packages to create accessible interactive comoponents.
+There are a decent amount of folks who know how to write accessible HTML in React. For those folks, I've created a reference for creating accessible interactive components. I want to remove the barrier and utilize well-supported libraries.
 
-This blog post writes under the assumption that you are familiar with the basic terms of React and understand the syntax of JSX. If you are not familiar with it, I suggest that you read through the following resources:
+I write this under the assumption that you are familiar with React basics and the syntax of JSX. If you are not familiar with it, I suggest that you read through the following resources:
 
 1. Read through the [React docs](https://reactjs.org/docs/getting-started.html) and play around with their [Tutorial](https://reactjs.org/tutorial/tutorial.html)
 1. Have a familiarity with [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 1. Understand using the [spread operator](https://reactjs.org/docs/jsx-in-depth.html#spread-attributes) into a React Component.
-1. Understand the map array method. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+1. Understand how the [children prop](https://reactjs.org/docs/composition-vs-inheritance.html#containment) is used in react
+1. Understand the [map array method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+1. Have a basic understanding of using `npm` if you are using the command line. If you want a great and funny intro to npm and the command line, Tatiana Mac goes over a ton of the basics in her [eleventy series](https://tatianamac.com/posts/beginner-eleventy-tutorial-partii/).
 
-I use CodeSandbox for all of my examples. If you like to learn by doing and don't feel like setting up your environment, I highly recommend forking my examples, play with the styling, and manually test the components.
+I use CodeSandbox for my examples. It will help you play with the code without setting up an environment. I recommend forking my examples, play with the styling, and manually test the components.
 
 ## React Hamburger Menu
 
@@ -41,7 +43,7 @@ What are some features of an accessible hamburger menu?
 1. The hamburger button has some text that labels it, even if it's visually-hidden
 1. You cannot focus on the links inside the menu when the menu is closed. This happens very often when we have a menu that slides in.
 1. The menu closes on ESC keypress
-1. There is an easy way to close the menu - whether there's a Close button inside the menu, or you tab back to the hamburger button and use that to close it.
+1. There is a clear way to close the menu. This can be a Close button inside the menu or use the hamburger button to close it.
 
 Below I've created a quick demo of what we expect the functionality to be:
 
@@ -55,7 +57,7 @@ How to install:
 
 There are many different hamburger menu animation styles you can use. I chose `slide` for this example, but you can see how all the options animate in the [demo](https://negomi.github.io/react-burger-menu/).
 
-2. In `src` directory, create a component called `BurgerMenu.js`. Go to the Import the desired Menu animation (here's a list of the animation [options](https://github.com/negomi/react-burger-menu#animations)) and use that component to add links to your menu. I am adding the `noOverlay` prop to my Menu because I personally don't like the look of overlays.
+2. In `src` directory, create a component called `BurgerMenu.js`. Import the desired Menu animation (here’s a list of the animation [options](https://github.com/negomi/react-burger-menu#animations)) and use that component to add links to your menu. I am adding the `noOverlay` prop to my Menu because I personally don't like the look of overlays.
 
 <!-- ```jsx
 import React from 'react'
@@ -101,7 +103,7 @@ export default function App() {
 }
 ``` -->
 
-4. Create a CSS file and import it into your react component. Add some CSS to position some of the elements, give background colors to the close cross button and the hamburger bars, etc.
+4. Create a CSS file and import it into your react component. Add some CSS to position some of the elements.
 
 <!-- ```jsx{4}
 import React from 'react'
@@ -155,7 +157,7 @@ And the css
 }
 ``` -->
 
-Something I always do, even if a library says it's accessible is go through some basic manual testing with both my keyboard and VoiceOver.
+Even if a library says it’s accessible, I always do some manual testing with both my keyboard and VoiceOver.
 
 1. Go through on a keyboard 👍
 
@@ -167,7 +169,7 @@ Something I always do, even if a library says it's accessible is go through some
   <source src="/hamburger-voiceover-test.mov" type="video/mp4" />
 </video> */} -->
 
-Voiceover goes to menu items that are hidden. What we need to do is hide the content we need to add aria-hidden and toggle it. Because this attribute is not included in the library, we are going to add an effect (`useEffect`) on the parent component to add that attribute to the appropriate element when the component has mounted. _Learn more about [useEffect](https://reactjs.org/docs/hooks-effect.html)_
+When we use Voiceover, we navigate to menu items that are visually hidden. We can remedy this by adding add aria-hidden and toggling it on menu open. Because this attribute is not included in the library, we are going to add an effect (`useEffect`) on the parent component. I made that conclusion because I saw a note about properties in the [docs](https://github.com/negomi/react-burger-menu/#open-state). I'll add that attribute to the appropriate element when the component has mounted. _Learn more about [useEffect](https://reactjs.org/docs/hooks-effect.html)_
 
 In the App.js parent component, we want to set the `aria-hidden` attribute on the `bm-menu-wrap` class:
 
@@ -193,7 +195,7 @@ export default function App() {
 }
 ``` -->
 
-After reading the [`react-burger-menu` docs](https://github.com/negomi/react-burger-menu#state-change), I saw `onStateChange` so we are going to use that to toggle the aria-hidden attribute dependent on the isOpen state.
+In the [`react-burger-menu` docs](https://github.com/negomi/react-burger-menu#state-change), I saw the `onStateChange` prop. I am going to use that to toggle the `aria-hidden` attribute dependent on the `isOpen` state.
 
 ```jsx
 <Menu noOverlay onStateChange={toggleMenu}>
@@ -237,7 +239,7 @@ On VoiceOver:
 
 As a note:
 
-As of this writing, the Menu doesn't work if you add a menu using unordered lists of list items. I found why that is in the code, and I plan on making a PR when I finally have some spare time 😁. I personally prefer to write my menus using unordered lists, but I wanted to be sure I made that disclaimer so you didn't have to go through the debugging pain that I did.
+As of this writing, the Menu doesn’t work if you add a menu using unordered lists of list items. I found why that is in the code, and I plan on making a PR when I finally have some spare time 😁. I prefer to write my menus using unordered lists. However, I wanted to be sure I made that disclaimer so you didn’t have to go through the debugging pain that I did.
 
 <!--
 <iframe
@@ -252,13 +254,11 @@ As of this writing, the Menu doesn't work if you add a menu using unordered list
 
 _NOTE: This is using react-modal version 3.11.2. I'll do my best to keep this blog post up to date_
 
-The top of the react community documentation shows that the top focus of the `react-modal` library is accessibility.
-
 First, let's go over what makes a modal accessible:
 
-- Can't focus inside of the modal until it's open. If someone cannot see where they are focused, this is a poor user experience.
+- Can’t focus inside of the modal until it’s open. If someone cannot see where their keyboard is focused, this is a poor user experience.
 - When modal is open, focus trapping occurs. This means that we when we reach the bottom of the modal, we go to the top of the modal content. This ensures focus won't be anywhere else on the screen except inside the modal and it won't be "behind" it.
-- closes on esc
+- closes on ESC keypress
 - upon close, focuses on the thing it was on last
 
 Below I've created a quick demo of what we expect the functionality to be:
@@ -283,7 +283,7 @@ const Modal = () => {
 export default Modal
 ``` -->
 
-Attach the Modal to the root of your app (this toggles aria-hidden on the root when it's open, which helps with focus trapping)
+Attach the Modal to the root of your app. This toggles aria-hidden on the root when it’s open, which helps with focus trapping.
 
 <!-- ```jsx{4}
 import React from 'react'
@@ -302,7 +302,7 @@ const Modal = () => {
 export default Modal
 ``` -->
 
-add `useState` hook to the Modal component and use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
+Add `useState` hook to the Modal component. Use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
 
 <!-- ```jsx{1,7}
 import React, { useState } from 'react'
@@ -322,7 +322,7 @@ const Modal = () => {
 export default Modal
 ``` -->
 
-1. Next we want to create an `openModal` and `closeModal` function that sets the state appropriately.
+1. Next we want to create two functions: `openModal` and `closeModal`. These function that sets the isOpen state.
 
 <!-- ```jsx{4-5}
 const Modal = () => {
@@ -339,7 +339,7 @@ const Modal = () => {
 }
 ``` -->
 
-1. Now we want to add some props to `ReactModal` to make it work the way we want to. The most important ones we want to pass are `isOpen` and `onRequestClose`. `isOpen` should take on the `isOpen` state and `onRequestClose` should take the `closeModal` function. The latter is important to ensure that the Modal closes on the ESC key.
+1. Now we want to add some props to `ReactModal` to make it work the way we want to. The most important ones we want to pass are `isOpen` and `onRequestClose`. `isOpen` takes on the `isOpen` state and `onRequestClose` should take the `closeModal` function. The latter is important to ensure that the Modal closes on the ESC key.
 
 <!-- ```jsx{8}
 const Modal = () => {
@@ -356,7 +356,7 @@ const Modal = () => {
 }
 ``` -->
 
-1. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'm going to place this button right before the ReactModal component, but because React must have a singular parent element, I am going to use a React Fragment. Read more about [Fragments](https://reactjs.org/docs/fragments.html)
+1. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'll place this button right before the ReactModal component. Because React must have a singular parent element, I am going to use a React Fragment. Read more about [Fragments](https://reactjs.org/docs/fragments.html)
 
 <!-- ```jsx{9}
 const Modal = () => {
@@ -447,8 +447,7 @@ export default function App() {
 }
 ``` -->
 
-(Make a note about the children prop)
-Now we manually test, because while many libraries say they're accessible, we should always ensure that there are no bugs.
+Now we manually test as always.
 
 <!-- {/* <iframe
   src="https://codesandbox.io/embed/a11y-react-modal-k4p4q?fontsize=14&hidenavigation=1&theme=dark"
@@ -460,11 +459,11 @@ Now we manually test, because while many libraries say they're accessible, we sh
 
 <!-- Add videos -->
 
-> Note: I wanted to do the "harder" ones first. The reason I consider the previous two harder is because they take a smidge of configuration and you have to know where the loopholes are. The next two sections will be less complicated as they take no configuration out of the box. All you need to do is follow the documentation. I'll pretty much be walking you through my understanding of the docs and what the standard features are.
+> Note: I wanted to do the "harder" ones first. The reason I consider the previous two harder is because they take a smidge of configuration and you have to know where the loopholes are. The next two sections will be less complicated as they need no configuration out of the box to be accessible. All you need to do is follow the documentation. I'll pretty much be walking you through my understanding of the docs and what the standard features are.
 
 ## React Accordion
 
-To get up an accessible accordion in a since I use `react-accessible-accordion`, which is promising as "accessible" is in the name. Here are the features of an accessible accordion:
+To get up an accessible accordion in a sinch I use `react-accessible-accordion`. Here are the features of an accessible accordion:
 
 - The Accordion Headings are buttons that open and close on `space` or `enter`
 - Pressing the tab key moves to the next focusable element.
@@ -562,7 +561,7 @@ export default function App() {
 }
 ``` -->
 
-I want to make this Accordion more reusable, so instead of hardcoding the accordion headings and content, I want to pass a data array using a prop. Then we can map through the data and make our code cleaner.
+I want to make this Accordion more reusable. Instead of hardcoding the accordion headings and content, I want to pass a data array using a prop. Then we can map through the data and make our code cleaner.
 
 <!-- ```js
 const data = [
