@@ -8,6 +8,8 @@ featuredImage: './react-a11y.png'
 draft: false
 ---
 
+_Content Warning: This blog post contains gifs._
+
 I’ve wanted to write this blog post ever since I wrote [a11y and JS - A Seemingly Unconventional Romance](/blog/a11y-js-seemingly-unconventional-romance). I love JavaScript, and my job is to code in React. I often observe folks (rightly) critique that React Apps are inaccessible. According to the [WebAIM Million report](https://webaim.org/projects/million/#frameworks), “the adoption of [React] corresponded with [5.7%] more accessibility errors than the average home page.”
 
 WebAIM Million tests the sample using the WAVE stand-alone API. The WAVE tool catches all crawlable issues, which don't involve a ton of interactivity. I’m not going to use this blog post to talk about those issues. If you’re interested in learning more about that, I’ve created an [Email Course](https://a11y-with-lindsey.ck.page/b4e437f629) on the topic.
@@ -23,13 +25,13 @@ There are a decent amount of folks who know how to write accessible HTML using R
 I write this under the assumption that you are familiar with React basics and the syntax of JSX. If you are not familiar with it, I suggest that you read through the following resources:
 
 1. Read through the [React docs](https://reactjs.org/docs/getting-started.html) and play around with their [Tutorial](https://reactjs.org/tutorial/tutorial.html).
-1. Have a familiarity with [React Hooks](https://reactjs.org/docs/hooks-intro.html).
+1. Have a basic familiarity with [React Hooks](https://reactjs.org/docs/hooks-intro.html), particularly useState and useEffect.
 1. Understand using the [spread operator](https://reactjs.org/docs/jsx-in-depth.html#spread-attributes) into a React Component.
 1. Understand how the [children prop](https://reactjs.org/docs/composition-vs-inheritance.html#containment) is used in React.
 1. Understand the [map array method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 1. Have a basic understanding of using `npm` if you are using the command line. Tatiana Mac goes over a ton of the basics in her [eleventy series](https://tatianamac.com/posts/beginner-eleventy-tutorial-partii/) if you want a great and funny intro to npm and the command line.
 
-I use CodeSandbox for my examples. It will help you play with the code without setting up an environment. I recommend forking my examples, play with the styling, and manually test the components.
+I use CodeSandbox for my examples. It will help you play with the code without setting up an environment. I recommend forking my examples, playing with the styling, and manually test the components.
 
 ## React Hamburger Menu
 
@@ -42,22 +44,15 @@ What are some features of an accessible hamburger menu?
 1. The hamburger button has a clear focus state.
 1. The hamburger button has some text that labels it, even if it's visually-hidden.
 1. You cannot focus on the links inside the menu when the menu is closed. This experience happens very often when we have a menu that slides in.
-1. The menu closes on ESC keypress.
+1. The menu closes on the Escape keypress.
 1. There is a clear way to close the menu, like a Close button inside the menu, or use the hamburger button to close it.
 
 Below I've created a quick demo of what we expect the functionality to be:
 
-<video controls>
-  <source src="/hamburger.mp4" type="video/mp4" />
-</video>
-
 How to install:
 
-1. If you're on your local: In your project directory, enter `npm i react-burger-menu` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-burger-menu` as a dependency.
-
-There are many different hamburger menu animation styles you can use. I chose `slide` for this example, but you can see how all the options animate in the [demo](https://negomi.github.io/react-burger-menu/).
-
-2. In the `src` directory, create a component called `BurgerMenu.js`. Import the desired Menu animation (here’s a list of the animation [options](https://github.com/negomi/react-burger-menu#animations)) and use that component to add links to your menu. I am using the `noOverlay` prop on my Menu because I don't like the look of overlays.
+1. If you're on your local: In your project directory, enter `npm install react-burger-menu` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-burger-menu` as a dependency. There are many different hamburger menu animation styles you can use. I chose `slide` for this example, but you can see how all the options animate in the [demo](https://negomi.github.io/react-burger-menu/).
+1. In the `src` directory, create a component called `BurgerMenu.js`. Import the desired Menu [animation](https://github.com/negomi/react-burger-menu#animations) and use that component to add links to your menu. I am using the `noOverlay` prop on my Menu because I don't like the look of overlays.
 
 ```jsx
 import React from 'react'
@@ -112,8 +107,6 @@ import { slide as Menu } from 'react-burger-menu'
 import './burger.css'
 ```
 
-And the css
-
 ```css
 .bm-burger-button {
   position: fixed;
@@ -159,7 +152,7 @@ And the css
 
 Even if a library says it’s accessible, I always do some manual testing with both my keyboard and VoiceOver.
 
-1. Go through on a keyboard 👍
+1. Navigate through the component on a keyboard 👍
 
 ![](./hamburger-keyboard-test.gif)
 
@@ -169,7 +162,7 @@ Even if a library says it’s accessible, I always do some manual testing with b
   <source src="/hamburger-voiceover-test.mov" type="video/mp4" />
 </video>
 
-When we use Voiceover, we navigate to visually-hidden menu items. We can remedy this by adding add aria-hidden and toggling it on menu open. Because the library doesn't include this attribute, we will add an effect (`useEffect`) on the parent component. I made that conclusion because I saw a note about properties in the [docs](https://github.com/negomi/react-burger-menu/#open-state). I'll add that attribute to the appropriate element when the component has mounted. _Learn more about the [useEffect](https://reactjs.org/docs/hooks-effect.html) hook_.
+When we use Voiceover, we navigate to visually-hidden menu items. We can remedy this by adding aria-hidden and toggling it on menu open. Because the library doesn't include this attribute, we will add an effect (`useEffect`) on the parent component. I made that conclusion because I saw a note about properties in the [docs](https://github.com/negomi/react-burger-menu/#open-state). I'll add that attribute to the appropriate element when the component has mounted. _Learn more about the [useEffect](https://reactjs.org/docs/hooks-effect.html) hook_.
 
 In the App.js parent component, we want to set the `aria-hidden` attribute on the `bm-menu-wrap` class:
 
@@ -228,7 +221,7 @@ const toggleMenu = ({ isOpen }) => {
 }
 ```
 
-Now we want to make sure that everything is working how we would expect a screen reader.
+Now we want to make sure that everything is working how we would expect on a screen reader.
 
 On VoiceOver:
 
@@ -255,7 +248,7 @@ _NOTE: This is using react-modal version 3.11.2. I'll do my best to keep this bl
 First, let's go over what makes a modal accessible:
 
 - Can’t focus inside of the modal until it’s open. If someone cannot see where their keyboard is focused, this is poor user experience.
-- When modal is open, focus trapping occurs. Focus trapping means that when the blur event occurs on the last focusable element of the modal, we go to the top of the modal content. This process ensures focus won't be anywhere else on the screen except inside the modal, and it won't be "behind" it.
+- When the modal is open, focus trapping occurs. Focus trapping means that when the blur event occurs on the last focusable element of the modal, we go to the top of the modal content. This process ensures focus won't be anywhere else on the screen except inside the modal, and it won't be "behind" it.
 - Closes on ESC keypress.
 - Upon close, focuses on the thing it was on last.
 
@@ -263,7 +256,9 @@ Below I've created a quick demo of what we expect the functionality to be:
 
 ![](./modal-desired.gif)
 
-1. If you're on your local: In your project directory, enter `npm i react-modal` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-modal` as a dependency.
+How to install:
+
+1. If you're on your local: In your project directory, enter `npm install react-modal` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-modal` as a dependency.
 1. In the `src` directory, create a component called `Modal.js`. Import `ReactModal` and create the base of your function component.
 
 ```jsx
@@ -281,7 +276,7 @@ const Modal = () => {
 export default Modal
 ```
 
-Attach the Modal to the root of your app. This line of code adds `aria-hidden` on the `#root` when the modal is open and removes it when it is closed. Adding `aria-hidden` helps with focus trapping.
+3. Attach the Modal to the root of your app. This line of code adds `aria-hidden` on the `#root` when the modal is open and removes it when it is closed. Adding `aria-hidden` helps with focus trapping.
 
 ```jsx{4}
 import React from 'react'
@@ -300,7 +295,7 @@ const Modal = () => {
 export default Modal
 ```
 
-Add `useState` hook to the Modal component. Use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
+4. Add the `useState` hook to the Modal component. Use the hook to destructure an `isOpen` variable and `setIsOpen` function. The initial state of the modal being open is `false` (because we don't want to start with an open modal)
 
 ```jsx{1,7}
 import React, { useState } from 'react'
@@ -320,7 +315,7 @@ const Modal = () => {
 export default Modal
 ```
 
-Next, we want to create two functions: `openModal` and `closeModal`. These functions set the isOpen state.
+5. Next, we want to create two functions: `openModal` and `closeModal`. These functions set the `isOpen` state.
 
 ```jsx{4-5}
 const Modal = () => {
@@ -337,7 +332,7 @@ const Modal = () => {
 }
 ```
 
-1. Now we want to add some props to `ReactModal` to make it work the way we want to. The most important ones we want to pass are `isOpen` and `onRequestClose`. `isOpen` takes on the `isOpen` state, and `onRequestClose` should take the `closeModal` function. The latter is crucial to ensure that the Modal closes on the ESC key.
+6. Now we want to add some props to `ReactModal` to make it work the way we want to. The most important ones we want to pass are `isOpen` and `onRequestClose`. `isOpen` takes on the `isOpen` state, and `onRequestClose` should take the `closeModal` function. The latter is crucial to ensure that the Modal closes on the Escape key.
 
 ```jsx{8}
 const Modal = () => {
@@ -354,7 +349,7 @@ const Modal = () => {
 }
 ```
 
-1. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'll place this button right before the ReactModal component. Because React must have a singular parent element, I am going to use a React Fragment. _Read more about [Fragments](https://reactjs.org/docs/fragments.html)_.
+7. This is great, but how are we supposed to open the Modal 😂? Let's create a button to open the modal and pass the `onClick` prop the `openModal` function. I'll place this button right before the ReactModal component. Because React must have a singular parent element, I am going to use a React Fragment. _Read more about [Fragments](https://reactjs.org/docs/fragments.html)_.
 
 ```jsx{9}
 const Modal = () => {
@@ -374,7 +369,7 @@ const Modal = () => {
 }
 ```
 
-1. As it is, this Modal closes on the escape key. But I want to create a button that always inside the modal to close it to make it evident to non-keyboard users.
+8. As it is, this Modal closes on the escape key. But I want to create a button that always inside the modal to close it to make it evident to non-keyboard users.
 
 ```jsx{11}
 const Modal = () => {
@@ -395,7 +390,7 @@ const Modal = () => {
 }
 ```
 
-Make it adaptable with the children prop and a button text.
+9. Now that this is all configured, let's make it dynamic with the children prop and a button text.
 
 ```jsx{1,9,12}
 const Modal = ({ children, openButtonText }) => {
@@ -416,7 +411,7 @@ const Modal = ({ children, openButtonText }) => {
 }
 ```
 
-And on our App component, let's add the Modal component and the props!
+10. And on our App component, let's add the Modal component and the props!
 
 ```jsx
 import React from 'react'
@@ -447,6 +442,11 @@ export default function App() {
 
 Now we manually test as always.
 
+![](./accessible-modal.gif)
+
+<video controls>
+  <source src="./voiceover-modal.mov" type="video/mp4" />
+</video>
 <iframe
   src="https://codesandbox.io/embed/a11y-react-modal-k4p4q?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -455,24 +455,22 @@ Now we manually test as always.
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 />
 
-<!-- Add videos -->
-
 > Note: I wanted to do the "harder" ones first. The reason I consider the previous two harder is because they take a smidge of configuration, and you have to know where the loopholes are. The next two sections will be less complicated as they need no setup out of the box to be accessible. All you need to do is follow the documentation. I'll pretty much be walking you through my understanding of the docs and what the standard features are.
 
 ## React Accordion
 
-To get up an accessible accordion in a sinch, I use `react-accessible-accordion`. Here are the features of an accessible accordion:
+_NOTE: This is using react-accessible-accordion version 3.0.1. I’ll do my best to keep this blog post up to date_
+
+To get up an accessible accordion, I use `react-accessible-accordion`. Here are the features of an accessible accordion:
 
 - The Accordion Headings are buttons that open and close on `space` or `enter`
 - Pressing the tab key moves to the next focusable element.
 - Cannot access the inside of a closed accordion with the keyboard.
 - Up & Down Arrow goes to the Previous & Next Accordion header when focused on another accordion header.
 
-Desired keyboard interactions:
+How to install:
 
-![](./accordion-desired.gif)
-
-1. If you're on your local: In your project directory, enter `npm i react-accessible-accordion` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-accessible-accordion` as a dependency.
+1. If you're on your local: In your project directory, enter `npm install react-accessible-accordion` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-accessible-accordion` as a dependency.
 1. In the `src` directory, create a component called `Accordion.js`. We'll be importing a bunch of components from the library, as shown below.
 
 ```jsx
@@ -486,7 +484,7 @@ import {
 } from 'react-accessible-accordion'
 ```
 
-1. Create the base of your function component.
+3. Create the base of your function component.
 
 ```jsx
 import React from 'react'
@@ -581,7 +579,7 @@ const data = [
 ]
 ```
 
-Now to add that array to our Accordion component.
+Now to add that data array as a prop on our Accordion component.
 
 ```jsx{6}
 export default function App() {
@@ -613,6 +611,16 @@ const Accordion = ({ data }) => (
 ```
 
 And that's all you need to do. Let's test to make sure all the features are working.
+
+On a keyboard:
+
+![](./keyboard-accordion.gif)
+
+And on voiceover:
+
+<video controls>
+  <source src="/accordion-voiceover.mov" type="video/mp4" />
+</video>
 
 A few cleanup items and personal preferences that have nothing to do with accessibility:
 
@@ -666,12 +674,16 @@ would be the same as
 
 ## React Tabs
 
+_NOTE: This is using react-tabs version 3.1.0. I’ll do my best to keep this blog post up to date_
+
+To get up an accessible tablist, I use `react-tabs`. Here are the features of an accessible tablist:
+
 - It can only access the content of the tab that's visible.
 - Right arrow and left arrow keys switch the tab.
 
 Getting started:
 
-1. If you're on your local: In your project directory, enter `npm i react-tabs` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-tabs` as a dependency.
+1. If you're on your local: In your project directory, enter `npm install react-tabs` in the command line. If you are in CodeSandbox, go to the "Dependencies" section and add `react-tabs` as a dependency.
 1. In the `src` directory, create a component called `Tabs.js`. We'll be importing a bunch of components from the library, as shown below.
 
 ```jsx
@@ -736,7 +748,21 @@ const data = [
 ]
 ```
 
-and refactoring with maps
+Now to add that data array as a prop on our Tabs component.
+
+```jsx{6}
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <Tabs data={data} />
+    </div>
+  )
+}
+```
+
+And refactoring the Tabs component using the map method.
 
 ```jsx
 const Tabs = ({ data }) => (
@@ -753,8 +779,17 @@ const Tabs = ({ data }) => (
 )
 ```
 
-then test
+Then, as always, we manually test!
 
+On a keyboard:
+
+![](./keyboard-tabs.gif)
+
+On VoiceOver:
+
+<video controls>
+  <source src="/voiceover-tabs.mov" type="video/mp4" />
+</video>
 <iframe
   src="https://codesandbox.io/embed/a11y-tabs-s205s?fontsize=14&hidenavigation=1&theme=dark"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
@@ -787,3 +822,14 @@ Other Resources:
 - [Tatiana Mac's NPM helper - Eleventy series](https://tatianamac.com/posts/beginner-eleventy-tutorial-partii/)
 
 ## Conclusion
+
+I wrote this blog post because I wanted to help React developers who care about creating inclusive apps, but get stuck overthinking accessible interactivity. I wanted to make sure there was an quick reference for some of the most common interactive components that are often not accessible. I hope this helps you!
+
+Stay in touch! If you liked this article:
+
+- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
+- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
+- Take my [10 days of a11y](https://a11y-with-lindsey.ck.page/b4e437f629) free email course.
+- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
+
+Cheers! Have a great week!
