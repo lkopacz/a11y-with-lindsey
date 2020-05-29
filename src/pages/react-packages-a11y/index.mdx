@@ -154,7 +154,7 @@ Even if a library says it’s accessible, I always do some manual testing with b
 
 1. Navigate through the component on a keyboard 👍
 
-![](./hamburger-keyboard-test.gif)
+![Opening and closing a hamburger bmenu using a hmaburger button and shifting focus to the links inside upon open.](./hamburger-keyboard-test.gif)
 
 2. Go through the hamburger menu using VoiceOver on Safari.
 
@@ -251,10 +251,6 @@ First, let's go over what makes a modal accessible:
 - When the modal is open, focus trapping occurs. Focus trapping means that when the blur event occurs on the last focusable element of the modal, we go to the top of the modal content. This process ensures focus won't be anywhere else on the screen except inside the modal, and it won't be "behind" it.
 - Closes on ESC keypress.
 - Upon close, focuses on the thing it was on last.
-
-Below I've created a quick demo of what we expect the functionality to be:
-
-![](./modal-desired.gif)
 
 How to install:
 
@@ -442,7 +438,7 @@ export default function App() {
 
 Now we manually test as always.
 
-![](./accessible-modal.gif)
+![Focusing on a Signup! button. Focus shifts inside of the modal where there's an email and password form and stays inside.](./accessible-modal.gif)
 
 <video controls>
   <source src="./voiceover-modal.mov" type="video/mp4" />
@@ -614,7 +610,7 @@ And that's all you need to do. Let's test to make sure all the features are work
 
 On a keyboard:
 
-![](./keyboard-accordion.gif)
+![Demonstration using the tab key to open and close the accordion](./keyboard-accordion.gif)
 
 And on voiceover:
 
@@ -783,7 +779,7 @@ Then, as always, we manually test!
 
 On a keyboard:
 
-![](./keyboard-tabs.gif)
+![Focus shifting other tabs using the keyboard.](./keyboard-tabs.gif)
 
 On VoiceOver:
 
