@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
             </Link>
           </div>
         </div>
-        <div className="support">
+        {/* <div className="support">
           <div className="wrapper">
             <h2>Supporters</h2>
             <p>
@@ -46,17 +46,6 @@ class IndexPage extends React.Component {
             <h3>Top Supporters - $20 Tier or more</h3>
             <div className="supporters-tier supporters-tier--top">
               <ul>
-                <li>
-                  <a
-                    href="https://webflow.com/"
-                    style={{ padding: 0, border: 0 }}
-                  >
-                    <img src={webflow} alt="Webflow's website" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/er1p">Erik Riedel</a>
-                </li>
                 <li>Simon Welsh</li>
               </ul>
             </div>
@@ -73,7 +62,7 @@ class IndexPage extends React.Component {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
     )
   }
