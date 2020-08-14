@@ -33,7 +33,7 @@ Now let's get started 🤓
 
 ## Template Strings
 
-Pre ES6/ES2015, rendering JavaScript within a string used to be a HUGE pain. You had  to create strings and concatenate the strings and the variables together with a + sign.
+Pre ES6/ES2015, rendering JavaScript within a string used to be a HUGE pain. You had  to create strings and concatenate the strings and the variables together with a plus sign +.
 
 Let’s say we have a function that renders a  short bio. We pass three arguments into the function. Those arguments will render within the bio.
 
@@ -41,7 +41,7 @@ Pre ES6 we had to create a bunch of different strings and concatenate them with 
 
 ```js
 function shortBio(name, age, job) {
-  return "Hi, I'm " + name+ ". I'm " + age + " years old and work as a " + job + "."
+  return "Hi, I'm " + name + ". I'm " + age + " years old and work as a " + job + "."
 }
 ```
 
@@ -254,7 +254,7 @@ The code that we defined above is the same as saying
 const { name, age, jobTitle } = person
 ```
 
-The items inside the curly braces are the properties we want to break out into separate variables. To the right of the equal sign is the object name itself.
+The items inside the curly braces are the properties we want to break out into separate variables. Whatever is inside the curly braces become variable names themselves. To the right of the equal sign is the object name itself.
 
 Destructuring comes in handy when we are using React props because `props` is an object.
 
@@ -524,7 +524,7 @@ We added parentheses because now we have two arguments in our arrow function.
 
 Let's say you're on a country page, and that country page has a map of with a bunch of pinpointed cities. You want to use that same array of objects of cities from the API.
 
-What if we only want to show countries that are in France? We can `filter` using the country code. T
+What if we only want to show countries that are in France? We can `filter` using the country code.
 
 If we are provided the value `'FR'` in some way (like React Context or an API), then we can use that value to get **only** those values from the existing array. This technique is helpful because if we are on the France country page, we likely only want cities in France.
 
@@ -544,6 +544,20 @@ const filteredCities = countries.filter(country => {
  if(country.code === countryCode) {
    // return that object
   return country
+ }
+})
+```
+
+While this technically works, a better way to think of this is true or false.
+
+```jsx
+const filteredCities = countries.filter(country => {
+  // if this condition is met
+ if(country.code === countryCode) {
+   // return that object
+  return true
+ } else {
+   return false
  }
 })
 ```
@@ -576,7 +590,7 @@ import CallToAction from '../../components/CallToAction/CallToAction'
 </CallToAction>
 
 
-## Destructuring within map and filter 🤯
+## Restructuring within map or filter 🤯
 
 Let’s combine two things we’ve learned into one. In the `CountryTable` component, we were mapping through and rendering every property. Like we did for the props, we can destructure the variables. Because a callback is a function, and you can destructure the `country` object right there! Let’s destructure all those properties in the parameters:
 
