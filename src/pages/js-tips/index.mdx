@@ -1,0 +1,648 @@
+---
+title: "'Knowing what you're looking at' - JS tips for new React developers"
+date: '2020-08-17'
+path: '/blog/javascript-tricks-tips'
+tags: ['accessibility', 'javascript', 'react']
+published: true
+featuredImage: './js-tips.png'
+draft: false
+---
+
+I have a confession to make. While I have been a professional web developer for over 6 years, I didn't feel comfortable with JavaScript until a year and a half ago. I still don't feel like I know a lot of things. There's a lot that still confuses me. But I've grown a lot in my knowledge in the past year and a half. I wanted to share what I've learned.
+
+My goal is to get more accessibility folks into the JavaScript community. The cryptic vocabulary for JavaScript concepts is intimidating for many folks (including myself). It’s why I didn’t become a JavaScript developer until I was 4.5 years into my career. Many experts say you should know the fundamentals well before learning frameworks. But where is that boundary? What is “knowing the fundamentals?” When do you know enough to jump into React?
+
+I saw this tweet by [Erika](https://twitter.com/EriPDev), and it inspired a lot of the tone of this blog post.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">React is just JS so you need to at least know of the fundamentals and major ES6 concepts. Don&#39;t need to be an expert but you need to know what you&#39;re looking at</p>&mdash; ✨Oobrikoob with a &#39;k&#39;✨ (@EriPDev) <a href="https://twitter.com/EriPDev/status/1283039172840882178?ref_src=twsrc%5Etfw">July 14, 2020</a></blockquote>
+
+Something I've enjoyed about React is how much I've learned about JavaScript from jumping in. But at the same time, jumping in without as Erika says, "knowing what you're looking at," you may wind up confused. Below are some of the concepts helpful to me for knowing what I was looking at.
+
+**Prerequisites**
+
+Before you go through this blog post, I highly recommend you take the CodeAcademy [Intro to JavaScript](https://www.codecademy.com/learn/introduction-to-javascript) course (the free parts should be enough of an overview). I won't be going in depth with concepts like "what is a variable?" These are all concepts I believe you should understand as well before reading this blog post.
+
+If you don't want to sign up for CodeAcademy (I get it, I hate signing up for new things too), review at least these concepts on MDN:
+
+- [Variables](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var): This includes the "see also" section on `let` and `const`
+- [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions): I'll be going over Arrow functions in this post, so that's not a prerequisite.
+- [Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures): Don't stress out too much about the vocabulary here. It can be overwhelming. But I'm going to use words like 'string' and 'object' in this blog post, so you should know what I mean by that.
+- [Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+Now let's get started 🤓
+
+## Template Literals/Strings
+
+Pre ES6/ES2015, rendering JavaScript within a string used to be a HUGE pain. You had  to create strings and concatenate the strings and the variables together with a plus sign +.
+
+Let’s say we have a function that renders a  short bio. We pass three arguments into the function. Those arguments will render within the bio.
+
+Pre ES6 we had to create a bunch of different strings and concatenate them with variables.
+
+```js
+function shortBio(name, age, job) {
+  return "Hi, I'm " + name + ". I'm " + age + " years old and work as a " + job + "."
+}
+```
+
+There are a few unideal things for me:
+
+1. There are 4 separate strings.
+1. It's hard for me to read. Having random spaces within the strings makes it a harder for me to visualize.
+1. If you want this string to be multiple lines, it becomes a nightmare. You have to end the string at the end of the line, add a plus sign, and then restart a string on the next line. Take a look at this [StackOverflow](https://stackoverflow.com/a/6247331) reply to see how unwieldy it can be.
+
+In ES6, template strings emerged. To start a template string, you use a backtick ` and start writing the string. Then, we want to inject some other JavaScript into the string. Here we add a dollar sign and starting curly brace. When you finish writing JavaScript logic, you close the curly brace. This formatting results in more readable code.
+
+```js
+function shortBio(name, age, job) {
+  return `Hi, I'm ${name}. I'm ${age} years old and work as a ${job}.`
+}
+```
+
+Source: [Template Literals - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
+## Using the spread operator
+
+First, what is the spread operator? The spread operator "allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected." (Source: [Spread Syntax - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
+
+I'm sorry, what? What does that even mean?
+
+In my own words, we are taking every item in an array and "expanding" it where the items in the array would work, but not the array itself.  You can also use the spread operator for every letter in a string, but I rarely use it this way.
+
+In the more technical sense, let's take this object:
+
+```js
+const person = {
+ name: 'Lindsey',
+ age: 30,
+ jobTitle: 'Senior UI Engineer',
+}
+```
+
+And let's use the `shortBio` function from the previous section to render a bit about me.
+
+```js
+function shortBio(name, age, job) {
+  return `Hi, I'm ${name}. I'm ${age} years old and work as a ${job}.`
+}
+```
+
+And make it into an array using the `Object.values()` method to make it an array of all those values. `Object.values()` takes the values of every property in an object and adds it to a new array [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+
+```js
+const personArr = Object.values(person)
+```
+
+This method will return an array that looks like this
+
+```js
+["Lindsey", 30, "Senior UI Engineer"]
+```
+
+Then I can use the spread syntax to iterate every item in the array as each parameter.
+
+```js
+shortBio(...personArr)
+```
+
+Which would be the same as
+
+```js
+shortBio(person.name, person.age, person.jobTitle)
+```
+
+We can also use the spread syntax to make a copy of an object.
+
+```js
+const lindsey = {...person}
+```
+
+If you want to play around with this example, I've created a [CodePen](https://codepen.io/littlekope0903/pen/dyMywYv?editors=1011).
+
+So why is this important? In a React component, we have a `props` object that gets passed in a parent component.
+
+Consider we have a Page with a `Layout` Component that renders a `Bio`. The Bio component takes on a `name`, `age`, and `jobTitle` prop. If we are in that parent component and have an object handy (like the `person` object), we can "spread" it into the component. In this example, we will be spreading these props into the `Bio` component:
+
+```jsx
+const BioPage = () => (
+ <Layout>
+  <Bio {...person} />
+ </Layout>
+)
+```
+
+This would be equivalent to this:
+
+```jsx
+const BioPage = () => (
+ <Layout>
+  <Bio name={person.name} age={person.age} jobTitle={person.jobTitle} />
+ </Layout>
+)
+```
+
+You can read more about how this works in the [React Docs](https://reactjs.org/docs/jsx-in-depth.html#spread-attributes).
+
+
+## Understanding Arrow functions
+
+When defining a function, I've found arrow functions are the norm in React. I'm not saying you'll never see the function keyword. I still see the function keyword from time to time. I recommend getting used to seeing arrow functions and understanding what you're seeing. It'll help you improve understanding React code, particularly with callbacks within `Array.prototype.map()` and `Array.prototype.filter()`, which we will discuss a bit later.
+
+I’m not going to go over all the intricacies of arrow functions in depth. There are plenty of JavaScript bloggers who will do a much better job at that than I would. You can start off at the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to see some of the motivations for why this was created. But again, I want you to know what you’re looking at.
+
+### The syntax:
+
+Arrow functions are anonymous functions that you can store in a variable (what I frequently do).
+
+You have the parentheses, where you have some optional parameters, an arrow that’s an equal sign and then a greater than sign (=>), and then some curly braces.
+
+```js
+const someVarFunction = () => {
+  // Do some stuff
+}
+```
+
+The parameters take on many formats, depending on the number of parameters you have. Here's the quick cheat sheet:
+
+1. 0 or more than one parameter = yes you need parentheses
+1. 1 parameter = no parentheses needed
+
+```js
+// must have parentheses
+const function = () => {
+  // Do some stuff
+}
+
+// must have parentheses
+const function2 = (param1, param2) => {
+  // Do some stuff
+}
+
+// no parentheses needed
+const function3 = param1 => {
+  // Do some stuff
+}
+```
+
+Understanding that I won’t see any parentheses if there’s only one parameter alleviated so much of my confusion. It helped me understand what I saw when I saw callbacks in the `.map()` method.
+
+The first way to look at an arrow function is if you have an explicit return. Consider the below example. We have curly braces, some logic happening where we reformat the data and store it in a variable, and then returning some JSX.
+
+```jsx
+const renderComponent = content => {
+ const data = formatData(content)
+
+ return (
+  <div className="wrapper">
+   <Component {...data} />
+  </div>
+ )
+}
+```
+
+There is one of key part to notice. In this function, we are doing MORE than returning the component. We are formatting some data with something we pass in, and then we are returning a component with that new data.
+
+But what if you don’t need to format any data, and you’re only returning one line of JSX? You can do that in one line, remove the `return` keyword, and the curly braces! This formatting is an **implicit return**. JavaScript knows when you format it this way that all you’re doing is returning something.
+
+```jsx
+const ParentComponent = () => <Component />
+```
+
+This syntax is saying, "Hey, your only job here is to return this single line component."
+
+You don't see that very often in React. How often do you have a component that only returns one thing that neatly fits into one line of code? What you'll see more often is an implicit return without curly braces or the return keyword, but wrapped in parentheses because it's returning multiple lines of code.
+
+```jsx
+const ParentComponent = () => (
+ <div className="wrapper">
+  <Component />
+ </div>
+)
+```
+
+This syntax says, "Hey, your only job here is to return multiple lines of JSX."
+
+Once I understood the differences between the formatting, it became a lot clearer what I was looking at when I was reading the code.
+
+## Understanding Destructuring
+
+Destructuring is a more straightforward way to unpack arrays or objects into unique variables.
+
+Consider the object from the previous example:
+
+```js
+const person = {
+ name: 'Lindsey',
+ age: 30,
+ jobTitle: 'Senior UI Engineer',
+}
+```
+
+What if we wanted to have distinct variables for every property in that object for ease of use. For example, saying `name` is way easier than saying `person.name`.
+
+We could do this:
+
+```js
+const name = person.name
+const age = person.age
+const jobTitle = person.jobTitle
+```
+
+Assigning variables works, but if this object had more than 3 properties, it could take up a lot of space to name every variable. This situation is when destructuring comes in handy.
+
+The code that we defined above is the same as saying
+
+```js
+const { name, age, jobTitle } = person
+```
+
+The items inside the curly braces are the properties we want to break out into separate variables. Whatever is inside the curly braces become variable names themselves. To the right of the equal sign is the object name itself.
+
+Destructuring comes in handy when we are using React props because `props` is an object.
+
+Consider we are using the `Layout` component from the Spread section:
+
+```jsx
+const BioPage = () => (
+ <Layout>
+  <Bio {...person} />
+ </Layout>
+)
+```
+
+Then in the Bio component itself, destructure the props and use the variables in a cleaner way.
+
+```jsx
+const Bio = props => {
+ const { name, age, jobTitle } = props
+ return (
+  <>
+   <h1>{name}</h1>
+   <span>
+    {age}, {jobTitle}
+   </span>
+  </>
+ )
+}
+```
+
+If you understand destructuring and what you’re seeing, this code is more concise than this:
+
+```jsx
+const Bio = props => (
+ <>
+  <h1>{props.name}</h1>
+  <span>
+   {props.age}, {props.jobTitle}
+  </span>
+ </>
+)
+```
+
+Additionally, you can actually start destructuring in the parameters themselves! The below code renders exactly the same as the past 2 examples.
+
+```jsx
+const Bio = ({ name, age, jobTitle }) => (
+ <>
+  <h1>{name}</h1>
+  <span>
+   {age}, {jobTitle}
+  </span>
+ </>
+)
+```
+
+Source: [Destructuring Assignment - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+### Assigning New Variable Names
+
+It's helpful to understand assigning a variable something different than the property name. This technique is useful if you have a property name that's the same as a variable present in the component.
+
+Wherever you are destructuring you add a colon and then assign the desired name of the variable:
+
+```js
+const { oldVar: newVar } = obj
+```
+
+Let's simplify the property `jobTitle` to `job`
+
+When we rename `jobTitle` to `job` inside the component, we can write it as such:
+
+```js
+const { name, age, jobTitle: job } = props
+```
+
+Or we can also rename within the parameters
+
+```jsx
+const Bio = ({ name, age, jobTitle: job }) => (
+ <>
+  <h1>{name}</h1>
+  <span>
+   {age}, {job}
+  </span>
+ </>
+)
+```
+
+Source: [Destructuring Assignment, Assigning to new variable names - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Assigning_to_new_variable_names)
+
+## The .map() Array Method
+
+I am not going to get into `.reduce()` in this blog post because I don't see it as often inside of components as I do `.map()` and `.filter()`. I can recommend a few blog posts that cover reduce better than I can. For example, Monica Powell wrote an [amazing guide](https://www.aboutmonica.com/blog/2020-03-29-understanding-reduce-in-javascript) to a variety of ways use `.reduce()`. This blog post clicked so much with me, as someone who admittedly still fumbles with when I want to use reduce.
+
+OK, back to `.map()` and `.filter()`! These methods go through each item in an array, do something with it, and creates a new array. Let’s cover the structure that you’ll see.
+
+In my experience, when I see this method used, I see it mapping through an **array of objects** or an **array of strings**. Each property in the object is usually a piece of data I want to render in the component. So let's have take this array of country objects.
+
+```js
+const countries = [
+ {
+  city: 'London',
+  code: 'UK',
+  latitude: 51.5285578,
+  longitude: -0.2420242
+ },
+ {
+  city: 'Manchester',
+  code: 'UK',
+  latitude: 53.4722249,
+  longitude: -2.2936739
+ },
+ {
+  city: 'Paris',
+  code: 'FR',
+  latitude: 48.8588376,
+  longitude: 2.2768487
+ },
+ {
+  city: 'Nice',
+  code: 'FR',
+  latitude: 43.703169,
+  longitude: 7.1826056
+ },
+ {
+  city: 'Berlin',
+  code: 'DE',
+  latitude: 52.5065117,
+  longitude: 13.1438688
+ },
+ {
+  city: 'Munich',
+  code: 'DE',
+  latitude: 48.1548252,
+  longitude: 11.4014097
+ }
+];
+```
+
+Let's say I want to create an accessible table of this data. In this example, I am going to hard code the `<th>`. You could also use something like `Object.keys()` ([MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)) to grab those keys and use those to render the headers. Let’s get that all rendered out first.
+
+```jsx
+const CountryTable = () => (
+ <table>
+  <tr>
+   <th scope="col">City</th>
+   <th scope="col">Country</th>
+   <th scope="col">Longitude</th>
+   <th scope="col">Latitude</th>
+  </tr>
+  {/* Here we will start some mapping magic */}
+ </table>
+)
+```
+
+Now let's pause to talk about what `.map()` looks like before we get to the mapping magic 😈
+
+Let's start mapping through that countries array.
+
+```js
+countries.map(country => /* Do Some stuff*/)
+```
+
+Inside of the parentheses of the map, we have what we call a **callback**. A callback is a function that is called inside another function. In the mapping method, you tend to see them done anonymously - done inside the map method.
+
+In this instance, the `country` argument is each object inside the array. Instead of writing `countries[0].city`, `countries[1].city`, `countries[2].city`, etc. for every item in the array, you can map through it and apply your logic once.
+
+What's easier to read?
+
+```jsx
+const CountryTable = () => (
+ <table>
+  <tr>
+   <th scope="col">City</th>
+   <th scope="col">Country</th>
+   <th scope="col">Longitude</th>
+   <th scope="col">Latitude</th>
+  </tr>
+  {countries.map(country => (
+   <tr>
+    <td>{country.city}</td>
+    <td>{country.code}</td>
+    <td>{country.longitude}</td>
+    <td>{country.latitude}</td>
+   </tr>
+  ))}
+ </table>
+)
+```
+
+or this?
+
+```jsx
+const CountryTable = () => (
+ <table>
+  <tr>
+   <th scope="col">City</th>
+   <th scope="col">Country</th>
+   <th scope="col">Longitude</th>
+   <th scope="col">Latitude</th>
+  </tr>
+  <tr>
+   <td>{countries[0].city}</td>
+   <td>{countries[0].code}</td>
+   <td>{countries[0].longitude}</td>
+   <td>{countries[0].latitude}</td>
+  </tr>
+  <tr>
+   <td>{countries[1].city}</td>
+   <td>{countries[1].code}</td>
+   <td>{countries[1].longitude}</td>
+   <td>{countries[1].latitude}</td>
+  </tr>
+  <tr>
+   <td>{countries[2].city}</td>
+   <td>{countries[2].code}</td>
+   <td>{countries[2].longitude}</td>
+   <td>{countries[2].latitude}</td>
+  </tr>
+  <tr>
+   <td>{countries[3].code}</td>
+   <td>{countries[3].city}</td>
+   <td>{countries[3].longitude}</td>
+   <td>{countries[3].latitude}</td>
+  </tr>
+  <tr>
+   <td>{countries[4].city}</td>
+   <td>{countries[4].code}</td>
+   <td>{countries[4].longitude}</td>
+   <td>{countries[4].latitude}</td>
+  </tr>
+   <tr>
+   <td>{countries[5].city}</td>
+   <td>{countries[5].code}</td>
+   <td>{countries[5].longitude}</td>
+   <td>{countries[5].latitude}</td>
+  </tr>
+ </table>
+)
+```
+
+Once you understand what you're seeing, mapping through is way easier to read (and write!)
+
+Think about the `country` being `countries[index]`. It's the current item in the array. Many folks use `item` instead of `country`, but I like naming my current item whatever the singular version of the array name is.
+
+Note that in React if we are mapping through an array, we need to make sure we give each item a unique `key`. If one of the countries in the map updates or is removed, it doesn’t impact the entire group of items. The callback inside the map takes on an optional index argument. That represents the index of whatever the current item is in the array. So if it's the last item of this array, the index would be `5`. If it was the first, it would be `0`. We can use that index parameter to be the `key` inside the map. Read more about [React Keys](https://reactjs.org/docs/lists-and-keys.html#keys).
+
+```jsx
+const CountryTable = () => (
+ <table>
+  <tr>
+   <th scope="col">City</th>
+   <th scope="col">Country</th>
+   <th scope="col">Longitude</th>
+   <th scope="col">Latitude</th>
+  </tr>
+  {countries.map((country, index) => (
+   <tr key={index}>
+    <td>{country.city}</td>
+    <td>{country.code}</td>
+    <td>{country.longitude}</td>
+    <td>{country.latitude}</td>
+   </tr>
+  ))}
+ </table>
+)
+```
+
+We added parentheses because now we have two arguments in our arrow function. Rememeber talking about that? 😉
+
+Source: [Array.prototype.map() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+## Only rendering specific data
+
+Let's say you're on a country page, and that country page has a map of with a bunch of pinpointed cities. You want to use that same array of objects of cities from the API.
+
+What if we only want to show countries that are in France? We can `filter` using the country code.
+
+If we are provided the value `'FR'` in some way (like React Context or an API), then we can use that value to get **only** those values from the existing array. This technique is helpful because if we are on the France country page, we likely only want cities in France.
+
+You will likely see the shorthand version of the filter method. I’ll go through the steps so that we are clear about what we are seeing.
+
+Let's say we get some value from an API that's called `country` and it returns the value `FR`.
+
+```js
+const countryCode = 'FR'
+```
+
+We want to return only the cities that have a `code` of `FR`. So we can do this:
+
+```jsx
+const filteredCities = countries.filter(country => {
+  // if this condition is met
+ if(country.code === countryCode) {
+   // return that object
+  return country
+ }
+})
+```
+
+While this technically works, a better way to think of this is true or false.
+
+```jsx
+const filteredCities = countries.filter(country => {
+  // if this condition is met
+ if(country.code === countryCode) {
+   // return that object
+  return true
+ } else {
+   return false
+ }
+})
+```
+
+We don’t want to alter the country data structure. We want to filter out what we don’t need. Because of that, we can simplify this to be in one line:
+
+```jsx
+const filteredCities = countries.filter(country => country.code === countryCode)
+```
+
+Then we can map through the `filteredCities` array for that country. I’m not going to plot any points on a map here because I am atrocious at geography and geolocation. However, you can use the latitude and longitude to plot points on a map.
+
+```js
+filteredCities.map(city => {
+  // do whatever you have to do.
+})
+```
+
+import CallToAction from '../../components/CallToAction/CallToAction'
+
+<CallToAction>
+
+  ![Using Filter. Free Egghead Video.](./filter-egghead.png)
+
+  ## Want to see this in action?
+
+  I created a 2-minute video!
+
+  [Go To My Free Egghead Lesson](https://egghead.io/lessons/javascript-filtering-through-an-array-of-countries-using-filter)
+
+</CallToAction>
+
+Source: [Array.prototype.filter() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+## Restructuring within map or filter 🤯
+
+Let’s combine two things we’ve learned into one. In the `CountryTable` component, we were mapping through and rendering every property. Like we did for the props, we can destructure the variables. Because a callback is a function, and you can destructure the `country` object right there! Let’s destructure all those properties in the parameters:
+
+```jsx
+const CountryTable = () => (
+ <table>
+  <tr>
+   <th scope="col">City</th>
+   <th scope="col">Country</th>
+   <th scope="col">Longitude</th>
+   <th scope="col">Latitude</th>
+  </tr>
+  {countries.map(({city, code, longitude, latitude}, index) => (
+   <tr key={index}>
+    <td>{city}</td>
+    <td>{code}</td>
+    <td>{longitude}</td>
+    <td>{latitude}</td>
+   </tr>
+  ))}
+ </table>
+)
+```
+
+For readability sake, I may only destructure if I need one or two properties in the object. If it got to be more than that, I might transform the callback function into an explicit return and destructure within the curly braces. It depends on what you find more readable: keeping it an implicit return or destructuring within the callback function.
+
+## Conclusion
+
+I originally had more sections written out, but I decided that they weren't necessary to get started. However, because I wanted to include them initially, I want to be sure that I am adding them to research yourself. I learned a lot about the following concepts after I immersed myself in React.
+
+- async/await - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- promises - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- Default values in destructuring - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values)
+- destructuring arrays - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)
+
+Stay in touch! If you liked this article:
+
+- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
+- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
+- Take my [10 days of a11y](https://a11y-with-lindsey.ck.page/b4e437f629) free email course.
+- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
+
+Cheers! Have a great week!
+
