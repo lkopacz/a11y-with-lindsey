@@ -1,6 +1,6 @@
 ---
 title: "'Knowing what you're looking at' - JS tips for new React developers"
-date: '2020-07-15'
+date: '2020-08-17'
 path: '/blog/javascript-tricks-tips'
 tags: ['accessibility', 'javascript', 'react']
 published: true
@@ -31,7 +31,7 @@ If you don't want to sign up for CodeAcademy (I get it, I hate signing up for ne
 
 Now let's get started 🤓
 
-## Template Strings
+## Template Literals/Strings
 
 Pre ES6/ES2015, rendering JavaScript within a string used to be a HUGE pain. You had  to create strings and concatenate the strings and the variables together with a plus sign +.
 
@@ -59,9 +59,11 @@ function shortBio(name, age, job) {
 }
 ```
 
+Source: [Template Literals - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
 ## Using the spread operator
 
-First, what is the spread operator? The spread operator "allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected." (Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
+First, what is the spread operator? The spread operator "allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected." (Source: [Spread Syntax - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax))
 
 I'm sorry, what? What does that even mean?
 
@@ -310,6 +312,8 @@ const Bio = ({ name, age, jobTitle }) => (
 )
 ```
 
+Source: [Destructuring Assignment - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
 ### Assigning New Variable Names
 
 It's helpful to understand assigning a variable something different than the property name. This technique is useful if you have a property name that's the same as a variable present in the component.
@@ -341,9 +345,13 @@ const Bio = ({ name, age, jobTitle: job }) => (
 )
 ```
 
+Source: [Destructuring Assignment, Assigning to new variable names - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Assigning_to_new_variable_names)
+
 ## The .map() Array Method
 
-I am not going to get into `.reduce()` in this blog post because I don't see it as often inside of components as I do `.map()` and `.filter()`. I can recommend a few blog posts that cover reduce better than I can. These methods go through each item in an array, do something with it, and creates a new array. Let’s cover the structure that you’ll see.
+I am not going to get into `.reduce()` in this blog post because I don't see it as often inside of components as I do `.map()` and `.filter()`. I can recommend a few blog posts that cover reduce better than I can. For example, Monica Powell wrote an [amazing guide](https://www.aboutmonica.com/blog/2020-03-29-understanding-reduce-in-javascript) to a variety of ways use `.reduce()`. This blog post clicked so much with me, as someone who admittedly still fumbles with when I want to use reduce.
+
+OK, back to `.map()` and `.filter()`! These methods go through each item in an array, do something with it, and creates a new array. Let’s cover the structure that you’ll see.
 
 In my experience, when I see this method used, I see it mapping through an **array of objects** or an **array of strings**. Each property in the object is usually a piece of data I want to render in the component. So let's have take this array of country objects.
 
@@ -388,7 +396,7 @@ const countries = [
 ];
 ```
 
-Let's say I want to create an accessible table of this data. In this example, I am going to hard code the `<th>`. You could also use something like `Object.keys()` to grab those keys and use those to render the headers. Let’s get that all rendered out first.
+Let's say I want to create an accessible table of this data. In this example, I am going to hard code the `<th>`. You could also use something like `Object.keys()` ([MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)) to grab those keys and use those to render the headers. Let’s get that all rendered out first.
 
 ```jsx
 const CountryTable = () => (
@@ -517,8 +525,9 @@ const CountryTable = () => (
 )
 ```
 
-We added parentheses because now we have two arguments in our arrow function.
+We added parentheses because now we have two arguments in our arrow function. Rememeber talking about that? 😉
 
+Source: [Array.prototype.map() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## Only rendering specific data
 
@@ -576,19 +585,21 @@ filteredCities.map(city => {
 })
 ```
 
-
 import CallToAction from '../../components/CallToAction/CallToAction'
 
 <CallToAction>
 
- ## Want to see this in action?
+  ![Using Filter. Free Egghead Video.](./filter-egghead.png)
 
- I created a 2-minute video!
+  ## Want to see this in action?
 
- [Go To My Free Egghead Lesson](https://egghead.io/lessons/javascript-filtering-through-an-array-of-countries-using-filter)
+  I created a 2-minute video!
+
+  [Go To My Free Egghead Lesson](https://egghead.io/lessons/javascript-filtering-through-an-array-of-countries-using-filter)
 
 </CallToAction>
 
+Source: [Array.prototype.filter() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ## Restructuring within map or filter 🤯
 
@@ -621,10 +632,10 @@ For readability sake, I may only destructure if I need one or two properties in 
 
 I originally had more sections written out, but I decided that they weren't necessary to get started. However, because I wanted to include them initially, I want to be sure that I am adding them to research yourself. I learned a lot about the following concepts after I immersed myself in React.
 
-- async/await - [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- promises - [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- Default values in destructuring - [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values)
-- destructuring arrays - [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)
+- async/await - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- promises - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- Default values in destructuring - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values)
+- destructuring arrays - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)
 
 Stay in touch! If you liked this article:
 
