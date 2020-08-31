@@ -140,13 +140,17 @@ const About = () => (
             </p>
             <h2>A Bit More About Me</h2>
             <p>
-              Currently, I am a software developer who works as a contractor for
-              the government. I play around a lot with React and data viz at my
-              day job, and a lot of it inspires my blog posts. My day job also
-              inspires a lot of my{' '}
+              Currently, I am a Senior UI Engineer, Accessibility lead at
+              Medallia. Specifically, I work on Alchemy, Medallia's design
+              system. At the day job, I play around a lot with React,
+              TypeScript, and styled-components. Creating accessible interactive
+              components is one of my major passions in coding, and a lot of
+              what I work on at my day job inspires my blog posts. My day job
+              also inspires a lot of my{' '}
               <a href="https://egghead.io/instructors/lindsey-kopacz">
                 Egghead videos
               </a>
+              .
             </p>
             <p>
               My interests vary, depending on the topic. I love weight lifting,

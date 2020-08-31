@@ -48,10 +48,17 @@ const Contact = () => (
               </a>
             </p>
             <p>
+              Because this blog is a side project, and I am a full-time employee
+              - I'm a pretty busy gal. With that said, I am not available to
+              lead company training or anything that takes away from my day job.
+              Thank you for understanding!
+            </p>
+            <p>
               To get updates from me, to get discounts on my upcoming content,{' '}
               <a href="https://pages.convertkit.com/4218bd5fb5/68dc4e412a">
                 subscribe to my newsletter
               </a>
+              .
             </p>
           </div>
         </div>
