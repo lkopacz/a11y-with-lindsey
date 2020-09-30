@@ -12,6 +12,11 @@
   transform: scale(1.05);
 }
 
+.book {
+  padding: 1rem 0;
+  text-align: center;
+}
+
 .blog {
   max-width: 52rem;
   padding: 2rem 1.5rem;
