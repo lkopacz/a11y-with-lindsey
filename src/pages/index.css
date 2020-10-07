@@ -1,5 +1,7 @@
 :root {
   --marron: #640d23;
+  --off-white: #f3e9ea;
+  --navy: #1e3650;
 }
 
 :root[data-user-reduced-motion='true'] .blog__more-link {
@@ -13,8 +15,14 @@
 }
 
 .book {
+  background-color: var(--navy);
+  color: var(--off-white);
   padding: 1rem 0;
   text-align: center;
+}
+
+.book a {
+  color: var(--off-white);
 }
 
 .blog {

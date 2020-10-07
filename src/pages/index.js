@@ -18,7 +18,9 @@ class IndexPage extends React.Component {
             My new ebook <span>The Bootcampers Guide to Web Accessibility</span>{' '}
             is available for pre-order!
           </p>
-          <a href="https://gumroad.com/l/ndFuPO">Pre-order now!</a>
+          <a href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web">
+            Pre-order now!
+          </a>
         </div>
         <div className="blog">
           <h2>Recent Blog Posts</h2>

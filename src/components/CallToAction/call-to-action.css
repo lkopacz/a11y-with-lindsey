@@ -39,11 +39,13 @@
   .call-to-action h2 {
     grid-column-start: 2;
     place-self: center;
+    text-align: center;
   }
 
   .call-to-action p {
     grid-column-start: 2;
     place-self: center;
+    text-align: center;
   }
 
   .call-to-action p:first-of-type {
