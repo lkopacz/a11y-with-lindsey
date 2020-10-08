@@ -13,6 +13,15 @@ class IndexPage extends React.Component {
     return (
       <main id="main-content">
         <Hero header="My Mission" />
+        <div className="book">
+          <p style={{ margin: 0 }}>
+            My new ebook <span>The Bootcampers Guide to Web Accessibility</span>{' '}
+            is available for pre-order!
+          </p>
+          <a href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web">
+            Pre-order now!
+          </a>
+        </div>
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">

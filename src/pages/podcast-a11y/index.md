@@ -302,7 +302,7 @@ If you're interested in the LadyBug Podcast, be sure to [subscribe](https://link
 Stay in touch! If you liked this article:
 
 - Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge. I also do a monthly Ask Me Anything Session for all Patrons!
+- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
 - [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
 
 Cheers! Have a great week!
