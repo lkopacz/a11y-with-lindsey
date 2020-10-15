@@ -15,6 +15,7 @@ const buttonStyles = {
   fontWeight: 500,
   background: 'transparent',
   fontFamily: "'PT Sans', sans-serif",
+  cursor: 'pointer'
 }
 
 const buttonDisabledStyles = {
@@ -32,7 +33,7 @@ const getStripe = () => {
 }
 
 const StripePreorder = () => {
-  const [amount, setAmount] = useState(1)
+  const [amount, setAmount] = useState(2)
   const [loading, setLoading] = useState(false)
 
   const redirectToCheckout = async event => {
@@ -56,9 +57,11 @@ const StripePreorder = () => {
 
   return (
     <>
+      <h2>Pre-ordering for you and someone else?*</h2>
+      <p>*Minimum order is 2</p>
       <div style={{margin: '1rem 0'}}>
         <label htmlFor="select-amount">Select Amount:</label>
-        <input id="select-amount" type="number" min="1" max="10" value={amount} onChange={e => setAmount(parseFloat(e.target.value))}/>
+        <input id="select-amount" type="number" min="2" max="10" value={amount} onChange={e => setAmount(parseFloat(e.target.value))}/>
       </div>
       <button
         disabled={loading}
