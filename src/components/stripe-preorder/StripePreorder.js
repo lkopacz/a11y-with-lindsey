@@ -15,7 +15,8 @@ const buttonStyles = {
   fontWeight: 500,
   background: 'transparent',
   fontFamily: "'PT Sans', sans-serif",
-  cursor: 'pointer'
+  cursor: 'pointer',
+  margin: '1rem 0'
 }
 
 const buttonDisabledStyles = {
@@ -35,6 +36,7 @@ const getStripe = () => {
 const StripePreorder = () => {
   const [amount, setAmount] = useState(2)
   const [loading, setLoading] = useState(false)
+  const price = 9.97
 
   const redirectToCheckout = async event => {
     event.preventDefault()
@@ -46,7 +48,7 @@ const StripePreorder = () => {
       lineItems: [
         { price: process.env.GATSBY_PRICE, quantity: amount },
       ],
-      successUrl: `${process.env.GATSBY_URL}thank-you-preorder/`,
+      successUrl: `${process.env.GATSBY_URL}thank-you-pre-order/`,
       cancelUrl: `${process.env.GATSBY_URL}pre-order/`,
     })
     if (error) {
@@ -63,6 +65,7 @@ const StripePreorder = () => {
         <label htmlFor="select-amount">Select Amount:</label>
         <input id="select-amount" type="number" min="2" max="10" value={amount} onChange={e => setAmount(parseFloat(e.target.value))}/>
       </div>
+      <div>Gift Total: <span style={{fontWeight: 'bold'}}>${(price * amount).toFixed(2)}</span></div>
       <button
         disabled={loading}
         style={
@@ -70,7 +73,7 @@ const StripePreorder = () => {
         }
         onClick={redirectToCheckout}
       >
-        Preorder my E-book
+        Pre-order {amount} copies
       </button>
     </>
   )

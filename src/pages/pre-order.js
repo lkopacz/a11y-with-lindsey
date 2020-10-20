@@ -5,12 +5,10 @@ import StripePreorder from '../components/stripe-preorder/StripePreorder'
 import Cover from '../images/cover.png'
 
 
-
-
 const PreOrder = () => {
   return (
     <div>
-      <Helmet title="Preorder | a11y with Lindsey" />
+      <Helmet title="Pre-order | a11y with Lindsey" />
       <div className="content">
         <main id="main-content">
           <div className="content__heading">
@@ -48,19 +46,21 @@ const PreOrder = () => {
                   <p>And much more 🤓</p>
                   <p>I'll be launching the ebook on November 2nd. <strong>People who pre-order the ebook will pay the low price of $9.97</strong>, which will increase post launch. 15% of all profits will go to the Equal Justice Initiative.</p>
               </div>
-              <h2>Pre-ordering for yourself?</h2>
-              <a
-                style={{
-                  borderRadius: '16px',
-                  border: '2px solid',
-                  padding: '12px 14px',
-                  fontWeight: 500,
-                  fontSize: '1.25rem'
-                }}
-                href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
-              >
-                Pre-Order through Convertkit
-              </a>
+              <div style={{margin: '3.25rem 0'}}>
+                <h2>Pre-ordering for yourself?</h2>
+                <a
+                  style={{
+                    borderRadius: '16px',
+                    border: '2px solid',
+                    padding: '12px 14px',
+                    fontWeight: 500,
+                    fontSize: '1.25rem'
+                  }}
+                  href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
+                >
+                  Pre-order through Convertkit
+                </a>
+              </div>
               <StripePreorder />
             </div>
           </div>
