@@ -36,7 +36,7 @@ const PreOrder = () => {
                   <p>Accessibility is often glazed over in education. I'm creating a guide of everything I've learned as a self-taught accessibility expert to help bootcampers and self-guided learners.</p>
                   <p>As our industry expands to include more self-guided learners and bootcamp graduates, unfortunately, we have to start seeking out accessibility education on our own. Most introductions to HTML classes don't even mention accessibility.</p>
                   <p>
-                    After reading my book, you'll understand:
+                    After reading my ebook, you'll understand:
                     <ul>
                       <li>The crucial takeaways of Accessibility standards, making them less intimidating</li>
                       <li>The negative impact of inaccessible sites and web apps</li>
@@ -46,7 +46,7 @@ const PreOrder = () => {
                     </ul>
                   </p>
                   <p>And much more 🤓</p>
-                  <p>I'll be launching the ebook on November 2nd. <strong>People who pre-order the book will pay the low price of $9.97</strong>, which will increase post launch. 15% of all profits will go to the Equal Justice Initiative.</p>
+                  <p>I'll be launching the ebook on November 2nd. <strong>People who pre-order the ebook will pay the low price of $9.97</strong>, which will increase post launch. 15% of all profits will go to the Equal Justice Initiative.</p>
               </div>
               <h2>Pre-ordering for yourself?</h2>
               <a
