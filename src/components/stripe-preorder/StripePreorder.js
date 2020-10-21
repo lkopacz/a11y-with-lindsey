@@ -74,6 +74,11 @@ const StripePreorder = () => {
           <option name="8">8</option>
           <option name="9">9</option>
           <option name="10">10</option>
+          <option name="10">11</option>
+          <option name="10">12</option>
+          <option name="10">13</option>
+          <option name="10">14</option>
+          <option name="10">15</option>
         </select>
       </div>
       <div>Gift Total: <span style={{fontWeight: 'bold'}}>${(price * amount).toFixed(2)}</span></div>
