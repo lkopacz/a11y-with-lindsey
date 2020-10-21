@@ -76,13 +76,7 @@ const StripePreorder = () => {
           <option name="10">10</option>
         </select>
       </div>
-      {amount === NaN ? (
-        <div>Boop</div>
-      ): (
-        <div>Gift Total: <span style={{fontWeight: 'bold'}}>${(price * amount).toFixed(2)}</span></div>
-      )
-      }
-
+      <div>Gift Total: <span style={{fontWeight: 'bold'}}>${(price * amount).toFixed(2)}</span></div>
       <button
         disabled={loading}
         style={
