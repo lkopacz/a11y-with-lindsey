@@ -1,0 +1,7 @@
+input[type='number'] {
+  font-size: 1.25rem;
+  max-width: 4rem;
+  color: #640d23;
+  border-bottom: 2px solid;
+  text-align: center;
+}
