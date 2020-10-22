@@ -56,6 +56,7 @@ const StripePreorder = () => {
       setLoading(false)
     }
   }
+  console.log(amount)
 
   return (
     <>
@@ -63,7 +64,22 @@ const StripePreorder = () => {
       <p>*Minimum order is 2</p>
       <div style={{margin: '1rem 0'}}>
         <label htmlFor="select-amount">Select Amount:</label>
-        <input id="select-amount" type="number" min="2" max="10" value={amount} onChange={e => setAmount(parseFloat(e.target.value))}/>
+        <select id="select-amount" value={amount} onChange={e => setAmount(parseFloat(e.target.value))} style={{marginLeft: '0.5rem'}}>
+          <option name="2">2</option>
+          <option name="3">3</option>
+          <option name="4">4</option>
+          <option name="5">5</option>
+          <option name="6">6</option>
+          <option name="7">7</option>
+          <option name="8">8</option>
+          <option name="9">9</option>
+          <option name="10">10</option>
+          <option name="10">11</option>
+          <option name="10">12</option>
+          <option name="10">13</option>
+          <option name="10">14</option>
+          <option name="10">15</option>
+        </select>
       </div>
       <div>Gift Total: <span style={{fontWeight: 'bold'}}>${(price * amount).toFixed(2)}</span></div>
       <button
