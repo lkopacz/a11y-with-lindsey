@@ -16,10 +16,10 @@ class IndexPage extends React.Component {
         <div className="book">
           <p style={{ margin: 0 }}>
             My new ebook <span>The Bootcampers Guide to Web Accessibility</span>{' '}
-            is available for pre-order!
+            is available!
           </p>
           <a href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web">
-            Pre-order now!
+            Order now!
           </a>
         </div>
         <div className="blog">

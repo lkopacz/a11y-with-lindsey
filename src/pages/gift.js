@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import StripePreorder from '../components/stripe-preorder/StripePreorder'
 import Cover from '../images/cover.png'
 
-const PreOrder = () => {
+const Order = () => {
   return (
     <div>
       <Helmet title="Pre-order | a11y with Lindsey" />
@@ -25,23 +25,6 @@ const PreOrder = () => {
           </div>
           <div className="content__body">
             <div className="wrapper">
-              <p>
-                Preorder price has ended. You can now order the book for $19.97
-              </p>
-              <a
-                style={{
-                  borderRadius: '16px',
-                  border: '2px solid',
-                  padding: '12px 14px',
-                  fontWeight: 500,
-                  fontSize: '1.25rem',
-                  // margin: '1rem 0',
-                  display: 'inline-block',
-                }}
-                href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
-              >
-                Order through Convertkit
-              </a>
               <div className="landing-page">
                 <img
                   src={Cover}
@@ -100,23 +83,22 @@ const PreOrder = () => {
                   to the Equal Justice Initiative.
                 </p>
               </div>
-              <a
-                style={{
-                  borderRadius: '16px',
-                  border: '2px solid',
-                  padding: '12px 14px',
-                  fontWeight: 500,
-                  fontSize: '1.25rem',
-                }}
-                href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
-              >
-                Order here for $19.97
-              </a>
-              {/* <div style={{margin: '3.25rem 0'}}>
+              <div style={{ margin: '3.25rem 0' }}>
                 <h2>Pre-ordering for yourself?</h2>
-
-              </div> */}
-              {/* <StripePreorder /> */}
+                <a
+                  style={{
+                    borderRadius: '16px',
+                    border: '2px solid',
+                    padding: '12px 14px',
+                    fontWeight: 500,
+                    fontSize: '1.25rem',
+                  }}
+                  href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
+                >
+                  Pre-order through Convertkit
+                </a>
+              </div>
+              <StripePreorder />
             </div>
           </div>
         </main>
@@ -125,4 +107,4 @@ const PreOrder = () => {
   )
 }
 
-export default PreOrder
+export default Order
