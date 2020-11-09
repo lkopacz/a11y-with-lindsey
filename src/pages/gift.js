@@ -72,16 +72,7 @@ const Gift = () => {
                     <li>How to comprehensively test</li>
                   </ul>
                 </p>
-                <p>And much more 🤓</p>
-                <p>
-                  I'll be launching the ebook on November 2nd.{' '}
-                  <strong>
-                    People who pre-order the ebook will pay the low price of
-                    $9.97
-                  </strong>
-                  , which will increase post launch. 15% of all profits will go
-                  to the Equal Justice Initiative.
-                </p>
+                <p>And much more 🤓 for the low price of $19.97</p>
               </div>
               <div style={{ margin: '3.25rem 0' }}>
                 <h2>Ordering for one person?</h2>
