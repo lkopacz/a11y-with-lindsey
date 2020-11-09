@@ -112,11 +112,6 @@ const PreOrder = () => {
               >
                 Order here for $19.97
               </a>
-              {/* <div style={{margin: '3.25rem 0'}}>
-                <h2>Pre-ordering for yourself?</h2>
-
-              </div> */}
-              {/* <StripePreorder /> */}
             </div>
           </div>
         </main>
