@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import StripePreorder from '../components/stripe-preorder/StripePreorder'
 import Cover from '../images/cover.png'
 
-const Order = () => {
+const Gift = () => {
   return (
     <div>
-      <Helmet title="Pre-order | a11y with Lindsey" />
+      <Helmet title="The Bootcamper's Guide to Web Accessibility | a11y with Lindsey" />
       <div className="content">
         <main id="main-content">
           <div className="content__heading">
@@ -17,10 +17,10 @@ const Order = () => {
                   <li>
                     <Link to="/">Home</Link>
                   </li>
-                  <li>Pre-order The Bootcampers Guide to Web Accessibility</li>
+                  <li>The Bootcampers Guide to Web Accessibility</li>
                 </ol>
               </nav>
-              <h1>Pre-order The Bootcampers Guide to Web Accessibility</h1>
+              <h1>The Bootcampers Guide to Web Accessibility</h1>
             </div>
           </div>
           <div className="content__body">
@@ -72,19 +72,10 @@ const Order = () => {
                     <li>How to comprehensively test</li>
                   </ul>
                 </p>
-                <p>And much more 🤓</p>
-                <p>
-                  I'll be launching the ebook on November 2nd.{' '}
-                  <strong>
-                    People who pre-order the ebook will pay the low price of
-                    $9.97
-                  </strong>
-                  , which will increase post launch. 15% of all profits will go
-                  to the Equal Justice Initiative.
-                </p>
+                <p>And much more 🤓 for the low price of $19.97</p>
               </div>
               <div style={{ margin: '3.25rem 0' }}>
-                <h2>Pre-ordering for yourself?</h2>
+                <h2>Ordering for one person?</h2>
                 <a
                   style={{
                     borderRadius: '16px',
@@ -95,7 +86,7 @@ const Order = () => {
                   }}
                   href="https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web"
                 >
-                  Pre-order through Convertkit
+                  Order through Convertkit
                 </a>
               </div>
               <StripePreorder />
@@ -107,4 +98,4 @@ const Order = () => {
   )
 }
 
-export default Order
+export default Gift
