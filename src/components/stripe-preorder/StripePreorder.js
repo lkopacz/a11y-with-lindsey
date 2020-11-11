@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 
 import './stripe-preorder.css'
@@ -36,18 +36,17 @@ const getStripe = () => {
 const StripePreorder = () => {
   const [amount, setAmount] = useState(2)
   const [loading, setLoading] = useState(false)
-  const price = 9.97
+  const price = 19.97
 
   const redirectToCheckout = async event => {
     event.preventDefault()
-    console.log('hey?')
     setLoading(true)
     const stripe = await getStripe()
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
       lineItems: [{ price: process.env.GATSBY_PRICE, quantity: amount }],
-      successUrl: `${process.env.GATSBY_URL}thank-you-pre-order/`,
-      cancelUrl: `${process.env.GATSBY_URL}pre-order/`,
+      successUrl: `${process.env.GATSBY_URL}thank-you-order/`,
+      cancelUrl: `${process.env.GATSBY_URL}gift/`,
     })
     if (error) {
       console.warn('Error:', error)

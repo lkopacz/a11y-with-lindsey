@@ -23,8 +23,8 @@ const ThankYouPreorder = () => (
         <div className="content__body">
           <div className="wrapper">
             <p>
-              Thank you for preordering my e-book! Keep your eye on your email to provide email addresses for gift e-books. You'll have it delivered to
-              your inbox on November 2nd!
+              Thank you for ordering my e-book! Keep your eye on your email to
+              provide email addresses for the gifted e-books.
             </p>
             <Link to="/">Go Back Home</Link>
           </div>

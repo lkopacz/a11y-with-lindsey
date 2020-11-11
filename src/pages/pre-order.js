@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
-import StripePreorder from '../components/stripe-preorder/StripePreorder'
 import Cover from '../images/cover.png'
 
 const PreOrder = () => {
