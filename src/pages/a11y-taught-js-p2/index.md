@@ -9,7 +9,7 @@ draft: false
 featuredImage: './a11y-taught-js.png'
 ---
 
-_Content Warning: There are gifs in this post._
+_Content Warning: This blog post contains gifs._
 
 Hey friends! Today's writing is going to be a follow up to [How Accessibility Taught Me to be Better At JavaScript](/blog/how-accessibility-taught-better-javascript-part-one). If you have read my content, one of my favorite topics is about JavaScript and Accessibility. I speak about how JavaScript is **actually** necessary to make interactive elements accessible.
 
