@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/502080242/fe487c06f516e2c9a627b987a5ed0a7b4aa7b405.49f907de-8e08-421a-be73-a522dc5894c6.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 When I was a Drupal developer, a great deal of interest went into Automated Accessibility Testing. I very much loved working on automation especially when it was incorporated into our Continuous Integration. This would fail builds that introduced accessibility errors, which was a great way to ensure that we were thinking about accessibility from the start and not adding new problems. However, I feel like we like to automate our problems away and it cannot fix everything for you. Automated accessibility testing catches those nitpicky HTML errors so that you can focus on the more significant and subjective items manually.
 
 Accessibility is empathy-driven, and you can not automate empathy. Automation certainly makes a lot of things easier, like catching a text input without an associated label, but here are a few things that I do to ensure that my sites are accessible as possible.

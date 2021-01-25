@@ -9,6 +9,8 @@ featuredImage: './reduce-motion-a11y.png'
 draft: false
 ---
 
+_Content Warning: This blog post contains gifs._
+
 Hey friends! In this post, I am going to walk you through a newer media query (to me): `prefers-reduced-motion`.
 
 Quick confession: I know CSS fundamentals, but I am pretty behind on all the new stuff that has been coming out. Because my focus is usually on accessibility, I am focusing far more on HTML and JavaScript. When I focus on CSS, it's ensuring proper color contrast or custom focus states. Sometimes I use CSS to make [checkboxes keyboard accessible](/blog/create-custom-keyboard-accesible-checkboxes). I always associated media queries with responsive design. I never thought of media queries as an accessibility enhancement.

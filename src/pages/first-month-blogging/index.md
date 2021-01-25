@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/19a753d9c6dbb910412cfa899fd86ae80e64a05b.c402014b-649e-4e13-a9d0-023f90ca14b8.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 I soft-launched my blog the day before my birthday, announced it on my birthday (October 3rd), and now it's 4 weeks later. It's been a very intense and rewarding process thus far, and I've taken this week to reflect on it. I wanted to share what I have learned thus far for those of you who wanted to get started but also wanted someone to keep it real.
 
 To keep it transparent, these are my motivations for actively blogging.

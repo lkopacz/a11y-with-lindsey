@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/af7974aef13321b8595c6cfd4ba5430ca93a5905.4e55cac8-4797-4843-a10b-e688a8559d73.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 As I started this blog, I began to follow specific hashtags on Twitter. I learned that last month was Dyslexia Awareness Month after following the a11y hashtags on Twitter. I’ve always said that disability isn’t always visible, mainly learning disabilities. However, this is something that Web Accessibility doesn’t cover often. I’ve found very few places that talk about web accessibility and dyslexia. Most of the resources I found focused on teaching those with dyslexia.
 
 I’ve spent the last couple of weeks researching how to make my content more accessible to those who have dyslexia. I am learning along with you in this blog post. Here is what I’ve learned:

@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/67927009fe10c9ec137aa9ff973489b3948157c0.a5c18b68-29ba-482a-8c62-3e2c033c4447.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 If you didn’t know this already, I usually cross post all these on [DEV](https://dev.to). When I cross-posted about why accessibility isn’t an edge case, I got a comment wishing accessibility was more straightforward to implement. I didn’t find learning to make accessible solutions to be that challenging once I was up to date on HTML and CSS best practices, so I was genuinely curious about where they found it difficult. When [they answered](https://dev.to/marek/comment/882m), it seemed like the primary pain point was ARIA.
 
 I’ve seen a ton of confusion about ARIA and when it should and shouldn’t be used. What do these ARIA attributes even mean? Is there a list of all the attributes? I am thinking about making this into a series, maybe going over a few ARIA attributes a week and how they can be used, whether I like them, etc. Before I get into the weeds about all the ARIA attributes though, I really need to get a few things straight about what ARIA is used for, and what I don’t think you should use it for.

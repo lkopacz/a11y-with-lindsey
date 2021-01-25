@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/2cdfdce373d5b6114644114a22a9fb7fd60ab264.5e9775fc-2449-4d02-ac37-3627f767bfdd.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 After cross-posting my last accessibility post about [dropdowns](/blog/create-accessible-dropdown-navigation) on [dev.to](https://dev.to/), I was reading through the comments and someone posted about `:focus-within`. The best thing about sharing my knowledge on the internet is learning how other people are approaching things. Quite frankly, I have never used `:focus-within` before, so this is me learning and testing it out. Because this blog post will primarily be based on a continuation of the [previous dropdown post](/blog/create-accessible-dropdown-navigation), I highly suggest reading that beforehand if you haven't already.
 
 As a reminder, here is the same HTML structure from the previous post:

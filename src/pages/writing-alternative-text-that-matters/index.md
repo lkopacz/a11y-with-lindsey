@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/90028901e4e8647746f9f114253d322f922e0dc5.640af66d-5cc1-40d4-8502-cc5595ae1fb5.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 If I ask anyone what accessibility means to them, usually the first thing that they can identify is “Adding alt text!” All you have to do is add alt tags to your images makes your site way more accessible, right? I love the enthusiasm to reduce accessibility errors, but I am about to give you an infuriating response. **It depends**.
 
 Adding alt text may mean that you don’t get pesky errors about missing alternative text on an Accessibility Scan, but it doesn’t necessarily mean that your images have a better meaning. Sometimes an empty alt tag is actually what you need for a more accessible image. Are you envisioning the mind blown emoji and/or gif yet?
@@ -21,7 +23,7 @@ That’s how I felt when I was learning about it, and it made me realize how muc
 
 I have a few strategies to start writing better alternative text, I usually ask myself the below questions.
 
-##Is it decorative?
+## Is it decorative?
 
 The first thing I want anyone to think about before they start diving into their CMS's media gallery is not technical at all. It's strategic. What is the _purpose_ of that image being there? If we took away that image for visually able users, would we still get the information we needed? The reason I mention this first is because this is relatively simple to ask yourself before you get started. Let's start off with a practical example that lots of organization websites have - Biography pages.
 
@@ -37,7 +39,7 @@ In this instance, we are not using these image icons to convey any meaning. This
 
 From an empathetic standpoint, when you put non-empty alternative text on a decorative image, what does it do for a visually impaired user? If I were in their shoes, and I wanted to learn about what the powerful features were, I think I would be annoyed hearing images read out that did not communicate any value to me. This is usually the question I ask myself when I think about whether something is decorative or not.
 
-##What is the context of this image?
+## What is the context of this image?
 
 Before thinking about the descriptor, sometimes we need to ask the question first: form or function? Sometimes the easiest way to think of this is “Is this a link or a button, or is this content?” Granted, this doesn’t cover all your bases, but asking yourself whether it _does something_ like go to another page or _describes something_ that adds context to our content is usually a good first start.
 
@@ -86,7 +88,7 @@ Here's what I did:
 />
 ```
 
-##What is your content strategy?
+## What is your content strategy?
 
 Are we writing alternative text for images that are embedded in our copywriting? Is this an image that the designer specifically wanted to communicate our brand? We need to think about who is involved in these decisions because that is who we will want to be involved in writing our alternative text.
 
@@ -96,7 +98,7 @@ Similar to food blogging, let's say that you're working with a book publisher wh
 
 That's why strategy is more important than the technical aspect. This means that you _should_ be partnering with your Marketing Strategy team about writing alternative text. This should also be why Design should be involved in branding images and why they put them there. If those teams don't exist, at the very least we thought about the purpose of the image being there. My favorite example is the example to the right from [WebAim's documentation on Alt Text](https://webaim.org/techniques/alttext/#context). There is an image of George Washington in a battle, but if we were on a site about history or if we were on a site about art, this same image would have very different alternative text.
 
-##Don't overthink it
+## Don't overthink it
 
 If you are having difficulty with this, try to take these three strategies with you when writing your alternative text. It decreases your chances of overthinking it (which frankly, I am the queen of doing). The strategy behind writing your alternative text is strongly correlated to thinking through your strategy. And remember, it's a work in progress. Your alternative text can adapt and improve over time :).
 
