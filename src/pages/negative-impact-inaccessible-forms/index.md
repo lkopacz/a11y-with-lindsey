@@ -11,13 +11,15 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
 
 The biggest issue on both Trump and Clinton’s sites were inaccessible forms. I did an evaluation of the forms of the candidates’ donation sites and if I remember correctly (it was almost 2 years ago), both had issues with all forms having missing form labels. While I don’t know what the development cycle is for candidate sites, I would assume the strategy is something like “get the site online as quickly as possible so we can start receiving donations.”
 
 One of the most common accessibility issues I’ve seen is fields missing labels. The great news is it’s one of the simplest accessibility issues to fix.
 
-##The Empathetic Side of Forms
+## The Empathetic Side of Forms
 
 Before we go into how to solve this issue, I want to describe a scenario to you. Imagine you are without vision and care deeply about a certain candidate's campaign. You are highly dependent on a screen reader to help you navigate a site. You go to your preferred candidate’s donation site, but then you’re stumped. There are a bunch of fields, but nothing is telling you which field is which. You don’t know where to put your credit card information or where to put your billing address. What do you do? Do you take a guess and then deal with all the validation errors when you get it wrong? Or do you give up?
 
@@ -29,7 +31,7 @@ There is significant research that shows us that making things confusing for ano
 
 While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all.
 
-##The Business Side of Forms
+## The Business Side of Forms
 
 Let’s reflect on the above scenario for a second, but from the business side of it. How much money did we miss out on by not including something like form labels on our donation form? According to the [National Federation of the Blind](https://nfb.org/blindness-statistics), in 2015, 7,297,100 or 2.3% of the American population reported having a visual disability. Over 7 million people - think about that. That’s a lot of money potential.
 
@@ -39,7 +41,7 @@ While I believe the reason to create accessible forms is that you don’t want t
 
 Let's start to think about our call to actions and how many of those actions are forms. Newsletter signups, surveys, credit card information--all of these are forms that can ultimately impact our bottom line. There could be a tremendous cost if we do not address these users. This is not an "edge case" (insert eye roll emoji here). This is actually a costly endeavor.
 
-##Quickest way to create accessible forms: provide form labels
+## Quickest way to create accessible forms: provide form labels
 
 There is more about forms to make them even more accessible, which I will cover in other blog posts. But if I can summarize form accessibility, I would say Labels, labels, labels!
 

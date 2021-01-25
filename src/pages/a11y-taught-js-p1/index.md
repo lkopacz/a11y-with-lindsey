@@ -9,6 +9,8 @@ draft: false
 featuredImage: './a11y-taught-js.png'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 Hey friends! Hope you’ve had a great week! This tweet I wrote a while back inspired me to write this blog post:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Fun fact about me: I started learning about JavaScript BECAUSE of accessibility, not in spite of it.</p>&mdash; Lindsey Kopacz 🐞 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1148576284332699651?ref_src=twsrc%5Etfw">July 9, 2019</a></blockquote>

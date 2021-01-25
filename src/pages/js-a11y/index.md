@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/4d72855d6900f3209c1790440bbbb3bdda3a568f.b7306f01-8672-4861-9a24-9a4f3d3a84b5.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 This post was inspired by a few things. First, a few months ago Rian Rietveld announced she was [resigning as the WordPress accessibility lead](https://rianrietveld.com/2018/10/09/i-have-resigned-the-wordpress-accessibility-team/). I read through the post, and the reason seemed to be mainly about Gutenberg. It seemed that despite all the wpa11y’s team’s warnings, they were pushing to release it while it was almost unusable for those who need assistive devices. I found there to be a tremendous opportunity to educate communities and help to others learn.
 
 In Rian’s blog post, a few things stuck out to me as main problems (these are directly from her site):

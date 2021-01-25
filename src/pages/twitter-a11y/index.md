@@ -11,6 +11,8 @@ hasAudio: true
 audioLink: 'https://www.parler.io/audio/7119149108/06080083b67ba91f497d9138a9e69982c81b93d5.12f6ed3d-c72c-4be5-9429-b343c920d39f.mp3'
 ---
 
+_Content Warning: This blog post contains gifs._
+
 I wrote a tweet thread a while back where I started talking about ways to keep accessibility in mind on the platforms we use such as Twitter. Sometimes we don’t have control over the platforms we use, and the best we can do is ensure our content is accessible. This tweet thread got a decent amount of attention, but unfortunately, it’s easy for things to get lost in the Twitterverse. I decided to write a blog post elaborating a bit more on each of the critical points I made while also ensuring that you could find them more easily.
 
 ## Be careful with your emoji use
