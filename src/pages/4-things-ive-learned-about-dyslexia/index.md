@@ -71,8 +71,6 @@ I learned about the [Hemingway app](http://www.hemingwayapp.com/) in my research
 
 Slideshows already annoy me as someone who doesn’t have dyslexia. Imagine going to a page that has a hero carousel. As you’re halfway through the sentence, it switches on you!
 
-![Gif of person smacking their head in frustration](https://media.giphy.com/media/l4pMc4UUV7xGpPgWY/giphy.gif)
-
 It is even worse for people with dyslexia, who tend to read slower. If you’re changing your content in a carousel, then you should give at least 25% more time than you’d think. Adding the extra time would help accommodate those who read a little bit slower.
 
 What are some alternatives? It might be worth asking if there needs to be a carousel at all. Right now, singular heroes are more on trend than carousels. Can you include one hero image as the focal point of your text? If you have multiple pieces of content you’d like to showcase, provide an option to switch from one to the other manually.
