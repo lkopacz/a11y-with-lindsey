@@ -14,6 +14,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`,
@@ -42,14 +43,6 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: '÷',
-            },
-          },
-          {
-            resolve: `gatsby-plugin-sharp`,
-            options: {
-              useMozJpeg: false,
-              stripMetadata: true,
-              defaultQuality: 75,
             },
           },
           'gatsby-remark-copy-linked-files',
