@@ -416,10 +416,4 @@ Now, all it reads are the groups of the text of the legend. We could do more to 
 
 As I conclude this post, I want to emphasize something I often say: **Manual testing is your friend**. What I did is not necessarily the **right** answer. This is a **potential** answer. The critical takeaway is that I always test what I am doing with a screen reader, a keyboard, and a mouse. I think about what options we are providing for our disabled users before I start building it, so it’s easy to adapt.
 
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
 Cheers! Have a great week!

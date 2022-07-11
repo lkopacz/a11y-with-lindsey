@@ -158,6 +158,4 @@ The strings that we put in these attributes are like the form labels above. We w
 
 ## Conclusion
 
-I hope I helped you understand a bit more about the confusing world of labeling for accessibility! Let me know on [Twitter](https://twitter.com/LittleKope) what you thought or if you have any other questions.
-
-Also, I have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge. Cheers! Have a great week!
+I hope I helped you understand a bit more about the confusing world of labeling for accessibility! Cheers! Have a great week!

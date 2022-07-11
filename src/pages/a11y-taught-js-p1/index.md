@@ -140,10 +140,4 @@ These aria attributes give direction to a screen reader user about **how** to in
 
 It's really fun seeing how my code has evolved as an accessibility focused web developer. I am going to make a second post about the other main accessibility issue I came up with for this project. This post was starting to get REALLY lengthy! I needed JavaScript to solve these issues. I also needed JavaScript to learn about Progressive Enhancement.
 
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
 Cheers! Have a great week!

@@ -19,7 +19,7 @@ A few weeks ago, I asked people if they had an interest in my blog editing proce
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Random question: would people be interested to hear about my editing process?<br/><br/>I have ADHD and I&#39;m a Type A perfectionist. Editing used to be a challenge, but I&#39;ve gotten way better and shortened my process a ton! <a href="https://t.co/3HdXdgHMM1">https://t.co/3HdXdgHMM1</a></p>&mdash; Lindsey Kopacz 🐞in Stockholm 🇸🇪 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1124278521378037760?ref_src=twsrc%5Etfw">May 3, 2019</a></blockquote>
 
-I had an overwhelming response that said yes. I also asked on my [Patreon](https://www.patreon.com/join/a11ywithlindsey). While my last post about [JavaScript and Accordions](/blog/javascript-accessibility-accordions) won out, this topic was a close second. So here we are!
+I had an overwhelming response that said yes. I also asked on my Patreon. While my last post about [JavaScript and Accordions](/blog/javascript-accessibility-accordions) won out, this topic was a close second. So here we are!
 
 ## Starting out
 
@@ -94,4 +94,4 @@ This last one is important. There were a couple of times where I thought somethi
 
 I love using tools to help me edit. The anxiety and time that it takes to write and publish a post can be downright daunting. I’ve used this process to cut down the amount of time it takes me to edit, and I hope it helps you as well! Blogging as a developer is very rewarding, and I’m glad I’ve found a process that works for me.
 
-Let me know on [Twitter](https://twitter.com/LittleKope/) what you think! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!
+Cheers! Have a great week!
