@@ -13,7 +13,7 @@ audioLink: 'https://www.parler.io/audio/7119149108/dbd2a6e8f7bcbfd853450c16d7765
 
 _Content Warning: This blog post contains gifs._
 
-When I first wrote my post about [JavaScript and Accessibility](/blog/a11y-js-seemingly-unconventional-romance), I promised I would make it a series. I've decided to use my [patreon](https://www.patreon.com/a11ywithlindsey) to have votes on what my next blog post is. This topic won, and I'm finally getting more time to write about JavaScript!
+When I first wrote my post about [JavaScript and Accessibility](/blog/a11y-js-seemingly-unconventional-romance), I promised I would make it a series. I've decided to use my patreon to have votes on what my next blog post is. This topic won, and I'm finally getting more time to write about JavaScript!
 
 So this topic I am going to go into a deep dive on how to make accordions accessible! Our focus is:
 
@@ -321,4 +321,4 @@ We're done! Remember, we haven't removed any of the other code or event listener
 
 ## Conclusion
 
-What did you think of this post? Did it help you? Are you excited for the `<details>` element? Let me know on [Twitter](https://twitter.com/LittleKope/) what you think! Also, I now have a [patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider becoming a patron. You’ll be able to vote on future blog posts if you make a \$5 pledge or higher! Cheers! Have a great week!
+What did you think of this post? Did it help you? Are you excited for the `<details>` element? Cheers! Have a great week!

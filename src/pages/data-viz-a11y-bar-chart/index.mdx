@@ -44,9 +44,23 @@ const data = [
 
 The problem that I see with most bar charts is the absence of text elements indicating what the data is. They only have visual bars with the axis indicating it’s value.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart Part 2" src="//codepen.io/littlekope0903/embed/BEMNGO/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/BEMNGO/'>Accessible Bar Chart Part 2</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="265"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accessible Bar Chart Part 2"
+  src="//codepen.io/littlekope0903/embed/BEMNGO/?height=265&theme-id=0&default-tab=js,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/BEMNGO/">
+    Accessible Bar Chart Part 2
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 So what is the problem with this? We have some text for the labels of the bars and the axis. However, the screen reader won’t reflect the **value** associated with the dataset.
@@ -71,9 +85,23 @@ d3.selectAll('.tick')
 
 The `.tick` class is what comes by default with d3-axis, and it attaches to the `<g>` element that it comes with. I selected all the `.tick` elements and appended a formatted text element to it.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 1" src="//codepen.io/littlekope0903/embed/vMwPdx/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/vMwPdx/'>Accessible Bar Chart - Solution 1</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="265"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accessible Bar Chart - Solution 1"
+  src="//codepen.io/littlekope0903/embed/vMwPdx/?height=265&theme-id=0&default-tab=js,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/vMwPdx/">
+    Accessible Bar Chart - Solution 1
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 While this works for screen readers, I don’t think this is the most accessible data visualization experience for everyone. The vast range of the yAxis might make it challenging to understand the value to visual users. Because the y-axis goes to over 16 billion, it may be safe to assume that it may not be evident to our users what the value of the data is. It might be different if the y-axis range was 0 - 10.
@@ -84,9 +112,23 @@ Having `<text>` element is a better experience for screen reader users, but we c
 
 Another solution would be to include a legend. It’s important to note that having a color-coded bar chart may not be the most accessible for colorblindness. If we go this route, we have to ensure a drastic and accessible contrast between each bar.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 2" src="//codepen.io/littlekope0903/embed/WWBmWY/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/WWBmWY/'>Accessible Bar Chart - Solution 2</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="265"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accessible Bar Chart - Solution 2"
+  src="//codepen.io/littlekope0903/embed/WWBmWY/?height=265&theme-id=0&default-tab=js,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/WWBmWY/">
+    Accessible Bar Chart - Solution 2
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 I made a few changes here:
@@ -218,9 +260,23 @@ g.append('text')
 
 Here is the final result!
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Solution 2 Continued" src="//codepen.io/littlekope0903/embed/dLBYaN/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/dLBYaN/'>Accessible Bar Chart - Solution 2 Continued</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="265"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accessible Bar Chart - Solution 2 Continued"
+  src="//codepen.io/littlekope0903/embed/dLBYaN/?height=265&theme-id=0&default-tab=js,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/dLBYaN/">
+    Accessible Bar Chart - Solution 2 Continued
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ## Adding more context
@@ -267,11 +323,42 @@ const g = barGroups
 
 Something that Heather does that I am not going to do here is adding `role="presentation"` to the axes. The reason for that is that I posted this question on Twitter and got mixed responses.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have an <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> question that feels subjective. If you&#39;re creating an SVG graph, wouldn&#39;t the axis be a bit useless to a screen reader if you are announcing the data points a different way? <br/><br/>For example, &quot;Donations - $100k&quot;. If that gets read - wouldn&#39;t the axis be redundant?</p>&mdash; Lindsey Kopacz 🐞 (@LittleKope) <a href="https://twitter.com/LittleKope/status/1123571021120827394?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+    I have an{' '}
+    <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">
+      #a11y
+    </a>{' '}
+    question that feels subjective. If you&#39;re creating an SVG graph,
+    wouldn&#39;t the axis be a bit useless to a screen reader if you are
+    announcing the data points a different way? <br />
+    <br />
+    For example, &quot;Donations - $100k&quot;. If that gets read - wouldn&#39;t
+    the axis be redundant?
+  </p>
+  &mdash; Lindsey Kopacz 🐞 (@LittleKope){' '}
+  <a href="https://twitter.com/LittleKope/status/1123571021120827394?ref_src=twsrc%5Etfw">
+    May 1, 2019
+  </a>
+</blockquote>
 
 I had thought about the redundancy of screen readers, but someone else brought up an excellent point.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Not necessarily. People don&#39;t always use accessibility tools in the way you would expect.<br/><br/>For instance, I have ADHD and often use a screen reader to help me with my writing. No vision problems, I just need something to read it back to me, so I know it all makes sense. 😊</p>&mdash; Chris Kitchens (@imchriskitchens) <a href="https://twitter.com/imchriskitchens/status/1123708336212516864?ref_src=twsrc%5Etfw">May 1, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+    Not necessarily. People don&#39;t always use accessibility tools in the way
+    you would expect.
+    <br />
+    <br />
+    For instance, I have ADHD and often use a screen reader to help me with my writing.
+    No vision problems, I just need something to read it back to me, so I know it
+    all makes sense. 😊
+  </p>
+  &mdash; Chris Kitchens (@imchriskitchens){' '}
+  <a href="https://twitter.com/imchriskitchens/status/1123708336212516864?ref_src=twsrc%5Etfw">
+    May 1, 2019
+  </a>
+</blockquote>
 
 This is something I hadn’t thought about, even as someone with ADHD myself. So with that said, I’ve decided to put the axes later in the DOM and added an `aria-label` to those groups in the SVG.
 
@@ -291,32 +378,27 @@ svg
   .call(yAxis);
 ```
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Accessible Bar Chart - Adding ARIA" src="//codepen.io/littlekope0903/embed/qwepvj/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/littlekope0903/pen/qwepvj/'>Accessible Bar Chart - Adding ARIA</a> by Lindsey Kopacz
-  (<a href='https://codepen.io/littlekope0903'>@littlekope0903</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe
+  height="265"
+  style="width: 100%;"
+  scrolling="no"
+  title="Accessible Bar Chart - Adding ARIA"
+  src="//codepen.io/littlekope0903/embed/qwepvj/?height=265&theme-id=0&default-tab=js,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen{' '}
+  <a href="https://codepen.io/littlekope0903/pen/qwepvj/">
+    Accessible Bar Chart - Adding ARIA
+  </a>{' '}
+  by Lindsey Kopacz (
+  <a href="https://codepen.io/littlekope0903">@littlekope0903</a>) on{' '}
+  <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
 ## Conclusion
 
 I’m sure I could improve this visualization a lot! I am still relatively new to SVG, and some of this is subjective. It’s unclear if the axis points would be redundant. I got mixed answers about whether I should hide it from a screen reader or not. I decided to go with more context is better, unless it’s annoying.
-
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- Take my [10 days of a11y](https://a11y-with-lindsey.ck.page/b4e437f629) free email course.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
-<CallToAction>
-
-  ![Ebook: The Bootcampers Guide to Web Accessibility](./cover.png)
-
-  ## Order now!
-
-  The Bootcamper’s Guide to Web Accessibility is now available.
-
-  [Order Now](https://a11y-with-lindsey.ck.page/products/pre-order-the-bootcampers-guide-to-web)
-
-</CallToAction>
 
 Cheers! Have a great week!

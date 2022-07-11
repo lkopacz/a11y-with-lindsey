@@ -157,24 +157,6 @@ const About = () => (
               makeup artistry, learning more about JavaScript, marketing, craft
               beer, cooking, and my cat!
             </p>
-            <img
-              src={halloween}
-              alt="Lindsey with her upper half of her face covered in blue, pink, and black colors being an interpretation of a galaxy."
-              style={{
-                width: '30%',
-                display: 'block',
-                margin: '0 auto',
-                minWidth: '200px',
-              }}
-            />
-            <p>
-              Stay in touch! If you want to hear more from me and when my next
-              blog post comes out,{' '}
-              <a href="https://a11y-with-lindsey.ck.page/4218bd5fb5">
-                sign up for updates
-              </a>
-              .
-            </p>
           </div>
         </div>
       </main>

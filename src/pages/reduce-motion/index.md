@@ -602,10 +602,4 @@ If you'd like to play around with this, I've made a CodeSandbox for you!
 
 <iframe src="https://codesandbox.io/embed/laughing-sutherland-76xj6?fontsize=14" title="Testing Reducing Motion" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
 Cheers! Have a great week!

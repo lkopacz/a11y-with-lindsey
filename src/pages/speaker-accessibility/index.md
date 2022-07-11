@@ -150,10 +150,4 @@ Here are some inclusive conference examples that I've seen:
 
 I’ve said this before, and I’ll repeat it. Accessibility isn’t about coding (even though this blog talks mostly about coding). Accessibility is about **people**. Accessibility is about including and protecting people in minoritized groups. So I hope these tips help you! Let me know what tips you have!
 
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
 Cheers! Have a great week and a great holiday if you're in America!

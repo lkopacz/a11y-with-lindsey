@@ -81,5 +81,3 @@ Something I still am working on is learning how to use a screen reader better. I
 ## Conclusion
 
 This post is getting a bit long because I wanted to ensure that I go through what I do on my personal projects. I want to do a follow-up post about Continuous Integration, all the testing libraries, and how I use react-testing-library for my integration tests. The reality is that most of us are working on teams and we need some automation built into the workflow. That post is coming soon! Stay tuned!
-
-Feel free to let me know what you think on [Twitter](https://twitter.com/LittleKope). If you're interested in hearing more content from me [subscribe to my newsletter](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) (unsubscribe, anytime).

@@ -31,7 +31,6 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-        <Subscribe color="#F3E9EA" title="Get Updates" id="footer" />
       </div>
     </div>
     <div className="credit">

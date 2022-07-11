@@ -373,10 +373,4 @@ If you want to play around with the code, fork the CodePen and check it out.
 
 Was this the most ideal markup ever? No. Did this teach me a lot about JavaScript? Yes. Did this teach me the value of using buttons where I have keyboard events built-in? Yes.
 
-Stay in touch! If you liked this article:
-
-- Let me know on [Twitter](https://twitter.com/LittleKope) and share this article with your friends! Also, feel free to tweet me any follow up questions or thoughts.
-- Support me on [Patreon](https://www.patreon.com/a11ywithlindsey)! If you like my work, consider making a monthly pledge.
-- [Be the first to learn about my posts](https://pages.convertkit.com/4218bd5fb5/68dc4e412a) for more accessibility funsies!
-
 Cheers! Have a great week!
