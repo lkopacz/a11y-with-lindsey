@@ -20,9 +20,6 @@ const Menu = props => {
         <li className="menu-item">
           <Link to="/blog">Blog</Link>
         </li>
-        <li className="menu-item">
-          <Link to="/contact">Contact</Link>
-        </li>
         <li>
           <a href="https://egghead.io/instructors/lindsey-kopacz">Egghead</a>
         </li>
