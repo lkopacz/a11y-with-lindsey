@@ -16,6 +16,10 @@ class IndexPage extends React.Component {
         <div className="blog">
           <h2>Recent Blog Posts</h2>
           <div className="blog__items">
+            <p style={{ fontStyle: 'italic' }}>
+              Note: this blog is an archive and not actively maintained. Some
+              information may be out of date.
+            </p>
             {posts.map(({ excerpt, frontmatter }, i) => {
               return (
                 <article key={i} className="blog__item">
