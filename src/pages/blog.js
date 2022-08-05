@@ -42,11 +42,21 @@ class BlogIndex extends React.Component {
             </div>
             <div className="content__body">
               <div className="wrapper">
-                {posts.map(({excerpt, frontmatter}, i) => {
+                <p style={{ fontStyle: 'italic' }}>
+                  Note: this blog is an archive and not actively maintained.
+                  Some information may be out of date.
+                </p>
+                {posts.map(({ excerpt, frontmatter }, i) => {
                   return (
-                    <article style={{ marginTop: 24, marginBottom: 24 }} key={i}>
+                    <article
+                      style={{ marginTop: 24, marginBottom: 24 }}
+                      key={i}
+                    >
                       <h2 style={{ marginTop: 10, marginBottom: 10 }}>
-                        <Link style={{ boxShadow: 'none' }} to={frontmatter.path}>
+                        <Link
+                          style={{ boxShadow: 'none' }}
+                          to={frontmatter.path}
+                        >
                           {frontmatter.title}
                         </Link>
                       </h2>
