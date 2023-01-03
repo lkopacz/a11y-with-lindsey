@@ -78,7 +78,7 @@ const Layout = ({ children, location }) => {
       <a className="focusable visually-hidden" href="#main-content">
         Skip to main content
       </a>
-      {/* <div className="promo">
+      <div className="promo">
         Want to level up in accessibility?{' '}
         <a
           onFocus={onFocusFunc}
@@ -87,7 +87,7 @@ const Layout = ({ children, location }) => {
         >
           Get my 10 day guide
         </a>
-      </div> */}
+      </div>
       <div className="content">
         <Header siteTitle={data.site.siteMetadata.title} location={location} />
         {children}
