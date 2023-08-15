@@ -51,7 +51,7 @@ class Header extends React.Component {
       <header>
         <div className="header-wrapper">
           {header}
-          <ReduceToggle />
+          {/* <ReduceToggle /> */}
           <Menu class="menu-main" hasPrivacyPolicy={false} />
         </div>
       </header>

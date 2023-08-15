@@ -3,6 +3,14 @@ import { Link } from 'gatsby'
 import './menu.css'
 
 const Menu = props => {
+  let privacyPolicy
+  if (props.hasPrivacyPolicy) {
+    privacyPolicy = (
+      <li className="menu-item privacy-policy">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+      </li>
+    )
+  }
   return (
     <nav className={props.class} style={{ alignSelf: props.position }}>
       <ul className="menu">
@@ -15,6 +23,7 @@ const Menu = props => {
         <li>
           <a href="https://egghead.io/instructors/lindsey-kopacz">Egghead</a>
         </li>
+        {privacyPolicy}
       </ul>
     </nav>
   )
