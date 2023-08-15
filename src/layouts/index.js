@@ -13,7 +13,7 @@ const Layout = ({ children, location }) => {
   const [position, setPosition] = useState(0)
 
   const [scrollHandler] = useDebouncedCallback(() => {
-    setPosition(window.pageYOffset)
+    setPosition(window.scrollY)
   }, 300)
 
   useEffect(() => {
