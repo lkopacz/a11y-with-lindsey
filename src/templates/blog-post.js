@@ -102,6 +102,14 @@ const Template = ({ data: { mdx: post, site } }) => {
           </div>
           <div className="content__body">
             <div className="wrapper">
+              <p style={{ fontStyle: 'italic' }}>
+                {' '}
+                Note: this blog is an archive and not actively maintained. Some
+                information may be out of date. If you'd like to see what I am
+                working on or work with me in a consulting capacity, visit my
+                website{' '}
+                <a href="https://lindseykopacz.com/">lindseykopacz.com</a>.
+              </p>
               <time>{date}</time>
               {hasAudio ? <audio src={audio} controls /> : ''}
               {affiliate ? (

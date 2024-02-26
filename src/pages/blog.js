@@ -44,7 +44,10 @@ class BlogIndex extends React.Component {
               <div className="wrapper">
                 <p style={{ fontStyle: 'italic' }}>
                   Note: this blog is an archive and not actively maintained.
-                  Some information may be out of date.
+                  Some information may be out of date. If you'd like to see what
+                  I am working on or work with me in a consulting capacity,
+                  visit my website{' '}
+                  <a href="https://lindseykopacz.com/">lindseykopacz.com</a>.
                 </p>
                 {posts.map(({ excerpt, frontmatter }, i) => {
                   return (
