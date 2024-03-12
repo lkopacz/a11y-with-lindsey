@@ -7,21 +7,13 @@ published: true
 affiliate: false
 featuredImage: './2018-in-review.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/7119149108/2807a3de0b61446fdc71a748f040f6d531a264b4.6718b88f-04db-48db-98f8-88ca7c5cfb49.mp3'
 ---
 
-_Content Warning: This blog post contains gifs._
-
 It's that time of year where I utter the same predictable phrase: "This year feels like it's been so long and yet so short!" As some may have noticed, I took a bit of a break from blogging in December. However, the positive of that is I've had a lot of time to reflect on the year and my goals for the upcoming year.
-
-![Champagne clinking together with a message Goodbye 2018 in the background.](https://media.giphy.com/media/lorP8urQinc4tAq1ta/giphy.gif)
 
 ## Blog
 
 This blog is something I wanted to start since April this year. I worked with my friend Raquel (link in the footer) to get the logo designed, and the color scheme decided upon. She was a fantastic resource, and I have recommended her to friends who are looking for a designer. But somewhere along the road, I got a bit slowed down by hosting costs because I was building my blog in Drupal. Drupal hosting is EXPENSIVE and considering I was not making any income from blogging, I needed a cheaper alternative. It wasn't until my friend [Ali Spittel](https://twitter.com/aspittel/) told me about Gatsby and Netlify that I really got my momentum going again. Knowing that costs were no longer a factor, it reignited my excitement!
-
-![Gif of Kermit the Frog typing furiously at a typewriter.](https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif)
 
 I launched my blog on October 3rd (my birthday), and from that day to year end here are my stats:
 
@@ -55,8 +47,6 @@ Side hustling seems to have a very very different connotation depending on who y
 2. Being in charge of my own thing.
 3. A way to allow me to define my career instead of another company.
 4. A way to investigate what works well and what doesn't.
-
-![Gif of Beyonce with saying I'm not bossy, I'm the boss.](https://media.giphy.com/media/KbkiITyNVzzO/giphy.gif)
 
 If you had asked me 2 years ago if I would have any sort of entrepreneurial spirit, I might have laughed in your face. Literally. Both my parents are self-employed, and I've never understood that path. I never wanted to worry about overhead, taxes, or inconsistent money. I just wanted to go to work, do my thing, and have them give me my pay and benefits.
 
@@ -100,5 +90,3 @@ This post has been way longer than I thought it would be. So I am going to keep 
 6. If my goals are impacting my mental health and life negatively, feel free to re-evaluate
 
 Here's to a fantastic 2019! I'd love to see some of your years in review!
-
-![Leo DiCaprio lifting champagne for a toast.](https://media.giphy.com/media/10bHcDcPM925ry/giphy.gif)

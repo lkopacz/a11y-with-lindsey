@@ -7,17 +7,11 @@ published: true
 affiliate: false
 featuredImage: './alt-text.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/90028901e4e8647746f9f114253d322f922e0dc5.640af66d-5cc1-40d4-8502-cc5595ae1fb5.mp3'
 ---
-
-_Content Warning: This blog post contains gifs._
 
 If I ask anyone what accessibility means to them, usually the first thing that they can identify is “Adding alt text!” All you have to do is add alt tags to your images makes your site way more accessible, right? I love the enthusiasm to reduce accessibility errors, but I am about to give you an infuriating response. **It depends**.
 
 Adding alt text may mean that you don’t get pesky errors about missing alternative text on an Accessibility Scan, but it doesn’t necessarily mean that your images have a better meaning. Sometimes an empty alt tag is actually what you need for a more accessible image. Are you envisioning the mind blown emoji and/or gif yet?
-
-![Gif of Chris Pratt doing a gesture about mind blowing.](https://media.giphy.com/media/l0NhZ0aUSE8fXag12/giphy.gif)
 
 That’s how I felt when I was learning about it, and it made me realize how much bad advice I had given to others about fixing alt text. Hopefully, my conscience is clear after this blog post! I used to think that every single image had to have alternative text, and didn't really put much thought into how to write it. I would love to give some of my tips to not only help you avoid accessibility errors but to think more critically and strategically about how you are giving your visually impaired users the best experience possible.
 

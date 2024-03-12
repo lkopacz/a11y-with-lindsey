@@ -7,15 +7,9 @@ published: true
 affiliate: false
 featuredImage: './thanksgiving-2018.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/37ddc5388264f6e9bae7106e3e0260ffcc1ccec9.c5e1d161-0c99-45d1-82c2-219f8eb5add9.mp3'
 ---
 
-_Content Warning: This blog post contains gifs._
-
 Happy Thanksgiving to those of us in the United States!
-
-![Monica Gellar from TV show Friends with a turkey over her head putting on sunglasses.](https://media.giphy.com/media/PjYfyarIEsNGM/giphy.gif)
 
 I've been in this industry now for about 4 and a half years. In the spirit of Thanksgiving (in the US), I wanted to make a specific list of what I am thankful for in my journey as a developer.
 
@@ -28,8 +22,6 @@ These friends I get to cheer on as they grow in their career, and they reciproca
 ## Digital tools developed by fellow developers
 
 I was diagnosed with ADHD when I was 7 and have struggled with the distractions as they get more complicated. Phone and desktop notifications, text messages, and social media have not helped those of us who already struggle to focus.
-
-![Neil Patrick Harris tossing papers that say productivity on it.](https://media.giphy.com/media/B2NKPKFTHtB7rTYNhN/giphy.gif)
 
 I know I am not the only one who struggles with distraction, especially developers who are always having their attention taken away from their code. I am thankful for the many developers and entrepreneurs who have designed tools to help us stay organized. Here are the apps that help me with my productivity, which ultimately help me reduce my anxiety:
 
@@ -50,8 +42,6 @@ I've also grown to love that the industry (at least at the companies I have work
 ## Constantly learning and helping others
 
 I am thankful to have a platform to help others with web accessibility. Starting a blog has been out of my comfort zone, but incredibly rewarding. It has been a fantastic experience having a place where I can teach and help others, while also challenging myself to learn and grow. I love being able to see people have moments where they finally get it.
-
-![Hamster with glasses on reading a book, a metaphor for learning.](https://media.giphy.com/media/tHufwMDTUi20E/giphy.gif)
 
 Blogging and teaching others has also encouraged me to lean further into my talents and skills. It's also forced me to explain things more in depth and expand how I think about accessibility. My last post on dyslexia was not something I had ever considered before starting this blog, and I learned so much in the process!
 

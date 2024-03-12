@@ -7,11 +7,7 @@ published: true
 affiliate: false
 featuredImage: './negative-impacts.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/0d908c585a0750ce555638ada33745328decddcc.cc66a03a-1363-45a5-bf9c-7e79b364e2c9.mp3'
 ---
-
-_Content Warning: This blog post contains gifs._
 
 Back in fall of 2016, I spoke for the first time about accessibility. While planning my presentation and looking for a relevant case study, I stumbled upon something that was quite relevant for the time - the presidential candidates’ donation sites. Considering Section 508 applies to government agencies, I figured that their sites would be super accessible. Boy, was I wrong.
 
@@ -25,8 +21,6 @@ Before we go into how to solve this issue, I want to describe a scenario to you.
 
 I imagine that I’d try if I was very passionate about that candidate, but considering how difficult the site was making it donate my own hard earned money, I’d probably give up at that point. I doubt I am the only person who would give up, at least that's what research indicates.
 
-![Gif of woman who is covering her face in frustration](https://media.giphy.com/media/ql4LidslabKpi/giphy.gif)
-
 There is significant research that shows us that making things confusing for another user causes them to have a higher bounce rate. I am currently reading Donald Miller's book, Building a StoryBrand, and yesterday I was reading about how confusing users, creating noise and having an unclear message causes a user to go to a brand's competitors that have a more clear message. From what he describes, the amount of energy that it takes to navigate confusion causes calorie burn, and we do not want to waste precious calories. The way her describes it is about surviving and thriving, you should definitely pick up his book and read for yourself.
 
 While this is a book on marketing messaging and not accessibility, I couldn't help but relate that to this case study I did 2 years ago. How does inaccessibility of forms directly relate to "noise," which causes your visually impaired users to leave? This leads me to the business side of it all.
@@ -36,8 +30,6 @@ While this is a book on marketing messaging and not accessibility, I couldn't he
 Let’s reflect on the above scenario for a second, but from the business side of it. How much money did we miss out on by not including something like form labels on our donation form? According to the [National Federation of the Blind](https://nfb.org/blindness-statistics), in 2015, 7,297,100 or 2.3% of the American population reported having a visual disability. Over 7 million people - think about that. That’s a lot of money potential.
 
 While I believe the reason to create accessible forms is that you don’t want to create a frustrating experience for your users, I know that it’s not really convincing to tell your boss or your clients “Hey we just need to be nicer and more empathetic!” But lost dollars might raise some eyebrows.
-
-![Money on a cutting board being cut up, representing the metaphor of wasting money](https://media.giphy.com/media/3ohze3cqkv058SUy2s/giphy.gif)
 
 Let's start to think about our call to actions and how many of those actions are forms. Newsletter signups, surveys, credit card information--all of these are forms that can ultimately impact our bottom line. There could be a tremendous cost if we do not address these users. This is not an "edge case" (insert eye roll emoji here). This is actually a costly endeavor.
 

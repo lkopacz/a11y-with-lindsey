@@ -7,8 +7,6 @@ published: true
 affiliate: false
 featuredImage: './dyslexia.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/af7974aef13321b8595c6cfd4ba5430ca93a5905.4e55cac8-4797-4843-a10b-e688a8559d73.mp3'
 ---
 
 _Content Warning: This blog post contains gifs._

@@ -7,8 +7,6 @@ published: true
 affiliate: false
 featuredImage: './accordion.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/7119149108/dbd2a6e8f7bcbfd853450c16d776560d9259319c.568362ee-3b2c-4ac1-8d7b-4cd0b3d99d20.mp3'
 ---
 
 _Content Warning: This blog post contains gifs._
@@ -266,8 +264,6 @@ Let's test on our screen reader to be extra sure.
 </video>
 
 When I go through the accordions headers without opening them, they do not read them in the section. That's a good thing! When I open it, I'm able to read it.
-
-![Neil Patrick Harris sitting in the driver's seat of a car, making a large grin. Then he nods his head and puts his thumb up.](https://media.giphy.com/media/vtVpHbnPi9TLa/giphy.gif)
 
 ## Progressive Enhancement
 

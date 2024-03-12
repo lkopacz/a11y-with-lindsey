@@ -6,9 +6,7 @@ tags: ['accessibility', 'testing', 'wave tool', 'screen reader']
 published: true
 affiliate: false
 featuredImage: './a11y-testing-workflow.png'
-hasAudio: true
 draft: false
-audioLink: 'https://www.parler.io/audio/7119149108/9e5dc5641e88e812e0903c9df90a0933946bc91c.67256623-e5a3-4d82-b83b-9d4c7502bb75.mp3'
 ---
 
 Hi friends! It’s been a hot minute since I wrote a blog post. If you follow me [on Twitter](https://twitter.com/LittleKope/status/1101112031355260928), you know that I took a very strategic break in March to work on getting ahead of things. So now I am up and running, and I asked some followers what they wanted me to write next.

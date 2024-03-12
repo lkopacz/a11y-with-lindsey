@@ -8,8 +8,6 @@ published: true
 affiliate: false
 featuredImage: './colors-and-design-a11y.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/611001e2df08446a55fd876dec8e1286605845f1.7cfe201d-2419-4fc6-b3e1-d164dcaf92d2.mp3'
 ---
 
 This topic has the potential to be a touchy one for marketing departments and designers. There have been plenty of approved designs I have received, just to find their new branding's color scheme is not accessible. Sometimes our clients or organizations fall in love with their new brand and design, and asking them to change on the branding or the design is actually like asking them to change the new identity they just fell in love with. The ironic part is there are usually accessibility requirements on the clients' SOW, but the designers didn't know that their colors were inaccessible.

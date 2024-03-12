@@ -6,15 +6,9 @@ tags: ['ux', 'accessibility']
 published: true
 featuredImage: './not-edge-case.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/7119149108/68a55ac9f32155276ec3f8fd63b57e87ab25acf6.05adf8b2-34cd-4a74-8a95-5ed875db72db.mp3'
 ---
 
-_Content Warning: This blog post contains gifs._
-
 The primary question I get from developers is “How do I get my clients on board” or sometimes “How do I convince my boss that it’s worth investing in?” I was asked this once at a panel, and my response was “I don’t, I just do it.” Because I understand accessibility pretty well and build with accessibility in mind from the start, I am usually able to solve accessibility problems relatively quickly without people even noticing that I spent extra time on it. But when developers who are still newer to accessibility are trying to convince their bosses, sometimes they clap back that “this is a low priority” or “that is an edge case.”
-
-![Gif of Pixar character Anger from the movie inside out having fire shooting from his head.](https://media.giphy.com/media/11tTNkNy1SdXGg/giphy.gif)
 
 Oh goodness, nothing gets my blood boiling more when someone dismisses the needs of their users. If your product or website doesn’t work for any one person who wants to use it, it’s not an edge case. It’s a severe usability problem that is costing you money and potentially a lawsuit.
 
@@ -31,8 +25,6 @@ My main point was if their sites are not accessible, particularly in an area whe
 The thing I find shocking is how many e-commerce sites fail miserably with accessibility. For example, I happen to be on [Rent the Runway's website](https://www.renttherunway.com/) looking for a dress to rent, and I pulled up the [Wave tool](https://wave.webaim.org/), and as of this writing, it has detected **54 errors**. Not alerts or warnings, **errors**. I also cannot access their navigation with my keyboard, and the focus states are missing.
 
 Approximately one of every five people suffer from a disability, which means that you are potentially losing out on 20% of your target audience. If your business had $500,000 of revenue in a month and the site wasn’t accessible, you may have lost out on over $125,000 in potential revenue. That’s a large piece of the pie that I would want a part of. The numbers go even higher when your business is a multi-million dollar business.
-
-![Gif of a baby throwing money out the window.](https://media.giphy.com/media/l0HFkA6omUyjVYqw8/giphy.gif)
 
 ## Legal
 
