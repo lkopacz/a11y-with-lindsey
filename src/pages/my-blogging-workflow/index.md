@@ -48,8 +48,6 @@ I tend to be more outlined in these posts than usual because these types of post
 ```
 ````
 
-![Cat Programming at a computer.](https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif)
-
 I try not to overanalyze this part because as I said before, it is the most time-consuming part. The more I overanalyze, the longer it takes me to write my code.
 
 ## The Editing Process

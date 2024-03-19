@@ -7,11 +7,7 @@ published: true
 affiliate: false
 featuredImage: './a11y-js.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/7119149108/4d72855d6900f3209c1790440bbbb3bdda3a568f.b7306f01-8672-4861-9a24-9a4f3d3a84b5.mp3'
 ---
-
-_Content Warning: This blog post contains gifs._
 
 This post was inspired by a few things. First, a few months ago Rian Rietveld announced she was [resigning as the WordPress accessibility lead](https://rianrietveld.com/2018/10/09/i-have-resigned-the-wordpress-accessibility-team/). I read through the post, and the reason seemed to be mainly about Gutenberg. It seemed that despite all the wpa11y’s team’s warnings, they were pushing to release it while it was almost unusable for those who need assistive devices. I found there to be a tremendous opportunity to educate communities and help to others learn.
 
@@ -77,5 +73,3 @@ Is there a feature that uses your mouse to interact with it? Is this an essentia
 Something I also mentioned in my previous post is that Accessibility is empathy-driven. I think the beauty of combining JavaScript and accessibility is it lends itself to being an empathy exercise. You think through questions like “What would I like this MegaMenu to be if I were a user who was unable to use a mouse? What would make my life easier navigating through this?”
 
 My goal is to have blog posts going through each of these concepts in more depth. But I want you to know that JavaScript isn’t the enemy of accessibility. Instead, lack of empathy is. With some empathy and your awesome JavaScript skills, you CAN make your sites accessible!
-
-![Gif of two men saying We Got This](https://media.giphy.com/media/3og0IxDd2sAT4y24zC/giphy.gif)

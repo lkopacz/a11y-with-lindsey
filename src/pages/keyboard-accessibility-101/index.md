@@ -7,15 +7,9 @@ published: true
 affiliate: false
 featuredImage: './keyboard-a11y.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/9625517181/1ad8e5216bfc32feb30c3b6702a679f91407747b.34e94a53-efea-447e-87c5-a87a2e1b893b.mp3'
 ---
 
-_Content Warning: This blog post contains gifs._
-
 I wanted to write a blog post about one of my favorite accessibility topics - keyboard accessibility! I test this so much without even trying because as a developer I use my keyboard so much. I use it to navigate around apps, within a web page, and scrolling through my millions of tabs on my browser (who else is guilty of that haha).
-
-![Gif of Tom Hanks in You Got Mail movie typing at his computer, looking frustrated.](https://media.giphy.com/media/LPn77YyDIqfhm/giphy.gif)
 
 ## What is Keyboard Accessibility
 

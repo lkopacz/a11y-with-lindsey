@@ -7,8 +7,6 @@ published: true
 affiliate: false
 featuredImage: './dropdown-no-js.png'
 draft: false
-hasAudio: true
-audioLink: 'https://www.parler.io/audio/7119149108/2cdfdce373d5b6114644114a22a9fb7fd60ab264.5e9775fc-2449-4d02-ac37-3627f767bfdd.mp3'
 ---
 
 _Content Warning: This blog post contains gifs._
@@ -70,8 +68,6 @@ I added mostly the same CSS, but frankly, I have deleted the sample code so some
   clip: auto;
 }
 ```
-
-![Two men saying That was Easy Office Space Movie](https://media.giphy.com/media/zcCGBRQshGdt6/giphy.gif)
 
 Well, that was easy. So I guess I'll go into some of the Pros and Cons of using this technique.
 

@@ -15,13 +15,11 @@ const Template = ({ data: { mdx: post, site } }) => {
     date,
     affiliate,
     audioLink,
-    hasAudio,
     featuredImage,
   } = frontmatter
 
   const affiliateText =
     'This post contains affiliate links. If you buy something through those links I may earn a small commission at no cost to you. This helps pay for the costs associated with running a11y with Lindsey. I promise to only recommend products I use and love!'
-  const audio = hasAudio ? audioLink : ''
 
   const cover = featuredImage.childImageSharp
     ? featuredImage.childImageSharp
@@ -103,7 +101,6 @@ const Template = ({ data: { mdx: post, site } }) => {
           <div className="content__body">
             <div className="wrapper">
               <time>{date}</time>
-              {hasAudio ? <audio src={audio} controls /> : ''}
               {affiliate ? (
                 <p>
                   <em>{affiliateText}</em>
@@ -139,8 +136,6 @@ export const pageQuery = graphql`
         path
         date(formatString: "MMMM D, YYYY")
         affiliate
-        audioLink
-        hasAudio
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1240) {
