@@ -10,40 +10,40 @@ import './index.css'
 import './fonts.css'
 
 const Layout = ({ children, location }) => {
-  const [position, setPosition] = useState(0)
+  // const [position, setPosition] = useState(0)
 
-  const [scrollHandler] = useDebouncedCallback(() => {
-    setPosition(window.scrollY)
-  }, 300)
+  // const [scrollHandler] = useDebouncedCallback(() => {
+  //   setPosition(window.scrollY)
+  // }, 300)
 
-  useEffect(() => {
-    let isMounted = true
+  // useEffect(() => {
+  //   let isMounted = true
 
-    if (isMounted) {
-      window.addEventListener('scroll', scrollHandler)
-    }
+  //   if (isMounted) {
+  //     window.addEventListener('scroll', scrollHandler)
+  //   }
 
-    return () => {
-      isMounted = false
-      window.removeEventListener('scroll', scrollHandler)
-    }
-  }, [])
+  //   return () => {
+  //     isMounted = false
+  //     window.removeEventListener('scroll', scrollHandler)
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    if (position > 50) {
-      document.body.classList.add('promo-showing')
-    } else {
-      document.body.classList.remove('promo-showing')
-    }
-  }, [position])
+  // useEffect(() => {
+  //   if (position > 50) {
+  //     document.body.classList.add('promo-showing')
+  //   } else {
+  //     document.body.classList.remove('promo-showing')
+  //   }
+  // }, [position])
 
-  const onFocusFunc = () => {
-    document.body.classList.add('promo-showing')
-  }
+  // const onFocusFunc = () => {
+  //   document.body.classList.add('promo-showing')
+  // }
 
-  const onBlurFunc = () => {
-    document.body.classList.remove('promo-showing')
-  }
+  // const onBlurFunc = () => {
+  //   document.body.classList.remove('promo-showing')
+  // }
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -78,7 +78,7 @@ const Layout = ({ children, location }) => {
       <a className="focusable visually-hidden" href="#main-content">
         Skip to main content
       </a>
-      <div className="promo">
+      {/* <div className="promo">
         Want to level up in accessibility?{' '}
         <a
           onFocus={onFocusFunc}
@@ -87,7 +87,7 @@ const Layout = ({ children, location }) => {
         >
           Get my 10 day guide
         </a>
-      </div>
+      </div> */}
       <div className="content">
         <Header siteTitle={data.site.siteMetadata.title} location={location} />
         {children}
